@@ -24,9 +24,9 @@
     var CONFIG = {"hostname":"dooyeong20.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 <meta property="og:type" content="website">
-<meta property="og:title" content="happy dooyeong blog">
+<meta property="og:title" content="dooyeong devlog !">
 <meta property="og:url" content="https://dooyeong20.github.io/index.html">
-<meta property="og:site_name" content="happy dooyeong blog">
+<meta property="og:site_name" content="dooyeong devlog !">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="dooyeong">
 <meta name="twitter:card" content="summary">
@@ -44,7 +44,7 @@
     lang   : 'en'
   };
 </script>
-<title>happy dooyeong blog</title>
+<title>dooyeong devlog !</title>
   
 
 
@@ -102,7 +102,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">happy dooyeong blog</h1>
+      <h1 class="site-title">dooyeong devlog !</h1>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -155,7 +155,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -204,6 +204,130 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/02/ds_algo/ds-algo-08/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/02/ds_algo/ds-algo-08/" class="post-title-link" itemprop="url">ds-algo-_08</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-02 13:48:41 / Modified: 16:50:59" itemprop="dateCreated datePublished" datetime="2021-04-02T13:48:41+09:00">2021-04-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="탐색"><a href="#탐색" class="headerlink" title="탐색"></a>탐색</h1><p>Search Algorithms</p>
+<ul>
+<li><p>원하는 조건에 맞는 자료를 찾는 것을 탐색 알고리즘이라고 한다</p>
+</li>
+<li><p>자료가 정렬되어있지 않다면, 이분 탐색이 불가능하다.</p>
+</li>
+<li><p>미분가능하고 연속적이면 수치해석(?)</p>
+</li>
+</ul>
+<h2 id="선형-탐색"><a href="#선형-탐색" class="headerlink" title="선형 탐색"></a>선형 탐색</h2><ul>
+<li>순차 탐색(Sequential Search)</li>
+<li>순서대로 하나씩 비교 -&gt; O(n)</li>
+</ul>
+<h2 id="이분-탐색"><a href="#이분-탐색" class="headerlink" title="이분 탐색"></a>이분 탐색</h2><ul>
+<li>이진 탐색</li>
+<li>자료가 정렬되어 있을 때 적용 가능 (요소 중복 가능)</li>
+<li>탐색 범위를 절반씩 줄여가며 탐색 -&gt; O(logn)</li>
+<li>bst의 best 케이스라고도 볼 수 있음</li>
+<li>bst는 삽입할 때 logN, 검색할 때 logN이 걸린다<ul>
+<li>자료가 추가가 되면서 자동적으로 정렬이 되기 때문에(logN) 좋다</li>
+</ul>
+</li>
+<li>리스트에는 자료를 추가해 이분탐색하려면 O(nlogn)이 걸리기 때문에 데이터 추가나 삭제 등을 고려하지는 않고 탐색용이다</li>
+</ul>
+<h1 id="해시"><a href="#해시" class="headerlink" title="해시"></a>해시</h1><p>넓은 범위의 값이 주어졌을 때 특정 범위(값)으로 좁힌 값을 도출<br>모듈러 연산(%)도 간단한 해시 값에 해당한다</p>
+<ul>
+<li><p>해시, 해시 값</p>
+</li>
+<li><p>동일 입력에 대해 동일 출력을 보장</p>
+<ul>
+<li>다른 입력에 대해서도 동일한 출력이 발생할 수 있음(충돌)</li>
+</ul>
+</li>
+<li><p>해시 값의 범위를 좁히는 것과 해시 충돌이 일어나지 않도록 하는 것은 반비례한다. (비둘기 집의 원리(?))</p>
+</li>
+<li><p>임의 접근이 가능해진다</p>
+</li>
+</ul>
+<h2 id="해시-성능에-영향을-주는-요소들-trade-off-관계에-있다"><a href="#해시-성능에-영향을-주는-요소들-trade-off-관계에-있다" class="headerlink" title="해시 성능에 영향을 주는 요소들(trade off 관계에 있다)"></a>해시 성능에 영향을 주는 요소들(trade off 관계에 있다)</h2><ol>
+<li>해시함수의 동작 시간(해시를 계산하는데 걸리는 시간)</li>
+<li>해시 충돌의 발생 확률</li>
+<li>해시 값의 범위 (부작용이 없다면 범위가 작을수록 좋다)</li>
+</ol>
+<h2 id="해시-셋-set"><a href="#해시-셋-set" class="headerlink" title="해시 셋(set)"></a>해시 셋(set)</h2><p>파이썬에서 set으로 바꿔주면 in 연산을 통해 O(1)의 시간복잡도로 데이터의 유무를 파악할 수 있다.</p>
+<h2 id="해시-충돌"><a href="#해시-충돌" class="headerlink" title="해시 충돌"></a>해시 충돌</h2><ul>
+<li>Bucket 에 담는 과정에서도(index 계산한다 등등) 해시 충돌이 일어날 수 있다</li>
+<li>일반적으로 자료 저장 인덱스는 bucekt 사이즈로 모듈러 연산으로 구한다</li>
+</ul>
+<h1 id="숙제"><a href="#숙제" class="headerlink" title="숙제"></a>숙제</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/43236">프로그래머스 징검다리 문제</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/31/ds_algo/ds-algo-07/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -213,7 +337,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="happy dooyeong blog">
+      <meta itemprop="name" content="dooyeong devlog !">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -430,7 +554,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="happy dooyeong blog">
+      <meta itemprop="name" content="dooyeong devlog !">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -605,7 +729,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="happy dooyeong blog">
+      <meta itemprop="name" content="dooyeong devlog !">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -701,7 +825,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="happy dooyeong blog">
+      <meta itemprop="name" content="dooyeong devlog !">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -869,7 +993,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="happy dooyeong blog">
+      <meta itemprop="name" content="dooyeong devlog !">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -971,7 +1095,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="happy dooyeong blog">
+      <meta itemprop="name" content="dooyeong devlog !">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1068,7 +1192,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="happy dooyeong blog">
+      <meta itemprop="name" content="dooyeong devlog !">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1232,7 +1356,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="happy dooyeong blog">
+      <meta itemprop="name" content="dooyeong devlog !">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1334,7 +1458,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="happy dooyeong blog">
+      <meta itemprop="name" content="dooyeong devlog !">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1492,208 +1616,6 @@
 <li><code>access(index)</code> : O(n)</li>
 <li><code>insert(item, index)</code>: O(1) (w/ access: O(n)) - 노드를 찾아가는데에 O(n)</li>
 <li><code>remove(index)</code>: O(1) (w/ access: O(n)) - 노드를 찾아가는데에 O(n)</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/26/ds_algo/ds-algo-01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="happy dooyeong blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/26/ds_algo/ds-algo-01/" class="post-title-link" itemprop="url">ds-algo-01</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-03-26 12:06:27" itemprop="dateCreated datePublished" datetime="2021-03-26T12:06:27+09:00">2021-03-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="자료구조"><a href="#자료구조" class="headerlink" title="[자료구조]"></a>[자료구조]</h2><ul>
-<li><strong>자료(Data)</strong>: 현실 세계로부터 수집한 사실이나 개념의 값 또는 이들의 집합. 특정 용도로 사용하기 위해 처리/가공한 것을 정보(Information)이라 한다.</li>
-<li><strong>자료구조(Data Structure)</strong>: 자료구조는 자료 값의 모임, 자료간의 관계, 그리고 자료에 적용할 수 있는 함수나 명령을 의미</li>
-</ul>
-<p><strong>1. 자료구조의 특징</strong></p>
-<ul>
-<li>효율성</li>
-<li>추상화</li>
-<li>재사용성</li>
-</ul>
-<p><strong>2. 자료구조 종류</strong></p>
-<ul>
-<li>선형(Linear - 일자로 되어있다, 여러갈래로 갈라지지 않는다)<ul>
-<li>스택과 큐는 배열/연결 리스트를 효율성을 극대화 해놓은 자료구조이다.</li>
-<li>배열/연결 리스트, 스택, 큐</li>
-</ul>
-</li>
-<li>비선형 (방향성 존재, 여러 갈래로 갈라질 수 있다)<ul>
-<li>트리, 그래프</li>
-<li>어떠한 자료구조도 다 포함할 수 있음</li>
-</ul>
-</li>
-</ul>
-<p><strong>3. 자료구조의 필요성</strong></p>
-<ul>
-<li>효율적인 접근 및 사용(중복 제거)</li>
-<li>적절한 알고리즘을 기계적으로 적용</li>
-<li>협업에 큰 도움(설명같은것도 덜 필요함)</li>
-</ul>
-<p><strong>4. Python의 자료구조</strong></p>
-<ul>
-<li>List(Queue, Stack)</li>
-<li>Map(dictionary)</li>
-<li>Set</li>
-<li>Heap</li>
-</ul>
-<h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="[알고리즘]"></a>[알고리즘]</h2><p>: 알고리즘이란? 문제 해결을 위한 여러 동작들의 모임</p>
-<p><strong>1. 알고리즘 조건</strong></p>
-<ul>
-<li><strong>입력</strong> : 외부에서 제공되는 자료가 존재해야함</li>
-<li><strong>출력</strong> : 2가지 이상의 다른 결과를 출력</li>
-<li><strong>명확성</strong> : 명확한 명령어로 구성해야함 (코드로 작성할 수 있을 만큼 명확)</li>
-<li><strong>유한성</strong> : 유한한 시간안에 종료되어야함. 그래야 출력이 나오니까.</li>
-<li><strong>효과성</strong> : 사람이 종이와 연필로 수행할 수 있을 정도로 단순</li>
-</ul>
-<p><strong>2. 알고리즘 필요성</strong></p>
-<ul>
-<li>서비스의 규모</li>
-<li>컴퓨터 연산 &amp; 비용 (클라우드)</li>
-</ul>
-<p><strong>3. Python</strong></p>
-<ul>
-<li><strong>glue 언어</strong> : 다른 언어로 구현된 걸 풀로 붙이듯 사용할 수 있음</li>
-<li>OOP, FP(람다 문법을 사용) 모두 지원</li>
-<li>코딩테스트에서 Comprehension, lambda 등 간결한 코드 작성 가능</li>
-</ul>
-<h2 id="코딩테스트"><a href="#코딩테스트" class="headerlink" title="[코딩테스트]"></a>[코딩테스트]</h2><p><strong>1. 목적</strong></p>
-<ul>
-<li>빠르고 효율적으로 실력 가늠</li>
-<li>코딩 습관</li>
-<li>공통 역량 준비 가능</li>
-</ul>
-<p><strong>2. 유형</strong></p>
-<ul>
-<li>기본 라이브러리 효율적 구현 - 예외처리로 test case들 해결</li>
-<li>자료구조 - 자료구조를 잘 선택 (dictoinary, set, heap 등)</li>
-<li>알고리즘 - sorting, DP, DFS/BFS, greedy, Dijkstra<ul>
-<li>알고리즘을 모르면 절대로 못 푸는 문제</li>
-</ul>
-</li>
-</ul>
-<h2 id="알고리즘-복잡도"><a href="#알고리즘-복잡도" class="headerlink" title="[알고리즘 복잡도]"></a>[알고리즘 복잡도]</h2><ol>
-<li>공간 복잡도 vs. 시간 복잡도 일반적으로 두 복잡도는 Trade-off 관계<ul>
-<li>공간복잡도 : 알고리즘이 동작하기 위해 필요한 공간(메모리)의 크기</li>
-<li>시간복잡도 : 알고리즘이 동작하는 데에 걸리는 시간또는 연산의 횟수(기기마다 스펙이 다르기 때문에 시간은 잘 안쓰고 보통 횟수를 많이 사용함)</li>
-</ul>
-</li>
-</ol>
-<h2 id="지식"><a href="#지식" class="headerlink" title="[지식]"></a>[지식]</h2><ul>
-<li><p>파이썬 클로저(약간 안정확)</p>
-</li>
-<li><p>파이썬 Generator (튜플이 아님 -&gt; lazy evaluation임. 나중에 실제로 iter하거나 등 그때그때 하나씩만 계산을 함)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># List Comprehension : 얘는 모든 것을 계산해서 미리 만들어 저장해두는 방식</span></span><br><span class="line">a = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]  <span class="comment"># List comprehension</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 미리 값을 만들어두지 않기 때문에(저장을 해두지 않기 때문에) 메모리를 적게 사용</span></span><br><span class="line"><span class="comment"># a 변수에는 iterator가 저장되어있음. x를 계산하는 방법 -&gt; 필요할 때 계산해서 뱉어내는 방식</span></span><br><span class="line">a = (x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>))  <span class="comment"># Generator</span></span><br></pre></td></tr></table></figure></li>
-<li><p>Dictionary Comprehension</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 딕셔너리도 지능형 리스트처럼 구현 가능</span></span><br><span class="line">a = &#123;key:key**<span class="number">2</span> <span class="keyword">for</span> key <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>Lambda expression</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>((<span class="keyword">lambda</span> x: x**<span class="number">2</span>)(<span class="number">10</span>))</span><br></pre></td></tr></table></figure></li>
-<li><p>삼항 연산자</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = <span class="number">20</span></span><br><span class="line">a = <span class="number">1</span> <span class="keyword">if</span> b &gt; <span class="number">0</span> <span class="keyword">else</span> -<span class="number">1</span>  <span class="comment"># 중첩도 가능</span></span><br></pre></td></tr></table></figure></li>
-<li><p>map 함수</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]</span><br><span class="line">a = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x**<span class="number">10</span>, a))   <span class="comment"># map도 lazy evaluation임. 따라서 바로 쓰고 싶으면 list()형으로 변환해놔야 함</span></span><br></pre></td></tr></table></figure></li>
-<li><p>filter 함수</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>)]</span><br><span class="line">a = <span class="built_in">list</span>(<span class="built_in">filter</span>(<span class="keyword">lambda</span> x: x % <span class="number">2</span>, a))    <span class="comment"># map이랑 비슷한데, 왼쪽 함수에 true/false를 리턴하는 함수를 놔둬서 true만 리턴하고 false는 제외해버림</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>&lt;map object&gt;</code> 이런 식으로 뜨는 <code>iterable</code>한 객체들은 한번 iterate하면 다시 사용할 수 없다.</li>
-</ul>
-</li>
-<li><p>클래스</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span>:</span></span><br><span class="line">    cls_var = <span class="number">10</span>  <span class="comment"># 클래스 멤버 변수</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, x</span>):</span></span><br><span class="line">        self.x = x  <span class="comment"># 인스턴스 멤버 변수</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span>(<span class="params">self, y</span>):</span>  <span class="comment"># 인스턴스 메소드</span></span><br><span class="line">        <span class="keyword">return</span> self.x + y</span><br><span class="line"></span><br><span class="line">    <span class="comment">################## 요정도만 ####################</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cls_method</span>(<span class="params">cls, z</span>):</span>  <span class="comment"># 클래스 메소드</span></span><br><span class="line">        <span class="keyword">return</span> cls.cls_var + z</span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">static_method</span>(<span class="params">k</span>):</span>  <span class="comment"># 스태틱 메소드</span></span><br><span class="line">        <span class="keyword">return</span> k</span><br></pre></td></tr></table></figure></li>
-<li><p>Coding Convention</p>
-<ul>
-<li>ClassName : Pascal case(앞자리 소문자는 Camel case)</li>
-<li>method_name, val_name : Snake case</li>
-<li>CONST_NAME : 안변하는 고정 변수</li>
-<li>pep-8(파이썬 코드 권고안)</li>
-<li><code>map</code>이랑 <code>filter</code>를 적절히 채용(for문보다 훨 나음)</li>
-</ul>
-</li>
-<li><p>나쁜 습관</p>
-<ul>
-<li>모든 것을 구현하려고 함</li>
-<li>C언어 스타일… for문 도배</li>
-<li>무조건 최적화</li>
-</ul>
-</li>
-<li><p>Python Ref</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://docs.python.org/3/">https://docs.python.org/3/</a></li>
-<li><a target="_blank" rel="noopener" href="https://devdocs.programmers.co.kr/python/">https://devdocs.programmers.co.kr/python/</a></li>
-</ul>
-</li>
 </ul>
 
       
