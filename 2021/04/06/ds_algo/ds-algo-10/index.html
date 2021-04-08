@@ -23,20 +23,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"dooyeong20.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="Hello there! I’m dooyeong. I’m king king happy Please keep looking my blog! test.py1print(&amp;#x27;my first blog code block!!&amp;#x27;)">
+<meta name="description" content="DP두 가지 조건을 만족해야만 동적프로그래밍이라고 할 수 있다.  Optimal Substructure: 부분 문제들의 최적해가 전체의 최적해를 이루어야 한다. 잘게 쪼개진 부분 그때그때 최적의 선택을 해나간다(그리디 greedy) Optimal Substructure가 아닌데 그리디로 풀면 최적해가 아니게 된다.   Overlapping Sub-Probl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My very new blog">
-<meta property="og:url" content="https://dooyeong20.github.io/2021/03/25/My-very-new-blog/index.html">
+<meta property="og:title" content="ds-algo-10">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/04/06/ds_algo/ds-algo-10/index.html">
 <meta property="og:site_name" content="dooyeong devlog !">
-<meta property="og:description" content="Hello there! I’m dooyeong. I’m king king happy Please keep looking my blog! test.py1print(&amp;#x27;my first blog code block!!&amp;#x27;)">
+<meta property="og:description" content="DP두 가지 조건을 만족해야만 동적프로그래밍이라고 할 수 있다.  Optimal Substructure: 부분 문제들의 최적해가 전체의 최적해를 이루어야 한다. 잘게 쪼개진 부분 그때그때 최적의 선택을 해나간다(그리디 greedy) Optimal Substructure가 아닌데 그리디로 풀면 최적해가 아니게 된다.   Overlapping Sub-Probl">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-25T07:31:01.000Z">
-<meta property="article:modified_time" content="2021-03-31T02:09:03.991Z">
+<meta property="article:published_time" content="2021-04-06T05:00:57.000Z">
+<meta property="article:modified_time" content="2021-04-07T04:01:17.301Z">
 <meta property="article:author" content="dooyeong">
+<meta property="article:tag" content="data structure">
+<meta property="article:tag" content="algorithm">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://dooyeong20.github.io/2021/03/25/My-very-new-blog/">
+<link rel="canonical" href="https://dooyeong20.github.io/2021/04/06/ds_algo/ds-algo-10/">
 
 
 <script class="page-configurations">
@@ -48,7 +50,7 @@
     lang   : 'en'
   };
 </script>
-<title>My very new blog | dooyeong devlog !</title>
+<title>ds-algo-10 | dooyeong devlog !</title>
   
 
 
@@ -134,7 +136,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -147,6 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DP"><span class="nav-number">1.</span> <span class="nav-text">DP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DP-%EC%A2%85%EB%A5%98"><span class="nav-number">1.1.</span> <span class="nav-text">DP 종류</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DP-%ED%99%9C%EC%9A%A9-0-1-%EB%B0%B0%EB%82%AD-%EB%AC%B8%EC%A0%9C-Knapsack"><span class="nav-number">1.2.</span> <span class="nav-text">DP 활용 - 0-1 배낭 문제(Knapsack)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Homework"><span class="nav-number">2.</span> <span class="nav-text">Homework</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -209,7 +212,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/25/My-very-new-blog/">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/06/ds_algo/ds-algo-10/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -222,7 +225,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          My very new blog
+          ds-algo-10
         </h1>
 
         <div class="post-meta-container">
@@ -233,15 +236,24 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-03-25 16:31:01" itemprop="dateCreated datePublished" datetime="2021-03-25T16:31:01+09:00">2021-03-25</time>
+      <time title="Created: 2021-04-06 14:00:57" itemprop="dateCreated datePublished" datetime="2021-04-06T14:00:57+09:00">2021-04-06</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
+        <time title="Modified: 2021-04-07 13:01:17" itemprop="dateModified" datetime="2021-04-07T13:01:17+09:00">2021-04-07</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -253,10 +265,53 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Hello there! I’m dooyeong.</p>
-<p>I’m king king happy</p>
-<p>Please keep looking my blog!</p>
-<figure class="highlight python"><figcaption><span>test.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;my first blog code block!!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+        <h1 id="DP"><a href="#DP" class="headerlink" title="DP"></a>DP</h1><p>두 가지 조건을 만족해야만 동적프로그래밍이라고 할 수 있다.</p>
+<ul>
+<li>Optimal Substructure: 부분 문제들의 최적해가 전체의 최적해를 이루어야 한다.<ul>
+<li>잘게 쪼개진 부분 그때그때 최적의 선택을 해나간다(그리디 greedy)</li>
+<li>Optimal Substructure가 아닌데 그리디로 풀면 최적해가 아니게 된다.</li>
+</ul>
+</li>
+<li>Overlapping Sub-Problems: 동일한 부분 문제가 여러번 발생해야 한다.<ul>
+<li>이 조건이 만족되지 않으면 분할정복(Divide &amp; Conquer) 문제라고 한다.(merge sort, quick sort)</li>
+</ul>
+</li>
+<li>중복되는 연산을 미리 캐싱해 두고, 중복 연산이 발생할 때 마다 참조하여 연산을 줄인다. (Memoization)</li>
+</ul>
+<h2 id="DP-종류"><a href="#DP-종류" class="headerlink" title="DP 종류"></a>DP 종류</h2><ul>
+<li>Top-Down 접근법<ul>
+<li>큰 문제부터 시작하여, 작은 문제로 나누는 접근법</li>
+<li>일반적으로 재귀적으로 구현(Recursion)할 때 사용된다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fibo = <span class="built_in">dict</span>()</span><br><span class="line">fibo[<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line">fibo[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n <span class="keyword">in</span> fibo:</span><br><span class="line">        <span class="keyword">return</span> fibo[n]</span><br><span class="line"></span><br><span class="line">    res = fibonacci(n-<span class="number">1</span>) + fibonacci(n-<span class="number">2</span>)</span><br><span class="line">    fibo[n] = res</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Bottom-Up 접근법<ul>
+<li>문제를 미리 나누어 두고, 작은 문제의 답을 모아 큰 문제를 해결하는 접근법</li>
+<li>일반적으로 반복적으로 구현(Iteration)할 때 사용된다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span>(<span class="params">n</span>):</span></span><br><span class="line">    fibo = [<span class="literal">None</span>] * (n + <span class="number">1</span>)</span><br><span class="line">    fibo[<span class="number">0</span>], fibo[<span class="number">1</span>] = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, n + <span class="number">1</span>):</span><br><span class="line">        fibo[i] = fibo[i - <span class="number">1</span>] + fibo[i - <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fibo[n]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>DP를 너무 naive하게 사용하다보면 O(n)의 공간을 낭비하게 된다.</li>
+</ul>
+<h2 id="DP-활용-0-1-배낭-문제-Knapsack"><a href="#DP-활용-0-1-배낭-문제-Knapsack" class="headerlink" title="DP 활용 - 0-1 배낭 문제(Knapsack)"></a>DP 활용 - 0-1 배낭 문제(Knapsack)</h2><ul>
+<li><p>배낭에 담을 수 있는 무게의 최대값이 정해져 있을 때, 배낭에 담은 짐의 가치가 최대가 되게 하는 문제</p>
+</li>
+<li><p>각 짐은 무게와 가치를 가지고 있으며, 0-1 배낭 문제에서는 짐을 쪼갤 수 없다.</p>
+</li>
+<li><p>dp 반복적으로 다 구하는 것 tabulization</p>
+</li>
+</ul>
+<h1 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h1><p>두 개 다 풀기</p>
+<ul>
+<li>직사각형문제</li>
+<li>도둑질문제</li>
+</ul>
 
     </div>
 
@@ -265,15 +320,22 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/data-structure/" rel="tag"># data structure</a>
+              <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2021/04/05/ds_algo/ds-algo-09/" rel="prev" title="ds-algo-09">
+                  <i class="fa fa-chevron-left"></i> ds-algo-09
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/03/26/ps/TIL-210326-ps/" rel="next" title="BOJ 1715 - 카드 정렬하기">
-                  BOJ 1715 - 카드 정렬하기 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/04/07/ds_algo/ds-algo-11/" rel="next" title="ds-algo-11">
+                  ds-algo-11 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

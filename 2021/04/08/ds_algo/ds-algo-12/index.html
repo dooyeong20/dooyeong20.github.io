@@ -23,20 +23,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"dooyeong20.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="Hello there! I’m dooyeong. I’m king king happy Please keep looking my blog! test.py1print(&amp;#x27;my first blog code block!!&amp;#x27;)">
+<meta name="description" content="이전 시간 (카카오 가사검색) 원래는 O(Q * N * M) 이었는데(dfs를 각각 해줘야하기 때문) 근데 딕셔너리로 각각의 노드마다 하위 단어의 개수를 메모함으로써 O(1)만큼의 탐색시간으로 탐색 가능 즉, 시간복잡도는 O(Q * M)이 됨  Dijkstra Algorithm노드 하나를 기준으로 다른 모든 노드까지 도달하는 최단 거리를 계산하는 알고리즘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="My very new blog">
-<meta property="og:url" content="https://dooyeong20.github.io/2021/03/25/My-very-new-blog/index.html">
+<meta property="og:title" content="ds-algo-12">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/04/08/ds_algo/ds-algo-12/index.html">
 <meta property="og:site_name" content="dooyeong devlog !">
-<meta property="og:description" content="Hello there! I’m dooyeong. I’m king king happy Please keep looking my blog! test.py1print(&amp;#x27;my first blog code block!!&amp;#x27;)">
+<meta property="og:description" content="이전 시간 (카카오 가사검색) 원래는 O(Q * N * M) 이었는데(dfs를 각각 해줘야하기 때문) 근데 딕셔너리로 각각의 노드마다 하위 단어의 개수를 메모함으로써 O(1)만큼의 탐색시간으로 탐색 가능 즉, 시간복잡도는 O(Q * M)이 됨  Dijkstra Algorithm노드 하나를 기준으로 다른 모든 노드까지 도달하는 최단 거리를 계산하는 알고리즘">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-03-25T07:31:01.000Z">
-<meta property="article:modified_time" content="2021-03-31T02:09:03.991Z">
+<meta property="article:published_time" content="2021-04-08T04:40:57.000Z">
+<meta property="article:modified_time" content="2021-04-08T07:57:36.510Z">
 <meta property="article:author" content="dooyeong">
+<meta property="article:tag" content="data structure">
+<meta property="article:tag" content="algorithm">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://dooyeong20.github.io/2021/03/25/My-very-new-blog/">
+<link rel="canonical" href="https://dooyeong20.github.io/2021/04/08/ds_algo/ds-algo-12/">
 
 
 <script class="page-configurations">
@@ -48,7 +50,7 @@
     lang   : 'en'
   };
 </script>
-<title>My very new blog | dooyeong devlog !</title>
+<title>ds-algo-12 | dooyeong devlog !</title>
   
 
 
@@ -134,7 +136,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -147,6 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%B4%EC%A0%84-%EC%8B%9C%EA%B0%84-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EA%B0%80%EC%82%AC%EA%B2%80%EC%83%89"><span class="nav-number">1.</span> <span class="nav-text">이전 시간 (카카오 가사검색)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dijkstra-Algorithm"><span class="nav-number"></span> <span class="nav-text">Dijkstra Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra-%EC%A1%B0%EA%B1%B4"><span class="nav-number">1.</span> <span class="nav-text">Dijkstra 조건</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra-%ED%8A%B9%EC%A7%95"><span class="nav-number">2.</span> <span class="nav-text">Dijkstra 특징</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra-Implement"><span class="nav-number">3.</span> <span class="nav-text">Dijkstra Implement</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Kruskal%E2%80%99s-Algorithm"><span class="nav-number"></span> <span class="nav-text">Kruskal’s Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Kruskal"><span class="nav-number">1.</span> <span class="nav-text">Kruskal</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -209,7 +212,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/25/My-very-new-blog/">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/08/ds_algo/ds-algo-12/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -222,7 +225,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          My very new blog
+          ds-algo-12
         </h1>
 
         <div class="post-meta-container">
@@ -232,16 +235,19 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-03-25 16:31:01" itemprop="dateCreated datePublished" datetime="2021-03-25T16:31:01+09:00">2021-03-25</time>
+      <time title="Created: 2021-04-08 13:40:57 / Modified: 16:57:36" itemprop="dateCreated datePublished" datetime="2021-04-08T13:40:57+09:00">2021-04-08</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
       </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -253,10 +259,57 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Hello there! I’m dooyeong.</p>
-<p>I’m king king happy</p>
-<p>Please keep looking my blog!</p>
-<figure class="highlight python"><figcaption><span>test.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;my first blog code block!!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+        <h2 id="이전-시간-카카오-가사검색"><a href="#이전-시간-카카오-가사검색" class="headerlink" title="이전 시간 (카카오 가사검색)"></a>이전 시간 (카카오 가사검색)</h2><ul>
+<li>원래는 O(Q * N * M) 이었는데(dfs를 각각 해줘야하기 때문)</li>
+<li>근데 딕셔너리로 각각의 노드마다 하위 단어의 개수를 메모함으로써 O(1)만큼의 탐색시간으로 탐색 가능</li>
+<li>즉, 시간복잡도는 O(Q * M)이 됨</li>
+</ul>
+<h1 id="Dijkstra-Algorithm"><a href="#Dijkstra-Algorithm" class="headerlink" title="Dijkstra Algorithm"></a>Dijkstra Algorithm</h1><p><u>노드 하나를 기준</u>으로 다른 모든 노드까지 도달하는 <u>최단 거리</u>를 계산하는 알고리즘</p>
+<ul>
+<li>Vanila Dijkstra는 최단 거리만을 계산, 경로까지 알아내려면 추가 메모리 필요</li>
+<li>간선의 weight를 거리로 계산</li>
+</ul>
+<h2 id="Dijkstra-조건"><a href="#Dijkstra-조건" class="headerlink" title="Dijkstra 조건"></a>Dijkstra 조건</h2><ul>
+<li>그래프의 내 간선(edge) 중 음수 값이 없을 때에 사용 가능<ul>
+<li>무향 그래프의 경우, 음수로 연결된 노드 사이에서 이동시 계속 음의 무한대로 발산해버림</li>
+</ul>
+</li>
+<li>그래프는 <u>유향 그래프, 무향 그래프</u> 모두 사용 가능</li>
+</ul>
+<h2 id="Dijkstra-특징"><a href="#Dijkstra-특징" class="headerlink" title="Dijkstra 특징"></a>Dijkstra 특징</h2><ul>
+<li><p><u>Greed Algorithm</u>이면서, <u>Dynamic Programming</u> 기법을 사용</p>
+</li>
+<li><p>원리</p>
+<ul>
+<li>가장 가중치가 작은 간선부터 하나씩 탐색 (Greed Algorithm)</li>
+<li>탐색 과정에서 최단 거리를 기억하여, 이를 누적하여 빠르게 최단 거리 계산 (Dynamic Programming)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Dijkstra-Implement"><a href="#Dijkstra-Implement" class="headerlink" title="Dijkstra Implement"></a>Dijkstra Implement</h2><ol>
+<li>각 Node에 도달하는 최소 거리를 기억하기 위한 배열 distance를 생성하고, 무한대 값으로 초기화</li>
+<li>Start Node에서 해당 Node까지의 거리를 정렬 기준으로 하는 Min Heap 생성</li>
+<li>Start Node를 Min Heap에 삽입 (자기 자신까지의 거리는 0)</li>
+<li>Min Heap에 Node가 있는 동안 반복</li>
+<li>Min Heap에서 Node를 하나 꺼낸다.</li>
+<li>Min Heap에 기록된 거리가 distance에 저장된 해당 Node까지의 거리보다 길면 건너뛴다.(최적화 기법)</li>
+<li>Node의 Adjacent Node들에 대하여 아래 기능 수행</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># distance[node] min_heap에서 뽑은 것</span></span><br><span class="line">new_distance = distance[node] + dist[node][adj_node]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> new_distance &lt; distance[adj_node]: <span class="comment"># min_heap에서 뽑은게 더 좋은거라면</span></span><br><span class="line">                                      <span class="comment"># 만약 음수가 허용이 된다면, 가정(거리가 증가해가며 맞춰간다는 가정)이 깨짐</span></span><br><span class="line">distance[adj_node] = new_distance</span><br><span class="line">min_heap.add(adj_node)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Kruskal’s-Algorithm"><a href="#Kruskal’s-Algorithm" class="headerlink" title="Kruskal’s Algorithm"></a>Kruskal’s Algorithm</h1><p>어느 그래프의 Subgraph 중, 다음 조건을 만족하는 그래프</p>
+<ul>
+<li>본 그래프의 모든 노드를 포함한다.</li>
+<li>모든 노드가 서로 연결되어 있다. (Connected graph)</li>
+<li>사이클이 존재하지 않는다.</li>
+<li>위 조건들을 만족하는 그래프 중 간선 가중치의 합이 최소인 그래프</li>
+</ul>
+<h2 id="Kruskal"><a href="#Kruskal" class="headerlink" title="Kruskal"></a>Kruskal</h2><ul>
+<li>같은 그래프에 있는 노드끼리 연결되면 사이클이 생긴다.<ul>
+<li>같은 그래프에 있는지 확인을 해주어야 함</li>
+</ul>
+</li>
+</ul>
 
     </div>
 
@@ -265,16 +318,20 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/data-structure/" rel="tag"># data structure</a>
+              <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/2021/04/07/ds_algo/ds-algo-11/" rel="prev" title="ds-algo-11">
+                  <i class="fa fa-chevron-left"></i> ds-algo-11
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/03/26/ps/TIL-210326-ps/" rel="next" title="BOJ 1715 - 카드 정렬하기">
-                  BOJ 1715 - 카드 정렬하기 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
