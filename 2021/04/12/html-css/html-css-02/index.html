@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"dooyeong20.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+<meta name="description" content="HTML 문법기본 형태요소, 태그로 이루어져 있음. 태그와 요소는 거의 같은 것 12345678&lt;TAG&gt;CONTENT&lt;&#x2F;TAG&gt;&lt;h1&gt;토끼와 거북이&lt;&#x2F;h1&gt;&lt;p&gt;옛날 옛적에 토끼와 거북이가 살았습니다 ...&lt;&#x2F;p&gt;&lt;!-- 다음과 같이 이해할 수 있습니다. --&gt;&lt;주제1&gt;토">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML 기본 문법">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/04/12/html-css/html-css-02/index.html">
+<meta property="og:site_name" content="dooyeong devlog !">
+<meta property="og:description" content="HTML 문법기본 형태요소, 태그로 이루어져 있음. 태그와 요소는 거의 같은 것 12345678&lt;TAG&gt;CONTENT&lt;&#x2F;TAG&gt;&lt;h1&gt;토끼와 거북이&lt;&#x2F;h1&gt;&lt;p&gt;옛날 옛적에 토끼와 거북이가 살았습니다 ...&lt;&#x2F;p&gt;&lt;!-- 다음과 같이 이해할 수 있습니다. --&gt;&lt;주제1&gt;토">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-12T02:00:06.000Z">
+<meta property="article:modified_time" content="2021-04-12T02:19:11.514Z">
+<meta property="article:author" content="dooyeong">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-02/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>HTML 기본 문법 | dooyeong devlog !</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">dooyeong devlog !</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-%EB%AC%B8%EB%B2%95"><span class="nav-number">1.</span> <span class="nav-text">HTML 문법</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EA%B8%B0%EB%B3%B8-%ED%98%95%ED%83%9C"><span class="nav-number">1.1.</span> <span class="nav-text">기본 형태</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%86%8D%EC%84%B1%EA%B3%BC-%EA%B0%92"><span class="nav-number">1.2.</span> <span class="nav-text">속성과 값</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%B6%80%EB%AA%A8-%EC%9E%90%EC%8B%9D-%EC%9A%94%EC%86%8C"><span class="nav-number">1.3.</span> <span class="nav-text">부모, 자식 요소</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">dooyeong</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTML 기본 문법
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-12 11:00:06 / Modified: 11:19:11" itemprop="dateCreated datePublished" datetime="2021-04-12T11:00:06+09:00">2021-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="HTML-문법"><a href="#HTML-문법" class="headerlink" title="HTML 문법"></a>HTML 문법</h1><h2 id="기본-형태"><a href="#기본-형태" class="headerlink" title="기본 형태"></a>기본 형태</h2><p>요소, 태그로 이루어져 있음. 태그와 요소는 거의 같은 것</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TAG</span>&gt;</span>CONTENT<span class="tag">&lt;/<span class="name">TAG</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>토끼와 거북이<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>옛날 옛적에 토끼와 거북이가 살았습니다 ...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 다음과 같이 이해할 수 있습니다. --&gt;</span></span><br><span class="line">&lt;주제1&gt;토끼와 거북이&lt;/주제1&gt;</span><br><span class="line">&lt;문단&gt;옛날 옛적에 토끼와 거북이가 살았습니다 ...&lt;/문단&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>태그는 열리고(open) 닫히는(close) 태그 구조를 가지고 있으며 이는 한 쌍</li>
+</ul>
+<h2 id="속성과-값"><a href="#속성과-값" class="headerlink" title="속성과 값"></a>속성과 값</h2><p>태그(요소)의 기능을 확장하기 위해 ‘속성’을 사용</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TAG</span> 속성=<span class="string">&quot;값&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">TAG</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./my_photo.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;내 프로필 사진&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;name&quot;</span>&gt;</span>홍길동<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 다음과 같이 이해할 수 있습니다. --&gt;</span></span><br><span class="line">&lt;이미지삽입 소스위치=&quot;./my_photo.jpg&quot; 대체텍스트=&quot;내 프로필 사진&quot; /&gt;</span><br><span class="line">&lt;의미없는분할 태그별명=&quot;name&quot;&gt;홍길동&lt;/의미없는분할&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>&lt;img /&gt;</code>는 이미지를 삽입할 때 사용하는 태그</li>
+<li>src(source)라는 속성을 사용해서 삽입할 이미지의 경로를 지정</li>
+<li>alt(alternative)라는 속성은 이미지를 출력하지 못하는 상황에 이미지 대신 보여질 텍스트를 지정</li>
+<li><code>&lt;div&gt;&lt;/div&gt;</code>는 의미를 가지지 않는 태그</li>
+<li>닫히는 태그가 없으면 빈 태그(Empty Tag)</li>
+</ul>
+<h2 id="부모-자식-요소"><a href="#부모-자식-요소" class="headerlink" title="부모, 자식 요소"></a>부모, 자식 요소</h2><p>태그A가 태그B의 콘텐츠로 사용되면, 태그B는 태그A의 부모 요소, 태그A는 태그B의 자식 요소</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">PARENT</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">CHILD</span>&gt;</span><span class="tag">&lt;/<span class="name">CHILD</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">PARENT</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">&quot;fruits&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>과일 목록<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>사과<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>딸기<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>바나나<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>오렌지<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 다음과 같이 이해할 수 있습니다. --&gt;</span></span><br><span class="line">&lt;섹션영역 태그별명=&quot;fruits&quot;&gt;</span><br><span class="line">  &lt;주제1&gt;과일 목록&lt;/주제1&gt;</span><br><span class="line">  &lt;순서없는목록&gt;</span><br><span class="line">    &lt;항목&gt;사과&lt;/항목&gt;</span><br><span class="line">    &lt;항목&gt;딸기&lt;/항목&gt;</span><br><span class="line">    &lt;항목&gt;바나나&lt;/항목&gt;</span><br><span class="line">    &lt;항목&gt;오렌지&lt;/항목&gt;</span><br><span class="line">  &lt;/순서없는목록&gt;</span><br><span class="line">&lt;/섹션영역&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>&lt;ul&gt;</code>은 <code>&lt;section&gt;</code>의 자식 요소이면서 <code>&lt;li&gt;</code>의 부모 요소</li>
+<li>부모보다 높다면 조상(상위)요소</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/html/" rel="tag"># html</a>
+              <a href="/tags/css/" rel="tag"># css</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/12/html-css/html-css-01/" rel="prev" title="HTML/CSS/JavaScript와 웹 표준, 접근성">
+                  <i class="fa fa-chevron-left"></i> HTML/CSS/JavaScript와 웹 표준, 접근성
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/04/12/html-css/html-css-03/" rel="next" title="CSS 기본 문법과 선택자">
+                  CSS 기본 문법과 선택자 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dooyeong</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

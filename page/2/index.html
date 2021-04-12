@@ -155,18 +155,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -195,6 +195,810 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/03/ps/ps-210403/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/03/ps/ps-210403/" class="post-title-link" itemprop="url">Programmers - 괄호변환</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-03 17:04:23 / Modified: 17:07:34" itemprop="dateCreated datePublished" datetime="2021-04-03T17:04:23+09:00">2021-04-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Problem-Solving-관호변환-Level-2"><a href="#Problem-Solving-관호변환-Level-2" class="headerlink" title="Problem Solving - 관호변환 (Level 2)"></a>Problem Solving - 관호변환 (Level 2)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/60058">[Link]</a></h3><p>카카오에 신입 개발자로 입사한 “콘”은 선배 개발자로부터 개발역량 강화를 위해 다른 개발자가 작성한 소스 코드를 분석하여 문제점을 발견하고 수정하라는 업무 과제를 받았습니다. 소스를 컴파일하여 로그를 보니 대부분 소스 코드 내 작성된 괄호가 개수는 맞지만 짝이 맞지 않은 형태로 작성되어 오류가 나는 것을 알게 되었습니다.<br>수정해야 할 소스 파일이 너무 많아서 고민하던 “콘”은 소스 코드에 작성된 모든 괄호를 뽑아서 올바른 순서대로 배치된 괄호 문자열을 알려주는 프로그램을 다음과 같이 개발하려고 합니다.</p>
+<p>용어의 정의<br>‘(‘ 와 ‘)’ 로만 이루어진 문자열이 있을 경우, ‘(‘ 의 개수와 ‘)’ 의 개수가 같다면 이를 균형잡힌 괄호 문자열이라고 부릅니다.<br>그리고 여기에 ‘(‘와 ‘)’의 괄호의 짝도 모두 맞을 경우에는 이를 올바른 괄호 문자열이라고 부릅니다.<br>예를 들어, “(()))(“와 같은 문자열은 “균형잡힌 괄호 문자열” 이지만 “올바른 괄호 문자열”은 아닙니다.<br>반면에 “(())()”와 같은 문자열은 “균형잡힌 괄호 문자열” 이면서 동시에 “올바른 괄호 문자열” 입니다.</p>
+<p>‘(‘ 와 ‘)’ 로만 이루어진 문자열 w가 “균형잡힌 괄호 문자열” 이라면 다음과 같은 과정을 통해 “올바른 괄호 문자열”로 변환할 수 있습니다.</p>
+<ol>
+<li>입력이 빈 문자열인 경우, 빈 문자열을 반환합니다.</li>
+<li>문자열 w를 두 “균형잡힌 괄호 문자열” u, v로 분리합니다. 단, u는 “균형잡힌 괄호 문자열”로 더 이상 분리할 수 없어야 하며, v는 빈 문자열이 될 수 있습니다.</li>
+<li>문자열 u가 “올바른 괄호 문자열” 이라면 문자열 v에 대해 1단계부터 다시 수행합니다.<br>3-1. 수행한 결과 문자열을 u에 이어 붙인 후 반환합니다.</li>
+<li>문자열 u가 “올바른 괄호 문자열”이 아니라면 아래 과정을 수행합니다.<br>4-1. 빈 문자열에 첫 번째 문자로 ‘(‘를 붙입니다.<br>4-2. 문자열 v에 대해 1단계부터 재귀적으로 수행한 결과 문자열을 이어 붙입니다.<br>4-3. ‘)’를 다시 붙입니다.<br>4-4. u의 첫 번째와 마지막 문자를 제거하고, 나머지 문자열의 괄호 방향을 뒤집어서 뒤에 붙입니다.<br>4-5. 생성된 문자열을 반환합니다.<br>“균형잡힌 괄호 문자열” p가 매개변수로 주어질 때, 주어진 알고리즘을 수행해 “올바른 괄호 문자열”로 변환한 결과를 return 하도록 solution 함수를 완성해 주세요.</li>
+</ol>
+<p>매개변수 설명<br>p는 ‘(‘ 와 ‘)’ 로만 이루어진 문자열이며 길이는 2 이상 1,000 이하인 짝수입니다.<br>문자열 p를 이루는 ‘(‘ 와 ‘)’ 의 개수는 항상 같습니다.<br>만약 p가 이미 “올바른 괄호 문자열”이라면 그대로 return 하면 됩니다.</p>
+<h3 id="2-입력-출력"><a href="#2-입력-출력" class="headerlink" title="2. 입력/출력"></a>2. 입력/출력</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p	            result</span><br><span class="line"></span><br><span class="line">&quot;(()())()&quot;	    &quot;(()())()&quot;</span><br><span class="line">&quot;)(&quot;	        &quot;()&quot;</span><br><span class="line">&quot;()))((()&quot;	    &quot;()(())()&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-풀이"><a href="#3-풀이" class="headerlink" title="3. 풀이"></a>3. 풀이</h3><p>문제는 재귀의 구현능력을 보는 문제였던 것 같다.<br>어떻게 재귀를 구현해야하는지 넘버링이 잘 되어있기 때문에 그냥 변환과정대로만 구현하면 되는 문제였다.</p>
+<p>올바른 문자열인지 구하는 메서드를 구현해 아래 코드와 같이 재귀적으로 문제를 풀어주었다.</p>
+<h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">p</span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">is_correct</span>(<span class="params">st</span>):</span></span><br><span class="line">        s = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> ch <span class="keyword">in</span> st:</span><br><span class="line">            <span class="keyword">if</span> ch  == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">                s.append(ch)</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> s <span class="keyword">and</span> s[-<span class="number">1</span>] == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">                s.pop()</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> <span class="keyword">not</span> s <span class="keyword">else</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> p == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">        <span class="keyword">return</span> p</span><br><span class="line"></span><br><span class="line">    cnt = <span class="number">0</span></span><br><span class="line">    u, v = <span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span></span><br><span class="line">    u_end = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> p:</span><br><span class="line">        <span class="keyword">if</span> ch == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">            cnt += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            cnt -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> u_end:</span><br><span class="line">            u += ch</span><br><span class="line">            <span class="keyword">if</span> cnt == <span class="number">0</span>:</span><br><span class="line">                u_end = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            v += ch</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> is_correct(u):</span><br><span class="line">        <span class="keyword">return</span> u + solution(v)</span><br><span class="line"></span><br><span class="line">    tmp = <span class="string">&#x27;(&#x27;</span> + solution(v) + <span class="string">&#x27;)&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(u)-<span class="number">1</span>):</span><br><span class="line">        tmp += <span class="string">&#x27;(&#x27;</span> <span class="keyword">if</span> u[i] == <span class="string">&#x27;)&#x27;</span> <span class="keyword">else</span> <span class="string">&#x27;)&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> tmp</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/02/ps/ps-210402/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/02/ps/ps-210402/" class="post-title-link" itemprop="url">Programmers - 징검다리</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-02 21:16:23 / Modified: 21:24:19" itemprop="dateCreated datePublished" datetime="2021-04-02T21:16:23+09:00">2021-04-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Problem-Solving-징검다리-Level-4"><a href="#Problem-Solving-징검다리-Level-4" class="headerlink" title="Problem Solving - 징검다리 (Level 4)"></a>Problem Solving - 징검다리 (Level 4)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/43236">[Link]</a></h3><p>출발지점부터 distance만큼 떨어진 곳에 도착지점이 있습니다. 그리고 그사이에는 바위들이 놓여있습니다. 바위 중 몇 개를 제거하려고 합니다.<br>예를 들어, 도착지점이 25만큼 떨어져 있고, 바위가 [2, 14, 11, 21, 17] 지점에 놓여있을 때 바위 2개를 제거하면 출발지점, 도착지점, 바위 간의 거리가 아래와 같습니다.</p>
+<p>제거한 바위의 위치 각 바위 사이의 거리 거리의 최솟값</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[21, 17]	[2, 9, 3, 11]	2</span><br><span class="line">[2, 21]	    [11, 3, 3, 8]	3</span><br><span class="line">[2, 11]	    [14, 3, 4, 4]	3</span><br><span class="line">[11, 21]	[2, 12, 3, 8]	2</span><br><span class="line">[2, 14] 	[11, 6, 4, 4]	4</span><br></pre></td></tr></table></figure>
+
+<p>위에서 구한 거리의 최솟값 중에 가장 큰 값은 4입니다.</p>
+<p>출발지점부터 도착지점까지의 거리 distance, 바위들이 있는 위치를 담은 배열 rocks, 제거할 바위의 수 n이 매개변수로 주어질 때, 바위를 n개 제거한 뒤 각 지점 사이의 거리의 최솟값 중에 가장 큰 값을 return 하도록 solution 함수를 작성해주세요.</p>
+<p>제한사항<br>도착지점까지의 거리 distance는 1 이상 1,000,000,000 이하입니다.<br>바위는 1개 이상 50,000개 이하가 있습니다.<br>n 은 1 이상 바위의 개수 이하입니다.</p>
+<h3 id="2-입력-출력"><a href="#2-입력-출력" class="headerlink" title="2. 입력/출력"></a>2. 입력/출력</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">distance	rocks	                n	return</span><br><span class="line">25          [2, 14, 11, 21, 17]     2   4</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-풀이"><a href="#3-풀이" class="headerlink" title="3. 풀이"></a>3. 풀이</h3><p>문제의 카테고리가 이분탐색인 것을 알고 있는 상태로 풀이를 시작했지만, 어떻게 구현해야 하는지 감이 잘 오지 않는 문제였다. 하지만 징검다리를 지우고 <code>distance</code>를 구해주는 것이 아닌, <code>distance</code>를 가지고 지울 징검다리의 개수를 얻어 이분탐색을 진행해야 한다는 힌트를 얻은 뒤 아래와 같이 구현하였다.</p>
+<p>먼저 <code>distance</code>를 구해주기 위해 최솟값인 0부터 최대값인 1000000000 사이를 이분탐색 해주었는데, 해당 <code>distance</code>를 징검다리에 적용했을 때 몇 개의 징검다리가 삭제되어야 하는지를 활용해 탐색해주었다.</p>
+<p>그리고 가능한 값 중 최댓값을 구해야하는 것에 주의해주어야 한다.</p>
+<h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">distance, rocks, n</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_count</span>(<span class="params">dis</span>):</span></span><br><span class="line">        prev = <span class="number">0</span></span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> r <span class="keyword">in</span> rocks:</span><br><span class="line">            <span class="keyword">if</span> r - prev &lt; dis:</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                prev = r</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> cnt</span><br><span class="line"></span><br><span class="line">    ans = <span class="number">0</span></span><br><span class="line">    l, r = <span class="number">0</span>, <span class="number">1000000000</span></span><br><span class="line">    rocks.sort()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> l &lt;= r:</span><br><span class="line">        m = (l + r) // <span class="number">2</span></span><br><span class="line">        tmp_cnt = get_count(m)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> tmp_cnt &lt;= n:</span><br><span class="line">            l = m + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            r = m - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> l - <span class="number">1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/01/ds_algo/ds-algo-08/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/01/ds_algo/ds-algo-08/" class="post-title-link" itemprop="url">ds-algo-_08</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-04-01 13:49:57" itemprop="dateCreated datePublished" datetime="2021-04-01T13:49:57+09:00">2021-04-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-05 14:11:18" itemprop="dateModified" datetime="2021-04-05T14:11:18+09:00">2021-04-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="탐색"><a href="#탐색" class="headerlink" title="탐색"></a>탐색</h1><p>Search Algorithms</p>
+<ul>
+<li><p>원하는 조건에 맞는 자료를 찾는 것을 탐색 알고리즘이라고 한다</p>
+</li>
+<li><p>자료가 정렬되어있지 않다면, 이분 탐색이 불가능하다.</p>
+</li>
+<li><p>미분가능하고 연속적이면 수치해석(?)</p>
+</li>
+</ul>
+<h2 id="선형-탐색"><a href="#선형-탐색" class="headerlink" title="선형 탐색"></a>선형 탐색</h2><ul>
+<li>순차 탐색(Sequential Search)</li>
+<li>순서대로 하나씩 비교 -&gt; O(n)</li>
+</ul>
+<h2 id="이분-탐색"><a href="#이분-탐색" class="headerlink" title="이분 탐색"></a>이분 탐색</h2><ul>
+<li>이진 탐색</li>
+<li>자료가 정렬되어 있을 때 적용 가능 (요소 중복 가능)</li>
+<li>탐색 범위를 절반씩 줄여가며 탐색 -&gt; O(logn)</li>
+<li>bst의 best 케이스라고도 볼 수 있음</li>
+<li>bst는 삽입할 때 logN, 검색할 때 logN이 걸린다<ul>
+<li>자료가 추가가 되면서 자동적으로 정렬이 되기 때문에(logN) 좋다</li>
+</ul>
+</li>
+<li>리스트에는 자료를 추가해 이분탐색하려면 O(nlogn)이 걸리기 때문에 데이터 추가나 삭제 등을 고려하지는 않고 탐색용이다</li>
+</ul>
+<h1 id="해시"><a href="#해시" class="headerlink" title="해시"></a>해시</h1><p>넓은 범위의 값이 주어졌을 때 특정 범위(값)으로 좁힌 값을 도출<br>모듈러 연산(%)도 간단한 해시 값에 해당한다</p>
+<ul>
+<li><p>해시, 해시 값</p>
+</li>
+<li><p>동일 입력에 대해 동일 출력을 보장</p>
+<ul>
+<li>다른 입력에 대해서도 동일한 출력이 발생할 수 있음(충돌)</li>
+</ul>
+</li>
+<li><p>해시 값의 범위를 좁히는 것과 해시 충돌이 일어나지 않도록 하는 것은 반비례한다. (비둘기 집의 원리(?))</p>
+</li>
+<li><p>임의 접근이 가능해진다</p>
+</li>
+</ul>
+<h2 id="해시-성능에-영향을-주는-요소들-trade-off-관계에-있다"><a href="#해시-성능에-영향을-주는-요소들-trade-off-관계에-있다" class="headerlink" title="해시 성능에 영향을 주는 요소들(trade off 관계에 있다)"></a>해시 성능에 영향을 주는 요소들(trade off 관계에 있다)</h2><ol>
+<li>해시함수의 동작 시간(해시를 계산하는데 걸리는 시간)</li>
+<li>해시 충돌의 발생 확률</li>
+<li>해시 값의 범위 (부작용이 없다면 범위가 작을수록 좋다)</li>
+</ol>
+<h2 id="해시-셋-set"><a href="#해시-셋-set" class="headerlink" title="해시 셋(set)"></a>해시 셋(set)</h2><p>파이썬에서 set으로 바꿔주면 in 연산을 통해 O(1)의 시간복잡도로 데이터의 유무를 파악할 수 있다.</p>
+<h2 id="해시-충돌"><a href="#해시-충돌" class="headerlink" title="해시 충돌"></a>해시 충돌</h2><ul>
+<li>Bucket 에 담는 과정에서도(index 계산한다 등등) 해시 충돌이 일어날 수 있다</li>
+<li>일반적으로 자료 저장 인덱스는 bucekt 사이즈로 모듈러 연산으로 구한다</li>
+</ul>
+<h1 id="숙제"><a href="#숙제" class="headerlink" title="숙제"></a>숙제</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/43236">프로그래머스 징검다리 문제</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/31/ds_algo/ds-algo-07/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/31/ds_algo/ds-algo-07/" class="post-title-link" itemprop="url">ds-algo-_07</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-03-31 13:56:57" itemprop="dateCreated datePublished" datetime="2021-03-31T13:56:57+09:00">2021-03-31</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-05 14:11:16" itemprop="dateModified" datetime="2021-04-05T14:11:16+09:00">2021-04-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="이전-강의"><a href="#이전-강의" class="headerlink" title="이전 강의"></a>이전 강의</h1><ul>
+<li><p>in-place 알고리즘 : O(logN) 보다 작은 공간 복잡도</p>
+<ul>
+<li>swap만으로 되면 in-place가 됨</li>
+<li>만약에 공간을 할당해야하면 in-place가 안된다(merge sort)</li>
+</ul>
+</li>
+<li><p>Stable 알고리즘 : 기존의 순서가 유지 되는 것(기준이 여러개 있을 때)</p>
+</li>
+<li><p>버블 소트</p>
+<ul>
+<li><code>swaped = False</code> 는 매우 중요한 최적화 요소이다</li>
+</ul>
+</li>
+<li><p>삽입 정렬(insertion sort)</p>
+<ul>
+<li>넣을 자리를 찾아가는 과정 + 찾으면 그 자리에 삽입</li>
+</ul>
+</li>
+</ul>
+<h1 id="선택-정렬-selection-sort"><a href="#선택-정렬-selection-sort" class="headerlink" title="선택 정렬(selection sort)"></a>선택 정렬(selection sort)</h1><p>버블 소트를 거꾸로 해놓은것과 비슷하게 보임<br>하지만 버블 소트는 인접한 것끼리 비교당하면서 밀려서 끝으로 가는데, 선택정렬은 리스트의 최소 값을 찾아 맨 앞과 교체</p>
+<ul>
+<li>버블소트보다 swap 이 더 적게 일어남</li>
+<li>형식적으로보면 재귀적(?)</li>
+<li>얘도 in-place임</li>
+</ul>
+<h2 id="시간-복잡도"><a href="#시간-복잡도" class="headerlink" title="시간 복잡도"></a>시간 복잡도</h2><ul>
+<li>최선, 최악, 평균 : 모두 O(n^2)</li>
+<li>최선의 경우에는 시간복잡도는 그대로지만, swap연산이 일어나지 않을 수는 있음</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">selection_sort</span>(<span class="params">x</span>):</span></span><br><span class="line">    length = <span class="built_in">len</span>(x)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length-<span class="number">1</span>):</span><br><span class="line">        index_min = i</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i+<span class="number">1</span>, length):</span><br><span class="line">            <span class="keyword">if</span> x[index_min] &gt; x[j]:</span><br><span class="line">                index_min = j</span><br><span class="line">        x[i], x[index_min] = x[index_min], x[i]</span><br><span class="line">    <span class="keyword">return</span> x</span><br></pre></td></tr></table></figure>
+
+<h1 id="머지-소트"><a href="#머지-소트" class="headerlink" title="머지 소트"></a>머지 소트</h1><p>머지 소트를 응용하는 하이브리드 개념의 소팅에 많이 쓰인다</p>
+<ul>
+<li>속도가 빠름에도 불구하고 <code>Stable</code> 알고리즘이다</li>
+<li>비교가 O(logN)만큼 진행된다</li>
+</ul>
+<h2 id="머지-소트-알고리즘"><a href="#머지-소트-알고리즘" class="headerlink" title="머지 소트 알고리즘"></a>머지 소트 알고리즘</h2><ul>
+<li>정렬되지 않은 리스트는 두 부분(n 부분) 리스트로 나눔<ul>
+<li>길이가 (0이나) 1인 경우는 정렬된 1짜리 리스트로 본다</li>
+</ul>
+</li>
+<li>나눠진 부분 리스트들을 합병해나가며 정렬된 임시 배열에 저장<ul>
+<li>정렬한 리스트들을 저장할 공간이 필요한 이유는, 이미 있는 공간에 덮어써버리면 안되기 때문</li>
+</ul>
+</li>
+<li>재귀 구현하기 적합함</li>
+<li>공간 복잡도: O(n) !!</li>
+<li>시간 복잡도: O(nlogn)<ul>
+<li>나눌 때 log(n)</li>
+<li>합병할 때(비교할 때) n</li>
+</ul>
+</li>
+</ul>
+<h1 id="퀵-소트-Quick-Sort"><a href="#퀵-소트-Quick-Sort" class="headerlink" title="퀵 소트(Quick Sort)"></a>퀵 소트(Quick Sort)</h1><p>핵심은 <code>pivot</code> !!</p>
+<ul>
+<li><p>하나의 <code>pivot</code>(아무거나 선택 가능)을 선택해 이를 기준으로 작은 값을 좌측, 큰 값을 우측에 배치함</p>
+</li>
+<li><p>좌측, 우측에 대해 재귀적으로 반복 진행</p>
+</li>
+<li><p>만약 운이 나빠서 이미 정렬된 상태에서, 가장 작은 값으로 <code>pivot</code>이 계속 선택된다면, selection sort와 같아지게 된다. (O(n^2))</p>
+</li>
+<li><p>공간복잡도: O(logN)이지만, 구현방법에 따라 O(1)로도 구현할 수 있다(?)</p>
+</li>
+<li><p>시간복잡도</p>
+<ul>
+<li>최선: O(nlogN)</li>
+<li>최악: O(n^2)</li>
+<li>평균: O(nlogN)</li>
+</ul>
+</li>
+</ul>
+<h1 id="팀소트-Timsort"><a href="#팀소트-Timsort" class="headerlink" title="팀소트(Timsort)"></a>팀소트(Timsort)</h1><p>엄청나게 유명한 하이브리드 알고리즘</p>
+<ul>
+<li><p>Java SE 7, Android, GNU Octave, Chrome V8, Swift, Rust, Python 등에 적용된 정렬 알고리즘</p>
+</li>
+<li><p>Insertion Sort와 Merge Sort를 결합하여 만든 알고리즘<br>작은 영역에 대해서 Insertion Sort를 수행하고, 이것을 Merge Sort하여 최적화</p>
+</li>
+<li><p>Insertion 이 O(n^2)이긴 하지만, n이 작은 상태에서는 지역성의 특정을 가지기 때문에 n이 충분히 작을 때는 insertion sort를 사용</p>
+<ul>
+<li>지역성: memory cache hit가 많이 발생하는 것</li>
+</ul>
+</li>
+<li><p>공간복잡도 : O(n)</p>
+</li>
+<li><p>시간복잡도</p>
+<ul>
+<li>최악의 경우: O(nlogn)</li>
+<li>최선의 경우: O(n) (이미 정렬이 되어있는 경우 insertion sort가 O(n))</li>
+<li>평균적인 경우: O(nlogn)</li>
+</ul>
+</li>
+</ul>
+<h1 id="재귀-호출"><a href="#재귀-호출" class="headerlink" title="재귀 호출"></a>재귀 호출</h1><p>함수가 자기 자신을 구현</p>
+<ul>
+<li>재귀는 무조건 iteration으로 바꿀 수 있다</li>
+<li>재귀식은이라고도 부르고, 수열의 항 사이의 관계를 나타냄</li>
+<li>수열을 n에 대한 식으로 표현하는 것을 ‘풀이한다’고 한다</li>
+<li>탈출조건이 반드시, 무조건 필요하다<ul>
+<li>탈출조건: 잘게 쪼개져서 풀 필요가 없을 때</li>
+<li>trivial, tidious 하다 라고 표현함</li>
+</ul>
+</li>
+<li>점화식에 의거하여 재귀 호출을 수행<ul>
+<li>입력 파라미터를 달리하여, 결국 탈출 조건에 도달</li>
+</ul>
+</li>
+</ul>
+<h2 id="top-down-bottom-up"><a href="#top-down-bottom-up" class="headerlink" title="top-down, bottom-up"></a>top-down, bottom-up</h2><ul>
+<li><p>top-down: 큰 것부터 잘게 쪼개가며 해결하는 것</p>
+<ul>
+<li>작은 문제를 호출해가며(쪼개나가며) 작은 문제를 풀어 합쳐 올라감</li>
+</ul>
+</li>
+<li><p>bottom-up: 작은 것부터 확장해나가는 것</p>
+<ul>
+<li>문제를 다 쪼개놓은 상태에서 맞춰 올라나감</li>
+</ul>
+</li>
+<li><p>작은 문제부터 푸는 것은 매한가지임</p>
+</li>
+</ul>
+<h2 id="재귀-문제점"><a href="#재귀-문제점" class="headerlink" title="재귀 문제점"></a>재귀 문제점</h2><ul>
+<li>여러번 재귀 호출이 발생하는 경우, 기하급수적으로 호출 횟수가 증가한다.</li>
+<li>함수 호출 스택(Function call stack)의 크기에 제한이 있어, 일정 횟수 이상 호출이 불가하다.</li>
+<li>실질적인 계산에 필요한 연산보다, 함수 호출에 의한 Overhead가 발생한다.</li>
+</ul>
+<p>그래서 예를 들어 피보나치 수를 bottom-up으로 구현하면 종료조건 대신 초깃값을 설정해주면서 시작한다</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span>(<span class="params">n</span>):</span></span><br><span class="line">    fn_1, fn = <span class="number">0</span>, <span class="number">1</span>  <span class="comment"># 초기값 설정</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> fn_1</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> fn</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, n + <span class="number">1</span>):  <span class="comment"># 반복문 구현</span></span><br><span class="line">        fn_1, fn = fn, fn_1 + fn</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fn</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tail-Recursion"><a href="#Tail-Recursion" class="headerlink" title="Tail Recursion"></a>Tail Recursion</h2><p>재귀 함수에서, 재귀 호출이 마지막에 딱 한번만 수행되는 것</p>
+<ul>
+<li>컴파일러에서 최적화를 지원하면, 함수 호출 스택을 낭비하지 않는다<ul>
+<li>python은 지원하지 않는</li>
+</ul>
+</li>
+<li>함수 호출 스택을 재활용</li>
+</ul>
+<p>예시</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 재귀 최적화</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span>(<span class="params">n, a=<span class="number">0</span>, b=<span class="number">1</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> b</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fibonacci(n-<span class="number">1</span>, b, a+b)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 일반적 재귀</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span>(<span class="params">n</span>):</span></span><br><span class="line">  <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> fibonacci(n-<span class="number">1</span>) + fibonacci(n-<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h1><ul>
+<li>퀵 소트 : 메모리 O(1)로 구현하기 (스왑해야 함)</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/30/ds_algo/ds-algo-06/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/30/ds_algo/ds-algo-06/" class="post-title-link" itemprop="url">ds-algo-_06</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-03-30 16:56:57" itemprop="dateCreated datePublished" datetime="2021-03-30T16:56:57+09:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-05 14:11:12" itemprop="dateModified" datetime="2021-04-05T14:11:12+09:00">2021-04-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="이전-강의"><a href="#이전-강의" class="headerlink" title="이전 강의"></a>이전 강의</h1><h2 id="이진-탐색-트리-삭제-매서드-중-…"><a href="#이진-탐색-트리-삭제-매서드-중-…" class="headerlink" title="이진 탐색 트리 삭제 매서드 중 …"></a>이진 탐색 트리 삭제 매서드 중 …</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># remove 에서 자식이 두명 있을 경우 핵심 코드</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># node = 지울 노드</span></span><br><span class="line"><span class="comment"># parent = 지울 노드의 부모 노드</span></span><br><span class="line"></span><br><span class="line">prev = node</span><br><span class="line">curr = node.left</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> curr.right:</span><br><span class="line">    prev = curr</span><br><span class="line">    curr = curr.right</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> prev != node:            <span class="comment"># 바로 왼쪽이 curr 가 아니고 좀 타고 내려가는 경우</span></span><br><span class="line">    prev.right = curr.left</span><br><span class="line"><span class="keyword">else</span>:                       <span class="comment"># 바로 왼쪽인 curr 일 경우</span></span><br><span class="line">    prev.left = curr.left</span><br><span class="line"></span><br><span class="line">curr.left = node.left</span><br><span class="line">curr.right = node.right</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> parent <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">    self.root = curr</span><br><span class="line"><span class="keyword">elif</span> direction == <span class="string">&#x27;left&#x27;</span>:</span><br><span class="line">    parent.left = curr</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    parent.right = curr</span><br></pre></td></tr></table></figure>
+
+<h1 id="그래프"><a href="#그래프" class="headerlink" title="그래프"></a>그래프</h1><p>그래프는 순서가 없다 !! 중요!!</p>
+<h2 id="그래프의-탐색"><a href="#그래프의-탐색" class="headerlink" title="그래프의 탐색"></a>그래프의 탐색</h2><ul>
+<li>사이클이 있을 수 있기 때문에 트리와 달리 노드의 방문 여부 <code>visited</code> 를 검사해야 함</li>
+<li>bfs, dfs 가 사용될 수 있음</li>
+<li>bfs<ul>
+<li><code>visited</code> 검사해야 함</li>
+<li>bfs 를 통해서 곧바로 연결되어 있는 애들이 큐에 들어가기 때문에 가까운 노드부터 검색해나갈 수 있다. 즉, 출발 vertex로부터의 distance를 구해나갈 수 있다.</li>
+<li>최단 경로, 임의의 경로를 찾을 때 사용</li>
+<li>Queue를 사용해 반복적인 방법으로 구현 가능</li>
+</ul>
+</li>
+<li>dfs<ul>
+<li>모든 vertex를 방문하고자 할 때 주로 사용함 (순회용)</li>
+<li><code>visited</code>를 검사해야함</li>
+<li>재귀를 이용해 전위 순회 형태로 구현 !</li>
+</ul>
+</li>
+</ul>
+<h1 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h1><h2 id="정렬-알고리즘이란"><a href="#정렬-알고리즘이란" class="headerlink" title="정렬 알고리즘이란"></a>정렬 알고리즘이란</h2><ul>
+<li><p>정렬 알고리즘은 비내림차순이다(오름차순이라고 안함. 중복되는 값이 있을 수 있기 때문)</p>
+<ul>
+<li>즉, 다음 원소보다 작지는 않다</li>
+</ul>
+</li>
+<li><p>정렬 알고리즘의 출력은 입력을 재배열하여 만든 순열이다.</p>
+<ul>
+<li>추가되거나, 삭제되지 않고 재배열된 것이 다임</li>
+<li>비교 연산, swap 연산 등</li>
+</ul>
+</li>
+<li><p>정렬 알고리즘을 앞단에 설명하는 이유</p>
+<ul>
+<li>점근 표기법</li>
+<li>분할 정복 알고리즘</li>
+<li>최악, 최선, 평균적인 경우 등등 설명하기 좋음</li>
+</ul>
+</li>
+</ul>
+<h2 id="정렬-알고리즘의-종류"><a href="#정렬-알고리즘의-종류" class="headerlink" title="정렬 알고리즘의 종류"></a>정렬 알고리즘의 종류</h2><ul>
+<li>In-place 알고리즘: 정렬을 수행하는 데에 추가 메모리가 O(logN) 이하로 사용되는 알고리즘<ul>
+<li>bubble, insertion, selection</li>
+</ul>
+</li>
+<li>Stable 알고리즘: 동일 값의 정렬 전후에 순서가 유지되는 알고리즘<ul>
+<li>bubble, insertion, selection</li>
+<li>예를 들어서 [1, 5_0, 2, 5_1] 일때 [1, 2, 5_0, 5_1] 이 되면 Stable 하다.</li>
+<li>Stable -&gt; 두 가지 이상의 값(key)으로 정렬하는 경우에 처음 소팅된 결과를 보장할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="버블-정렬"><a href="#버블-정렬" class="headerlink" title="버블 정렬"></a>버블 정렬</h3><p>!! 가장 큰 수가 쭉쭉 밀려서 끝으로 감 !!</p>
+<ul>
+<li><p>인접한 두 원소를 검사해 정렬</p>
+</li>
+<li><p>마지막 원소를 제외하고 동작 반복</p>
+</li>
+<li><p>최악의 경우: O(n^2)</p>
+<ul>
+<li>거꾸로 뒤집어져 있는 경우</li>
+</ul>
+</li>
+<li><p>최선의 경우: O(n)</p>
+<ul>
+<li>이미 정렬되어 있는 경우</li>
+</ul>
+</li>
+<li><p>평균적인 경우: O(n^2))</p>
+</li>
+<li><p>공간 복잡도는 O(1) - 추가 메모리를 필요로하지 않음</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubble_sort</span>(<span class="params">x</span>):</span></span><br><span class="line">    length = <span class="built_in">len</span>(x)-<span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(length):</span><br><span class="line">        swapped = <span class="literal">False</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(length-i):</span><br><span class="line">            <span class="keyword">if</span> x[j] &gt; x[j+<span class="number">1</span>]:</span><br><span class="line">                swapped = <span class="literal">True</span></span><br><span class="line">                x[j], x[j+<span class="number">1</span>] = x[j+<span class="number">1</span>], x[j]</span><br><span class="line">        <span class="keyword">if</span> swapped <span class="keyword">is</span> <span class="literal">False</span>:  <span class="comment"># 한번 쭉 봤는데 swap이 없다? 그러면 모두 정렬되어 있는 상태임</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> x</span><br></pre></td></tr></table></figure>
+
+<h3 id="삽입-정렬"><a href="#삽입-정렬" class="headerlink" title="삽입 정렬"></a>삽입 정렬</h3><ul>
+<li><p>이미 정렬된 부분(앞) 정렬되지 않은 영역(뒤)로 나뉜다</p>
+</li>
+<li><p>정렬되지 않은 영역의 값을 정렬된 영역(앞)에 하나씩 삽입한다</p>
+</li>
+<li><p>첫 번재 요소는 이미 정렬되어 있다고 가정(길이가 1인 리스트는 이미 정렬되어 있기 때문)<br>그리고 2번째 요소부터 하나씩 뒤로 탐색하며 앞으로 진행해 알맞는 곳에 삽입</p>
+</li>
+<li><p>공간 복잡도: O(1)</p>
+</li>
+<li><p>시간 복잡도</p>
+<ul>
+<li>최악의 경우: O(n^2)</li>
+<li>최선의 경우: O(n)</li>
+<li>평균적인 경우: O(n^2)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">insert_sort</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(x)):</span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        key = x[i]</span><br><span class="line">        <span class="keyword">while</span> x[j] &gt; key <span class="keyword">and</span> j &gt;= <span class="number">0</span>:    <span class="comment"># 입력되는 값을 거꾸로 찾아나가며 한칸씩 밀면서 작동함</span></span><br><span class="line">            x[j+<span class="number">1</span>] = x[j]</span><br><span class="line">            j = j - <span class="number">1</span></span><br><span class="line">        x[j+<span class="number">1</span>] = key</span><br><span class="line">    <span class="keyword">return</span> x</span><br></pre></td></tr></table></figure>
+
+<h3 id="참고-지식"><a href="#참고-지식" class="headerlink" title="참고 지식"></a>참고 지식</h3><ul>
+<li>algorithm은 정확한 답이 나와야 함</li>
+<li>method는 근사한 답을 내면 됨</li>
+</ul>
+<h1 id="Homework-6"><a href="#Homework-6" class="headerlink" title="Homework #6"></a>Homework #6</h1><ul>
+<li>프로그래머스 레벨 2 달성</li>
+<li>작성 코드, 스크린샷 제출</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/30/ps/ps-210330/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/30/ps/ps-210330/" class="post-title-link" itemprop="url">BOJ 2583 - 영역 구하기</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-03-30 11:29:23" itemprop="dateCreated datePublished" datetime="2021-03-30T11:29:23+09:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Problem-Solving-영역-구하기-S1"><a href="#Problem-Solving-영역-구하기-S1" class="headerlink" title="Problem Solving - 영역 구하기(S1)"></a>Problem Solving - 영역 구하기(S1)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/2583">[Link]</a></h3><blockquote>
+<p>눈금의 간격이 1인 M×N(M,N≤100)크기의 모눈종이가 있다. 이 모눈종이 위에 눈금에 맞추어 K개의 직사각형을 그릴 때, 이들 K개의 직사각형의 내부를 제외한 나머지 부분이 몇 개의 분리된 영역으로 나누어진다.<br>M, N과 K 그리고 K개의 직사각형의 좌표가 주어질 때, K개의 직사각형 내부를 제외한 나머지 부분이 몇 개의 분리된 영역으로 나누어지는지, 그리고 분리된 각 영역의 넓이가 얼마인지를 구하여 이를 출력하는 프로그램을 작성하시오.</p>
+</blockquote>
+<h3 id="2-입력"><a href="#2-입력" class="headerlink" title="2. 입력"></a>2. 입력</h3><blockquote>
+<p>첫째 줄에 M과 N, 그리고 K가 빈칸을 사이에 두고 차례로 주어진다. M, N, K는 모두 100 이하의 자연수이다. 둘째 줄부터 K개의 줄에는 한 줄에 하나씩 직사각형의 왼쪽 아래 꼭짓점의 x, y좌표값과 오른쪽 위 꼭짓점의 x, y좌표값이 빈칸을 사이에 두고 차례로 주어진다. 모눈종이의 왼쪽 아래 꼭짓점의 좌표는 (0,0)이고, 오른쪽 위 꼭짓점의 좌표는(N,M)이다. 입력되는 K개의 직사각형들이 모눈종이 전체를 채우는 경우는 없다.</p>
+</blockquote>
+<h3 id="3-예제-입-출력"><a href="#3-예제-입-출력" class="headerlink" title="3. 예제 입/출력"></a>3. 예제 입/출력</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">입력</span><br><span class="line"></span><br><span class="line">5 7 3</span><br><span class="line">0 2 4 4</span><br><span class="line">1 1 2 5</span><br><span class="line">4 0 6 2</span><br><span class="line"></span><br><span class="line">출력</span><br><span class="line"></span><br><span class="line">3</span><br><span class="line">1 7 13</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-풀이"><a href="#4-풀이" class="headerlink" title="4. 풀이"></a>4. 풀이</h3><p>주어진 사각형들의 꼭지점 정보들을 바탕으로 먼저 사각형을 2차원 배열에 칠한 후, 해당 부분을 제외한 나머지 빈 공간을 bfs로 탐색해주며 각각의 넓이와 빈 공간의 개수를 탐색해주었다.</p>
+<p>이 때 조심해야 하는 것은, 주어진 꼭짓점의 좌표 특징은 x축 좌-&gt; 우, 그리고 y축 하 -&gt; 상의 방향으로 주어져있기 때문에 배열에 인덱스로 대입할 때 주의해야 한다.</p>
+<h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">m, n, k, pointList</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">paint</span>(<span class="params">point</span>):</span></span><br><span class="line">        x1, y1, x2, y2 = point</span><br><span class="line">        y1, y2 = m - y1, m - y2</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(y2, y1):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(x1, x2):</span><br><span class="line">                mapp[i][j] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">bfs</span>(<span class="params">row, col</span>):</span></span><br><span class="line">        q = deque([(row, col)])</span><br><span class="line">        mapp[row][col] = <span class="number">1</span></span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> q:</span><br><span class="line">            r, c = q.pop()</span><br><span class="line">            cnt += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> d <span class="keyword">in</span> dirs:</span><br><span class="line">                nr, nc = r + d[<span class="number">0</span>], c + d[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> <span class="number">0</span> &lt;= nr &lt; m <span class="keyword">and</span> <span class="number">0</span> &lt;= nc &lt; n <span class="keyword">and</span> mapp[nr][nc] == <span class="number">0</span>:</span><br><span class="line">                    mapp[nr][nc] = <span class="number">1</span></span><br><span class="line">                    q.append((nr, nc))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> cnt</span><br><span class="line"></span><br><span class="line">    cnt = <span class="number">0</span></span><br><span class="line">    ans = []</span><br><span class="line">    mapp = [[<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n)] <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(m)]</span><br><span class="line">    dirs = [(<span class="number">1</span>, <span class="number">0</span>), (<span class="number">0</span>, -<span class="number">1</span>), (-<span class="number">1</span>, <span class="number">0</span>), (<span class="number">0</span>, <span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> point <span class="keyword">in</span> pointList:</span><br><span class="line">        paint(point)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">if</span> mapp[i][j] == <span class="number">0</span>:</span><br><span class="line">                ans.append(bfs(i, j))</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">    ans.sort()</span><br><span class="line">    ans = <span class="built_in">str</span>(cnt) + <span class="string">&#x27;\n&#x27;</span> + <span class="string">&#x27; &#x27;</span>.join(<span class="built_in">map</span>(<span class="built_in">str</span>, ans))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">m, n, k = <span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split())</span><br><span class="line">pointList = [<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split())) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(k)]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(solution(m, n, k, pointList))</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-분류"><a href="#5-분류" class="headerlink" title="5. 분류"></a>5. 분류</h3><ul>
+<li>그래프 이론</li>
+<li>그래프 탐색</li>
+<li>너비 우선 탐색 (BFS)</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -727,579 +1531,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/26/ds_algo/ds-algo-02/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dooyeong devlog !">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/26/ds_algo/ds-algo-02/" class="post-title-link" itemprop="url">ds-algo-02</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-03-26 12:11:40" itemprop="dateCreated datePublished" datetime="2021-03-26T12:11:40+09:00">2021-03-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1-복잡도"><a href="#1-복잡도" class="headerlink" title="1. 복잡도"></a>1. 복잡도</h2><h3 id="1-1-측정-amp-분석"><a href="#1-1-측정-amp-분석" class="headerlink" title="1.1 측정 &amp; 분석"></a>1.1 측정 &amp; 분석</h3><ul>
-<li><p>측정 : 알고리즘을 구동하면서 Elementary Operation의 횟수를 카운팅. 하지만 알기 쉽지 않음</p>
-</li>
-<li><p>측정은 결과의 의미도 기준이 애매하고, 코드도 복잡해져서 잘 사용하지 않음</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line">array = [<span class="number">1</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(array)): &#123;</span><br><span class="line">    count += <span class="number">1</span> <span class="comment"># 루프 조건 확인</span></span><br><span class="line">	    <span class="built_in">sum</span> += array[i]  <span class="comment"># 숨어있는 연산(array 인덱스에 접근하는 연산)</span></span><br><span class="line">    count += <span class="number">1</span> <span class="comment"># 덧셈 연산</span></span><br><span class="line">    count += <span class="number">1</span> <span class="comment"># 대입 연산</span></span><br><span class="line">&#125;</span><br><span class="line">count += <span class="number">1</span> <span class="comment"># Branch: for문은 반복하는게 default라서 반복 안할 경우에 연산</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(count)</span><br></pre></td></tr></table></figure></li>
-<li><p>분석 :  반복문과 조건문을 고려하여 분기별로 실행 횟수를 분석</p>
-<ul>
-<li>알고리즘 동작에 영향을 주는 인자를 변수로(ex: n, m, k) 사용한다.</li>
-</ul>
-</li>
-</ul>
-<h3 id="1-2-복잡도의-종류"><a href="#1-2-복잡도의-종류" class="headerlink" title="1.2 복잡도의 종류"></a>1.2 복잡도의 종류</h3><ul>
-<li>최악의 경우</li>
-<li>최선의 경우</li>
-<li>평균적인 경우</li>
-</ul>
-<p>위 세가지 모두 각각 big-O, Big-Omega, Big-Theta 다 사용할 수 있지만, 보통 최악의 경우의 Big-O 를 사용한다.</p>
-<h3 id="1-3-Asymptotic-Notations-점진적-표현-방법"><a href="#1-3-Asymptotic-Notations-점진적-표현-방법" class="headerlink" title="1.3 Asymptotic Notations(점진적 표현 방법)"></a>1.3 Asymptotic Notations(점진적 표현 방법)</h3><ul>
-<li>자료의 개수 등 n의 크기가 충분히 많다고 가정</li>
-<li>Big-O<ul>
-<li>$3n+1$ 은 $O(n^2), O(n), O(n^3)$  등 모두에게 다 포함된다. 즉, g(n)이 상한이다.</li>
-<li>Big-O에 O(n)에는 {n, 4, $logn$} 등이 있을 수 있다.</li>
-<li>Big-O 순위 → 상수, 로그, 선형, 선형로그($nlogn$), 다항식(제곱), 지수, 팩토리얼</li>
-<li>많이 사용하는 이유는 “최소한의 성능을 보장”한다는 느낌이다.</li>
-</ul>
-</li>
-<li>Big-Omega<ul>
-<li>Big-O와는 반대로, g(n)이 하한이 된다.</li>
-<li>수식을 봐도, f(n)과 c * g(n)의 위치가 바뀌어 있다.</li>
-</ul>
-</li>
-<li>Big-Theta<ul>
-<li>상한, 하한 양쪽 모두에게 딱 맞아야 한다. (교집합)</li>
-<li>쉽게 말해 n의 차수가 똑같이 맞는 것만 가능하다.</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-자료구조"><a href="#2-자료구조" class="headerlink" title="2. 자료구조"></a>2. 자료구조</h2><h3 id="2-1-추상-자료형-Abstract-Data-Type-ADT"><a href="#2-1-추상-자료형-Abstract-Data-Type-ADT" class="headerlink" title="2.1 추상 자료형(Abstract Data Type; ADT)"></a>2.1 추상 자료형(Abstract Data Type; ADT)</h3><ul>
-<li><p><strong>정의</strong>: ‘값’과 ‘연산’의 집합으로 정의되는 논리적 행동을 가지는 오브젝트 클래스</p>
-</li>
-<li><p>추상 자료형이란, 자료형의 수학적 모델로서, 사용자(일반 개발자) 입장에서 본 자료의 행동에 의해서 정의된다. 이 ‘행동’은 가능한 값과 가능한 연산, 그리고 이 연산의 동작으로 이루어진다.</p>
-</li>
-<li><p>추상 자료형이 자료 구조와 다른 점은, 개발자(DataStructure 개발자) 입장의 구현 측면은 고려하지 않는다는 점이다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = []</span><br><span class="line">a.append(<span class="number">3</span>)  <span class="comment"># 연산이 내부적으로 어떻게 돌아가는지 모르지만, 해당 요청을 통해</span></span><br><span class="line">						 <span class="comment"># 우리가 원하는 동작을 할 수있도록</span></span><br><span class="line"><span class="comment"># a = [3]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 리스트는 추상 자료형일 수 있지만, 참고로 파이썬의 list는 이미 구현이 된 구현체이다.</span></span><br></pre></td></tr></table></figure></li>
-<li><p>내부적인 구현이 빠져있어야 추상 자료형이다.</p>
-</li>
-<li><p>예를들어, stack, queue 등의 추상 자료형의 구현체를 똑같은 이름을 그대로 사용해서 자료구조로 구현할 수도 있다.</p>
-</li>
-<li><p>사용과 개발의 분리를 위해서 추상 자료형이 쓰인다.</p>
-</li>
-</ul>
-<h3 id="2-2-배열-Arrays"><a href="#2-2-배열-Arrays" class="headerlink" title="2.2 배열 (Arrays)"></a>2.2 배열 (Arrays)</h3><ul>
-<li>배열은 자료구조이며, 배열에서 인덱스는 유일무이한 식별자(Identifier)로 사용</li>
-<li>하나의 변수에 여러 자료를 저장</li>
-<li>배열을 만들 때는 Type과 Length가 필요하다.</li>
-</ul>
-<h3 id="2-2-1-배열의-특징"><a href="#2-2-1-배열의-특징" class="headerlink" title="2.2.1 배열의 특징"></a>2.2.1 배열의 특징</h3><ul>
-<li>크기(Element의 개수)가 정해져 있다. ⭐</li>
-<li>자료 구조에 기능(메소드)이 포함되어 있지 않다.</li>
-<li>자료가 메모리상에 빈틈 없이 연속적으로 위치해 있다. ⭐</li>
-<li>인덱스를 활용하여 자료에 빠르게 접근(임의 접근, random access)할 수 있다. ⭐<ul>
-<li>RAM(Random Access Memory) : 임의적으로 접근이 가능함</li>
-</ul>
-</li>
-<li>배열의 길이는 생성 시 정해져, 변경할 수 없다.</li>
-<li>가변 길이 배열은 배열의 크기를 변경할 때 마다 새 배열을 만든다.</li>
-<li>실제로는 Element의 삭제가 불가능</li>
-</ul>
-<h2 id="3-리스트-Lists"><a href="#3-리스트-Lists" class="headerlink" title="3. 리스트(Lists)"></a>3. 리스트(Lists)</h2><p>기본적으로 추상 자료형(ADT)⭐이며, 순차적인 데이터(Sequential Data)를 다룸</p>
-<p>인덱스가 있지만, 배열(Array)의 index와 의미가 약간 다름</p>
-<h3 id="3-1-연산자"><a href="#3-1-연산자" class="headerlink" title="3.1 연산자"></a>3.1 연산자</h3><ul>
-<li>리스트를 생성</li>
-<li>리스트가 비어있는지 확인</li>
-<li>리스트의 앞에 개체를 삽입(prepending)</li>
-<li>리스트 뒤에 개체를 삽입(appending)</li>
-<li>리스트의 첫 머리(head)를 결정</li>
-<li>주어진 인덱스에 해당하는 요소에 접근<ul>
-<li>내부를 array로 구현했으면 random access가 가능함</li>
-</ul>
-</li>
-<li>주어진 인덱스에 새로운 요소를 삽입</li>
-<li>주어진 인덱스에 해당하는 요소를 제거</li>
-</ul>
-<h3 id="3-2-배열-리스트-Array-List"><a href="#3-2-배열-리스트-Array-List" class="headerlink" title="3.2 배열 리스트(Array List)"></a>3.2 배열 리스트(Array List)</h3><p>내부 저장소로써 배열을 사용해 구현하는 List</p>
-<ul>
-<li><p><code>is_empty()</code>: O(1) - length를 사용할 수 있기 때문</p>
-</li>
-<li><p><code>prepend()</code>: O(n)</p>
-</li>
-<li><p><code>append()</code>: O(n) (조건부 O(1)) - 배열의 크기를 넘었을 때 다시 큰 크기로 재할당 해야하기 때문에</p>
-</li>
-<li><pre><code>set_head(index)
-</code></pre>
-<p>: O(1) ⭐ - 시작점을 바꿔주고 길이만 바꿔주면 되기 때문</p>
-<ul>
-<li>set_head 에서 self.array[index:] 는 실제 python 슬라이싱이 아니라 C 수준으로 최적화가 되어 있어서</li>
-</ul>
-</li>
-<li><p><code>access(index)</code>: O(1)</p>
-</li>
-<li><p><code>insert(item, index)</code>: O(n) - 최악(가장 앞에 넣는 경우)</p>
-</li>
-<li><p><code>remove(index)</code>: O(n) - 최악(가장 앞의 요소를 제거하는 경우)</p>
-</li>
-</ul>
-<h3 id="3-2-연결-리스트-Linked-List"><a href="#3-2-연결-리스트-Linked-List" class="headerlink" title="3.2 연결 리스트(Linked List)"></a>3.2 연결 리스트(Linked List)</h3><p>단방향, 양방향 리스트가 존재함</p>
-<ul>
-<li><code>is_empty()</code>: O(1)</li>
-<li><code>prepend()</code>: O(1)</li>
-<li><code>append()</code>: O(1) (w/ access: O(n)) ⭐ - 노드를 찾아가는데에 O(n)</li>
-<li><code>set_head(index)</code>: O(1) (w/ access: O(n)) ⭐- 노드를 찾아가는데에 O(n)</li>
-<li><code>access(index)</code> : O(n)</li>
-<li><code>insert(item, index)</code>: O(1) (w/ access: O(n)) - 노드를 찾아가는데에 O(n)</li>
-<li><code>remove(index)</code>: O(1) (w/ access: O(n)) - 노드를 찾아가는데에 O(n)</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/26/ds_algo/ds-algo-01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dooyeong devlog !">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/26/ds_algo/ds-algo-01/" class="post-title-link" itemprop="url">ds-algo-01</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-03-26 12:06:27" itemprop="dateCreated datePublished" datetime="2021-03-26T12:06:27+09:00">2021-03-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="자료구조"><a href="#자료구조" class="headerlink" title="[자료구조]"></a>[자료구조]</h2><ul>
-<li><strong>자료(Data)</strong>: 현실 세계로부터 수집한 사실이나 개념의 값 또는 이들의 집합. 특정 용도로 사용하기 위해 처리/가공한 것을 정보(Information)이라 한다.</li>
-<li><strong>자료구조(Data Structure)</strong>: 자료구조는 자료 값의 모임, 자료간의 관계, 그리고 자료에 적용할 수 있는 함수나 명령을 의미</li>
-</ul>
-<p><strong>1. 자료구조의 특징</strong></p>
-<ul>
-<li>효율성</li>
-<li>추상화</li>
-<li>재사용성</li>
-</ul>
-<p><strong>2. 자료구조 종류</strong></p>
-<ul>
-<li>선형(Linear - 일자로 되어있다, 여러갈래로 갈라지지 않는다)<ul>
-<li>스택과 큐는 배열/연결 리스트를 효율성을 극대화 해놓은 자료구조이다.</li>
-<li>배열/연결 리스트, 스택, 큐</li>
-</ul>
-</li>
-<li>비선형 (방향성 존재, 여러 갈래로 갈라질 수 있다)<ul>
-<li>트리, 그래프</li>
-<li>어떠한 자료구조도 다 포함할 수 있음</li>
-</ul>
-</li>
-</ul>
-<p><strong>3. 자료구조의 필요성</strong></p>
-<ul>
-<li>효율적인 접근 및 사용(중복 제거)</li>
-<li>적절한 알고리즘을 기계적으로 적용</li>
-<li>협업에 큰 도움(설명같은것도 덜 필요함)</li>
-</ul>
-<p><strong>4. Python의 자료구조</strong></p>
-<ul>
-<li>List(Queue, Stack)</li>
-<li>Map(dictionary)</li>
-<li>Set</li>
-<li>Heap</li>
-</ul>
-<h2 id="알고리즘"><a href="#알고리즘" class="headerlink" title="[알고리즘]"></a>[알고리즘]</h2><p>: 알고리즘이란? 문제 해결을 위한 여러 동작들의 모임</p>
-<p><strong>1. 알고리즘 조건</strong></p>
-<ul>
-<li><strong>입력</strong> : 외부에서 제공되는 자료가 존재해야함</li>
-<li><strong>출력</strong> : 2가지 이상의 다른 결과를 출력</li>
-<li><strong>명확성</strong> : 명확한 명령어로 구성해야함 (코드로 작성할 수 있을 만큼 명확)</li>
-<li><strong>유한성</strong> : 유한한 시간안에 종료되어야함. 그래야 출력이 나오니까.</li>
-<li><strong>효과성</strong> : 사람이 종이와 연필로 수행할 수 있을 정도로 단순</li>
-</ul>
-<p><strong>2. 알고리즘 필요성</strong></p>
-<ul>
-<li>서비스의 규모</li>
-<li>컴퓨터 연산 &amp; 비용 (클라우드)</li>
-</ul>
-<p><strong>3. Python</strong></p>
-<ul>
-<li><strong>glue 언어</strong> : 다른 언어로 구현된 걸 풀로 붙이듯 사용할 수 있음</li>
-<li>OOP, FP(람다 문법을 사용) 모두 지원</li>
-<li>코딩테스트에서 Comprehension, lambda 등 간결한 코드 작성 가능</li>
-</ul>
-<h2 id="코딩테스트"><a href="#코딩테스트" class="headerlink" title="[코딩테스트]"></a>[코딩테스트]</h2><p><strong>1. 목적</strong></p>
-<ul>
-<li>빠르고 효율적으로 실력 가늠</li>
-<li>코딩 습관</li>
-<li>공통 역량 준비 가능</li>
-</ul>
-<p><strong>2. 유형</strong></p>
-<ul>
-<li>기본 라이브러리 효율적 구현 - 예외처리로 test case들 해결</li>
-<li>자료구조 - 자료구조를 잘 선택 (dictoinary, set, heap 등)</li>
-<li>알고리즘 - sorting, DP, DFS/BFS, greedy, Dijkstra<ul>
-<li>알고리즘을 모르면 절대로 못 푸는 문제</li>
-</ul>
-</li>
-</ul>
-<h2 id="알고리즘-복잡도"><a href="#알고리즘-복잡도" class="headerlink" title="[알고리즘 복잡도]"></a>[알고리즘 복잡도]</h2><ol>
-<li>공간 복잡도 vs. 시간 복잡도 일반적으로 두 복잡도는 Trade-off 관계<ul>
-<li>공간복잡도 : 알고리즘이 동작하기 위해 필요한 공간(메모리)의 크기</li>
-<li>시간복잡도 : 알고리즘이 동작하는 데에 걸리는 시간또는 연산의 횟수(기기마다 스펙이 다르기 때문에 시간은 잘 안쓰고 보통 횟수를 많이 사용함)</li>
-</ul>
-</li>
-</ol>
-<h2 id="지식"><a href="#지식" class="headerlink" title="[지식]"></a>[지식]</h2><ul>
-<li><p>파이썬 클로저(약간 안정확)</p>
-</li>
-<li><p>파이썬 Generator (튜플이 아님 -&gt; lazy evaluation임. 나중에 실제로 iter하거나 등 그때그때 하나씩만 계산을 함)</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># List Comprehension : 얘는 모든 것을 계산해서 미리 만들어 저장해두는 방식</span></span><br><span class="line">a = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]  <span class="comment"># List comprehension</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 미리 값을 만들어두지 않기 때문에(저장을 해두지 않기 때문에) 메모리를 적게 사용</span></span><br><span class="line"><span class="comment"># a 변수에는 iterator가 저장되어있음. x를 계산하는 방법 -&gt; 필요할 때 계산해서 뱉어내는 방식</span></span><br><span class="line">a = (x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>))  <span class="comment"># Generator</span></span><br></pre></td></tr></table></figure></li>
-<li><p>Dictionary Comprehension</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 딕셔너리도 지능형 리스트처럼 구현 가능</span></span><br><span class="line">a = &#123;key:key**<span class="number">2</span> <span class="keyword">for</span> key <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>Lambda expression</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>((<span class="keyword">lambda</span> x: x**<span class="number">2</span>)(<span class="number">10</span>))</span><br></pre></td></tr></table></figure></li>
-<li><p>삼항 연산자</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b = <span class="number">20</span></span><br><span class="line">a = <span class="number">1</span> <span class="keyword">if</span> b &gt; <span class="number">0</span> <span class="keyword">else</span> -<span class="number">1</span>  <span class="comment"># 중첩도 가능</span></span><br></pre></td></tr></table></figure></li>
-<li><p>map 함수</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)]</span><br><span class="line">a = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x**<span class="number">10</span>, a))   <span class="comment"># map도 lazy evaluation임. 따라서 바로 쓰고 싶으면 list()형으로 변환해놔야 함</span></span><br></pre></td></tr></table></figure></li>
-<li><p>filter 함수</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>)]</span><br><span class="line">a = <span class="built_in">list</span>(<span class="built_in">filter</span>(<span class="keyword">lambda</span> x: x % <span class="number">2</span>, a))    <span class="comment"># map이랑 비슷한데, 왼쪽 함수에 true/false를 리턴하는 함수를 놔둬서 true만 리턴하고 false는 제외해버림</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>&lt;map object&gt;</code> 이런 식으로 뜨는 <code>iterable</code>한 객체들은 한번 iterate하면 다시 사용할 수 없다.</li>
-</ul>
-</li>
-<li><p>클래스</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span>:</span></span><br><span class="line">    cls_var = <span class="number">10</span>  <span class="comment"># 클래스 멤버 변수</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, x</span>):</span></span><br><span class="line">        self.x = x  <span class="comment"># 인스턴스 멤버 변수</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">method</span>(<span class="params">self, y</span>):</span>  <span class="comment"># 인스턴스 메소드</span></span><br><span class="line">        <span class="keyword">return</span> self.x + y</span><br><span class="line"></span><br><span class="line">    <span class="comment">################## 요정도만 ####################</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">cls_method</span>(<span class="params">cls, z</span>):</span>  <span class="comment"># 클래스 메소드</span></span><br><span class="line">        <span class="keyword">return</span> cls.cls_var + z</span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">static_method</span>(<span class="params">k</span>):</span>  <span class="comment"># 스태틱 메소드</span></span><br><span class="line">        <span class="keyword">return</span> k</span><br></pre></td></tr></table></figure></li>
-<li><p>Coding Convention</p>
-<ul>
-<li>ClassName : Pascal case(앞자리 소문자는 Camel case)</li>
-<li>method_name, val_name : Snake case</li>
-<li>CONST_NAME : 안변하는 고정 변수</li>
-<li>pep-8(파이썬 코드 권고안)</li>
-<li><code>map</code>이랑 <code>filter</code>를 적절히 채용(for문보다 훨 나음)</li>
-</ul>
-</li>
-<li><p>나쁜 습관</p>
-<ul>
-<li>모든 것을 구현하려고 함</li>
-<li>C언어 스타일… for문 도배</li>
-<li>무조건 최적화</li>
-</ul>
-</li>
-<li><p>Python Ref</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://docs.python.org/3/">https://docs.python.org/3/</a></li>
-<li><a target="_blank" rel="noopener" href="https://devdocs.programmers.co.kr/python/">https://devdocs.programmers.co.kr/python/</a></li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/26/ps/TIL-210326-ps/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dooyeong devlog !">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/26/ps/TIL-210326-ps/" class="post-title-link" itemprop="url">BOJ 1715 - 카드 정렬하기</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-03-26 11:22:23" itemprop="dateCreated datePublished" datetime="2021-03-26T11:22:23+09:00">2021-03-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Problem-Solving-카드-정렬하기-G4"><a href="#Problem-Solving-카드-정렬하기-G4" class="headerlink" title="Problem Solving - 카드 정렬하기(G4)"></a>Problem Solving - 카드 정렬하기(G4)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [ Link ]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/1715">[ Link ]</a></h3><blockquote>
-<p>정렬된 두 묶음의 숫자 카드가 있다고 하자. 각 묶음의 카드의 수를 A, B라 하면 보통 두 묶음을 합쳐서 하나로 만드는 데에는 A+B 번의 비교를 해야 한다. 이를테면, 20장의 숫자 카드 묶음과 30장의 숫자 카드 묶음을 합치려면 50번의 비교가 필요하다.</p>
-<p>매우 많은 숫자 카드 묶음이 책상 위에 놓여 있다. 이들을 두 묶음씩 골라 서로 합쳐나간다면, 고르는 순서에 따라서 비교 횟수가 매우 달라진다. 예를 들어 10장, 20장, 40장의 묶음이 있다면 10장과 20장을 합친 뒤, 합친 30장 묶음과 40장을 합친다면 (10 + 20) + (30 + 40) = 100번의 비교가 필요하다. 그러나 10장과 40장을 합친 뒤, 합친 50장 묶음과 20장을 합친다면 (10 + 40) + (50 + 20) = 120 번의 비교가 필요하므로 덜 효율적인 방법이다.</p>
-<p>N개의 숫자 카드 묶음의 각각의 크기가 주어질 때, 최소한 몇 번의 비교가 필요한지를 구하는 프로그램을 작성하시오.</p>
-</blockquote>
-<h3 id="2-입력"><a href="#2-입력" class="headerlink" title="2. 입력"></a>2. 입력</h3><blockquote>
-<p>첫째 줄에 N이 주어진다. (1 ≤ N ≤ 100,000) 이어서 N개의 줄에 걸쳐 숫자 카드 묶음의 각각의 크기가 주어진다. 숫자 카드 묶음의 크기는 1,000보다 작거나 같은 양의 정수이다.</p>
-</blockquote>
-<h3 id="3-예제-입-출력"><a href="#3-예제-입-출력" class="headerlink" title="3. 예제 입/출력"></a>3. 예제 입/출력</h3><blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">10</span><br><span class="line">20</span><br><span class="line">40</span><br><span class="line"></span><br><span class="line">100</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h3 id="4-풀이"><a href="#4-풀이" class="headerlink" title="4. 풀이"></a>4. 풀이</h3><p>그리디 문제로 접근하여, 카드의 비교 횟수가 가장 적으려면 카드들 중 가장 작은 단위의 카드들부터 차례대로 비교해나가는 방식으로 문제를 풀었다. 이 때, 가장 작은 수를 고르기 위해서 최소 힙을 사용했는데, 이는 카드를 비교해 나갈 때 마다 리스트를 정렬하거나, 최소 값을 찾는다면 시간 복잡도가 너무 커지기 때문이었다.</p>
-<p>따라서 최소 힙을 사용해 아래와 같이 문제를 풀어주었다.</p>
-<h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">n, cards</span>):</span></span><br><span class="line">    <span class="comment"># n이 1일 경우에는 비교할 카드가 없기 때문에 1을 출력한다.</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># cards 리스트를 (최소)힙으로 사용하기 위해 변환한다.</span></span><br><span class="line">    heapq.heapify(cards)</span><br><span class="line"></span><br><span class="line">    ans = <span class="number">0</span></span><br><span class="line">    tmp = []</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 힙을 통해 시간복잡도를 줄여 카드의 덱이 작은 순으로 더해 그 값을 ans에 누적시켜 준다.</span></span><br><span class="line">    <span class="comment"># 이 때, cards 리스트에 카드가 하나만 남았을 경우가 종료 조건이 된다.</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">1</span>:</span><br><span class="line">        tmp = heapq.heappop(cards) + heapq.heappop(cards)</span><br><span class="line">        ans += tmp</span><br><span class="line">        heapq.heappush(cards, tmp)</span><br><span class="line">        n -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">cards = [<span class="built_in">int</span>(stdin.readline()) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n)]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(solution(n, cards))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="5-분류"><a href="#5-분류" class="headerlink" title="5. 분류"></a>5. 분류</h3><ul>
-<li>자료구조</li>
-<li>그리디 알고리즘</li>
-<li>우선순위 큐</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/25/My-very-new-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dooyeong devlog !">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/25/My-very-new-blog/" class="post-title-link" itemprop="url">My very new blog</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-03-25 16:31:01" itemprop="dateCreated datePublished" datetime="2021-03-25T16:31:01+09:00">2021-03-25</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Hello there! I’m dooyeong.</p>
-<p>I’m king king happy</p>
-<p>Please keep looking my blog!</p>
-<figure class="highlight python"><figcaption><span>test.py</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;my first blog code block!!&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
