@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"dooyeong20.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+<meta name="description" content="HTML 콘텐츠 구분BODY 내 구조 개념body 태그는 정보의 구조들을 나타냄  의미가 없는 div 태그들로 도배하면 좋지 않다. header 태그, ul, li 등 의미를 가지는 태그들을 사용해야 한다. 일반적으로 영역을 나타내는 태그들은 block요소이다  콘텐츠 구분Header Tag소개나 탐색을 돕는 그룹을 나타냄  로고 검색바 메뉴 등   hea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML 콘텐츠 구분, 문자 콘텐츠">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/04/12/html-css/html-css-05/index.html">
+<meta property="og:site_name" content="dooyeong devlog !">
+<meta property="og:description" content="HTML 콘텐츠 구분BODY 내 구조 개념body 태그는 정보의 구조들을 나타냄  의미가 없는 div 태그들로 도배하면 좋지 않다. header 태그, ul, li 등 의미를 가지는 태그들을 사용해야 한다. 일반적으로 영역을 나타내는 태그들은 block요소이다  콘텐츠 구분Header Tag소개나 탐색을 돕는 그룹을 나타냄  로고 검색바 메뉴 등   hea">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-12T03:18:06.000Z">
+<meta property="article:modified_time" content="2021-04-12T04:58:06.546Z">
+<meta property="article:author" content="dooyeong">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-05/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>HTML 콘텐츠 구분, 문자 콘텐츠 | dooyeong devlog !</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">dooyeong devlog !</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-%EC%BD%98%ED%85%90%EC%B8%A0-%EA%B5%AC%EB%B6%84"><span class="nav-number">1.</span> <span class="nav-text">HTML 콘텐츠 구분</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BODY-%EB%82%B4-%EA%B5%AC%EC%A1%B0-%EA%B0%9C%EB%85%90"><span class="nav-number">1.1.</span> <span class="nav-text">BODY 내 구조 개념</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%BD%98%ED%85%90%EC%B8%A0-%EA%B5%AC%EB%B6%84"><span class="nav-number">1.2.</span> <span class="nav-text">콘텐츠 구분</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Header-Tag"><span class="nav-number">1.2.1.</span> <span class="nav-text">Header Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footer-Tag"><span class="nav-number">1.2.2.</span> <span class="nav-text">Footer Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#H-Tag"><span class="nav-number">1.2.3.</span> <span class="nav-text">H Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Main-Tag"><span class="nav-number">1.2.4.</span> <span class="nav-text">Main Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Article-Tag"><span class="nav-number">1.2.5.</span> <span class="nav-text">Article Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Section-Tag"><span class="nav-number">1.2.6.</span> <span class="nav-text">Section Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Aside-Tag"><span class="nav-number">1.2.7.</span> <span class="nav-text">Aside Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nav-Tag"><span class="nav-number">1.2.8.</span> <span class="nav-text">Nav Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Address-Tag"><span class="nav-number">1.2.9.</span> <span class="nav-text">Address Tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Div-Tag"><span class="nav-number">1.2.10.</span> <span class="nav-text">Div Tag</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EC%9E%90-%EA%B5%AC%EB%B6%84"><span class="nav-number">1.3.</span> <span class="nav-text">문자 구분</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ol-ul-li-Tag"><span class="nav-number">1.3.1.</span> <span class="nav-text">ol, ul, li Tag</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ol-%EC%86%8D%EC%84%B1"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">ol 속성</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#li-%EC%86%8D%EC%84%B1"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">li 속성</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dl-dt-dd"><span class="nav-number">1.3.2.</span> <span class="nav-text">dl, dt, dd</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">dooyeong</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTML 콘텐츠 구분, 문자 콘텐츠
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-12 12:18:06 / Modified: 13:58:06" itemprop="dateCreated datePublished" datetime="2021-04-12T12:18:06+09:00">2021-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="HTML-콘텐츠-구분"><a href="#HTML-콘텐츠-구분" class="headerlink" title="HTML 콘텐츠 구분"></a>HTML 콘텐츠 구분</h1><h2 id="BODY-내-구조-개념"><a href="#BODY-내-구조-개념" class="headerlink" title="BODY 내 구조 개념"></a>BODY 내 구조 개념</h2><p>body 태그는 정보의 구조들을 나타냄</p>
+<ul>
+<li>의미가 없는 <code>div</code> 태그들로 도배하면 좋지 않다.</li>
+<li><code>header</code> 태그, <code>ul</code>, <code>li</code> 등 의미를 가지는 태그들을 사용해야 한다.</li>
+<li>일반적으로 영역을 나타내는 태그들은 <code>block</code>요소이다</li>
+</ul>
+<h2 id="콘텐츠-구분"><a href="#콘텐츠-구분" class="headerlink" title="콘텐츠 구분"></a>콘텐츠 구분</h2><h3 id="Header-Tag"><a href="#Header-Tag" class="headerlink" title="Header Tag"></a>Header Tag</h3><p>소개나 탐색을 돕는 그룹을 나타냄</p>
+<ul>
+<li>로고</li>
+<li>검색바</li>
+<li>메뉴 등</li>
+</ul>
+<blockquote>
+<p><code>header</code>나 <code>footer</code>는 후손이 될 수 없다.</p>
+</blockquote>
+<h3 id="Footer-Tag"><a href="#Footer-Tag" class="headerlink" title="Footer Tag"></a>Footer Tag</h3><p>작성자 구획, 저작권 데이터, 관련 문서 등에 대한 링크, 정보를 포함한다.<br>일반적으로 사이트 하단의 정보들을 포함</p>
+<blockquote>
+<p><code>header</code>나 <code>footer</code>는 후손이 될 수 없다.</p>
+</blockquote>
+<h3 id="H-Tag"><a href="#H-Tag" class="headerlink" title="H Tag"></a>H Tag</h3><p><strong>6단계</strong>의 문서 제목을 지칭<br>h1 ~ h6까지 존재</p>
+<ul>
+<li>크기 조절을 위해서 <code>h</code> 태그를 사용하는 것은 좋지 않고, 대신 css의 font-size 속성을 사용해야 함</li>
+<li>제목 단계를 건너뛰면 좋지 않음</li>
+<li>h1은 한 페이지에 하나씩만 사용해야 함</li>
+<li>추천하는 방식정도</li>
+</ul>
+<h3 id="Main-Tag"><a href="#Main-Tag" class="headerlink" title="Main Tag"></a>Main Tag</h3><p><code>&lt;body&gt;</code> 의 주요 콘텐츠를 나타내는 태그<br>문서 핵심 주제 및 핵심 기능성 등과 직접적으로 연관된 콘텐츠들로 구성</p>
+<ul>
+<li>문서에 하나의 <code>&lt;main&gt;</code>만 존재해야 함</li>
+<li>IE에서 지원하지 않음</li>
+</ul>
+<h3 id="Article-Tag"><a href="#Article-Tag" class="headerlink" title="Article Tag"></a>Article Tag</h3><p><strong>독립적</strong>으로 구분되거나 <strong>재사용 가능</strong>한 영역을 설정<br>매거진/신문 기사, 블로그 등</p>
+<ul>
+<li>일반적으로 <code>&lt;h1&gt;</code> ~ <code>&lt;h6&gt;</code>를 포함하여 식별.</li>
+<li>작성일자와 시간을 <code>&lt;time&gt;</code>의 datetime 속성으로 작성.</li>
+<li><code>article</code> 태그 안에 <code>section</code> 태그가 있어도 되고, 그 반대도 가능함</li>
+</ul>
+<h3 id="Section-Tag"><a href="#Section-Tag" class="headerlink" title="Section Tag"></a>Section Tag</h3><p>문서의 일반적인 영역을 설정</p>
+<ul>
+<li>영역을 의미하기 때문에 일반적으로 <code>&lt;h1&gt;</code> ~ <code>&lt;h6&gt;</code>를 포함하여 식별</li>
+<li><code>div</code>와 차이: 의미가 있기 때문에 <code>h</code>태그로 제목을 포함함</li>
+<li><strong>독림성</strong>을 가지는 <code>article</code> 태그와 함께 사용할 수 있음</li>
+</ul>
+<h3 id="Aside-Tag"><a href="#Aside-Tag" class="headerlink" title="Aside Tag"></a>Aside Tag</h3><p>문서의 별도 콘텐츠를 설정</p>
+<ul>
+<li>보통 광고나 기타 링크 등의 사이드바를 설정</li>
+</ul>
+<h3 id="Nav-Tag"><a href="#Nav-Tag" class="headerlink" title="Nav Tag"></a>Nav Tag</h3><p>다른 페이지 링크를 제공하는 영역</p>
+<ul>
+<li>Navigation, 보통 메뉴(Home, About, Contact), 목차, 색인</li>
+<li><code>ol</code>, <code>ul</code> 태그와 함께 메뉴들을 보여줄 때 자주 사용됨</li>
+</ul>
+<h3 id="Address-Tag"><a href="#Address-Tag" class="headerlink" title="Address Tag"></a>Address Tag</h3><p><code>&lt;body&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code> 등에서 연락처 정보를 제공하기 위해 포함</p>
+<ul>
+<li>block 요소</li>
+</ul>
+<h3 id="Div-Tag"><a href="#Div-Tag" class="headerlink" title="Div Tag"></a>Div Tag</h3><p>본질적으로 아무것도 나타내지 않는 콘텐츠 영역</p>
+<ul>
+<li>Division, 꾸미는 용도</li>
+</ul>
+<h2 id="문자-구분"><a href="#문자-구분" class="headerlink" title="문자 구분"></a>문자 구분</h2><h3 id="ol-ul-li-Tag"><a href="#ol-ul-li-Tag" class="headerlink" title="ol, ul, li Tag"></a>ol, ul, li Tag</h3><p>각 항목<code>&lt;li&gt;</code> 의 정렬된 목록<code>&lt;ol&gt;</code>이나 정렬되지 않은 목록<code>&lt;ul&gt;</code>을 설정</p>
+<ul>
+<li><code>&lt;ol&gt;</code>과 <code>&lt;ul&gt;</code>은 자식으로 <code>&lt;li&gt;</code>만 포함 가능</li>
+<li><code>&lt;li&gt;</code>는 단독으로 사용할 수 없으며, <code>&lt;ol&gt;</code>이나 <code>&lt;ul&gt;</code>에 자식으로 포함되어야 함</li>
+<li>정렬된 목록(<code>&lt;ol&gt;</code>)의 항목 순서는 중요도를 의미할 수 있음</li>
+</ul>
+<h4 id="ol-속성"><a href="#ol-속성" class="headerlink" title="ol 속성"></a>ol 속성</h4><ul>
+<li><strong>start</strong>: 항목에 매겨지는 번호의 시작 값 숫자(Number)</li>
+<li><strong>type</strong>: 항목에 매겨지는 번호의 유형 a, A, i, I, 1</li>
+<li><strong>reversed</strong>: 항목의 순서만 바뀌고 물리적 위치는 바뀌지 않음</li>
+</ul>
+<h4 id="li-속성"><a href="#li-속성" class="headerlink" title="li 속성"></a>li 속성</h4><ul>
+<li><strong>value</strong>: 항목의 순서를 설정 숫자(Number) <strong>이하 항목들</strong>의 순서가 다시 지정됨</li>
+</ul>
+<h3 id="dl-dt-dd"><a href="#dl-dt-dd" class="headerlink" title="dl, dt, dd"></a>dl, dt, dd</h3><p>용어(<code>&lt;dt&gt;</code>)와 정의(<code>&lt;dd&gt;</code>) 쌍들의 영역(<code>&lt;dl&gt;</code>)을 설정</p>
+<ul>
+<li>block 요소</li>
+<li>Description List, Definition Details, Definition Term</li>
+<li><strong><code>&lt;dl&gt;</code>은 <code>&lt;dd&gt;</code>, <code>&lt;dt&gt;</code>만을 포함해야 함</strong></li>
+<li>키(key)/값(value) 형태를 표시할 때 유용</li>
+<li>근데 <code>dl</code> 태그안에 <code>div</code> 와 같은 태그를 넣을 수 없기 때문에 스타일링하기 힘듬</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Coffee<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Coffee is a brewed drink !<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Milk<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Milk is a nutrient-rich, white liquid !<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dfn</span>&gt;</span>Coffeee<span class="tag">&lt;/<span class="name">dfn</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Coffee is ~<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dfn</span>&gt;</span>Milk<span class="tag">&lt;/<span class="name">dfn</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Milk is ~<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/html/" rel="tag"># html</a>
+              <a href="/tags/css/" rel="tag"># css</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/12/html-css/html-css-04/" rel="prev" title="HTML 주요 범위, 메타데이터">
+                  <i class="fa fa-chevron-left"></i> HTML 주요 범위, 메타데이터
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dooyeong</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
