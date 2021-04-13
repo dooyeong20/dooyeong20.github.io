@@ -31,7 +31,7 @@
 <meta property="og:description" content="이전 강의 in-place 알고리즘 : O(logN) 보다 작은 공간 복잡도  swap만으로 되면 in-place가 됨 만약에 공간을 할당해야하면 in-place가 안된다(merge sort)   Stable 알고리즘 : 기존의 순서가 유지 되는 것(기준이 여러개 있을 때)  버블 소트  swaped &#x3D; False 는 매우 중요한 최적화 요소이다   삽입">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-31T04:56:57.000Z">
-<meta property="article:modified_time" content="2021-04-05T05:11:16.283Z">
+<meta property="article:modified_time" content="2021-04-13T02:04:21.085Z">
 <meta property="article:author" content="dooyeong">
 <meta property="article:tag" content="data structure">
 <meta property="article:tag" content="algorithm">
@@ -162,7 +162,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -243,7 +243,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-05 14:11:16" itemprop="dateModified" datetime="2021-04-05T14:11:16+09:00">2021-04-05</time>
+        <time title="Modified: 2021-04-13 11:04:21" itemprop="dateModified" datetime="2021-04-13T11:04:21+09:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -361,7 +361,7 @@
 <h1 id="재귀-호출"><a href="#재귀-호출" class="headerlink" title="재귀 호출"></a>재귀 호출</h1><p>함수가 자기 자신을 구현</p>
 <ul>
 <li>재귀는 무조건 iteration으로 바꿀 수 있다</li>
-<li>재귀식은이라고도 부르고, 수열의 항 사이의 관계를 나타냄</li>
+<li>수열의 항 사이의 관계를 나타냄</li>
 <li>수열을 n에 대한 식으로 표현하는 것을 ‘풀이한다’고 한다</li>
 <li>탈출조건이 반드시, 무조건 필요하다<ul>
 <li>탈출조건: 잘게 쪼개져서 풀 필요가 없을 때</li>
@@ -398,7 +398,7 @@
 <h2 id="Tail-Recursion"><a href="#Tail-Recursion" class="headerlink" title="Tail Recursion"></a>Tail Recursion</h2><p>재귀 함수에서, 재귀 호출이 마지막에 딱 한번만 수행되는 것</p>
 <ul>
 <li>컴파일러에서 최적화를 지원하면, 함수 호출 스택을 낭비하지 않는다<ul>
-<li>python은 지원하지 않는</li>
+<li>python은 지원하지 않음</li>
 </ul>
 </li>
 <li>함수 호출 스택을 재활용</li>

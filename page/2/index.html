@@ -155,7 +155,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -195,6 +195,410 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/07/ds_algo/ds-algo-11/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/07/ds_algo/ds-algo-11/" class="post-title-link" itemprop="url">ds-algo-11</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-04-07 12:00:57" itemprop="dateCreated datePublished" datetime="2021-04-07T12:00:57+09:00">2021-04-07</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-13 11:10:54" itemprop="dateModified" datetime="2021-04-13T11:10:54+09:00">2021-04-13</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="트리"><a href="#트리" class="headerlink" title="트리"></a>트리</h1><h2 id="힙-Heap"><a href="#힙-Heap" class="headerlink" title="힙 (Heap)"></a>힙 (Heap)</h2><ul>
+<li>항상 최대값/최소값이 루트 노드에 존재하는 트리 구조</li>
+<li>우선순위 큐(Priority Queue)를 구현하는 데에 쓰인다.</li>
+<li>자료를 트리에서 제거하거나 추가할 때 이를 위한 <u>추가 동작</u>을 구현</li>
+<li>배열로 이루어진 <u>완전 이진 트리(CBT)</u> 를 기반으로 함</li>
+</ul>
+<h3 id="Min-Heap"><a href="#Min-Heap" class="headerlink" title="Min Heap"></a>Min Heap</h3><ul>
+<li>부모 노드가 항상 자식노드보다 작은 <u>완전 이진 트리</u></li>
+<li>좌/우는 상관이 없다</li>
+</ul>
+<h3 id="Max-Heap"><a href="#Max-Heap" class="headerlink" title="Max Heap"></a>Max Heap</h3><ul>
+<li>부모 노드가 항상 자식노드보다 큰 <u>완전 이진 트리</u></li>
+<li>좌/우는 상관이 없다</li>
+</ul>
+<h2 id="힙의-삽입-O-logN"><a href="#힙의-삽입-O-logN" class="headerlink" title="힙의 삽입 O(logN)"></a>힙의 삽입 O(logN)</h2><ol>
+<li><u>배열의 마지막</u>에 새로운 자료를 추가</li>
+<li><u>부모 노드와 비교</u>하여 두 값을 swap해야 하는지 여부 결정</li>
+<li>Heap의 정의에 부합할 때 까지 2번 동작을 반복 - 최대 O(logN)번 반복</li>
+</ol>
+<h2 id="힙의-삭제-O-logN"><a href="#힙의-삭제-O-logN" class="headerlink" title="힙의 삭제 O(logN)"></a>힙의 삭제 O(logN)</h2><ol>
+<li>항상 <u>루트(배열의 첫번째 자료)</u>의 자료를 삭제한다.</li>
+<li>배열의 <u>마지막 자료를 첫번째 위치로 옮긴다</u>.</li>
+<li><u>두개의 자식 노드</u> 중 부모의 자리를 대체할 노드를 선택</li>
+<li>Heap의 정의에 부합할 때 까지 3번 동작을 반복 - 최대 O(logN)번 반복</li>
+</ol>
+<ul>
+<li>3번의 과정에서, 둘 중 더 작은 값과 swap을 해주어야 한다(min heap).</li>
+</ul>
+<h2 id="힙을-사용하는-이유-힙-vs-배열"><a href="#힙을-사용하는-이유-힙-vs-배열" class="headerlink" title="힙을 사용하는 이유 (힙 vs 배열)"></a>힙을 사용하는 이유 (힙 vs 배열)</h2><ul>
+<li>배열<ul>
+<li>정렬된 배열에서 최대/최소 찾을 때: O(1)</li>
+<li>정렬된 배열에 자료를 추가/삭제할 때: O(N)</li>
+<li>평균적으로 O(N)</li>
+</ul>
+</li>
+<li>힙<ul>
+<li>힙: 삽입, 삭제, 조회 모두 O(logN)</li>
+<li>평균적으로 O(logN)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Trie"><a href="#Trie" class="headerlink" title="Trie"></a>Trie</h2><p>단어 검색에 최적화된 Tree 기반의 자료구조</p>
+<ul>
+<li><p>Trie 이름의 어원: Retrieval</p>
+</li>
+<li><p>회수한다</p>
+</li>
+<li><p>Trie에서 단어 검색의 시간 복잡도: O(M), M: 단어의 길이</p>
+<ul>
+<li>cf) 단순 문자열 비교의 시간 복잡도: O(N*M), N: 단어의 개수</li>
+</ul>
+</li>
+<li><p>자식 노드들을 훑어 보는데 O(N)이 들지 않도록 리스트말고 딕셔너리로 구현해야 한다.</p>
+</li>
+<li><p>asterisk(종료문자)가 반드시 필요함</p>
+<ul>
+<li>중간에 단어 매칭이 끝나버리면 있는지 없는지 확인할 수 없기 때문</li>
+</ul>
+</li>
+</ul>
+<h2 id="다익스트라"><a href="#다익스트라" class="headerlink" title="다익스트라"></a>다익스트라</h2><p>노드 하나를 기준으로 다른 모든 노드까지 도달하는 최단 거리를 계산하는 알고리즘</p>
+<ul>
+<li>최단 거리만을 계산하며, 경로까지 알아내려면 추가 메모리 필요</li>
+</ul>
+<h1 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h1><ul>
+<li>카카오 blind 문제 풀기</li>
+<li>다익스트라 예습</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/06/ds_algo/ds-algo-10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/06/ds_algo/ds-algo-10/" class="post-title-link" itemprop="url">ds-algo-10</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-04-06 14:00:57" itemprop="dateCreated datePublished" datetime="2021-04-06T14:00:57+09:00">2021-04-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-07 13:01:17" itemprop="dateModified" datetime="2021-04-07T13:01:17+09:00">2021-04-07</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="DP"><a href="#DP" class="headerlink" title="DP"></a>DP</h1><p>두 가지 조건을 만족해야만 동적프로그래밍이라고 할 수 있다.</p>
+<ul>
+<li>Optimal Substructure: 부분 문제들의 최적해가 전체의 최적해를 이루어야 한다.<ul>
+<li>잘게 쪼개진 부분 그때그때 최적의 선택을 해나간다(그리디 greedy)</li>
+<li>Optimal Substructure가 아닌데 그리디로 풀면 최적해가 아니게 된다.</li>
+</ul>
+</li>
+<li>Overlapping Sub-Problems: 동일한 부분 문제가 여러번 발생해야 한다.<ul>
+<li>이 조건이 만족되지 않으면 분할정복(Divide &amp; Conquer) 문제라고 한다.(merge sort, quick sort)</li>
+</ul>
+</li>
+<li>중복되는 연산을 미리 캐싱해 두고, 중복 연산이 발생할 때 마다 참조하여 연산을 줄인다. (Memoization)</li>
+</ul>
+<h2 id="DP-종류"><a href="#DP-종류" class="headerlink" title="DP 종류"></a>DP 종류</h2><ul>
+<li>Top-Down 접근법<ul>
+<li>큰 문제부터 시작하여, 작은 문제로 나누는 접근법</li>
+<li>일반적으로 재귀적으로 구현(Recursion)할 때 사용된다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fibo = <span class="built_in">dict</span>()</span><br><span class="line">fibo[<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line">fibo[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n <span class="keyword">in</span> fibo:</span><br><span class="line">        <span class="keyword">return</span> fibo[n]</span><br><span class="line"></span><br><span class="line">    res = fibonacci(n-<span class="number">1</span>) + fibonacci(n-<span class="number">2</span>)</span><br><span class="line">    fibo[n] = res</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Bottom-Up 접근법<ul>
+<li>문제를 미리 나누어 두고, 작은 문제의 답을 모아 큰 문제를 해결하는 접근법</li>
+<li>일반적으로 반복적으로 구현(Iteration)할 때 사용된다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span>(<span class="params">n</span>):</span></span><br><span class="line">    fibo = [<span class="literal">None</span>] * (n + <span class="number">1</span>)</span><br><span class="line">    fibo[<span class="number">0</span>], fibo[<span class="number">1</span>] = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, n + <span class="number">1</span>):</span><br><span class="line">        fibo[i] = fibo[i - <span class="number">1</span>] + fibo[i - <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fibo[n]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>DP를 너무 naive하게 사용하다보면 O(n)의 공간을 낭비하게 된다.</li>
+</ul>
+<h2 id="DP-활용-0-1-배낭-문제-Knapsack"><a href="#DP-활용-0-1-배낭-문제-Knapsack" class="headerlink" title="DP 활용 - 0-1 배낭 문제(Knapsack)"></a>DP 활용 - 0-1 배낭 문제(Knapsack)</h2><ul>
+<li><p>배낭에 담을 수 있는 무게의 최대값이 정해져 있을 때, 배낭에 담은 짐의 가치가 최대가 되게 하는 문제</p>
+</li>
+<li><p>각 짐은 무게와 가치를 가지고 있으며, 0-1 배낭 문제에서는 짐을 쪼갤 수 없다.</p>
+</li>
+<li><p>dp 반복적으로 다 구하는 것 tabulization</p>
+</li>
+</ul>
+<h1 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h1><p>두 개 다 풀기</p>
+<ul>
+<li>직사각형문제</li>
+<li>도둑질문제</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/05/ds_algo/ds-algo-09/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/05/ds_algo/ds-algo-09/" class="post-title-link" itemprop="url">ds-algo-09</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-04-05 14:00:57" itemprop="dateCreated datePublished" datetime="2021-04-05T14:00:57+09:00">2021-04-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-09 10:22:37" itemprop="dateModified" datetime="2021-04-09T10:22:37+09:00">2021-04-09</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="해시"><a href="#해시" class="headerlink" title="해시"></a>해시</h1><p>해시는 항상 해시함수를 사용하기 때문에 해시 함수를 잘 선택하는 것은 매우 중요하다.</p>
+<ul>
+<li>key는 중복이 불가능</li>
+<li>value는 가능</li>
+</ul>
+<h2 id="Bucket"><a href="#Bucket" class="headerlink" title="Bucket"></a>Bucket</h2><ul>
+<li>자료를 저장하는 저장소</li>
+<li>몇 번째 인덱스에 저장할지에 대한 정보를 구하기 위해서 해시함수를 사용한다</li>
+<li>다른 입력이지만, 해시 값(버킷 인덱스)이 같아서 충돌이 발생할 수 있다</li>
+<li>크기가 부족하면 두 배씩</li>
+</ul>
+<h2 id="해시-테이블-해시-셋이랑-다름"><a href="#해시-테이블-해시-셋이랑-다름" class="headerlink" title="해시 테이블 (해시 셋이랑 다름)"></a>해시 테이블 (해시 셋이랑 다름)</h2><ul>
+<li>key와 value로 이루어져 있다</li>
+<li>key에 대해 해시 값을 구하고, 이 값을 인덱스로 하여 value를 저장한다</li>
+<li>key와 value를 같이 입력한다</li>
+</ul>
+<h2 id="충돌"><a href="#충돌" class="headerlink" title="충돌"></a>충돌</h2><ul>
+<li>모든 값이 해시충돌이 발생하는 경우엔 O(n)의 탐색성능이 된다.</li>
+</ul>
+<h2 id="충돌-해결법"><a href="#충돌-해결법" class="headerlink" title="충돌 해결법"></a>충돌 해결법</h2><ul>
+<li>개방 주소법</li>
+<li>체이닝</li>
+</ul>
+<h2 id="Open-Addressing-Closed-Hashing"><a href="#Open-Addressing-Closed-Hashing" class="headerlink" title="Open Addressing(Closed Hashing)"></a>Open Addressing(Closed Hashing)</h2><ul>
+<li>Open Addressing (개방 주소법)</li>
+<li>Closed Hashing이라고도 함</li>
+<li>충돌이 일어났다면, 다른 index를 선택한다<ul>
+<li>선형 탐사(Linear Probing) : 정해진 값만큼 index를 이동함(예: 1)<ul>
+<li>Sparse 할 경우에 좋음</li>
+<li>open addressing 쓸때는 선형 탐사를 많이 쓴다</li>
+</ul>
+</li>
+<li>이차 탐사(Quadratic Probing) : 인덱스를 제곱해서 이동함</li>
+<li>이중 해싱(Double Hashing) : 별도의 해시 함수를 이용해 이동 간격을 정함</li>
+</ul>
+</li>
+</ul>
+<h3 id="선형-탐색-문제점"><a href="#선형-탐색-문제점" class="headerlink" title="선형 탐색 문제점"></a>선형 탐색 문제점</h3><ul>
+<li>Linear 로 진행해야하는데, 만약 중간 값이 삭제된 경우 그 뒤의 (충돌 중복된 값)들을 찾아보러 가지 않기 때문에 삭제된 자리에 더미 데이터를 남겨둬야 한다</li>
+</ul>
+<h2 id="Hash-Chaining"><a href="#Hash-Chaining" class="headerlink" title="Hash Chaining"></a>Hash Chaining</h2><ul>
+<li>링크드 리스트를 활용한다.</li>
+<li>자료 자체를 노드로 해야한다</li>
+<li>노드 말고도 리스트(튜플)로 만들어도 된다(구현해봐야함)<ul>
+<li>[1, [4, [9, [10, None]]]]</li>
+</ul>
+</li>
+<li>인덱스를 이동할 필요도 없기 때문에 더 단순함(노드가 저장)</li>
+</ul>
+<h2 id="충돌-해결-결론"><a href="#충돌-해결-결론" class="headerlink" title="충돌 해결 결론"></a>충돌 해결 결론</h2><ul>
+<li>일반적인 경우 해시 충돌이 많이 일어나지 않기 때문에 O(1)의 시간복잡도라고 생각하면 된다.</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -539,7 +943,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-05 14:11:16" itemprop="dateModified" datetime="2021-04-05T14:11:16+09:00">2021-04-05</time>
+        <time title="Modified: 2021-04-13 11:04:21" itemprop="dateModified" datetime="2021-04-13T11:04:21+09:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -657,7 +1061,7 @@
 <h1 id="재귀-호출"><a href="#재귀-호출" class="headerlink" title="재귀 호출"></a>재귀 호출</h1><p>함수가 자기 자신을 구현</p>
 <ul>
 <li>재귀는 무조건 iteration으로 바꿀 수 있다</li>
-<li>재귀식은이라고도 부르고, 수열의 항 사이의 관계를 나타냄</li>
+<li>수열의 항 사이의 관계를 나타냄</li>
 <li>수열을 n에 대한 식으로 표현하는 것을 ‘풀이한다’고 한다</li>
 <li>탈출조건이 반드시, 무조건 필요하다<ul>
 <li>탈출조건: 잘게 쪼개져서 풀 필요가 없을 때</li>
@@ -694,7 +1098,7 @@
 <h2 id="Tail-Recursion"><a href="#Tail-Recursion" class="headerlink" title="Tail Recursion"></a>Tail Recursion</h2><p>재귀 함수에서, 재귀 호출이 마지막에 딱 한번만 수행되는 것</p>
 <ul>
 <li>컴파일러에서 최적화를 지원하면, 함수 호출 스택을 낭비하지 않는다<ul>
-<li>python은 지원하지 않는</li>
+<li>python은 지원하지 않음</li>
 </ul>
 </li>
 <li>함수 호출 스택을 재활용</li>
@@ -762,7 +1166,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-05 14:11:12" itemprop="dateModified" datetime="2021-04-05T14:11:12+09:00">2021-04-05</time>
+        <time title="Modified: 2021-04-13 10:23:30" itemprop="dateModified" datetime="2021-04-13T10:23:30+09:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -807,7 +1211,7 @@
 <h1 id="알고리즘"><a href="#알고리즘" class="headerlink" title="알고리즘"></a>알고리즘</h1><h2 id="정렬-알고리즘이란"><a href="#정렬-알고리즘이란" class="headerlink" title="정렬 알고리즘이란"></a>정렬 알고리즘이란</h2><ul>
 <li><p>정렬 알고리즘은 비내림차순이다(오름차순이라고 안함. 중복되는 값이 있을 수 있기 때문)</p>
 <ul>
-<li>즉, 다음 원소보다 작지는 않다</li>
+<li>즉, 이전 원소보다 작지는 않다</li>
 </ul>
 </li>
 <li><p>정렬 알고리즘의 출력은 입력을 재배열하여 만든 순열이다.</p>
@@ -1149,369 +1553,6 @@
 </ul>
 <h1 id="Homework-6"><a href="#Homework-6" class="headerlink" title="Homework #6"></a>Homework #6</h1><ul>
 <li>이진 탐색 트리 구현 (remove까지)</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/29/ps/ps-210329/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dooyeong devlog !">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/29/ps/ps-210329/" class="post-title-link" itemprop="url">BOJ 1991 - 트리 순회</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-03-29 10:41:23" itemprop="dateCreated datePublished" datetime="2021-03-29T10:41:23+09:00">2021-03-29</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-02 23:23:14" itemprop="dateModified" datetime="2021-04-02T23:23:14+09:00">2021-04-02</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Problem-Solving-트리-순회-S1"><a href="#Problem-Solving-트리-순회-S1" class="headerlink" title="Problem Solving - 트리 순회(S1)"></a>Problem Solving - 트리 순회(S1)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [ Link ]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/1991">[ Link ]</a></h3><blockquote>
-<p>이진 트리를 입력받아 전위 순회(preorder traversal), 중위 순회(inorder traversal), 후위 순회(postorder traversal)한 결과를 출력하는 프로그램을 작성하시오.</p>
-</blockquote>
-<h3 id="2-입력"><a href="#2-입력" class="headerlink" title="2. 입력"></a>2. 입력</h3><blockquote>
-<p>첫째 줄에는 이진 트리의 노드의 개수 N(1≤N≤26)이 주어진다. 둘째 줄부터 N개의 줄에 걸쳐 각 노드와 그의 왼쪽 자식 노드, 오른쪽 자식 노드가 주어진다. 노드의 이름은 A부터 차례대로 영문자 대문자로 매겨지며, 항상 A가 루트 노드가 된다. 자식 노드가 없는 경우에는 .으로 표현된다.  </p>
-</blockquote>
-<h3 id="3-예제-입-출력"><a href="#3-예제-입-출력" class="headerlink" title="3. 예제 입/출력"></a>3. 예제 입/출력</h3><blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">A B C</span><br><span class="line">B D .</span><br><span class="line">C E F</span><br><span class="line">E . .</span><br><span class="line">F . G</span><br><span class="line">D . .</span><br><span class="line">G . .</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h3 id="4-풀이"><a href="#4-풀이" class="headerlink" title="4. 풀이"></a>4. 풀이</h3><p>이 문제는 단순히 트리를 preorder, inorder, postorder 방식으로 순회하는 문제였다.<br>각각의 경우를 재귀적인 방법을 활용해 풀이했다.</p>
-<h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">preorder</span>(<span class="params">tree</span>):</span></span><br><span class="line">    s = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recursive</span>(<span class="params">node</span>):</span></span><br><span class="line">        <span class="keyword">nonlocal</span> s</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> node == <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        s += node</span><br><span class="line">        recursive(tree[node][<span class="number">0</span>])</span><br><span class="line">        recursive(tree[node][<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    recursive(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder</span>(<span class="params">tree</span>):</span></span><br><span class="line">    s = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recursive</span>(<span class="params">node</span>):</span></span><br><span class="line">        <span class="keyword">nonlocal</span> s</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> node == <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        recursive(tree[node][<span class="number">0</span>])</span><br><span class="line">        s += node</span><br><span class="line">        recursive(tree[node][<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    recursive(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">postorder</span>(<span class="params">tree</span>):</span></span><br><span class="line">    s = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recursive</span>(<span class="params">node</span>):</span></span><br><span class="line">        <span class="keyword">nonlocal</span> s</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> node == <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        recursive(tree[node][<span class="number">0</span>])</span><br><span class="line">        recursive(tree[node][<span class="number">1</span>])</span><br><span class="line">        s += node</span><br><span class="line"></span><br><span class="line">    recursive(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">n, treeDict</span>):</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        root, left, right = stdin.readline().split()</span><br><span class="line">        treeDict[root] = [left, right]</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(preorder(treeDict))</span><br><span class="line">    <span class="built_in">print</span>(inorder(treeDict))</span><br><span class="line">    <span class="built_in">print</span>(postorder(treeDict))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">treeDict = <span class="built_in">dict</span>()</span><br><span class="line">solution(n, treeDict)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="5-분류"><a href="#5-분류" class="headerlink" title="5. 분류"></a>5. 분류</h3><ul>
-<li>트리  </li>
-<li>재귀  </li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/26/ds_algo/ds-algo-04/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dooyeong devlog !">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/26/ds_algo/ds-algo-04/" class="post-title-link" itemprop="url">ds-algo-04</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-03-26 12:52:17" itemprop="dateCreated datePublished" datetime="2021-03-26T12:52:17+09:00">2021-03-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="이전-복습"><a href="#이전-복습" class="headerlink" title="이전 복습"></a>이전 복습</h4><ul>
-<li>Composition -&gt; ex) ComposedLinkedQueue라는 클래스가 DoublyLinkedList를 사용함</li>
-<li>생명주기를 함께 함</li>
-<li>nested가 되려면 class 안에 class가 구현이 되어 완벽이 nested가 되어야 한다.</li>
-</ul>
-<h2 id="1-트리-비선형-자료구조"><a href="#1-트리-비선형-자료구조" class="headerlink" title="1. 트리 - 비선형 자료구조"></a>1. 트리 - 비선형 자료구조</h2><ul>
-<li>그래프의 일종, 여러 노드가 한 노드를 가르킬 수 없음(방향성이 있다고 보는 것(부모가 자식을 가르키는 구조라는 개념))<ul>
-<li>즉, 부모는 없거나(루트 노드) 하나밖에 없다</li>
-<li>root는 부모가 없기 때문에 자기 자신을 가르켜도 된다(?)</li>
-</ul>
-</li>
-<li>회로가(사이클이) 없고, 두 노드를 잇는 길이 하나뿐임</li>
-<li>root node가 하나 있고, 자식 노드가 있는 것이다<ul>
-<li>이 때, 자식의 수는 0 ~ n개가 있을 수도 있다</li>
-</ul>
-</li>
-</ul>
-<h3 id="1-1-트리의-구조"><a href="#1-1-트리의-구조" class="headerlink" title="1.1 트리의 구조"></a>1.1 트리의 구조</h3><p>선형이 아니기 때문에 다양한 용어들이 존재함</p>
-<ul>
-<li>Root node : 부모가 없는, 뿌리 노드</li>
-<li>leaf node : 자식이 없는 노드(leaf node간에도 level의 차이가 있을 수 있음)</li>
-<li>level(depth): root가 level 0, root부터의 거리를 level 을 정함</li>
-<li>internal node :star: : leaf node를 제외한 나머지 노드들(root node 포함) :star:</li>
-<li>height : tree에서 가장 높은 레벨</li>
-<li>edge : 노드들을 연결하는 간선</li>
-<li>path : :star: 경로를 따질때는 노드들은 빠지고 edge들만 따진다 :star:</li>
-</ul>
-<h3 id="1-2-트리의-특징"><a href="#1-2-트리의-특징" class="headerlink" title="1.2 트리의 특징"></a>1.2 트리의 특징</h3><ul>
-<li>하나의 노드에서 다른 노드로 이동하는 경로는 유일하다 :star:</li>
-<li>Acyclic(사이클이 없다)</li>
-<li>모든 노드는 서로 연결됨(외딴 섬이 없다)<ul>
-<li>따라서 하나의 edge를 끊으면 트리가 두개가 됨 (두 개의 sub-tree로 분리)</li>
-<li>leaf node만 잘라내도 leaf node가 root node가 되는 tree가 된다</li>
-</ul>
-</li>
-<li>edge = node - 1</li>
-</ul>
-<h2 id="2-이진-트리-Binary-Tree-종류"><a href="#2-이진-트리-Binary-Tree-종류" class="headerlink" title="2. 이진 트리(Binary Tree) 종류"></a>2. 이진 트리(Binary Tree) 종류</h2><p>자식이 최대 2개 있을 수 있는 트리<br>왼쪽, 오른쪽을 나누기 때문에 경우의 수는 총 4개이다.<br>자식 있을 경우, 없을 경우, 왼쪽만, 오른쪽만</p>
-<h3 id="2-1-정-이진-트리-full-binary-tree-Perfect-binary-tree"><a href="#2-1-정-이진-트리-full-binary-tree-Perfect-binary-tree" class="headerlink" title="2.1 정 이진 트리(full binary tree, Perfect binary tree)"></a>2.1 정 이진 트리(full binary tree, Perfect binary tree)</h3><p>꽉 차있는 binary tree</p>
-<ul>
-<li>모든 리프노드들의 level이 같음</li>
-<li>leaf node들을 제외한 모든 노드들이 자식 노드가 2개씩 있음</li>
-</ul>
-<h3 id="2-2-완전-이진-트리-Complete-binary-tree"><a href="#2-2-완전-이진-트리-Complete-binary-tree" class="headerlink" title="2.2 완전 이진 트리(Complete binary tree)"></a>2.2 완전 이진 트리(Complete binary tree)</h3><p>가장 흔하고 많이 다루는 트리<br>Perfect vs Complete (정 이진트리 vs 완전 이진 트리)</p>
-<ul>
-<li>height에 레벨 끝에서 2번째까지는 완전 다 차있음</li>
-<li>leaf node들은 :star: 왼쪽에서부터 오른쪽으로 :star: 차례대로 차있는 트리</li>
-</ul>
-<h3 id="2-3-군형-이진-트리-Balnaces-binary-tree-vs-Skewed-Tree"><a href="#2-3-군형-이진-트리-Balnaces-binary-tree-vs-Skewed-Tree" class="headerlink" title="2.3 군형 이진 트리(Balnaces binary tree vs Skewed Tree)"></a>2.3 군형 이진 트리(Balnaces binary tree vs Skewed Tree)</h3><ul>
-<li>Skewed : 한쪽으로 치우친 트리</li>
-<li>balance : 밸런스도 기준이 다양함<ul>
-<li>좌우 height 차이가 1 이하</li>
-<li>좌우 node 개수 차이가 3 이하</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-이진-트리의-순회-Traversal-보통-재귀로-구현"><a href="#3-이진-트리의-순회-Traversal-보통-재귀로-구현" class="headerlink" title="3. 이진 트리의 순회(Traversal) (보통 재귀로 구현)"></a>3. 이진 트리의 순회(Traversal) (보통 재귀로 구현)</h2><p>목적은 잘 모르겠고 말그대로 순회하는 것임</p>
-<ul>
-<li>(전위) 깊이 우선 순회(:star:Preorder, DFS:star:)<ul>
-<li>node(root) -&gt; left -&gt; right</li>
-</ul>
-</li>
-<li>(중위) 대칭 순회 (:star: Inorder, Symmetric)<ul>
-<li>left -&gt; node(root) -&gt; right</li>
-</ul>
-</li>
-<li>후위 순회 (:star: Postorder :star:)<ul>
-<li>left -&gt; right -&gt; node(root)</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-이진-트리의-탐색-Search"><a href="#4-이진-트리의-탐색-Search" class="headerlink" title="4. 이진 트리의 탐색(Search)"></a>4. 이진 트리의 탐색(Search)</h2><p>단순 순회가 아니라 특정한 값을 :star: 찾기 위한 것 :star:.</p>
-<ul>
-<li><p>너비 우선 (BFS)</p>
-<ul>
-<li>같은 level인 애들을 차례대로 봄</li>
-<li>루트 노드에서 가장 가까운 노드를 찾는다</li>
-</ul>
-</li>
-<li><p>깊이 우선 (DFS)</p>
-<ul>
-<li>depth가 증가하는 방향으로 이동하며 Search 함</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/26/ds_algo/ds-algo-03/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dooyeong devlog !">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/26/ds_algo/ds-algo-03/" class="post-title-link" itemprop="url">ds-algo-03</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-03-26 12:36:40" itemprop="dateCreated datePublished" datetime="2021-03-26T12:36:40+09:00">2021-03-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1-스택-Stack"><a href="#1-스택-Stack" class="headerlink" title="1. 스택(Stack)"></a>1. 스택(Stack)</h2><p>스택은 후입선출(LIFO)의 특성을 가지는 추상 자료형(ADT)이다.</p>
-<h2 id="2-큐-Queue"><a href="#2-큐-Queue" class="headerlink" title="2. 큐(Queue)"></a>2. 큐(Queue)</h2><p>큐는 FIFO 특성을 가지는 추상 자료형(ADT)이다.</p>
-<p>만약 서버가 요청을 처리하는 속도와 요청하는 속도가 똑같으면 큐가 터져버린다.</p>
-<h3 id="2-1-큐의-연산"><a href="#2-1-큐의-연산" class="headerlink" title="2.1 큐의 연산"></a>2.1 큐의 연산</h3><ul>
-<li>put(enqueue)</li>
-<li>get(dequeue)</li>
-<li>peek</li>
-</ul>
-<h3 id="2-2-큐의-구현"><a href="#2-2-큐의-구현" class="headerlink" title="2.2 큐의 구현"></a>2.2 큐의 구현</h3><ul>
-<li>선형 큐(Linear Queue)<ul>
-<li>선형 큐는 공간의 낭비가 된다(언젠가 rear가 배열의 끝에 도착)</li>
-</ul>
-</li>
-<li>환형 큐(Circlular Queue)<ul>
-<li>큐의 용량을 전부 사용하기 전까지는 overflow가 발생하지 않음</li>
-</ul>
-</li>
-<li>연결리스트 큐(Linked Queue)<ul>
-<li>보통 양방향 연결리스트로 큐를 구성</li>
-<li>물리적인 메모리를 전부 사용하기 전에는 overflow가 발생하지 않음</li>
-</ul>
-</li>
 </ul>
 
       
