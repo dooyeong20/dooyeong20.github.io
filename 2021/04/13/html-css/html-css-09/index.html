@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"dooyeong20.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+<meta name="description" content="HTML 표 컨텐츠와 양식표 컨텐츠12345678910111213141516171819202122232425262728&lt;table&gt;  &lt;caption&gt;    Fruits  &lt;&#x2F;caption&gt;  &lt;colgroup&gt;    &lt;col span&#x3D;&quot;2&quot; style&#x3D;&quot;background-colo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML 표 컨텐츠와 양식">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/04/13/html-css/html-css-09/index.html">
+<meta property="og:site_name" content="dooyeong devlog !">
+<meta property="og:description" content="HTML 표 컨텐츠와 양식표 컨텐츠12345678910111213141516171819202122232425262728&lt;table&gt;  &lt;caption&gt;    Fruits  &lt;&#x2F;caption&gt;  &lt;colgroup&gt;    &lt;col span&#x3D;&quot;2&quot; style&#x3D;&quot;background-colo">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-13T06:02:06.000Z">
+<meta property="article:modified_time" content="2021-04-13T06:51:48.184Z">
+<meta property="article:author" content="dooyeong">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dooyeong20.github.io/2021/04/13/html-css/html-css-09/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>HTML 표 컨텐츠와 양식 | dooyeong devlog !</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">dooyeong devlog !</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-%ED%91%9C-%EC%BB%A8%ED%85%90%EC%B8%A0%EC%99%80-%EC%96%91%EC%8B%9D"><span class="nav-number">1.</span> <span class="nav-text">HTML 표 컨텐츠와 양식</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%91%9C-%EC%BB%A8%ED%85%90%EC%B8%A0"><span class="nav-number">1.1.</span> <span class="nav-text">표 컨텐츠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#table-tr-th-td"><span class="nav-number">1.2.</span> <span class="nav-text">table, tr, th, td</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#th"><span class="nav-number">1.3.</span> <span class="nav-text">th</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#td"><span class="nav-number">1.4.</span> <span class="nav-text">td</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#caption"><span class="nav-number">1.5.</span> <span class="nav-text">caption</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%96%91%EC%8B%9D-%ED%83%9C%EA%B7%B8"><span class="nav-number">1.6.</span> <span class="nav-text">양식 태그</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-form-gt"><span class="nav-number">1.7.</span> <span class="nav-text">&lt;form&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-input-gt"><span class="nav-number">1.8.</span> <span class="nav-text">&lt;input&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-label-gt"><span class="nav-number">1.9.</span> <span class="nav-text">&lt;label&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-button-gt"><span class="nav-number">1.10.</span> <span class="nav-text">&lt;button&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-textarea-gt"><span class="nav-number">1.11.</span> <span class="nav-text">&lt;textarea&gt;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#lt-fieldset-gt-lt-legend-gt"><span class="nav-number">1.12.</span> <span class="nav-text">&lt;fieldset&gt;, &lt;legend&gt;</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">dooyeong</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/13/html-css/html-css-09/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTML 표 컨텐츠와 양식
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-13 15:02:06 / Modified: 15:51:48" itemprop="dateCreated datePublished" datetime="2021-04-13T15:02:06+09:00">2021-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="HTML-표-컨텐츠와-양식"><a href="#HTML-표-컨텐츠와-양식" class="headerlink" title="HTML 표 컨텐츠와 양식"></a>HTML 표 컨텐츠와 양식</h1><h2 id="표-컨텐츠"><a href="#표-컨텐츠" class="headerlink" title="표 컨텐츠"></a>표 컨텐츠</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">caption</span>&gt;</span></span><br><span class="line">    Fruits</span><br><span class="line">  <span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">colgroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">col</span> <span class="attr">span</span>=<span class="string">&quot;2&quot;</span> <span class="attr">style</span>=<span class="string">&quot;background-color: yellowgreen;&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">&quot;background-color: tomato;&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>ID<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Price<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>F123A<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Apple<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$22<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>F098B<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Banana<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$19<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="table-tr-th-td"><a href="#table-tr-th-td" class="headerlink" title="table, tr, th, td"></a>table, tr, th, td</h2><ul>
+<li><code>table</code>: display=table</li>
+<li><code>tr</code>: display=table-row</li>
+<li><code>th</code>,<code>td</code>: display=table-cell</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">table 태그 에다가 border-collapse: collapse;</span><br><span class="line">입력해주면 윤곽선이 자연스럽게 정리된다.</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>th는 테이블의 헤더 역할을 한다(글씨가 두껍게 되고 등등)</li>
+</ul>
+<h2 id="th"><a href="#th" class="headerlink" title="th"></a>th</h2><ul>
+<li><code>abbr</code> : 열에 대한 간단한 소개</li>
+<li><code>headers</code>: 관련된 하나 이상의 다른 머리글 칸 <code>id</code>속성 값</li>
+<li><code>colspan</code></li>
+<li><code>rowspan</code></li>
+<li><code>span</code>: 자신이 누구 머리글 칸인지 명시 (col, colgroup, row, rowgroup, auto(row))</li>
+</ul>
+<h2 id="td"><a href="#td" class="headerlink" title="td"></a>td</h2><ul>
+<li><code>headers</code> : 보통 <code>th</code>의 <code>id</code>에 서연결한다.</li>
+<li><code>colspan</code></li>
+<li><code>rowspan</code></li>
+</ul>
+<h2 id="caption"><a href="#caption" class="headerlink" title="caption"></a>caption</h2><ul>
+<li>display는 table-caption이다</li>
+<li>테이블 태그 바로 하위에 작성하며 테이블 제목의 역할을 수행한다</li>
+</ul>
+<h2 id="양식-태그"><a href="#양식-태그" class="headerlink" title="양식 태그"></a>양식 태그</h2><h2 id="lt-form-gt"><a href="#lt-form-gt" class="headerlink" title="&lt;form&gt;"></a><code>&lt;form&gt;</code></h2><p>웹 서버에 정보를 제출하기위한 양식의 범위를 정함</p>
+<ul>
+<li><code>action</code>: 전송한 정보를 처리할 url</li>
+<li><code>autocomplete</code>: 사용자가 이전에 입력한 값으로 자동완성 할지 여부</li>
+<li><code>method</code>: 서버로 전송할 방식</li>
+<li><code>novalidate</code>: 유효성을 검사하지 않도록 지정</li>
+<li><code>target</code>: 서버로 전송 후 응답받을 방식을 지정</li>
+</ul>
+<h2 id="lt-input-gt"><a href="#lt-input-gt" class="headerlink" title="&lt;input&gt;"></a><code>&lt;input&gt;</code></h2><p>사용자에게 입력받을 데이터 양식</p>
+<ul>
+<li><p><code>autofocus</code>: 페이지가 로드될 때 자동으로 포커스</p>
+</li>
+<li><p><code>form</code>: 폼 바깥에 작성한 것을 이어주는 역할</p>
+</li>
+<li><p><code>type</code>: 입력할 수 있는 종류</p>
+<ul>
+<li><code>button</code></li>
+<li><code>checkbox</code></li>
+<li><code>color</code> 등</li>
+<li>예를 들어서,<code>type=number</code>과 같이 숫자를 입력하려고 했으면 숫자만 입력이 됨</li>
+<li><code>image</code> 이미지로 끝나지 않고, 제출 버튼으로 활용할 수 있다.</li>
+<li><code>reset</code> 데이터는 자신이 포함된 <code>form</code>태그 내의 <code>input</code>들을 초기화한다.</li>
+</ul>
+</li>
+<li><p><code>placeholder</code>: 사용자에게 힌트를 줌</p>
+</li>
+</ul>
+<h2 id="lt-label-gt"><a href="#lt-label-gt" class="headerlink" title="&lt;label&gt;"></a><code>&lt;label&gt;</code></h2><p>라벨 가능 요소(labelable)의 제목(Caption).</p>
+<ul>
+<li>for 속성으로 라벨 가능 요소를 참조하거나 콘텐츠로 포함.</li>
+<li>라벨 가능 요소: <code>&lt;button&gt;, &lt;input&gt;, &lt;progress&gt;, &lt;select&gt;, &lt;textarea&gt;</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 라벨 가능 요소를 참조 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;user-agreement&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;user-agreement&quot;</span>&gt;</span>동의하십니까?<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 라벨 가능 요소를 포함 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> /&gt;</span>동의하십니까?<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="lt-button-gt"><a href="#lt-button-gt" class="headerlink" title="&lt;button&gt;"></a><code>&lt;button&gt;</code></h2><ul>
+<li>autofocus 페이지가 로드될 때 자동으로 포커스</li>
+<li>disabled 버튼을 비활성화</li>
+<li>form <code>&lt;form&gt;</code>의 id 속성 값</li>
+<li>name 폼 데이터와 함께 전송되는 버튼의 이름</li>
+<li>type 버튼의 타입<ul>
+<li><code>button</code>, <code>submit</code>, <code>reset</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="lt-textarea-gt"><a href="#lt-textarea-gt" class="headerlink" title="&lt;textarea&gt;"></a><code>&lt;textarea&gt;</code></h2><p>여러 줄의 일반 텍스트 양식</p>
+<ul>
+<li>display: inline-block</li>
+<li>rows 양식의 줄 수 숫자(Number)<ul>
+<li>default: 2</li>
+</ul>
+</li>
+</ul>
+<h2 id="lt-fieldset-gt-lt-legend-gt"><a href="#lt-fieldset-gt-lt-legend-gt" class="headerlink" title="&lt;fieldset&gt;, &lt;legend&gt;"></a><code>&lt;fieldset&gt;, &lt;legend&gt;</code></h2><p>같은 목적의 양식을 그룹화(<code>&lt;fieldset&gt;</code>)하여 제목(<code>&lt;legend&gt;</code>)을 지정</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/html/" rel="tag"># html</a>
+              <a href="/tags/css/" rel="tag"># css</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/12/html-css/html-css-08/" rel="prev" title="HTML 멀티미디어 & 내장 콘텐츠">
+                  <i class="fa fa-chevron-left"></i> HTML 멀티미디어 & 내장 콘텐츠
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dooyeong</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

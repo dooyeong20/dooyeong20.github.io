@@ -155,7 +155,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -195,6 +195,174 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/29/ds_algo/ds-algo-05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/29/ds_algo/ds-algo-05/" class="post-title-link" itemprop="url">ds-algo-05</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-03-29 13:47:17" itemprop="dateCreated datePublished" datetime="2021-03-29T13:47:17+09:00">2021-03-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="이전-강의-복습"><a href="#이전-강의-복습" class="headerlink" title="이전 강의 복습"></a>이전 강의 복습</h3><ul>
+<li><p>‘is’ 와 ‘==’</p>
+<ul>
+<li>== : 값을 비교해서 같으면 True</li>
+<li>is : 동일한 객체인지를 확인해서 같으면 True</li>
+</ul>
+</li>
+<li><p>참고로, 파이썬에서는 id()가 유일학 객체를 구분하는 수단(주소값은 알 수 없음)</p>
+</li>
+<li><p>파이썬은 모든 값이 다 객체임. 모두.</p>
+<ul>
+<li>원시타입이 없음</li>
+</ul>
+</li>
+<li><p>재귀보다 스택(반복문)이 성능이 훨씬 좋다. 하지만 읽기가 좀 힘들다.</p>
+</li>
+</ul>
+<h1 id="이진-탐색-트리-Binary-Search-Trees"><a href="#이진-탐색-트리-Binary-Search-Trees" class="headerlink" title="이진 탐색 트리(Binary Search Trees)"></a>이진 탐색 트리(Binary Search Trees)</h1><ul>
+<li>노드 값에 ‘순서’, ‘크고 작음’이 있어서 비교를 할 수가 있다.(알파벳, 숫자 등도 포함)</li>
+<li>왼쪽 서브트리가 더 작고 오른쪽 서브트리 요소(노드)들이 더 크다.</li>
+<li>자료를 넣는 순서에 영향을 받는다.</li>
+<li>O(logN) ~ O(n) 사이 어딘가에 존재하게 된다.</li>
+<li>자료의 중복이 허용되지 않음</li>
+<li>(굳이 따지자면) 탐색 최적화</li>
+</ul>
+<h2 id="자료의-탐색"><a href="#자료의-탐색" class="headerlink" title="자료의 탐색"></a>자료의 탐색</h2><ul>
+<li>Skewed 경우 : O(n)</li>
+<li>Balance 경우 : O(logN)</li>
+</ul>
+<h2 id="자료의-삽입"><a href="#자료의-삽입" class="headerlink" title="자료의 삽입"></a>자료의 삽입</h2><ul>
+<li>일치하는 노드가 발견되면 종료</li>
+<li>일치하는 노드가 없으면 마지막 노드의 좌(작을 때), 우(클 때)에 삽입.</li>
+</ul>
+<h2 id="자료의-삭제"><a href="#자료의-삭제" class="headerlink" title="자료의 삭제"></a>자료의 삭제</h2><p>세가지 경우가 존재함<br>삭제를 하기 위해 search를 할 때는 부모노드를 추적해야 한다.</p>
+<ol>
+<li>삭제할 노드의 자식이 없을 때</li>
+<li>삭제할 노드가 좌/우 중 하나의 자식이 있는 경우</li>
+<li>삭제한 노드가 좌, 우 자식 모두 가지고 있는 경우 (매우 복잡)</li>
+</ol>
+<br>
+
+<h1 id="그래프"><a href="#그래프" class="headerlink" title="그래프"></a>그래프</h1><p>객체간의 짝을 이루는 구조를 나타냄. 가장 유연하다 (ADT 임)</p>
+<ul>
+<li>vertex와 이를 잇는 edge로 이루어져 있다.</li>
+<li>방향이 있거나(유유) 없을(무향) 수 있다.</li>
+<li>edge에는 가중치라는 것이 있다.(클수록 연결의 강도가 클 수도있고, 작아질 수도 있다.)</li>
+</ul>
+<h2 id="그래프와-트리-관계"><a href="#그래프와-트리-관계" class="headerlink" title="그래프와 트리 관계"></a>그래프와 트리 관계</h2><p>트리는 DAG(Directed Acyclic Graph)의 일종이며 회로(사이클)이 없고, 방향성이 존재한다.</p>
+<h2 id="그래프의-종류"><a href="#그래프의-종류" class="headerlink" title="그래프의 종류"></a>그래프의 종류</h2><ul>
+<li>무향 그래프(양쪽으로 다 연결되어 있는 것으로 생각할 수 있다.)</li>
+<li>유향 그래프<ul>
+<li>같은 노드를 잇더라도 방향에 따라서 가중치가 다를 수 있다.</li>
+</ul>
+</li>
+<li>다중 그래프<ul>
+<li>하나의 vertex에서 다른 vertex로 가는 edge가 여러 개 있을 수 있다</li>
+<li>자기 자신으로 연결되는 edge가 있을 수 있다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="그래프-용어"><a href="#그래프-용어" class="headerlink" title="그래프 용어"></a>그래프 용어</h2><ul>
+<li>path: edge들의 시퀀스</li>
+<li>회로(Cycle, Circuit): 트리와는 다르게 사이클이 존재할 수 있다. 자기 자신으로 다시 돌아올 수 있음.</li>
+<li>부분 그래프(Subgraph): 그래프에 속하는 그래프<ul>
+<li>모든 노드끼리 연결이 안되어 있어도 그래프임 즉, 1-7-3 6 4 이렇게 (1,7,3),(6), (4) 이렇게 구성해도 connected graph가 아닌 subgraph이다.</li>
+</ul>
+</li>
+<li>연결 그래프(connected graph): 임의의 노드와 임의의 노드를 연결하는 edge가 있다. 즉, 어떻게든 path를 구성해서 노드간에 이동할 수 있다.</li>
+</ul>
+<h2 id="그래프-구현-방법"><a href="#그래프-구현-방법" class="headerlink" title="그래프 구현 방법"></a>그래프 구현 방법</h2><ul>
+<li>인접 리스트: Sparse 할 경우 유리함<ul>
+<li>각 vertex마다 연결된 vertex들을 쭉 리스트로 나열함</li>
+<li>인접 리스트에서 순서는 중요하지 않음<ul>
+<li>트리는 left, right(순서)가 중요하지만 그래프는 중요하지 않음</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>인접 행렬 - Dense할 경우 유리함<ul>
+<li>노드들간에 연결이 다 되어 있을 수록 유리</li>
+<li>무향 그래프인 경우, 인접 행렬에서 row=colum 축에 대칭임</li>
+<li>가중치가 있을 경우 (v1, v2)에 1대신에 가중치를 적음</li>
+<li>행렬이 값으로 차있을 경우(dense) 효율적</li>
+</ul>
+</li>
+</ul>
+<h1 id="Homework-6"><a href="#Homework-6" class="headerlink" title="Homework #6"></a>Homework #6</h1><ul>
+<li>이진 탐색 트리 구현 (remove까지)</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -598,7 +766,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
+        <time title="Modified: 2021-04-13 16:13:29" itemprop="dateModified" datetime="2021-04-13T16:13:29+09:00">2021-04-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -625,7 +793,7 @@
 </li>
 <li><p>측정은 결과의 의미도 기준이 애매하고, 코드도 복잡해져서 잘 사용하지 않음</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line">array = [<span class="number">1</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">sum</span> = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(array)): &#123;</span><br><span class="line">    count += <span class="number">1</span> <span class="comment"># 루프 조건 확인</span></span><br><span class="line">	    <span class="built_in">sum</span> += array[i]  <span class="comment"># 숨어있는 연산(array 인덱스에 접근하는 연산)</span></span><br><span class="line">    count += <span class="number">1</span> <span class="comment"># 덧셈 연산</span></span><br><span class="line">    count += <span class="number">1</span> <span class="comment"># 대입 연산</span></span><br><span class="line">&#125;</span><br><span class="line">count += <span class="number">1</span> <span class="comment"># Branch: for문은 반복하는게 default라서 반복 안할 경우에 연산</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(count)</span><br></pre></td></tr></table></figure></li>
-<li><p>분석 :  반복문과 조건문을 고려하여 분기별로 실행 횟수를 분석</p>
+<li><p>분석 : 반복문과 조건문을 고려하여 분기별로 실행 횟수를 분석</p>
 <ul>
 <li>알고리즘 동작에 영향을 주는 인자를 변수로(ex: n, m, k) 사용한다.</li>
 </ul>
@@ -640,7 +808,7 @@
 <h3 id="1-3-Asymptotic-Notations-점진적-표현-방법"><a href="#1-3-Asymptotic-Notations-점진적-표현-방법" class="headerlink" title="1.3 Asymptotic Notations(점진적 표현 방법)"></a>1.3 Asymptotic Notations(점진적 표현 방법)</h3><ul>
 <li>자료의 개수 등 n의 크기가 충분히 많다고 가정</li>
 <li>Big-O<ul>
-<li>$3n+1$ 은 $O(n^2), O(n), O(n^3)$  등 모두에게 다 포함된다. 즉, g(n)이 상한이다.</li>
+<li>$3n+1$ 은 $O(n^2), O(n), O(n^3)$ 등 모두에게 다 포함된다. 즉, g(n)이 상한이다.</li>
 <li>Big-O에 O(n)에는 {n, 4, $logn$} 등이 있을 수 있다.</li>
 <li>Big-O 순위 → 상수, 로그, 선형, 선형로그($nlogn$), 다항식(제곱), 지수, 팩토리얼</li>
 <li>많이 사용하는 이유는 “최소한의 성능을 보장”한다는 느낌이다.</li>
@@ -711,12 +879,12 @@
 </li>
 <li><p><code>append()</code>: O(n) (조건부 O(1)) - 배열의 크기를 넘었을 때 다시 큰 크기로 재할당 해야하기 때문에</p>
 </li>
-<li><pre><code>set_head(index)
-</code></pre>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set_head(index)</span><br></pre></td></tr></table></figure>
+
 <p>: O(1) ⭐ - 시작점을 바꿔주고 길이만 바꿔주면 되기 때문</p>
 <ul>
-<li>set_head 에서 self.array[index:] 는 실제 python 슬라이싱이 아니라 C 수준으로 최적화가 되어 있어서</li>
-</ul>
+<li><p>set_head 에서 self.array[index:] 는 실제 python 슬라이싱이 아니라 C 수준으로 최적화가 되어 있어서</p>
 </li>
 <li><p><code>access(index)</code>: O(1)</p>
 </li>

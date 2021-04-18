@@ -155,7 +155,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -204,6 +204,160 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/13/html-css/html-css-09/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/13/html-css/html-css-09/" class="post-title-link" itemprop="url">HTML 표 컨텐츠와 양식</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-13 15:02:06 / Modified: 15:51:48" itemprop="dateCreated datePublished" datetime="2021-04-13T15:02:06+09:00">2021-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="HTML-표-컨텐츠와-양식"><a href="#HTML-표-컨텐츠와-양식" class="headerlink" title="HTML 표 컨텐츠와 양식"></a>HTML 표 컨텐츠와 양식</h1><h2 id="표-컨텐츠"><a href="#표-컨텐츠" class="headerlink" title="표 컨텐츠"></a>표 컨텐츠</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">caption</span>&gt;</span></span><br><span class="line">    Fruits</span><br><span class="line">  <span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">colgroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">col</span> <span class="attr">span</span>=<span class="string">&quot;2&quot;</span> <span class="attr">style</span>=<span class="string">&quot;background-color: yellowgreen;&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">&quot;background-color: tomato;&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>ID<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Price<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>F123A<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Apple<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$22<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>F098B<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Banana<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$19<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="table-tr-th-td"><a href="#table-tr-th-td" class="headerlink" title="table, tr, th, td"></a>table, tr, th, td</h2><ul>
+<li><code>table</code>: display=table</li>
+<li><code>tr</code>: display=table-row</li>
+<li><code>th</code>,<code>td</code>: display=table-cell</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">table 태그 에다가 border-collapse: collapse;</span><br><span class="line">입력해주면 윤곽선이 자연스럽게 정리된다.</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>th는 테이블의 헤더 역할을 한다(글씨가 두껍게 되고 등등)</li>
+</ul>
+<h2 id="th"><a href="#th" class="headerlink" title="th"></a>th</h2><ul>
+<li><code>abbr</code> : 열에 대한 간단한 소개</li>
+<li><code>headers</code>: 관련된 하나 이상의 다른 머리글 칸 <code>id</code>속성 값</li>
+<li><code>colspan</code></li>
+<li><code>rowspan</code></li>
+<li><code>span</code>: 자신이 누구 머리글 칸인지 명시 (col, colgroup, row, rowgroup, auto(row))</li>
+</ul>
+<h2 id="td"><a href="#td" class="headerlink" title="td"></a>td</h2><ul>
+<li><code>headers</code> : 보통 <code>th</code>의 <code>id</code>에 서연결한다.</li>
+<li><code>colspan</code></li>
+<li><code>rowspan</code></li>
+</ul>
+<h2 id="caption"><a href="#caption" class="headerlink" title="caption"></a>caption</h2><ul>
+<li>display는 table-caption이다</li>
+<li>테이블 태그 바로 하위에 작성하며 테이블 제목의 역할을 수행한다</li>
+</ul>
+<h2 id="양식-태그"><a href="#양식-태그" class="headerlink" title="양식 태그"></a>양식 태그</h2><h2 id="lt-form-gt"><a href="#lt-form-gt" class="headerlink" title="&lt;form&gt;"></a><code>&lt;form&gt;</code></h2><p>웹 서버에 정보를 제출하기위한 양식의 범위를 정함</p>
+<ul>
+<li><code>action</code>: 전송한 정보를 처리할 url</li>
+<li><code>autocomplete</code>: 사용자가 이전에 입력한 값으로 자동완성 할지 여부</li>
+<li><code>method</code>: 서버로 전송할 방식</li>
+<li><code>novalidate</code>: 유효성을 검사하지 않도록 지정</li>
+<li><code>target</code>: 서버로 전송 후 응답받을 방식을 지정</li>
+</ul>
+<h2 id="lt-input-gt"><a href="#lt-input-gt" class="headerlink" title="&lt;input&gt;"></a><code>&lt;input&gt;</code></h2><p>사용자에게 입력받을 데이터 양식</p>
+<ul>
+<li><p><code>autofocus</code>: 페이지가 로드될 때 자동으로 포커스</p>
+</li>
+<li><p><code>form</code>: 폼 바깥에 작성한 것을 이어주는 역할</p>
+</li>
+<li><p><code>type</code>: 입력할 수 있는 종류</p>
+<ul>
+<li><code>button</code></li>
+<li><code>checkbox</code></li>
+<li><code>color</code> 등</li>
+<li>예를 들어서,<code>type=number</code>과 같이 숫자를 입력하려고 했으면 숫자만 입력이 됨</li>
+<li><code>image</code> 이미지로 끝나지 않고, 제출 버튼으로 활용할 수 있다.</li>
+<li><code>reset</code> 데이터는 자신이 포함된 <code>form</code>태그 내의 <code>input</code>들을 초기화한다.</li>
+</ul>
+</li>
+<li><p><code>placeholder</code>: 사용자에게 힌트를 줌</p>
+</li>
+</ul>
+<h2 id="lt-label-gt"><a href="#lt-label-gt" class="headerlink" title="&lt;label&gt;"></a><code>&lt;label&gt;</code></h2><p>라벨 가능 요소(labelable)의 제목(Caption).</p>
+<ul>
+<li>for 속성으로 라벨 가능 요소를 참조하거나 콘텐츠로 포함.</li>
+<li>라벨 가능 요소: <code>&lt;button&gt;, &lt;input&gt;, &lt;progress&gt;, &lt;select&gt;, &lt;textarea&gt;</code></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 라벨 가능 요소를 참조 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;user-agreement&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;user-agreement&quot;</span>&gt;</span>동의하십니까?<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 라벨 가능 요소를 포함 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> /&gt;</span>동의하십니까?<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="lt-button-gt"><a href="#lt-button-gt" class="headerlink" title="&lt;button&gt;"></a><code>&lt;button&gt;</code></h2><ul>
+<li>autofocus 페이지가 로드될 때 자동으로 포커스</li>
+<li>disabled 버튼을 비활성화</li>
+<li>form <code>&lt;form&gt;</code>의 id 속성 값</li>
+<li>name 폼 데이터와 함께 전송되는 버튼의 이름</li>
+<li>type 버튼의 타입<ul>
+<li><code>button</code>, <code>submit</code>, <code>reset</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="lt-textarea-gt"><a href="#lt-textarea-gt" class="headerlink" title="&lt;textarea&gt;"></a><code>&lt;textarea&gt;</code></h2><p>여러 줄의 일반 텍스트 양식</p>
+<ul>
+<li>display: inline-block</li>
+<li>rows 양식의 줄 수 숫자(Number)<ul>
+<li>default: 2</li>
+</ul>
+</li>
+</ul>
+<h2 id="lt-fieldset-gt-lt-legend-gt"><a href="#lt-fieldset-gt-lt-legend-gt" class="headerlink" title="&lt;fieldset&gt;, &lt;legend&gt;"></a><code>&lt;fieldset&gt;, &lt;legend&gt;</code></h2><p>같은 목적의 양식을 그룹화(<code>&lt;fieldset&gt;</code>)하여 제목(<code>&lt;legend&gt;</code>)을 지정</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-08/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -227,10 +381,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-04-12 17:31:06 / Modified: 19:49:22" itemprop="dateCreated datePublished" datetime="2021-04-12T17:31:06+09:00">2021-04-12</time>
+      <time title="Created: 2021-04-12 17:31:06" itemprop="dateCreated datePublished" datetime="2021-04-12T17:31:06+09:00">2021-04-12</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-04-13 14:59:44" itemprop="dateModified" datetime="2021-04-13T14:59:44+09:00">2021-04-13</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -287,6 +447,23 @@
 <h2 id="figure-figcaption-tag"><a href="#figure-figcaption-tag" class="headerlink" title="figure, figcaption tag"></a>figure, figcaption tag</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">figure &#123; display: block; &#125;</span><br><span class="line">figcation &#123; display: inline; &#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">figure</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;milk.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;A milk&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">figcaption</span>&gt;</span>Milk is a nutrient-rich, white liquid.<span class="tag">&lt;/<span class="name">figcaption</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="iframe-Tag"><a href="#iframe-Tag" class="headerlink" title="iframe Tag"></a>iframe Tag</h2><p>다른 페이지를 현재 페이지에 삽입(HTML)</p>
+<ul>
+<li>inline 요소</li>
+<li>iframe tag(html)에다가 height, width 를 정할 수 있음</li>
+</ul>
+<h3 id="iframe-속성들"><a href="#iframe-속성들" class="headerlink" title="iframe 속성들"></a>iframe 속성들</h3><ul>
+<li><code>name</code></li>
+<li><code>frameborder</code> : 기본 값은 1</li>
+<li><code>allowfullscreen</code></li>
+<li><code>sandbox</code>: 보안을 위한 읽기 전용으로 삽입s<ul>
+<li><code>allow-form</code></li>
+<li><code>allow-scripts</code></li>
+<li><code>allow-same-origin</code>: 같은 출처(도메인) 리소스 사용 가능</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -1188,136 +1365,6 @@
 <li>O(ElogE) vs O(ElogV)</li>
 <li>sparse 하면 크루스칼 사용</li>
 <li>dense 하면 프림 사용</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/08/ds_algo/ds-algo-12/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dooyeong devlog !">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/08/ds_algo/ds-algo-12/" class="post-title-link" itemprop="url">ds-algo-12</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-04-08 13:40:57" itemprop="dateCreated datePublished" datetime="2021-04-08T13:40:57+09:00">2021-04-08</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-09 10:37:10" itemprop="dateModified" datetime="2021-04-09T10:37:10+09:00">2021-04-09</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="이전-시간-카카오-가사검색"><a href="#이전-시간-카카오-가사검색" class="headerlink" title="이전 시간 (카카오 가사검색)"></a>이전 시간 (카카오 가사검색)</h2><ul>
-<li>원래는 O(Q * N * M) 이었는데(dfs를 각각 해줘야하기 때문)</li>
-<li>근데 딕셔너리로 각각의 노드마다 하위 단어의 개수를 메모함으로써 O(1)만큼의 탐색시간으로 탐색 가능</li>
-<li>즉, 시간복잡도는 O(Q * M)이 됨</li>
-</ul>
-<h1 id="Dijkstra-Algorithm"><a href="#Dijkstra-Algorithm" class="headerlink" title="Dijkstra Algorithm"></a>Dijkstra Algorithm</h1><p><u>노드 하나를 기준</u>으로 다른 모든 노드까지 도달하는 <u>최단 거리</u>를 계산하는 알고리즘</p>
-<ul>
-<li>Vanila Dijkstra는 최단 거리만을 계산, 경로까지 알아내려면 추가 메모리 필요</li>
-<li>간선의 weight를 거리로 계산</li>
-</ul>
-<h2 id="Dijkstra-조건"><a href="#Dijkstra-조건" class="headerlink" title="Dijkstra 조건"></a>Dijkstra 조건</h2><ul>
-<li>그래프의 내 간선(edge) 중 음수 값이 없을 때에 사용 가능<ul>
-<li>무향 그래프의 경우, 음수로 연결된 노드 사이에서 이동시 계속 음의 무한대로 발산해버림</li>
-</ul>
-</li>
-<li>그래프는 <u>유향 그래프, 무향 그래프</u> 모두 사용 가능</li>
-</ul>
-<h2 id="Dijkstra-특징"><a href="#Dijkstra-특징" class="headerlink" title="Dijkstra 특징"></a>Dijkstra 특징</h2><ul>
-<li><p><u>Greed Algorithm</u>이면서, <u>Dynamic Programming</u> 기법을 사용</p>
-</li>
-<li><p>원리</p>
-<ul>
-<li>가장 가중치가 작은 간선부터 하나씩 탐색 (Greed Algorithm)</li>
-<li>탐색 과정에서 최단 거리를 기억하여, 이를 누적하여 빠르게 최단 거리 계산 (Dynamic Programming)</li>
-</ul>
-</li>
-</ul>
-<h2 id="Dijkstra-Implement"><a href="#Dijkstra-Implement" class="headerlink" title="Dijkstra Implement"></a>Dijkstra Implement</h2><ol>
-<li>각 Node에 도달하는 최소 거리를 기억하기 위한 배열 distance를 생성하고, 무한대 값으로 초기화</li>
-<li>Start Node에서 해당 Node까지의 거리를 정렬 기준으로 하는 Min Heap 생성</li>
-<li>Start Node를 Min Heap에 삽입 (자기 자신까지의 거리는 0)</li>
-<li>Min Heap에 Node가 있는 동안 반복</li>
-<li>Min Heap에서 Node를 하나 꺼낸다.</li>
-<li>Min Heap에 기록된 거리가 distance에 저장된 해당 Node까지의 거리보다 길면 건너뛴다.(최적화 기법)</li>
-<li>Node의 Adjacent Node들에 대하여 아래 기능 수행</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># distance[node] min_heap에서 뽑은 것</span></span><br><span class="line">new_distance = distance[node] + dist[node][adj_node]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> new_distance &lt; distance[adj_node]: <span class="comment"># min_heap에서 뽑은게 더 좋은거라면</span></span><br><span class="line">                                      <span class="comment"># 만약 음수가 허용이 된다면, 가정(거리가 증가해가며 맞춰간다는 가정)이 깨짐</span></span><br><span class="line">distance[adj_node] = new_distance</span><br><span class="line">min_heap.add(adj_node)</span><br></pre></td></tr></table></figure>
-
-<h1 id="Kruskal’s-Algorithm"><a href="#Kruskal’s-Algorithm" class="headerlink" title="Kruskal’s Algorithm"></a>Kruskal’s Algorithm</h1><p>어느 그래프의 Subgraph 중, 다음 조건을 만족하는 그래프</p>
-<ul>
-<li>본 그래프의 모든 노드를 포함한다.</li>
-<li>모든 노드가 서로 연결되어 있다. (Connected graph)</li>
-<li>사이클이 존재하지 않는다.</li>
-<li>위 조건들을 만족하는 그래프 중 간선 가중치의 합이 최소인 그래프</li>
-</ul>
-<h2 id="Kruskal"><a href="#Kruskal" class="headerlink" title="Kruskal"></a>Kruskal</h2><ul>
-<li>같은 그래프에 있는 노드끼리 연결되면 사이클이 생긴다.<ul>
-<li>같은 그래프에 있는지 확인을 해주어야 함</li>
-</ul>
-</li>
 </ul>
 
       
