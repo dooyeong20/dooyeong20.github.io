@@ -23,22 +23,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"dooyeong20.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="이전 시간 (카카오 가사검색) 원래는 O(Q * N * M) 이었는데(dfs를 각각 해줘야하기 때문) 근데 딕셔너리로 각각의 노드마다 하위 단어의 개수를 메모함으로써 O(1)만큼의 탐색시간으로 탐색 가능 즉, 시간복잡도는 O(Q * M)이 됨  Dijkstra Algorithm노드 하나를 기준으로 다른 모든 노드까지 도달하는 최단 거리를 계산하는 알고리즘">
+<meta name="description" content="마크업논리성이 중요함  마크업은 논리적으로 와닿을 수 있도록 하는 것이 중요 디자인을 보고 그대로 따라서 마크업 하는 것이 아니고, 실제 사용을 염두해두고 논리적인 순서에 따라 마크업하는 습관 디자인 외적으로 최대한 semantic하게 마크업 해야 함  WAI-ARIA웹 표준, 접근성의 중요성  fontawesome: aria-hidden&#x3D;”true” di">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ds-algo-12">
-<meta property="og:url" content="https://dooyeong20.github.io/2021/04/08/ds_algo/ds-algo-12/index.html">
+<meta property="og:title" content="HTML layout">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/04/20/html-css/html-css-11/index.html">
 <meta property="og:site_name" content="dooyeong devlog !">
-<meta property="og:description" content="이전 시간 (카카오 가사검색) 원래는 O(Q * N * M) 이었는데(dfs를 각각 해줘야하기 때문) 근데 딕셔너리로 각각의 노드마다 하위 단어의 개수를 메모함으로써 O(1)만큼의 탐색시간으로 탐색 가능 즉, 시간복잡도는 O(Q * M)이 됨  Dijkstra Algorithm노드 하나를 기준으로 다른 모든 노드까지 도달하는 최단 거리를 계산하는 알고리즘">
+<meta property="og:description" content="마크업논리성이 중요함  마크업은 논리적으로 와닿을 수 있도록 하는 것이 중요 디자인을 보고 그대로 따라서 마크업 하는 것이 아니고, 실제 사용을 염두해두고 논리적인 순서에 따라 마크업하는 습관 디자인 외적으로 최대한 semantic하게 마크업 해야 함  WAI-ARIA웹 표준, 접근성의 중요성  fontawesome: aria-hidden&#x3D;”true” di">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-04-08T04:40:57.000Z">
-<meta property="article:modified_time" content="2021-04-09T01:37:10.309Z">
+<meta property="article:published_time" content="2021-04-20T04:32:06.000Z">
+<meta property="article:modified_time" content="2021-04-20T07:51:56.032Z">
 <meta property="article:author" content="dooyeong">
-<meta property="article:tag" content="data structure">
-<meta property="article:tag" content="algorithm">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://dooyeong20.github.io/2021/04/08/ds_algo/ds-algo-12/">
+<link rel="canonical" href="https://dooyeong20.github.io/2021/04/20/html-css/html-css-11/">
 
 
 <script class="page-configurations">
@@ -50,7 +50,7 @@
     lang   : 'en'
   };
 </script>
-<title>ds-algo-12 | dooyeong devlog !</title>
+<title>HTML layout | dooyeong devlog !</title>
   
 
 
@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%B4%EC%A0%84-%EC%8B%9C%EA%B0%84-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EA%B0%80%EC%82%AC%EA%B2%80%EC%83%89"><span class="nav-number">1.</span> <span class="nav-text">이전 시간 (카카오 가사검색)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dijkstra-Algorithm"><span class="nav-number"></span> <span class="nav-text">Dijkstra Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra-%EC%A1%B0%EA%B1%B4"><span class="nav-number">1.</span> <span class="nav-text">Dijkstra 조건</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra-%ED%8A%B9%EC%A7%95"><span class="nav-number">2.</span> <span class="nav-text">Dijkstra 특징</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra-Implement"><span class="nav-number">3.</span> <span class="nav-text">Dijkstra Implement</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Kruskal%E2%80%99s-Algorithm"><span class="nav-number"></span> <span class="nav-text">Kruskal’s Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Kruskal"><span class="nav-number">1.</span> <span class="nav-text">Kruskal</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%A7%88%ED%81%AC%EC%97%85"><span class="nav-number">1.</span> <span class="nav-text">마크업</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WAI-ARIA"><span class="nav-number">2.</span> <span class="nav-text">WAI-ARIA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nav-tag"><span class="nav-number">3.</span> <span class="nav-text">nav tag</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#a-tag%EC%99%80-aria"><span class="nav-number">4.</span> <span class="nav-text">a tag와 aria</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%BB%A8%ED%85%90%EC%B8%A0-%EC%88%A8%EA%B8%B0%EA%B8%B0"><span class="nav-number">5.</span> <span class="nav-text">컨텐츠 숨기기</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -212,7 +212,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/08/ds_algo/ds-algo-12/">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/20/html-css/html-css-11/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -225,7 +225,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ds-algo-12
+          HTML layout
         </h1>
 
         <div class="post-meta-container">
@@ -235,23 +235,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2021-04-08 13:40:57" itemprop="dateCreated datePublished" datetime="2021-04-08T13:40:57+09:00">2021-04-08</time>
+      <time title="Created: 2021-04-20 13:32:06 / Modified: 16:51:56" itemprop="dateCreated datePublished" datetime="2021-04-20T13:32:06+09:00">2021-04-20</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-09 10:37:10" itemprop="dateModified" datetime="2021-04-09T10:37:10+09:00">2021-04-09</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
         </span>
     </span>
 
@@ -265,57 +259,25 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="이전-시간-카카오-가사검색"><a href="#이전-시간-카카오-가사검색" class="headerlink" title="이전 시간 (카카오 가사검색)"></a>이전 시간 (카카오 가사검색)</h2><ul>
-<li>원래는 O(Q * N * M) 이었는데(dfs를 각각 해줘야하기 때문)</li>
-<li>근데 딕셔너리로 각각의 노드마다 하위 단어의 개수를 메모함으로써 O(1)만큼의 탐색시간으로 탐색 가능</li>
-<li>즉, 시간복잡도는 O(Q * M)이 됨</li>
-</ul>
-<h1 id="Dijkstra-Algorithm"><a href="#Dijkstra-Algorithm" class="headerlink" title="Dijkstra Algorithm"></a>Dijkstra Algorithm</h1><p><u>노드 하나를 기준</u>으로 다른 모든 노드까지 도달하는 <u>최단 거리</u>를 계산하는 알고리즘</p>
+        <h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><p>논리성이 중요함</p>
 <ul>
-<li>Vanila Dijkstra는 최단 거리만을 계산, 경로까지 알아내려면 추가 메모리 필요</li>
-<li>간선의 weight를 거리로 계산</li>
+<li>마크업은 논리적으로 와닿을 수 있도록 하는 것이 중요</li>
+<li>디자인을 보고 그대로 따라서 마크업 하는 것이 아니고, 실제 사용을 염두해두고 논리적인 순서에 따라 마크업하는 습관</li>
+<li>디자인 외적으로 최대한 semantic하게 마크업 해야 함</li>
 </ul>
-<h2 id="Dijkstra-조건"><a href="#Dijkstra-조건" class="headerlink" title="Dijkstra 조건"></a>Dijkstra 조건</h2><ul>
-<li>그래프의 내 간선(edge) 중 음수 값이 없을 때에 사용 가능<ul>
-<li>무향 그래프의 경우, 음수로 연결된 노드 사이에서 이동시 계속 음의 무한대로 발산해버림</li>
-</ul>
-</li>
-<li>그래프는 <u>유향 그래프, 무향 그래프</u> 모두 사용 가능</li>
-</ul>
-<h2 id="Dijkstra-특징"><a href="#Dijkstra-특징" class="headerlink" title="Dijkstra 특징"></a>Dijkstra 특징</h2><ul>
-<li><p><u>Greed Algorithm</u>이면서, <u>Dynamic Programming</u> 기법을 사용</p>
-</li>
-<li><p>원리</p>
+<h2 id="WAI-ARIA"><a href="#WAI-ARIA" class="headerlink" title="WAI-ARIA"></a>WAI-ARIA</h2><p>웹 표준, 접근성의 중요성</p>
 <ul>
-<li>가장 가중치가 작은 간선부터 하나씩 탐색 (Greed Algorithm)</li>
-<li>탐색 과정에서 최단 거리를 기억하여, 이를 누적하여 빠르게 최단 거리 계산 (Dynamic Programming)</li>
+<li>fontawesome: aria-hidden=”true”</li>
+<li>display: none 보다는 접근성을 조금 더 고려한 aria-hidden을 이해해야 한다.</li>
 </ul>
-</li>
-</ul>
-<h2 id="Dijkstra-Implement"><a href="#Dijkstra-Implement" class="headerlink" title="Dijkstra Implement"></a>Dijkstra Implement</h2><ol>
-<li>각 Node에 도달하는 최소 거리를 기억하기 위한 배열 distance를 생성하고, 무한대 값으로 초기화</li>
-<li>Start Node에서 해당 Node까지의 거리를 정렬 기준으로 하는 Min Heap 생성</li>
-<li>Start Node를 Min Heap에 삽입 (자기 자신까지의 거리는 0)</li>
-<li>Min Heap에 Node가 있는 동안 반복</li>
-<li>Min Heap에서 Node를 하나 꺼낸다.</li>
-<li>Min Heap에 기록된 거리가 distance에 저장된 해당 Node까지의 거리보다 길면 건너뛴다.(최적화 기법)</li>
-<li>Node의 Adjacent Node들에 대하여 아래 기능 수행</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># distance[node] min_heap에서 뽑은 것</span></span><br><span class="line">new_distance = distance[node] + dist[node][adj_node]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> new_distance &lt; distance[adj_node]: <span class="comment"># min_heap에서 뽑은게 더 좋은거라면</span></span><br><span class="line">                                      <span class="comment"># 만약 음수가 허용이 된다면, 가정(거리가 증가해가며 맞춰간다는 가정)이 깨짐</span></span><br><span class="line">distance[adj_node] = new_distance</span><br><span class="line">min_heap.add(adj_node)</span><br></pre></td></tr></table></figure>
-
-<h1 id="Kruskal’s-Algorithm"><a href="#Kruskal’s-Algorithm" class="headerlink" title="Kruskal’s Algorithm"></a>Kruskal’s Algorithm</h1><p>어느 그래프의 Subgraph 중, 다음 조건을 만족하는 그래프</p>
+<h2 id="nav-tag"><a href="#nav-tag" class="headerlink" title="nav tag"></a>nav tag</h2><p>메뉴라고 다 네비게이션을 사용하지 말고, 실제로 중요한 메뉴에만 nav 태그를 사용한다.</p>
+<h2 id="a-tag와-aria"><a href="#a-tag와-aria" class="headerlink" title="a tag와 aria"></a>a tag와 aria</h2><p>button 태그를 사용하지 않고, a 태그를 버튼으로 쓰고자 한다면 다음 사항을 고려해야 함</p>
 <ul>
-<li>본 그래프의 모든 노드를 포함한다.</li>
-<li>모든 노드가 서로 연결되어 있다. (Connected graph)</li>
-<li>사이클이 존재하지 않는다.</li>
-<li>위 조건들을 만족하는 그래프 중 간선 가중치의 합이 최소인 그래프</li>
+<li>a 태그에 role=”button” 을 주어서 스크린 리더가 버튼으로 인식하도록 함</li>
+<li>aria-pressed=”true” : 눌렸을 때</li>
+<li>aria-haspopup=”true”: 뭔가를 가졌는지</li>
 </ul>
-<h2 id="Kruskal"><a href="#Kruskal" class="headerlink" title="Kruskal"></a>Kruskal</h2><ul>
-<li>같은 그래프에 있는 노드끼리 연결되면 사이클이 생긴다.<ul>
-<li>같은 그래프에 있는지 확인을 해주어야 함</li>
-</ul>
-</li>
-</ul>
+<h2 id="컨텐츠-숨기기"><a href="#컨텐츠-숨기기" class="headerlink" title="컨텐츠 숨기기"></a>컨텐츠 숨기기</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.a11y-hidden</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: aqua;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: -<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">visibility</span>: hidden;</span><br><span class="line">  <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">  <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">  <span class="attribute">clip-path</span>: <span class="built_in">polygon</span>(<span class="number">0</span> <span class="number">0</span>, <span class="number">0</span> <span class="number">0</span>, <span class="number">0</span> <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -325,22 +287,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/data-structure/" rel="tag"># data structure</a>
-              <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+              <a href="/tags/html/" rel="tag"># html</a>
+              <a href="/tags/css/" rel="tag"># css</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/07/ds_algo/ds-algo-11/" rel="prev" title="ds-algo-11">
-                  <i class="fa fa-chevron-left"></i> ds-algo-11
+                <a href="/2021/04/19/html-css/html-css-10/" rel="prev" title="Web과 HTML">
+                  <i class="fa fa-chevron-left"></i> Web과 HTML
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/09/ds_algo/ds-algo-13/" rel="next" title="ds-algo-13">
-                  ds-algo-13 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
