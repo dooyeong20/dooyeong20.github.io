@@ -155,7 +155,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -195,6 +195,200 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/12/html-css/html-css-04/" class="post-title-link" itemprop="url">HTML 주요 범위, 메타데이터</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-12 11:28:06 / Modified: 12:16:01" itemprop="dateCreated datePublished" datetime="2021-04-12T11:28:06+09:00">2021-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="HTML-주요-범위와-메타데이터"><a href="#HTML-주요-범위와-메타데이터" class="headerlink" title="HTML 주요 범위와 메타데이터"></a>HTML 주요 범위와 메타데이터</h1><h2 id="블록-요소"><a href="#블록-요소" class="headerlink" title="블록 요소"></a>블록 요소</h2><ul>
+<li>DIV, H1, P 등</li>
+<li>사용가능한 최대 가로 너비를 사용</li>
+<li>가로 사이즈를 지정하지 않고 height만 지정해준다면 가로사이즈를 끝까지 채움</li>
+<li><code>width: 100%; height: 0;</code>으로 <strong>시작</strong> (auto)</li>
+<li>수직으로 쌓임</li>
+<li>margin, padding 위,아래,좌,우 모두 사용 가능</li>
+<li>For Layout</li>
+</ul>
+<h2 id="인라인-요소"><a href="#인라인-요소" class="headerlink" title="인라인 요소"></a>인라인 요소</h2><ul>
+<li><p>SPAN, IMG</p>
+</li>
+<li><p>필요한 만큼의 너비만 사용</p>
+</li>
+<li><p>크기를 지정할 수 없음</p>
+</li>
+<li><p><code>width: 0; height: 0;</code>으로 <strong>시작</strong> (auto)</p>
+</li>
+<li><p>수평으로 쌓임</p>
+</li>
+<li><p>태그 사이에 띄어쓰기가 페이지에 그대로 보인다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 띄어쓰기가 없음 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 띄어쓰기가 들어감 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>margin, padding 위,아래를 사용할 수 없다.</p>
+</li>
+<li><p>For Text</p>
+</li>
+</ul>
+<h2 id="인라인-블록-요소-변경"><a href="#인라인-블록-요소-변경" class="headerlink" title="인라인, 블록 요소 변경"></a>인라인, 블록 요소 변경</h2><p><code>display</code>속성을 활용해 변경할 수 있다.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block; <span class="comment">/* 블럭 요소로 바뀜 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline; <span class="comment">/* 인라인 요소로 바뀜 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="메타데이터"><a href="#메타데이터" class="headerlink" title="메타데이터"></a>메타데이터</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;ko&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 문서의 정보 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">content</span>=<span class="string">&quot;&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>문서의 제목<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 문서의 내용 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dooyeong devlog !">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/12/html-css/html-css-03/" class="post-title-link" itemprop="url">CSS 기본 문법과 선택자</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-04-12 11:20:06 / Modified: 11:27:26" itemprop="dateCreated datePublished" datetime="2021-04-12T11:20:06+09:00">2021-04-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="CSS-문법과-선택자"><a href="#CSS-문법과-선택자" class="headerlink" title="CSS 문법과 선택자"></a>CSS 문법과 선택자</h1><h2 id="CSS-기본-문법"><a href="#CSS-기본-문법" class="headerlink" title="CSS 기본 문법"></a>CSS 기본 문법</h2><p><strong>선택자, 속성, 값</strong>으로 이루어져 있음</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 다음과 같이 이해할 수 있습니다. */</span></span><br><span class="line">선택자 &#123;</span><br><span class="line">  속성: 값;</span><br><span class="line">  속성: 값;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="선택자의-역할"><a href="#선택자의-역할" class="headerlink" title="선택자의 역할"></a>선택자의 역할</h2><p>HTML에 스타일(CSS)을 적용하기 위해 HTML의 특정한 요소를 선택하는 사인(sign)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>제목..<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>본문..<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>h1</code> 태그에 색을 빨간색으로</li>
+<li><code>p</code> 태그의 색을 파란색으로</li>
+</ul>
+<h2 id="속성-Properties-과-값-Value"><a href="#속성-Properties-과-값-Value" class="headerlink" title="속성(Properties)과 값(Value)"></a>속성(Properties)과 값(Value)</h2><ul>
+<li>HTML의 속성은 attribute</li>
+<li>CSS 속성은 properties</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red; <span class="comment">/* 글자색은 빨강 */</span></span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">20px</span>; <span class="comment">/* 글자 크기는 20px */</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>; <span class="comment">/* 가로 너비는 300px */</span></span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span>; <span class="comment">/* 바깥 여백은 20px */</span></span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span>; <span class="comment">/* 안쪽 여백은 위아래 10px, 좌우 20px */</span></span><br><span class="line">  <span class="attribute">position</span>: absolute; <span class="comment">/* 위치는 부모 요소 기준 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1141,222 +1335,6 @@
 <h3 id="3-풀이"><a href="#3-풀이" class="headerlink" title="3. 풀이"></a>3. 풀이</h3><p>문제는 재귀의 구현능력을 보는 문제였던 것 같다.<br>어떻게 재귀를 구현해야하는지 넘버링이 잘 되어있기 때문에 그냥 변환과정대로만 구현하면 되는 문제였다.</p>
 <p>올바른 문자열인지 구하는 메서드를 구현해 아래 코드와 같이 재귀적으로 문제를 풀어주었다.</p>
 <h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">p</span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">is_correct</span>(<span class="params">st</span>):</span></span><br><span class="line">        s = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> ch <span class="keyword">in</span> st:</span><br><span class="line">            <span class="keyword">if</span> ch  == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">                s.append(ch)</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> s <span class="keyword">and</span> s[-<span class="number">1</span>] == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">                s.pop()</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> <span class="keyword">not</span> s <span class="keyword">else</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> p == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">        <span class="keyword">return</span> p</span><br><span class="line"></span><br><span class="line">    cnt = <span class="number">0</span></span><br><span class="line">    u, v = <span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span></span><br><span class="line">    u_end = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> p:</span><br><span class="line">        <span class="keyword">if</span> ch == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">            cnt += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            cnt -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> u_end:</span><br><span class="line">            u += ch</span><br><span class="line">            <span class="keyword">if</span> cnt == <span class="number">0</span>:</span><br><span class="line">                u_end = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            v += ch</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> is_correct(u):</span><br><span class="line">        <span class="keyword">return</span> u + solution(v)</span><br><span class="line"></span><br><span class="line">    tmp = <span class="string">&#x27;(&#x27;</span> + solution(v) + <span class="string">&#x27;)&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(u)-<span class="number">1</span>):</span><br><span class="line">        tmp += <span class="string">&#x27;(&#x27;</span> <span class="keyword">if</span> u[i] == <span class="string">&#x27;)&#x27;</span> <span class="keyword">else</span> <span class="string">&#x27;)&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> tmp</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/02/ps/ps-210402/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dooyeong devlog !">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/02/ps/ps-210402/" class="post-title-link" itemprop="url">Programmers - 징검다리</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-04-02 21:16:23 / Modified: 21:24:19" itemprop="dateCreated datePublished" datetime="2021-04-02T21:16:23+09:00">2021-04-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Problem-Solving-징검다리-Level-4"><a href="#Problem-Solving-징검다리-Level-4" class="headerlink" title="Problem Solving - 징검다리 (Level 4)"></a>Problem Solving - 징검다리 (Level 4)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/43236">[Link]</a></h3><p>출발지점부터 distance만큼 떨어진 곳에 도착지점이 있습니다. 그리고 그사이에는 바위들이 놓여있습니다. 바위 중 몇 개를 제거하려고 합니다.<br>예를 들어, 도착지점이 25만큼 떨어져 있고, 바위가 [2, 14, 11, 21, 17] 지점에 놓여있을 때 바위 2개를 제거하면 출발지점, 도착지점, 바위 간의 거리가 아래와 같습니다.</p>
-<p>제거한 바위의 위치 각 바위 사이의 거리 거리의 최솟값</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[21, 17]	[2, 9, 3, 11]	2</span><br><span class="line">[2, 21]	    [11, 3, 3, 8]	3</span><br><span class="line">[2, 11]	    [14, 3, 4, 4]	3</span><br><span class="line">[11, 21]	[2, 12, 3, 8]	2</span><br><span class="line">[2, 14] 	[11, 6, 4, 4]	4</span><br></pre></td></tr></table></figure>
-
-<p>위에서 구한 거리의 최솟값 중에 가장 큰 값은 4입니다.</p>
-<p>출발지점부터 도착지점까지의 거리 distance, 바위들이 있는 위치를 담은 배열 rocks, 제거할 바위의 수 n이 매개변수로 주어질 때, 바위를 n개 제거한 뒤 각 지점 사이의 거리의 최솟값 중에 가장 큰 값을 return 하도록 solution 함수를 작성해주세요.</p>
-<p>제한사항<br>도착지점까지의 거리 distance는 1 이상 1,000,000,000 이하입니다.<br>바위는 1개 이상 50,000개 이하가 있습니다.<br>n 은 1 이상 바위의 개수 이하입니다.</p>
-<h3 id="2-입력-출력"><a href="#2-입력-출력" class="headerlink" title="2. 입력/출력"></a>2. 입력/출력</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">distance	rocks	                n	return</span><br><span class="line">25          [2, 14, 11, 21, 17]     2   4</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-풀이"><a href="#3-풀이" class="headerlink" title="3. 풀이"></a>3. 풀이</h3><p>문제의 카테고리가 이분탐색인 것을 알고 있는 상태로 풀이를 시작했지만, 어떻게 구현해야 하는지 감이 잘 오지 않는 문제였다. 하지만 징검다리를 지우고 <code>distance</code>를 구해주는 것이 아닌, <code>distance</code>를 가지고 지울 징검다리의 개수를 얻어 이분탐색을 진행해야 한다는 힌트를 얻은 뒤 아래와 같이 구현하였다.</p>
-<p>먼저 <code>distance</code>를 구해주기 위해 최솟값인 0부터 최대값인 1000000000 사이를 이분탐색 해주었는데, 해당 <code>distance</code>를 징검다리에 적용했을 때 몇 개의 징검다리가 삭제되어야 하는지를 활용해 탐색해주었다.</p>
-<p>그리고 가능한 값 중 최댓값을 구해야하는 것에 주의해주어야 한다.</p>
-<h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">distance, rocks, n</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_count</span>(<span class="params">dis</span>):</span></span><br><span class="line">        prev = <span class="number">0</span></span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> r <span class="keyword">in</span> rocks:</span><br><span class="line">            <span class="keyword">if</span> r - prev &lt; dis:</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                prev = r</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> cnt</span><br><span class="line"></span><br><span class="line">    ans = <span class="number">0</span></span><br><span class="line">    l, r = <span class="number">0</span>, <span class="number">1000000000</span></span><br><span class="line">    rocks.sort()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> l &lt;= r:</span><br><span class="line">        m = (l + r) // <span class="number">2</span></span><br><span class="line">        tmp_cnt = get_count(m)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> tmp_cnt &lt;= n:</span><br><span class="line">            l = m + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            r = m - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> l - <span class="number">1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/01/ds_algo/ds-algo-08/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dooyeong devlog !">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/01/ds_algo/ds-algo-08/" class="post-title-link" itemprop="url">ds-algo-_08</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-04-01 13:49:57" itemprop="dateCreated datePublished" datetime="2021-04-01T13:49:57+09:00">2021-04-01</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-05 14:11:18" itemprop="dateModified" datetime="2021-04-05T14:11:18+09:00">2021-04-05</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="탐색"><a href="#탐색" class="headerlink" title="탐색"></a>탐색</h1><p>Search Algorithms</p>
-<ul>
-<li><p>원하는 조건에 맞는 자료를 찾는 것을 탐색 알고리즘이라고 한다</p>
-</li>
-<li><p>자료가 정렬되어있지 않다면, 이분 탐색이 불가능하다.</p>
-</li>
-<li><p>미분가능하고 연속적이면 수치해석(?)</p>
-</li>
-</ul>
-<h2 id="선형-탐색"><a href="#선형-탐색" class="headerlink" title="선형 탐색"></a>선형 탐색</h2><ul>
-<li>순차 탐색(Sequential Search)</li>
-<li>순서대로 하나씩 비교 -&gt; O(n)</li>
-</ul>
-<h2 id="이분-탐색"><a href="#이분-탐색" class="headerlink" title="이분 탐색"></a>이분 탐색</h2><ul>
-<li>이진 탐색</li>
-<li>자료가 정렬되어 있을 때 적용 가능 (요소 중복 가능)</li>
-<li>탐색 범위를 절반씩 줄여가며 탐색 -&gt; O(logn)</li>
-<li>bst의 best 케이스라고도 볼 수 있음</li>
-<li>bst는 삽입할 때 logN, 검색할 때 logN이 걸린다<ul>
-<li>자료가 추가가 되면서 자동적으로 정렬이 되기 때문에(logN) 좋다</li>
-</ul>
-</li>
-<li>리스트에는 자료를 추가해 이분탐색하려면 O(nlogn)이 걸리기 때문에 데이터 추가나 삭제 등을 고려하지는 않고 탐색용이다</li>
-</ul>
-<h1 id="해시"><a href="#해시" class="headerlink" title="해시"></a>해시</h1><p>넓은 범위의 값이 주어졌을 때 특정 범위(값)으로 좁힌 값을 도출<br>모듈러 연산(%)도 간단한 해시 값에 해당한다</p>
-<ul>
-<li><p>해시, 해시 값</p>
-</li>
-<li><p>동일 입력에 대해 동일 출력을 보장</p>
-<ul>
-<li>다른 입력에 대해서도 동일한 출력이 발생할 수 있음(충돌)</li>
-</ul>
-</li>
-<li><p>해시 값의 범위를 좁히는 것과 해시 충돌이 일어나지 않도록 하는 것은 반비례한다. (비둘기 집의 원리(?))</p>
-</li>
-<li><p>임의 접근이 가능해진다</p>
-</li>
-</ul>
-<h2 id="해시-성능에-영향을-주는-요소들-trade-off-관계에-있다"><a href="#해시-성능에-영향을-주는-요소들-trade-off-관계에-있다" class="headerlink" title="해시 성능에 영향을 주는 요소들(trade off 관계에 있다)"></a>해시 성능에 영향을 주는 요소들(trade off 관계에 있다)</h2><ol>
-<li>해시함수의 동작 시간(해시를 계산하는데 걸리는 시간)</li>
-<li>해시 충돌의 발생 확률</li>
-<li>해시 값의 범위 (부작용이 없다면 범위가 작을수록 좋다)</li>
-</ol>
-<h2 id="해시-셋-set"><a href="#해시-셋-set" class="headerlink" title="해시 셋(set)"></a>해시 셋(set)</h2><p>파이썬에서 set으로 바꿔주면 in 연산을 통해 O(1)의 시간복잡도로 데이터의 유무를 파악할 수 있다.</p>
-<h2 id="해시-충돌"><a href="#해시-충돌" class="headerlink" title="해시 충돌"></a>해시 충돌</h2><ul>
-<li>Bucket 에 담는 과정에서도(index 계산한다 등등) 해시 충돌이 일어날 수 있다</li>
-<li>일반적으로 자료 저장 인덱스는 bucekt 사이즈로 모듈러 연산으로 구한다</li>
-</ul>
-<h1 id="숙제"><a href="#숙제" class="headerlink" title="숙제"></a>숙제</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/43236">프로그래머스 징검다리 문제</a></li>
-</ul>
 
       
     </div>
