@@ -1557,7 +1557,6 @@ pre code {
   border: 1px solid #eee;
   max-width: 120px;
   padding: 2px;
-  border-radius: 50%;
 }
 .site-author-name {
   color: var(--text-color);
@@ -2855,17 +2854,6 @@ ul.breadcrumb li:last-child {
   padding: 2px 5px;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
-.main-menu .menu-item-active::after {
-  background: #bbb;
-  border-radius: 50%;
-  content: ' ';
-  height: 6px;
-  margin-top: -3px;
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  width: 6px;
-}
 .sub-menu {
   margin: 0;
   padding: 6px 0;
@@ -2995,11 +2983,19 @@ body * {
 .main-inner {
   background-color: transparent;
 }
+.custom-logo-image {
+  width: 120px;
+  height: 120px;
+  background-color: #ccc;
+}
 .site-brand-container {
   background: none;
 }
 .site-meta {
   padding: 5px 0;
+}
+.site-author-image {
+  border-radius: 20px;
 }
 .site-meta .brand::before {
   content: "꾸준한 개미";

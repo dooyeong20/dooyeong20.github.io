@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="트리힙 (Heap) 항상 최대값&#x2F;최소값이 루트 노드에 존재하는 트리 구조 우선순위 큐(Priority Queue)를 구현하는 데에 쓰인다. 자료를 트리에서 제거하거나 추가할 때 이를 위한 추가 동작을 구현 배열로 이루어진 완전 이진 트리(CBT) 를 기반으로 함  Min Heap 부모 노드가 항상 자식노드보다 작은 완전 이진 트리 좌&#x2F;우는 상관이 없다  M">
+<meta property="og:type" content="article">
+<meta property="og:title" content="트리와 힙">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/04/07/ds-algo/ds-algo-11/index.html">
+<meta property="og:site_name" content="행복한 두영&#39;s 블로그">
+<meta property="og:description" content="트리힙 (Heap) 항상 최대값&#x2F;최소값이 루트 노드에 존재하는 트리 구조 우선순위 큐(Priority Queue)를 구현하는 데에 쓰인다. 자료를 트리에서 제거하거나 추가할 때 이를 위한 추가 동작을 구현 배열로 이루어진 완전 이진 트리(CBT) 를 기반으로 함  Min Heap 부모 노드가 항상 자식노드보다 작은 완전 이진 트리 좌&#x2F;우는 상관이 없다  M">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:published_time" content="2021-04-07T03:00:57.000Z">
+<meta property="article:modified_time" content="2021-05-01T08:59:04.046Z">
+<meta property="article:author" content="dooyeong">
+<meta property="article:tag" content="data structure">
+<meta property="article:tag" content="algorithm">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dooyeong20.github.io/2021/04/07/ds-algo/ds-algo-11/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;04&#x2F;07&#x2F;ds-algo&#x2F;ds-algo-11&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;04&#x2F;07&#x2F;ds-algo&#x2F;ds-algo-11&#x2F;&quot;,&quot;title&quot;:&quot;트리와 힙&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>트리와 힙 | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">행복한 두영's 블로그</h1>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/images/devpost.svg" alt="행복한 두영's 블로그">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>홈</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>카테고리<span class="badge">3</span></a></li>
+        <li class="menu-item menu-item-자료구조-알고리즘"><a href="/categories/DS-Algorithm/" rel="section"><i class="fa fa-bookmark fa-fw"></i>자료구조 알고리즘</a></li>
+        <li class="menu-item menu-item-html/css"><a href="/categories/HTML-CSS/" rel="section"><i class="fa fa-bookmark fa-fw"></i>HTML/CSS</a></li>
+        <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">7</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">36</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          목차
+        </li>
+        <li class="sidebar-nav-overview">
+          흝어보기
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%ED%8A%B8%EB%A6%AC"><span class="nav-number">1.</span> <span class="nav-text">트리</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%9E%99-Heap"><span class="nav-number">1.1.</span> <span class="nav-text">힙 (Heap)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Min-Heap"><span class="nav-number">1.1.1.</span> <span class="nav-text">Min Heap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Max-Heap"><span class="nav-number">1.1.2.</span> <span class="nav-text">Max Heap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%9E%99%EC%9D%98-%EC%82%BD%EC%9E%85-O-logN"><span class="nav-number">1.2.</span> <span class="nav-text">힙의 삽입 O(logN)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%9E%99%EC%9D%98-%EC%82%AD%EC%A0%9C-O-logN"><span class="nav-number">1.3.</span> <span class="nav-text">힙의 삭제 O(logN)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%9E%99%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0-%ED%9E%99-vs-%EB%B0%B0%EC%97%B4"><span class="nav-number">1.4.</span> <span class="nav-text">힙을 사용하는 이유 (힙 vs 배열)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Trie"><span class="nav-number">1.5.</span> <span class="nav-text">Trie</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC"><span class="nav-number">1.6.</span> <span class="nav-text">다익스트라</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Homework"><span class="nav-number">2.</span> <span class="nav-text">Homework</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="dooyeong"
+      src="/images/my.png">
+  <p class="site-author-name" itemprop="name">dooyeong</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-name">포스트</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">카테고리</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">태그</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dooyeong20" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dooyeong20" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:noviced22@gmail.com" title="E-Mail → mailto:noviced22@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/dooyeong20" class="github-corner" title="Follow Github - dooyeong20" aria-label="Follow Github - dooyeong20" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/07/ds-algo/ds-algo-11/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          트리와 힙
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-04-07 12:00:57" itemprop="dateCreated datePublished" datetime="2021-04-07T12:00:57+09:00">2021-04-07</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-01 17:59:04" itemprop="dateModified" datetime="2021-05-01T17:59:04+09:00">2021-05-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="트리"><a href="#트리" class="headerlink" title="트리"></a>트리</h1><h2 id="힙-Heap"><a href="#힙-Heap" class="headerlink" title="힙 (Heap)"></a>힙 (Heap)</h2><ul>
+<li>항상 최대값/최소값이 루트 노드에 존재하는 트리 구조</li>
+<li>우선순위 큐(Priority Queue)를 구현하는 데에 쓰인다.</li>
+<li>자료를 트리에서 제거하거나 추가할 때 이를 위한 <u>추가 동작</u>을 구현</li>
+<li>배열로 이루어진 <u>완전 이진 트리(CBT)</u> 를 기반으로 함</li>
+</ul>
+<h3 id="Min-Heap"><a href="#Min-Heap" class="headerlink" title="Min Heap"></a>Min Heap</h3><ul>
+<li>부모 노드가 항상 자식노드보다 작은 <u>완전 이진 트리</u></li>
+<li>좌/우는 상관이 없다</li>
+</ul>
+<h3 id="Max-Heap"><a href="#Max-Heap" class="headerlink" title="Max Heap"></a>Max Heap</h3><ul>
+<li>부모 노드가 항상 자식노드보다 큰 <u>완전 이진 트리</u></li>
+<li>좌/우는 상관이 없다</li>
+</ul>
+<h2 id="힙의-삽입-O-logN"><a href="#힙의-삽입-O-logN" class="headerlink" title="힙의 삽입 O(logN)"></a>힙의 삽입 O(logN)</h2><ol>
+<li><u>배열의 마지막</u>에 새로운 자료를 추가</li>
+<li><u>부모 노드와 비교</u>하여 두 값을 swap해야 하는지 여부 결정</li>
+<li>Heap의 정의에 부합할 때 까지 2번 동작을 반복 - 최대 O(logN)번 반복</li>
+</ol>
+<h2 id="힙의-삭제-O-logN"><a href="#힙의-삭제-O-logN" class="headerlink" title="힙의 삭제 O(logN)"></a>힙의 삭제 O(logN)</h2><ol>
+<li>항상 <u>루트(배열의 첫번째 자료)</u>의 자료를 삭제한다.</li>
+<li>배열의 <u>마지막 자료를 첫번째 위치로 옮긴다</u>.</li>
+<li><u>두개의 자식 노드</u> 중 부모의 자리를 대체할 노드를 선택</li>
+<li>Heap의 정의에 부합할 때 까지 3번 동작을 반복 - 최대 O(logN)번 반복</li>
+</ol>
+<ul>
+<li>3번의 과정에서, 둘 중 더 작은 값과 swap을 해주어야 한다(min heap).</li>
+</ul>
+<h2 id="힙을-사용하는-이유-힙-vs-배열"><a href="#힙을-사용하는-이유-힙-vs-배열" class="headerlink" title="힙을 사용하는 이유 (힙 vs 배열)"></a>힙을 사용하는 이유 (힙 vs 배열)</h2><ul>
+<li>배열<ul>
+<li>정렬된 배열에서 최대/최소 찾을 때: O(1)</li>
+<li>정렬된 배열에 자료를 추가/삭제할 때: O(N)</li>
+<li>평균적으로 O(N)</li>
+</ul>
+</li>
+<li>힙<ul>
+<li>힙: 삽입, 삭제, 조회 모두 O(logN)</li>
+<li>평균적으로 O(logN)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Trie"><a href="#Trie" class="headerlink" title="Trie"></a>Trie</h2><p>단어 검색에 최적화된 Tree 기반의 자료구조</p>
+<ul>
+<li><p>Trie 이름의 어원: Retrieval</p>
+</li>
+<li><p>회수한다</p>
+</li>
+<li><p>Trie에서 단어 검색의 시간 복잡도: O(M), M: 단어의 길이</p>
+<ul>
+<li>cf) 단순 문자열 비교의 시간 복잡도: O(N*M), N: 단어의 개수</li>
+</ul>
+</li>
+<li><p>자식 노드들을 훑어 보는데 O(N)이 들지 않도록 리스트말고 딕셔너리로 구현해야 한다.</p>
+</li>
+<li><p>asterisk(종료문자)가 반드시 필요함</p>
+<ul>
+<li>중간에 단어 매칭이 끝나버리면 있는지 없는지 확인할 수 없기 때문</li>
+</ul>
+</li>
+</ul>
+<h2 id="다익스트라"><a href="#다익스트라" class="headerlink" title="다익스트라"></a>다익스트라</h2><p>노드 하나를 기준으로 다른 모든 노드까지 도달하는 최단 거리를 계산하는 알고리즘</p>
+<ul>
+<li>최단 거리만을 계산하며, 경로까지 알아내려면 추가 메모리 필요</li>
+</ul>
+<h1 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h1><ul>
+<li>카카오 blind 문제 풀기</li>
+<li>다익스트라 예습</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/data-structure/" rel="tag"><i class="fa fa-tag"></i> data structure</a>
+              <a href="/tags/algorithm/" rel="tag"><i class="fa fa-tag"></i> algorithm</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/06/ds-algo/ds-algo-10/" rel="prev" title="다이나믹 프로그래밍">
+                  <i class="fa fa-chevron-left"></i> 다이나믹 프로그래밍
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/04/08/ds-algo/ds-algo-12/" rel="next" title="다익스트라 알고리즘">
+                  다익스트라 알고리즘 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dooyeong</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="100" alpha="0.3" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+
+
+
+
+
+</body>
+</html>
