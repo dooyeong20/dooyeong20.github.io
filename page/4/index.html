@@ -84,12 +84,12 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>홈</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>카테고리<span class="badge">3</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>카테고리<span class="badge">6</span></a></li>
         <li class="menu-item menu-item-자료구조-알고리즘"><a href="/categories/DS-Algorithm/" rel="section"><i class="fa fa-bookmark fa-fw"></i>자료구조 알고리즘</a></li>
         <li class="menu-item menu-item-html/css"><a href="/categories/HTML-CSS/" rel="section"><i class="fa fa-bookmark fa-fw"></i>HTML/CSS</a></li>
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">7</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">36</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">8</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">37</span></a></li>
   </ul>
 </nav>
 
@@ -135,20 +135,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
@@ -188,6 +188,105 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/29/ps/ps-210329/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/29/ps/ps-210329/" class="post-title-link" itemprop="url">BOJ 1991 - 트리 순회</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-03-29 10:41:23" itemprop="dateCreated datePublished" datetime="2021-03-29T10:41:23+09:00">2021-03-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-01 22:45:30" itemprop="dateModified" datetime="2021-05-01T22:45:30+09:00">2021-05-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Problem-Solving-트리-순회-S1"><a href="#Problem-Solving-트리-순회-S1" class="headerlink" title="Problem Solving - 트리 순회(S1)"></a>Problem Solving - 트리 순회(S1)</h1><h2 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/1991">[Link]</a></h2><blockquote>
+<p>이진 트리를 입력받아 전위 순회(preorder traversal), 중위 순회(inorder traversal), 후위 순회(postorder traversal)한 결과를 출력하는 프로그램을 작성하시오.</p>
+</blockquote>
+<h2 id="2-입력"><a href="#2-입력" class="headerlink" title="2. 입력"></a>2. 입력</h2><blockquote>
+<p>첫째 줄에는 이진 트리의 노드의 개수 N(1≤N≤26)이 주어진다. 둘째 줄부터 N개의 줄에 걸쳐 각 노드와 그의 왼쪽 자식 노드, 오른쪽 자식 노드가 주어진다. 노드의 이름은 A부터 차례대로 영문자 대문자로 매겨지며, 항상 A가 루트 노드가 된다. 자식 노드가 없는 경우에는 .으로 표현된다.</p>
+</blockquote>
+<h2 id="3-예제-입-출력"><a href="#3-예제-입-출력" class="headerlink" title="3. 예제 입/출력"></a>3. 예제 입/출력</h2><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">A B C</span><br><span class="line">B D .</span><br><span class="line">C E F</span><br><span class="line">E . .</span><br><span class="line">F . G</span><br><span class="line">D . .</span><br><span class="line">G . .</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="4-풀이"><a href="#4-풀이" class="headerlink" title="4. 풀이"></a>4. 풀이</h2><p>이 문제는 단순히 트리를 preorder, inorder, postorder 방식으로 순회하는 문제였다.<br>각각의 경우를 재귀적인 방법을 활용해 풀이했다.</p>
+<h2 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">preorder</span>(<span class="params">tree</span>):</span></span><br><span class="line">    s = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recursive</span>(<span class="params">node</span>):</span></span><br><span class="line">        <span class="keyword">nonlocal</span> s</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> node == <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        s += node</span><br><span class="line">        recursive(tree[node][<span class="number">0</span>])</span><br><span class="line">        recursive(tree[node][<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    recursive(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder</span>(<span class="params">tree</span>):</span></span><br><span class="line">    s = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recursive</span>(<span class="params">node</span>):</span></span><br><span class="line">        <span class="keyword">nonlocal</span> s</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> node == <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        recursive(tree[node][<span class="number">0</span>])</span><br><span class="line">        s += node</span><br><span class="line">        recursive(tree[node][<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    recursive(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">postorder</span>(<span class="params">tree</span>):</span></span><br><span class="line">    s = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recursive</span>(<span class="params">node</span>):</span></span><br><span class="line">        <span class="keyword">nonlocal</span> s</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> node == <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        recursive(tree[node][<span class="number">0</span>])</span><br><span class="line">        recursive(tree[node][<span class="number">1</span>])</span><br><span class="line">        s += node</span><br><span class="line"></span><br><span class="line">    recursive(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">n, treeDict</span>):</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        root, left, right = stdin.readline().split()</span><br><span class="line">        treeDict[root] = [left, right]</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(preorder(treeDict))</span><br><span class="line">    <span class="built_in">print</span>(inorder(treeDict))</span><br><span class="line">    <span class="built_in">print</span>(postorder(treeDict))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">treeDict = <span class="built_in">dict</span>()</span><br><span class="line">solution(n, treeDict)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-분류"><a href="#5-분류" class="headerlink" title="5. 분류"></a>5. 분류</h2><ul>
+<li>트리</li>
+<li>재귀</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -890,7 +989,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-03-31 11:09:03" itemprop="dateModified" datetime="2021-03-31T11:09:03+09:00">2021-03-31</time>
+        <time title="Updated at: 2021-05-01 22:43:00" itemprop="dateModified" datetime="2021-05-01T22:43:00+09:00">2021-05-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -899,6 +998,10 @@
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
         </span>
     </span>
 
@@ -912,7 +1015,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Problem-Solving-카드-정렬하기-G4"><a href="#Problem-Solving-카드-정렬하기-G4" class="headerlink" title="Problem Solving - 카드 정렬하기(G4)"></a>Problem Solving - 카드 정렬하기(G4)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [ Link ]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/1715">[ Link ]</a></h3><blockquote>
+          <h1 id="Problem-Solving-카드-정렬하기-G4"><a href="#Problem-Solving-카드-정렬하기-G4" class="headerlink" title="Problem Solving - 카드 정렬하기(G4)"></a>Problem Solving - 카드 정렬하기(G4)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/1715">[Link]</a></h3><blockquote>
 <p>정렬된 두 묶음의 숫자 카드가 있다고 하자. 각 묶음의 카드의 수를 A, B라 하면 보통 두 묶음을 합쳐서 하나로 만드는 데에는 A+B 번의 비교를 해야 한다. 이를테면, 20장의 숫자 카드 묶음과 30장의 숫자 카드 묶음을 합치려면 50번의 비교가 필요하다.</p>
 <p>매우 많은 숫자 카드 묶음이 책상 위에 놓여 있다. 이들을 두 묶음씩 골라 서로 합쳐나간다면, 고르는 순서에 따라서 비교 횟수가 매우 달라진다. 예를 들어 10장, 20장, 40장의 묶음이 있다면 10장과 20장을 합친 뒤, 합친 30장 묶음과 40장을 합친다면 (10 + 20) + (30 + 40) = 100번의 비교가 필요하다. 그러나 10장과 40장을 합친 뒤, 합친 50장 묶음과 20장을 합친다면 (10 + 40) + (50 + 20) = 120 번의 비교가 필요하므로 덜 효율적인 방법이다.</p>
 <p>N개의 숫자 카드 묶음의 각각의 크기가 주어질 때, 최소한 몇 번의 비교가 필요한지를 구하는 프로그램을 작성하시오.</p>
@@ -926,8 +1029,6 @@
 <h3 id="4-풀이"><a href="#4-풀이" class="headerlink" title="4. 풀이"></a>4. 풀이</h3><p>그리디 문제로 접근하여, 카드의 비교 횟수가 가장 적으려면 카드들 중 가장 작은 단위의 카드들부터 차례대로 비교해나가는 방식으로 문제를 풀었다. 이 때, 가장 작은 수를 고르기 위해서 최소 힙을 사용했는데, 이는 카드를 비교해 나갈 때 마다 리스트를 정렬하거나, 최소 값을 찾는다면 시간 복잡도가 너무 커지기 때문이었다.</p>
 <p>따라서 최소 힙을 사용해 아래와 같이 문제를 풀어주었다.</p>
 <h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">n, cards</span>):</span></span><br><span class="line">    <span class="comment"># n이 1일 경우에는 비교할 카드가 없기 때문에 1을 출력한다.</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># cards 리스트를 (최소)힙으로 사용하기 위해 변환한다.</span></span><br><span class="line">    heapq.heapify(cards)</span><br><span class="line"></span><br><span class="line">    ans = <span class="number">0</span></span><br><span class="line">    tmp = []</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 힙을 통해 시간복잡도를 줄여 카드의 덱이 작은 순으로 더해 그 값을 ans에 누적시켜 준다.</span></span><br><span class="line">    <span class="comment"># 이 때, cards 리스트에 카드가 하나만 남았을 경우가 종료 조건이 된다.</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">1</span>:</span><br><span class="line">        tmp = heapq.heappop(cards) + heapq.heappop(cards)</span><br><span class="line">        ans += tmp</span><br><span class="line">        heapq.heappush(cards, tmp)</span><br><span class="line">        n -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">cards = [<span class="built_in">int</span>(stdin.readline()) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n)]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(solution(n, cards))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
 
 <h3 id="5-분류"><a href="#5-분류" class="headerlink" title="5. 분류"></a>5. 분류</h3><ul>
 <li>자료구조</li>
