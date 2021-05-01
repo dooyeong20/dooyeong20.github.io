@@ -24,13 +24,13 @@
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
 <meta name="description" content="탐색Search Algorithms  원하는 조건에 맞는 자료를 찾는 것을 탐색 알고리즘이라고 한다  자료가 정렬되어있지 않다면, 이분 탐색이 불가능하다.  미분가능하고 연속적이면 수치해석(?)   선형 탐색 순차 탐색(Sequential Search) 순서대로 하나씩 비교 -&gt; O(n)  이분 탐색 이진 탐색 자료가 정렬되어 있을 때 적용 가능 (요">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ds-algo-_08">
+<meta property="og:title" content="탐색">
 <meta property="og:url" content="https://dooyeong20.github.io/2021/04/01/ds_algo/ds-algo-08/index.html">
 <meta property="og:site_name" content="행복한 두영&#39;s 블로그">
 <meta property="og:description" content="탐색Search Algorithms  원하는 조건에 맞는 자료를 찾는 것을 탐색 알고리즘이라고 한다  자료가 정렬되어있지 않다면, 이분 탐색이 불가능하다.  미분가능하고 연속적이면 수치해석(?)   선형 탐색 순차 탐색(Sequential Search) 순서대로 하나씩 비교 -&gt; O(n)  이분 탐색 이진 탐색 자료가 정렬되어 있을 때 적용 가능 (요">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2021-04-01T04:49:57.000Z">
-<meta property="article:modified_time" content="2021-04-05T05:11:18.389Z">
+<meta property="article:modified_time" content="2021-05-01T08:58:36.355Z">
 <meta property="article:author" content="dooyeong">
 <meta property="article:tag" content="data structure">
 <meta property="article:tag" content="algorithm">
@@ -41,10 +41,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;04&#x2F;01&#x2F;ds_algo&#x2F;ds-algo-08&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;04&#x2F;01&#x2F;ds_algo&#x2F;ds-algo-08&#x2F;&quot;,&quot;title&quot;:&quot;ds-algo-_08&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;04&#x2F;01&#x2F;ds_algo&#x2F;ds-algo-08&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;04&#x2F;01&#x2F;ds_algo&#x2F;ds-algo-08&#x2F;&quot;,&quot;title&quot;:&quot;탐색&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>ds-algo-_08 | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
+<title>탐색 | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
   
 
 
@@ -213,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ds-algo-_08
+          탐색
         </h1>
 
         <div class="post-meta-container">
@@ -231,7 +231,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-04-05 14:11:18" itemprop="dateModified" datetime="2021-04-05T14:11:18+09:00">2021-04-05</time>
+        <time title="Updated at: 2021-05-01 17:58:36" itemprop="dateModified" datetime="2021-05-01T17:58:36+09:00">2021-05-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -321,8 +321,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/03/31/ds_algo/ds-algo-07/" rel="prev" title="ds-algo-_07">
-                  <i class="fa fa-chevron-left"></i> ds-algo-_07
+                <a href="/2021/03/31/ds_algo/ds-algo-07/" rel="prev" title="정렬 알고리즘 2">
+                  <i class="fa fa-chevron-left"></i> 정렬 알고리즘 2
                 </a>
             </div>
             <div class="post-nav-item">

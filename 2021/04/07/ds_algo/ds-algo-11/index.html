@@ -24,13 +24,13 @@
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
 <meta name="description" content="트리힙 (Heap) 항상 최대값&#x2F;최소값이 루트 노드에 존재하는 트리 구조 우선순위 큐(Priority Queue)를 구현하는 데에 쓰인다. 자료를 트리에서 제거하거나 추가할 때 이를 위한 추가 동작을 구현 배열로 이루어진 완전 이진 트리(CBT) 를 기반으로 함  Min Heap 부모 노드가 항상 자식노드보다 작은 완전 이진 트리 좌&#x2F;우는 상관이 없다  M">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ds-algo-11">
+<meta property="og:title" content="트리와 힙">
 <meta property="og:url" content="https://dooyeong20.github.io/2021/04/07/ds_algo/ds-algo-11/index.html">
 <meta property="og:site_name" content="행복한 두영&#39;s 블로그">
 <meta property="og:description" content="트리힙 (Heap) 항상 최대값&#x2F;최소값이 루트 노드에 존재하는 트리 구조 우선순위 큐(Priority Queue)를 구현하는 데에 쓰인다. 자료를 트리에서 제거하거나 추가할 때 이를 위한 추가 동작을 구현 배열로 이루어진 완전 이진 트리(CBT) 를 기반으로 함  Min Heap 부모 노드가 항상 자식노드보다 작은 완전 이진 트리 좌&#x2F;우는 상관이 없다  M">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2021-04-07T03:00:57.000Z">
-<meta property="article:modified_time" content="2021-04-13T02:10:54.829Z">
+<meta property="article:modified_time" content="2021-05-01T08:59:04.046Z">
 <meta property="article:author" content="dooyeong">
 <meta property="article:tag" content="data structure">
 <meta property="article:tag" content="algorithm">
@@ -41,10 +41,10 @@
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;04&#x2F;07&#x2F;ds_algo&#x2F;ds-algo-11&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;04&#x2F;07&#x2F;ds_algo&#x2F;ds-algo-11&#x2F;&quot;,&quot;title&quot;:&quot;ds-algo-11&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;04&#x2F;07&#x2F;ds_algo&#x2F;ds-algo-11&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;04&#x2F;07&#x2F;ds_algo&#x2F;ds-algo-11&#x2F;&quot;,&quot;title&quot;:&quot;트리와 힙&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>ds-algo-11 | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
+<title>트리와 힙 | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
   
 
 
@@ -213,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ds-algo-11
+          트리와 힙
         </h1>
 
         <div class="post-meta-container">
@@ -231,7 +231,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-04-13 11:10:54" itemprop="dateModified" datetime="2021-04-13T11:10:54+09:00">2021-04-13</time>
+        <time title="Updated at: 2021-05-01 17:59:04" itemprop="dateModified" datetime="2021-05-01T17:59:04+09:00">2021-05-01</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -338,13 +338,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/06/ds_algo/ds-algo-10/" rel="prev" title="ds-algo-10">
-                  <i class="fa fa-chevron-left"></i> ds-algo-10
+                <a href="/2021/04/06/ds_algo/ds-algo-10/" rel="prev" title="다이나믹 프로그래밍">
+                  <i class="fa fa-chevron-left"></i> 다이나믹 프로그래밍
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/08/ds_algo/ds-algo-12/" rel="next" title="ds-algo-12">
-                  ds-algo-12 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/04/08/ds_algo/ds-algo-12/" rel="next" title="다익스트라 알고리즘">
+                  다익스트라 알고리즘 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
