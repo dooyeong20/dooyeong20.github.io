@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -21,15 +21,15 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"dooyeong20.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+    var CONFIG = {"hostname":"dooyeong20.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
 <meta name="description" content="마크업논리성이 중요함  마크업은 논리적으로 와닿을 수 있도록 하는 것이 중요 디자인을 보고 그대로 따라서 마크업 하는 것이 아니고, 실제 사용을 염두해두고 논리적인 순서에 따라 마크업하는 습관 디자인 외적으로 최대한 semantic하게 마크업 해야 함  WAI-ARIA웹 표준, 접근성의 중요성  fontawesome: aria-hidden&#x3D;”true” di">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML layout(1)">
 <meta property="og:url" content="https://dooyeong20.github.io/2021/04/20/html-css/html-css-11/index.html">
-<meta property="og:site_name" content="dooyeong devlog !">
+<meta property="og:site_name" content="Happy Dev Dooyeong!">
 <meta property="og:description" content="마크업논리성이 중요함  마크업은 논리적으로 와닿을 수 있도록 하는 것이 중요 디자인을 보고 그대로 따라서 마크업 하는 것이 아니고, 실제 사용을 염두해두고 논리적인 순서에 따라 마크업하는 습관 디자인 외적으로 최대한 semantic하게 마크업 해야 함  WAI-ARIA웹 표준, 접근성의 중요성  fontawesome: aria-hidden&#x3D;”true” di">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2021-04-20T04:32:06.000Z">
 <meta property="article:modified_time" content="2021-04-22T04:17:51.977Z">
 <meta property="article:author" content="dooyeong">
@@ -47,10 +47,10 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'en'
+    lang   : 'ko'
   };
 </script>
-<title>HTML layout(1) | dooyeong devlog !</title>
+<title>HTML layout(1) | Happy Dev Dooyeong!</title>
   
 
 
@@ -108,7 +108,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">dooyeong devlog !</h1>
+      <h1 class="site-title">Happy Dev Dooyeong!</h1>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -139,10 +139,10 @@
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          목차
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          흝어보기
         </li>
       </ul>
 
@@ -163,21 +163,29 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives">
           <span class="site-state-item-count">35</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">포스트</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
         <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">categories</span></a>
+        <span class="site-state-item-name">카테고리</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
         <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">tags</span></a>
+        <span class="site-state-item-name">태그</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dooyeong20" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dooyeong20" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:noviced22@gmail.com" title="E-Mail → mailto:noviced22@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
 
 
@@ -211,7 +219,7 @@
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
     <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/20/html-css/html-css-11/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -221,7 +229,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dooyeong devlog !">
+      <meta itemprop="name" content="Happy Dev Dooyeong!">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -234,16 +242,16 @@
       <span class="post-meta-item-icon">
         <i class="far fa-calendar"></i>
       </span>
-      <span class="post-meta-item-text">Posted on</span>
+      <span class="post-meta-item-text">작성일</span>
 
-      <time title="Created: 2021-04-20 13:32:06" itemprop="dateCreated datePublished" datetime="2021-04-20T13:32:06+09:00">2021-04-20</time>
+      <time title="Post created: 2021-04-20 13:32:06" itemprop="dateCreated datePublished" datetime="2021-04-20T13:32:06+09:00">2021-04-20</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-04-22 13:17:51" itemprop="dateModified" datetime="2021-04-22T13:17:51+09:00">2021-04-22</time>
+        <time title="Updated at: 2021-04-22 13:17:51" itemprop="dateModified" datetime="2021-04-22T13:17:51+09:00">2021-04-22</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -371,7 +379,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">dooyeong</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
     </div>
@@ -379,7 +387,7 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 
