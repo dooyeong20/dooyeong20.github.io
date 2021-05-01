@@ -2998,6 +2998,9 @@ body * {
 .site-brand-container {
   background: none;
 }
+.site-meta {
+  padding: 5px 0;
+}
 .site-meta .brand::before {
   content: "꾸준한 개미";
   display: block;
