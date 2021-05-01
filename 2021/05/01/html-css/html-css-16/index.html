@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="Sass (2)3. 문법 - 연산역시 다른 프로그래밍 언어처럼 Sass는 기본적인 연산 기능을 제공해준다. 연산 기능을 제공하는 이유는 레이아웃 작업시 상황에 맞게 크기를 계산을 하거나 정해진 값을 나눠서 작성할 경우 사용되기 때문이다. 3.1 연산자들의 종류사용 가능한 산술 연산자에는 +, -, *, &#x2F;, %, 그리고 비교 연산자에는 &#x3D;&#x3D;, !&#x3D;, &amp;gt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sass (2)">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/05/01/html-css/html-css-16/index.html">
+<meta property="og:site_name" content="행복한 두영&#39;s 블로그">
+<meta property="og:description" content="Sass (2)3. 문법 - 연산역시 다른 프로그래밍 언어처럼 Sass는 기본적인 연산 기능을 제공해준다. 연산 기능을 제공하는 이유는 레이아웃 작업시 상황에 맞게 크기를 계산을 하거나 정해진 값을 나눠서 작성할 경우 사용되기 때문이다. 3.1 연산자들의 종류사용 가능한 산술 연산자에는 +, -, *, &#x2F;, %, 그리고 비교 연산자에는 &#x3D;&#x3D;, !&#x3D;, &amp;gt">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:published_time" content="2021-05-01T07:26:20.000Z">
+<meta property="article:modified_time" content="2021-05-01T10:28:52.064Z">
+<meta property="article:author" content="dooyeong">
+<meta property="article:tag" content="html">
+<meta property="article:tag" content="css">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dooyeong20.github.io/2021/05/01/html-css/html-css-16/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;05&#x2F;01&#x2F;html-css&#x2F;html-css-16&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;01&#x2F;html-css&#x2F;html-css-16&#x2F;&quot;,&quot;title&quot;:&quot;Sass (2)&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>Sass (2) | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">행복한 두영's 블로그</h1>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/images/my.png" alt="행복한 두영's 블로그">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>홈</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>카테고리</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          목차
+        </li>
+        <li class="sidebar-nav-overview">
+          흝어보기
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Sass-2"><span class="nav-number">1.</span> <span class="nav-text">Sass (2)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%EB%AC%B8%EB%B2%95-%EC%97%B0%EC%82%B0"><span class="nav-number">1.1.</span> <span class="nav-text">3. 문법 - 연산</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%EC%97%B0%EC%82%B0%EC%9E%90%EB%93%A4%EC%9D%98-%EC%A2%85%EB%A5%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">3.1 연산자들의 종류</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%EC%97%B0%EC%82%B0-%EB%B0%A9%EB%B2%95"><span class="nav-number">1.1.2.</span> <span class="nav-text">3.2 연산 방법</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EC%98%88%EC%8B%9C"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">예시</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-if-%EC%A1%B0%EA%B1%B4"><span class="nav-number">1.1.3.</span> <span class="nav-text">3.3 @if 조건</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Mixin-%EC%9E%AC%EC%82%AC%EC%9A%A9"><span class="nav-number">1.2.</span> <span class="nav-text">4. Mixin (재사용)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-Mixin-SCSS"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">4.1 Mixin - SCSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-Mixin-Sass"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">4.2 Mixin - Sass</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-Mixin-SCSS"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">4.3 Mixin - SCSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-Mixin-Sass"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">4.4 Mixin - Sass</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-Mixin-SCSS"><span class="nav-number">1.2.0.5.</span> <span class="nav-text">4.5 Mixin - SCSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-Mixin-Sass"><span class="nav-number">1.2.0.6.</span> <span class="nav-text">4.6 Mixin - Sass</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%ED%99%95%EC%9E%A5"><span class="nav-number">1.3.</span> <span class="nav-text">5. 확장</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%ED%95%A8%EC%88%98"><span class="nav-number">1.4.</span> <span class="nav-text">6. 함수</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-if%EC%99%80-if"><span class="nav-number">1.5.</span> <span class="nav-text">7. if와 @if</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-for%EC%99%80-each-%EA%B7%B8%EB%A6%AC%EA%B3%A0-while"><span class="nav-number">1.5.1.</span> <span class="nav-text">8. @for와 @each 그리고 @while</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%82%B4%EC%9E%A5-%ED%95%A8%EC%88%98-Built-in-Functions"><span class="nav-number">1.6.</span> <span class="nav-text">내장 함수(Built-in Functions)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%AA%A8%EB%93%88"><span class="nav-number">1.6.1.</span> <span class="nav-text">모듈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%A0%84%EC%97%AD-%ED%95%A8%EC%88%98"><span class="nav-number">1.6.2.</span> <span class="nav-text">전역 함수</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">1.7.</span> <span class="nav-text">References</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">dooyeong</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-name">포스트</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">카테고리</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">태그</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dooyeong20" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dooyeong20" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:noviced22@gmail.com" title="E-Mail → mailto:noviced22@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/dooyeong20" class="github-corner" title="Follow Github - dooyeong20" aria-label="Follow Github - dooyeong20" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/01/html-css/html-css-16/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Sass (2)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-01 16:26:20 / Updated at: 19:28:52" itemprop="dateCreated datePublished" datetime="2021-05-01T16:26:20+09:00">2021-05-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="Sass-2"><a href="#Sass-2" class="headerlink" title="Sass (2)"></a>Sass (2)</h1><h2 id="3-문법-연산"><a href="#3-문법-연산" class="headerlink" title="3. 문법 - 연산"></a>3. 문법 - 연산</h2><p>역시 다른 프로그래밍 언어처럼 Sass는 기본적인 연산 기능을 제공해준다. 연산 기능을 제공하는 이유는 레이아웃 작업시 상황에 맞게 크기를 계산을 하거나 정해진 값을 나눠서 작성할 경우 사용되기 때문이다.</p>
+<h3 id="3-1-연산자들의-종류"><a href="#3-1-연산자들의-종류" class="headerlink" title="3.1 연산자들의 종류"></a>3.1 연산자들의 종류</h3><p>사용 가능한 산술 연산자에는 <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>, 그리고 비교 연산자에는 <code>==</code>, <code>!=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code> 이 있으며 논리 연산자에는 <code>and</code>, <code>or</code>, <code>not</code> 이 있으며 우리가 아는 그대로 동작한다.</p>
+<h3 id="3-2-연산-방법"><a href="#3-2-연산-방법" class="headerlink" title="3.2 연산 방법"></a>3.2 연산 방법</h3><p>숫자는 기본적으로 px단위면 일반적인 형태로 연산을 하지만, %나 em, rem 등의 상대적 단위는 연산을 할 때 <code>calc()</code> 함수를 사용하여 연산한다.</p>
+<h4 id="예시"><a href="#예시" class="headerlink" title="예시"></a>예시</h4><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">width</span>: clac(<span class="number">50%</span> - <span class="number">20px</span>);</span><br></pre></td></tr></table></figure>
+
+<p>하지만 나누기의 경우에는 주의할 점이 있는데, 그것은 바로 css가 <code>/</code>를 속성값 값을 구분하는 용도로도 사용하기 때문이다. 따라서 나누기가 제대로 동작하기 위해서는 아래 조건을 만족해야 한다.</p>
+<ol>
+<li>변수에 저장되거나 함수에 의해 반환되는 경우</li>
+<li>()로 묶여있는 경우</li>
+<li>다른 산술 표현식의 일부로 사용되는 경우</li>
+</ol>
+<p>그리고 한 가지 특이한 점은, 색상끼리도 아래와 같이 연산이 가능하다는 것이다.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#123456</span> + <span class="number">#345678</span>;</span><br><span class="line">	<span class="attribute">background</span>: rgba(<span class="number">50</span>, <span class="number">100</span>, <span class="number">150</span>, <span class="number">0.5</span>) + rgba(<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">0.5</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>하지만 rgba의 경우에는 alpha값이 반드시 동일해야 한다는 조건이 있다.</p>
+<h3 id="3-3-if-조건"><a href="#3-3-if-조건" class="headerlink" title="3.3 @if 조건"></a>3.3 <code>@if</code> 조건</h3><p>Sass에서는 조건문을 사용하여 분기처리 할 수 있는 기능이 있다. 이때 사용 가능한 연산자는 위에서 설명한 <code>and</code>, <code>or</code>, <code>not</code> 이 있다. 우리가 아는 그 <code>if</code>처럼 사용할 수 있으며 간단한 예시는 아래와 같다.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$width</span>: <span class="number">90px</span>;</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="keyword">@if</span> <span class="keyword">not</span>(<span class="variable">$width</span> &gt; <span class="number">100px</span>) &#123;</span><br><span class="line">		<span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-Mixin-재사용"><a href="#4-Mixin-재사용" class="headerlink" title="4. Mixin (재사용)"></a>4. Mixin (재사용)</h2><p>Mixin이라는 것은 스타일 시트 전체에서 재사용할 CSS 선언 그룹을 정의하는 것인데, 이 기능은 처음 보는 기능이었다. 그리고 말도 정확히 이해가지 않았다. 하지만 예시를 통해 이해하면 어렵지 않게 이해할 수 있었다.</p>
+<p>Mixin은 선언하기(@mixin)와 포함하기(@include) 이렇게 두 가지 중요한 개념이 있다. 선언해서(만들어서) 포함(사용)하는 것이다. 이는 예시를 통하면 더 쉽게 알 수 있기 때문에 예시를 보도록 하겠다.</p>
+<h4 id="4-1-Mixin-SCSS"><a href="#4-1-Mixin-SCSS" class="headerlink" title="4.1 Mixin - SCSS"></a>4.1 Mixin - SCSS</h4><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> large-text &#123;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">	<span class="attribute">font-weight</span>: bold;</span><br><span class="line">	<span class="attribute">font-family</span>: sans-serif;</span><br><span class="line">	<span class="attribute">color</span>: orange;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@mixin</span> large-text &#123;</span><br><span class="line">	<span class="attribute">font</span>: &#123;</span><br><span class="line">		size: <span class="number">22px</span>;</span><br><span class="line">		weight: bold;</span><br><span class="line">		family: sans-serif;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="attribute">color</span>: orange;</span><br><span class="line"></span><br><span class="line">	&amp;<span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">		<span class="attribute">content</span>: <span class="string">&quot;!!&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="selector-tag">span</span><span class="selector-class">.icon</span> &#123;</span><br><span class="line">		<span class="attribute">background</span>: url(<span class="string">&quot;/images/icon.png&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-2-Mixin-Sass"><a href="#4-2-Mixin-Sass" class="headerlink" title="4.2 Mixin - Sass"></a>4.2 Mixin - Sass</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x3D;large-text</span><br><span class="line">  font-size: 22px</span><br><span class="line">  font-weight: bold</span><br><span class="line">  font-family: sans-serif</span><br><span class="line">  color: orange</span><br></pre></td></tr></table></figure>
+
+<p>Mixin은 선택자를 포함할 수도 있으며 상위 요소를 참조할 수도 있다. 이렇게 선언한 Mixin은 <code>@include</code>를 통해서 사용이 가능하다. SCSS의 경우에는 <code>@include 믹스인이름;</code> 이렇게 사용하고, Sass의 경우에는 <code>+믹스인이름</code> 이렇게 사용할 수 있다.</p>
+<h4 id="4-3-Mixin-SCSS"><a href="#4-3-Mixin-SCSS" class="headerlink" title="4.3 Mixin - SCSS"></a>4.3 Mixin - SCSS</h4><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">	<span class="keyword">@include</span> large-text;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="keyword">@include</span> large-text;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-4-Mixin-Sass"><a href="#4-4-Mixin-Sass" class="headerlink" title="4.4 Mixin - Sass"></a>4.4 Mixin - Sass</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">h1</span><br><span class="line">  +large-text</span><br><span class="line">div</span><br><span class="line">  +large-text</span><br></pre></td></tr></table></figure>
+
+<p>그리고 Mixin은 아주 중요한 인수라는 것을 가질 수 있다. 여기서 말하는 인수는 우리가 아는 함수 사용법고 거의 비슷하게 사용할 수 있는 것이다.</p>
+<h4 id="4-5-Mixin-SCSS"><a href="#4-5-Mixin-SCSS" class="headerlink" title="4.5 Mixin - SCSS"></a>4.5 Mixin - SCSS</h4><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> 믹스인이름($매개변수) &#123;</span><br><span class="line">  스타일;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@include</span> 믹스인이름(인수);</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-6-Mixin-Sass"><a href="#4-6-Mixin-Sass" class="headerlink" title="4.6 Mixin - Sass"></a>4.6 Mixin - Sass</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x3D;믹스인이름($매개변수)</span><br><span class="line">  스타일</span><br><span class="line"></span><br><span class="line">+믹스인이름(인수)</span><br></pre></td></tr></table></figure>
+
+<p>이러한 인수는 기본값을 가질 수 있으며, 키워드 인수 그리고 가변 인수를 가질 수도 있는데, 그 방법은 다음과 같다.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@mixin</span> dash-line(<span class="variable">$width</span>: <span class="number">1px</span>, <span class="variable">$color</span>: black) &#123;</span><br><span class="line">	<span class="attribute">border</span>: <span class="variable">$width</span> dashed <span class="variable">$color</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@mixin</span> position(<span class="variable">$a</span>: absolute, <span class="variable">$b</span>: null) &#123;</span><br><span class="line">	<span class="attribute">position</span>: <span class="variable">$a</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="variable">$b</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@mixin</span> bg(<span class="variable">$width</span>, <span class="variable">$height</span>, <span class="variable">$bg-values</span>...) &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="variable">$width</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="variable">$height</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="variable">$bg-values</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-확장"><a href="#5-확장" class="headerlink" title="5. 확장"></a>5. 확장</h2><p><code>@extend 선택자</code> 를 통해 상속의 개념과 비슷하게 스타일을 확장해서 사용할 수 있다. 역시 예시 코드를 보고 쉽게 이해해보자.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.btn</span> &#123;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">background</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.btn-danger</span> &#123;</span><br><span class="line">	<span class="keyword">@extend</span> .btn;</span><br><span class="line">	<span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>언뜻 보면 유용한 기능이지만, 원치 않는 부작용이 생길 수도 있다. 왜냐하면 <code>.btn-danger</code>가 <code>,</code>를 기준으로 다른 선택자와 함께 선언되는 방식이기 때문이다. 따라서 결과적으로 확장은 무해하거나 혹은 유익할 수도 있지만 그만큼 부작용을 가지고 있기 때문에 Mixin을 대신 사용하는 것이 더 좋다.</p>
+<h2 id="6-함수"><a href="#6-함수" class="headerlink" title="6. 함수"></a>6. 함수</h2><p>함수는 자신이 원하는 기능을 하는 Mixin과 비슷한 기능을 수행할 수 있다. 하지만 Mixin과 비교했을 때, 반환되는 내용이 조금 다르다.</p>
+<p>Mixin은 지정한 스타일들을 반환하는 반면에 함수는 보통 연산된 특정 값을 <code>@return</code> 지시어를 통해 반환하기 때문이다. 또한 <code>@include</code>를 사용하는 Mixin과는 다르게 <code>@include</code>가 필요없이 그냥 바로 <code>함수이름(인수)</code> 이렇게 함수를 사용할 수 있다.</p>
+<p>하지만 별도의 지시어 없이 사용하기 때문에 나의 함수와 내장 함수의 이름이 충돌할 수 있기 때문에 함수 이름 네이밍에 주의해야 한다.</p>
+<h2 id="7-if와-if"><a href="#7-if와-if" class="headerlink" title="7. if와 @if"></a>7. <code>if</code>와 <code>@if</code></h2><p>그냥 <code>if</code>와 <code>@if</code>는 차이가 있다. 아래 예시를 먼저 보자.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$width</span>: <span class="number">555px</span>;</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: if(<span class="variable">$width</span> &gt; <span class="number">300px</span>, <span class="variable">$width</span>, null);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$color</span>: orange;</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">	<span class="keyword">@if</span> <span class="variable">$color</span> == red &#123;</span><br><span class="line">		<span class="attribute">color</span>: <span class="number">#fe2e2e</span>;</span><br><span class="line">	&#125; <span class="keyword">@else</span> &#123;</span><br><span class="line">		<span class="attribute">color</span>: <span class="number">#2a1b0a</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>if</code>는 <code>if(조건, 표현식1, 표현식2)</code>의 형태로 사용하며 조건이 참인 경우에 표현식1, 거짓인 경우에 표현식2를 반환하는 함수이다. 하지만 <code>@if</code>는 함수가 아닌 분기처리를 위한 분기문으로, 조건을 검사하는 기능을 하는 것이다. 즉 그냥 <code>if</code>는 삼항 연산자의 느낌인 것이다.</p>
+<h3 id="8-for와-each-그리고-while"><a href="#8-for와-each-그리고-while" class="headerlink" title="8. @for와 @each 그리고 @while"></a>8. <code>@for</code>와 <code>@each</code> 그리고 <code>@while</code></h3><p><code>@for</code>는 우리가 아는 그 for 처럼 반복을 수행한다. 이때 to 나 through를 사용해 표현할 수 있는데 그 예시는 아래와 같다. <code>through</code>는 해당 종료까지 포함하여 반복문을 실행하는 것이고, <code>to</code>는 그 직전까지 수행하는 것이다.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// through</span></span><br><span class="line"><span class="comment">// 종료 만큼 반복</span></span><br><span class="line"><span class="keyword">@for</span> $변수 from 시작 through 종료 &#123;</span><br><span class="line">	<span class="comment">// 반복 내용</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// to</span></span><br><span class="line"><span class="comment">// 종료 직전까지 반복</span></span><br><span class="line"><span class="keyword">@for</span> $변수 from 시작 to 종료 &#123;</span><br><span class="line">	<span class="comment">// 반복 내용</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@each</span> $변수 in 데이터 &#123;</span><br><span class="line">	<span class="comment">// 반복 내용</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@while</span> 조건 &#123;</span><br><span class="line">	<span class="comment">// 반복 내용</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>그리고 <code>@each</code>는 python의 <code>for ~ in ~</code> 문법과 비슷하다. 그리고 혹시 iteration에 index가 필요하다면 index() 내장함수를 사용할 수 있다. 예를 들어서, 아래와 같이 사용된다.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$fruits</span>: (apple, orange, banana, mango);</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fruits</span> &#123;</span><br><span class="line">	<span class="keyword">@each</span> <span class="variable">$fruit</span> in <span class="variable">$fruits</span> &#123;</span><br><span class="line">		<span class="selector-tag">li</span>.#&#123;<span class="variable">$fruit</span>&#125; &#123;</span><br><span class="line">			<span class="attribute">background</span>: url(<span class="string">&quot;/images/#&#123;$fruit&#125;.png&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$fruits</span>: (apple, orange, banana, mango);</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.fruits</span> &#123;</span><br><span class="line">	<span class="keyword">@each</span> <span class="variable">$fruit</span> in <span class="variable">$fruits</span> &#123;</span><br><span class="line">		<span class="variable">$i</span>: index(<span class="variable">$fruits</span>, <span class="variable">$fruit</span>);</span><br><span class="line">		<span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(#&#123;$i&#125;) &#123;</span><br><span class="line">			<span class="attribute">left</span>: <span class="number">50px</span> * <span class="variable">$i</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>@while</code> 은 해당 while문의 조건이 <code>false</code>가 될때까지 반복하는 것이다. 조건 설계를 잘못해 조건이 항상 <code>true</code>일 경우 무한 루프에 갇혀버릴 수도 있기 때문에 사용시 주의해야 할 것이다. 사용 예시는 아래와 같다.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$i</span>: <span class="number">6</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@while</span> <span class="variable">$i</span> &gt; <span class="number">0</span> &#123;</span><br><span class="line">	<span class="selector-class">.item-</span>#&#123;<span class="variable">$i</span>&#125; &#123;</span><br><span class="line">		<span class="attribute">width</span>: <span class="number">2px</span> * <span class="variable">$i</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="variable">$i</span>: <span class="variable">$i</span> - <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>결과는 아래와 같다.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item-6</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-4</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.item-2</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">4px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="내장-함수-Built-in-Functions"><a href="#내장-함수-Built-in-Functions" class="headerlink" title="내장 함수(Built-in Functions)"></a>내장 함수(Built-in Functions)</h2><h3 id="모듈"><a href="#모듈" class="headerlink" title="모듈"></a>모듈</h3><p>Sass는 유용한 기능(믹스인 포함)을 포함한 내장 모듈을 제공한다. 이 모듈들은 다른 사용자 정의 stylesheet와 같이 <code>@use rule</code>로 가져올 수 있고 그 기능들은 다른 모듈 멤버와 동일한 방식으로 호출할 수 있다.<br>모든 내장 모듈은 <code>sass:</code>로 시작하는 URL로 시작한다.</p>
+<blockquote>
+<p>Sass의 모듈 시스템이 도입되기 전에, 모든 Sass 함수들은 전역 범위에서 사용 가능했다. 많은 함수들이 여전히 전역 이름을 가지고 있다.<br>Sass 개발팀은 전역 함수의 사용을 권장하지 않고 머지않아 그들을 deprecate할 예정이다. 그러나 현재는 Sass의 예전 버전과 LibSass(아직 모듈 시스템을 지원하지 않는다.)과 호환을 위해 남아있다.</p>
+<p>새로운 모듈 시스템에서는 몇 함수만이 <code>if()</code>와 같은 특별한 평가 프로시저가 포함되거나 <code>rgb()</code>와 <code>hsl()</code> 같은 내장 CSS 함수를 이용하기 때문에 전역에서 사용가능할 것이다.<br>이 함수들은 deprecate 되지 않을 것이며 자유롭게 사용 가능하다.</p>
+</blockquote>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@use</span> <span class="string">&quot;sass:color&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">	<span class="variable">$primary-color</span>: <span class="number">#6b717f</span>;</span><br><span class="line">	<span class="attribute">color</span>: <span class="variable">$primary-color</span>;</span><br><span class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid color.scale(<span class="variable">$primary-color</span>, <span class="variable">$lightness</span>: <span class="number">20%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Sass는 다음과 같은 내장 모듈을 지원한다. 각 모듈에 내장된 함수의 디테일한 사용법은 <a target="_blank" rel="noopener" href="https://sass-lang.com/documentation/modules">sass-lang 공식 문서</a> 를 참고하도록 한다.</p>
+<ul>
+<li><code>sass:math</code> 모듈: type <code>numbers</code>와 관련된 함수를 제공한다.</li>
+<li><code>sass:string</code> 모듈: type <code>strings</code>를 쉽게 결함하고 검색하고 나눌 수 있는 함수를 제공한다.<ul>
+<li><code>quote(string)</code>: 입력된 값을 string 형식으로 변환한다. // ex) quote(hello world) =&gt; Result: “hello world”</li>
+<li><code>str-index(string, substring)</code>: 입력된 문자열 내에서 부분 문자가 포함되어 있다면 index를 반환한다. // ex) str-index(“Hello world!”, “H”) =&gt; Result: 1</li>
+<li><code>str-slice(string, start, end)</code>: 입력된 문자열에서 시작 index 부터 끝 index까지에 해당하는 부분 문자열을 반환한다. // ex) str-slice(“Hello world!”, 2, 5) =&gt; Result: “ello”</li>
+</ul>
+</li>
+<li><code>sass:color</code> 모듈: type <code>colors</code>와 관련된 함수를 제공하는데 색상 테마를 쉽게 만들게 해주며 기존의 색상을 기반으로 새로운 색상을 만드는 기능을 제공한다.<ul>
+<li><code>mix(color1, color2, weight)</code>: 두 개의 색상을 섞는다.</li>
+<li><code>red(color)</code>: 색상의 빨간색 값을 반환한다. // ex) red(#7fffd4); =&gt; Result: 127</li>
+<li><code>invert(color, weight)</code>: 반대되는 색을 반환한다. // ex) invert(white);</li>
+</ul>
+</li>
+<li><code>sass:list</code> 모튤: type <code>lists</code>의 값에 접근하고 수정하는 함수를 제공한다.</li>
+<li><code>sass:map</code> 모듈: type <code>map</code>의 key와 연결된 value를 보고 추적하는 등의 함수를 제공한다.<ul>
+<li><code>map-get(map, key)</code>: key에 해당하는 value를 반환한다. // ex) map-get($font-sizes, “small”) =&gt; Result: 12px</li>
+<li><code>map-keys(map)</code>: map의 모든 key list를 반환한다. // ex) map-keys($font-sizes) =&gt;Result: “small”, “normal, “large”</li>
+</ul>
+</li>
+<li><code>sass:selector</code> 모듈: Sass의 강력한 셀렉팅 엔진에 접근가능하게 해준다.<ul>
+<li><code>append(&quot;a&quot;, &quot;.disabled&quot;)</code>: “a” 선택자와 “.disabled” 선택자를 합친후 값을 반환한다 // “a.disabled”</li>
+<li><code>extend(&quot;a.disabled&quot;, &quot;a&quot;, &quot;.link&quot;)</code>: “a.disabled” 선택자에서 “a”를 찾아 “.link”로 대체한다. // “.link.disabled”</li>
+<li><code>simple-selector(&quot;div.myInput&quot;)</code>: 입력된 선택자를 개별적인 작은 단위의 선택자로 나누어 list로 반환한다. // div, .myInput, :before</li>
+</ul>
+</li>
+<li><code>sass:meta</code> 모듈: Sass의 디테일한 내부 작업 구조를 보여준다.</li>
+</ul>
+<h3 id="전역-함수"><a href="#전역-함수" class="headerlink" title="전역 함수"></a>전역 함수</h3><ul>
+<li>hsl(), hsla()</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hsl($hue $saturation $lightness)</span><br><span class="line">hsl($hue $saturation $lightness / $alpha)</span><br><span class="line">hsl($hue $saturation $lightness, $alpha: <span class="number">1</span>) <span class="comment">// default alpha: 1</span></span><br><span class="line">hsla($hue $saturation $lightness)</span><br><span class="line">hsla($hue $saturation $lightness / $alpha)</span><br><span class="line">hsla($hue $saturation $lightness, $alpha: <span class="number">1</span>) <span class="comment">// default alpha: 1</span></span><br></pre></td></tr></table></figure>
+
+<p>위의 함수는 <code>hue</code>(색상; 범위: 0deg ~ 360deg), <code>saturation</code>(채도; 범위: 0% ~ 100%), <code>lightness</code>(명도; 범위: 0% ~ 100%) 그리고 <code>alpha</code>(알파채널, 투명도; 범위: 0(0%) ~ 1(100%))로 하나의 색상을 반환한다.</p>
+<blockquote>
+<p>Sass에는 나누기 연산과 관련한 파싱 예외가 있기 때문에 <code>hsl($hue $saturation $lightness / $alpha)</code> 대신 <code>hsl($hue, $saturation, $lightness, $alpha)</code> 사용을 권장한다.</p>
+</blockquote>
+<ul>
+<li>if()</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if($condition, $if-true, $if-false)</span><br></pre></td></tr></table></figure>
+
+<p>위의 함수는 <code>$condition</code>이 true이면 <code>$if-true</code>를, false이면 <code>$if-false</code>를 반환한다.<br>이 함수는 반환되지 않는 인수를 평가하지 않는다는 점에서 특별하다. 그래서 사용되지 않은 인수가 에러를 발생시키더라도 안전하게 호출될 수 있다.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@debug</span> if(true, <span class="number">10px</span>, <span class="number">15px</span>); <span class="comment">// 10px</span></span><br><span class="line"><span class="keyword">@debug</span> if(false, <span class="number">10px</span>, <span class="number">15px</span>); <span class="comment">// 15px</span></span><br><span class="line"><span class="keyword">@debug</span> if(variable-defined(<span class="variable">$var</span>), <span class="variable">$var</span>, null); <span class="comment">// null; variable-defined(*args)가 정의되지 않아도 안전하게 null을 반환한다.</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>rgb(), rgba()</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rgb($red $green $blue)</span><br><span class="line">rgb($red $green $blue / $alpha)</span><br><span class="line">rgb($red, $green, $blue, $alpha: <span class="number">1</span>)</span><br><span class="line">rgb($color, $alpha)</span><br><span class="line">rgba($red $green $blue)</span><br><span class="line">rgba($red $green $blue / $alpha)</span><br><span class="line">rgba($red, $green, $blue, $alpha: <span class="number">1</span>)</span><br><span class="line">rgba($color, $alpha) <span class="comment">//=&gt; color</span></span><br></pre></td></tr></table></figure>
+
+<p>위의 함수는 <code>$red</code>, <code>$green</code>, <code>$blue</code> 그리고 선택적으로 <code>$alpha</code>이 전달되면 하나의 색상을 반환한다.</p>
+<p>각각의 인수 자리에는 0부터 255까지 단위가 없는 숫자나 0%와 100% 사이의 퍼센트 수가 올 수 있다. 알파 채널은 0과 1사이의 단위가 없는 수나 0%와 100% 사이의 퍼센트 수가 올 수 있다.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@debug</span> rgb(<span class="number">0</span> <span class="number">51</span> <span class="number">102</span>); <span class="comment">// #036</span></span><br><span class="line"><span class="keyword">@debug</span> rgb(<span class="number">95%</span>, <span class="number">92.5%</span>, <span class="number">89.5%</span>); <span class="comment">// #f2ece4</span></span><br><span class="line"><span class="keyword">@debug</span> rgb(<span class="number">0</span> <span class="number">51</span> <span class="number">102</span> / <span class="number">50%</span>); <span class="comment">// rgba(0, 51, 102, 0.5)</span></span><br><span class="line"><span class="keyword">@debug</span> rgba(<span class="number">95%</span>, <span class="number">92.5%</span>, <span class="number">89.5%</span>, <span class="number">0.2</span>); <span class="comment">// rgba(242, 236, 228, 0.2)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://heropy.blog/">https://heropy.blog/</a></li>
+<li><a target="_blank" rel="noopener" href="https://sass-lang.com/documentation">https://sass-lang.com/documentation</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/html/" rel="tag"><i class="fa fa-tag"></i> html</a>
+              <a href="/tags/css/" rel="tag"><i class="fa fa-tag"></i> css</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/01/html-css/html-css-15/" rel="prev" title="Sass (1)">
+                  <i class="fa fa-chevron-left"></i> Sass (1)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dooyeong</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="100" alpha="0.3" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+
+
+
+
+
+</body>
+</html>
