@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="백준 12025 - 장난꾸러기 영훈 백준 12025번 에서 풀어볼 수 있습니다.  문제설명희현이는 인터넷 ID를 만들 때 주로 쓰는 비밀번호가 있다. 하지만 이 비밀번호는 너무 길어서 희현이는 항상 쪽지에 적어 다니면서 확인을 한다. 하지만 장난꾸러기 영훈이는 이 쪽지를 가져가 1들 중 몇 개를 6로, 6들 중 몇 개를 1로 바꾸고 2들 중 몇 개를 7로">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BOJ 12025 - 장난꾸러기 영훈">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/05/02/ps/ps-210502/index.html">
+<meta property="og:site_name" content="행복한 두영&#39;s 블로그">
+<meta property="og:description" content="백준 12025 - 장난꾸러기 영훈 백준 12025번 에서 풀어볼 수 있습니다.  문제설명희현이는 인터넷 ID를 만들 때 주로 쓰는 비밀번호가 있다. 하지만 이 비밀번호는 너무 길어서 희현이는 항상 쪽지에 적어 다니면서 확인을 한다. 하지만 장난꾸러기 영훈이는 이 쪽지를 가져가 1들 중 몇 개를 6로, 6들 중 몇 개를 1로 바꾸고 2들 중 몇 개를 7로">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://dooyeong20.github.io/2021/05/02/images/210502-1.png">
+<meta property="article:published_time" content="2021-05-02T06:38:23.000Z">
+<meta property="article:modified_time" content="2021-05-02T06:53:51.926Z">
+<meta property="article:author" content="dooyeong">
+<meta property="article:tag" content="BOJ">
+<meta property="article:tag" content="PS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dooyeong20.github.io/2021/05/02/images/210502-1.png">
+
+
+<link rel="canonical" href="https://dooyeong20.github.io/2021/05/02/ps/ps-210502/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;05&#x2F;02&#x2F;ps&#x2F;ps-210502&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;02&#x2F;ps&#x2F;ps-210502&#x2F;&quot;,&quot;title&quot;:&quot;BOJ 12025 - 장난꾸러기 영훈&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>BOJ 12025 - 장난꾸러기 영훈 | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">행복한 두영's 블로그</h1>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/images/devpost.svg" alt="행복한 두영's 블로그">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>홈</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>카테고리<span class="badge">6</span></a></li>
+        <li class="menu-item menu-item-자료구조-알고리즘"><a href="/categories/DS-Algorithm/" rel="section"><i class="fa fa-bookmark fa-fw"></i>자료구조 알고리즘</a></li>
+        <li class="menu-item menu-item-html/css"><a href="/categories/HTML-CSS/" rel="section"><i class="fa fa-bookmark fa-fw"></i>HTML/CSS</a></li>
+        <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">8</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">38</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          목차
+        </li>
+        <li class="sidebar-nav-overview">
+          흝어보기
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EB%B0%B1%EC%A4%80-12025-%EC%9E%A5%EB%82%9C%EA%BE%B8%EB%9F%AC%EA%B8%B0-%EC%98%81%ED%9B%88"><span class="nav-number">1.</span> <span class="nav-text">백준 12025 - 장난꾸러기 영훈</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C%EC%84%A4%EB%AA%85"><span class="nav-number">1.1.</span> <span class="nav-text">문제설명</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%A0%9C%ED%95%9C%EC%82%AC%ED%95%AD"><span class="nav-number">1.1.1.</span> <span class="nav-text">제한사항</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%92%80%EC%9D%B4"><span class="nav-number">1.2.</span> <span class="nav-text">풀이</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%86%8C%EC%8A%A4-%EC%BD%94%EB%93%9C"><span class="nav-number">1.3.</span> <span class="nav-text">소스 코드</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EA%B2%B0%EA%B3%BC"><span class="nav-number">1.4.</span> <span class="nav-text">결과</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="dooyeong"
+      src="/images/my.png">
+  <p class="site-author-name" itemprop="name">dooyeong</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">포스트</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">카테고리</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">태그</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dooyeong20" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dooyeong20" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:noviced22@gmail.com" title="E-Mail → mailto:noviced22@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/dooyeong20" class="github-corner" title="Follow Github - dooyeong20" aria-label="Follow Github - dooyeong20" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/02/ps/ps-210502/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          BOJ 12025 - 장난꾸러기 영훈
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-02 15:38:23 / Updated at: 15:53:51" itemprop="dateCreated datePublished" datetime="2021-05-02T15:38:23+09:00">2021-05-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="백준-12025-장난꾸러기-영훈"><a href="#백준-12025-장난꾸러기-영훈" class="headerlink" title="백준 12025 - 장난꾸러기 영훈"></a>백준 12025 - 장난꾸러기 영훈</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/12025">백준 12025번</a> 에서 풀어볼 수 있습니다.</li>
+</ul>
+<h2 id="문제설명"><a href="#문제설명" class="headerlink" title="문제설명"></a>문제설명</h2><p>희현이는 인터넷 ID를 만들 때 주로 쓰는 비밀번호가 있다. 하지만 이 비밀번호는 너무 길어서 희현이는 항상 쪽지에 적어 다니면서 확인을 한다. 하지만 장난꾸러기 영훈이는 이 쪽지를 가져가 1들 중 몇 개를 6로, 6들 중 몇 개를 1로 바꾸고 2들 중 몇 개를 7로 7들 중 몇 개를 2으로 바꾸는 장난을 쳤다. 따라서 영훈이가 장난쳐놓은 비밀번호 무용지물이 되었다. 왜냐하면 1이라고 쓰여 있어도 1 또는 6일수가 있고, 또한 6이라 쓰여 있어도 1 또는 6일수가 있다. 2과 7에서도 마찬가지이다. 하지만 희현이는 이러한 상황에 대비하여 비밀번호에 대한 한 가지 단서를 만들어 놓았는데 이는 다음과 같다.</p>
+<p>비밀번호 수열의 숫자 중 1과 6을 모두 1로, 2와 7을 모두 2으로 바꾼 숫자와 1과 6을 모두 6으로 2과 7을 모두 7로 바꾼 숫자 사이에 가능한 경우를 모두 사전순으로 나열한 다음 그 중 k번째가 비밀번호이다.</p>
+<p>따라서 이 단서를 통해 멘붕에 빠진 희현이를 도와 비밀번호를 다시 찾아보자.</p>
+<h3 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h3><ul>
+<li>비밀번호의 길이는 60자까지이고 첫 숫자가 0일수도 있다.)</li>
+<li>둘째 줄에 숫자 k가 주어진다. (k ≤ 2^63 – 1)</li>
+</ul>
+<h2 id="풀이"><a href="#풀이" class="headerlink" title="풀이"></a>풀이</h2><p>이 문제는 1,2,6,7 만 추출해낸 다음 순열로 문제를 풀 수도 있다. 하지만 주어진 k 입력의 크기가 2^63 -1 로 매우 크기 때문에 100% 시간초과가 날 것이라고 생각했다. 그리고 k 번째의 순열을 O(1)로 찾기 위해서 비트마스킹을 사용했는데, 어떻게 사용되는지 아래에서 보자.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. k &#x3D; 0</span><br><span class="line">&gt; 0000</span><br><span class="line"></span><br><span class="line">2. k &#x3D; 1</span><br><span class="line">&gt; 0001</span><br><span class="line"></span><br><span class="line">3. k &#x3D; 2</span><br><span class="line">&gt; 0010</span><br></pre></td></tr></table></figure>
+
+<p>이런식으로 이진수를 사용하게되면 자동적으로 k 번째에 해당하는 flag 조합을 쉽고 빠르게 구할 수 있게 된다. 따라서 주어진 비밀번호에서 1,2,6,7의 개수를 추출해 해당 개수만큼에 해당하는 비트열을 만든다음, 그 길이에 따른 k 번째 비트(순열)을 구해줄 수 있다. 예를 들어 <code>1122</code> 라는 문자열이 있을 때, 3 번째 비트는 <code>0010</code> 가 된다. 따라서 <code>1</code>에 해당하는 수를 큰 값으로 배치해주고, <code>0</code>에 해당하는 수를 작은 값으로 배치해주면 된다. 즉, 위 예시에서는 <code>1172</code>가 답이 되는 것이다.</p>
+<h2 id="소스-코드"><a href="#소스-코드" class="headerlink" title="소스 코드"></a>소스 코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"></span><br><span class="line">password = stdin.readline().strip()</span><br><span class="line">k = <span class="built_in">int</span>(stdin.readline())</span><br><span class="line">bit = <span class="number">1</span></span><br><span class="line">cnt = <span class="number">0</span></span><br><span class="line">ans = <span class="string">&#x27;&#x27;</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 비밀번호를 받아 1,2,6,7 일 경우에만 저장해놓음</span></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> password:</span><br><span class="line">    <span class="keyword">if</span> p == <span class="string">&#x27;1&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;6&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;2&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;7&#x27;</span>:</span><br><span class="line">        bit &lt;&lt;= <span class="number">1</span></span><br><span class="line">        cnt += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 만약 구하려는 k 번째가 가능한 순열의 경우의 수를 넘는다면 바로 종료</span></span><br><span class="line"><span class="keyword">if</span> k &gt; bit:</span><br><span class="line">    <span class="built_in">print</span>(-<span class="number">1</span>)</span><br><span class="line">    exit(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># bit의 길이를 맞춰주기 위해 좌측에 &#x27;0&#x27;으로 패딩처리</span></span><br><span class="line">bit = <span class="built_in">str</span>(<span class="built_in">bin</span>(bit - <span class="number">1</span> &amp; (k-<span class="number">1</span>))[<span class="number">2</span>:])</span><br><span class="line">bit = <span class="string">&#x27;0&#x27;</span> * (cnt - <span class="built_in">len</span>(bit)) + bit</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 해당 비트에 해당하는 경우에 따라서 수를 정해서 ans 에 저장해나감</span></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> password:</span><br><span class="line">    <span class="keyword">if</span> p == <span class="string">&#x27;1&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;6&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;2&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;7&#x27;</span>:</span><br><span class="line">        <span class="keyword">if</span> bit[i] == <span class="string">&#x27;0&#x27;</span>:</span><br><span class="line">            <span class="keyword">if</span> p == <span class="string">&#x27;6&#x27;</span>:</span><br><span class="line">                ans += <span class="string">&#x27;1&#x27;</span></span><br><span class="line">            <span class="keyword">elif</span> p == <span class="string">&#x27;7&#x27;</span>:</span><br><span class="line">                ans += <span class="string">&#x27;2&#x27;</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans += p</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> p == <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">            ans += <span class="string">&#x27;6&#x27;</span></span><br><span class="line">        <span class="keyword">elif</span> p == <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">            ans += <span class="string">&#x27;7&#x27;</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            ans += p</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    ans += p</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(ans)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h2><img src="../../images/210502-1.png" width="800">
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/BOJ/" rel="tag"><i class="fa fa-tag"></i> BOJ</a>
+              <a href="/tags/PS/" rel="tag"><i class="fa fa-tag"></i> PS</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/01/html-css/html-css-17/" rel="prev" title="VLIVE 프로젝트 - 계획">
+                  <i class="fa fa-chevron-left"></i> VLIVE 프로젝트 - 계획
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dooyeong</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="100" alpha="0.3" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+
+
+
+
+
+</body>
+</html>
