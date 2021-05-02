@@ -89,7 +89,7 @@
         <li class="menu-item menu-item-html/css"><a href="/categories/HTML-CSS/" rel="section"><i class="fa fa-bookmark fa-fw"></i>HTML/CSS</a></li>
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">8</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">38</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">39</span></a></li>
   </ul>
 </nav>
 
@@ -135,7 +135,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -188,6 +188,140 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/09/ds-algo/ds-algo-13/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/09/ds-algo/ds-algo-13/" class="post-title-link" itemprop="url">크루스칼 알고리즘</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-04-09 14:00:57" itemprop="dateCreated datePublished" datetime="2021-04-09T14:00:57+09:00">2021-04-09</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-01 17:59:20" itemprop="dateModified" datetime="2021-05-01T17:59:20+09:00">2021-05-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Kruskal’s-Algorithm"><a href="#Kruskal’s-Algorithm" class="headerlink" title="Kruskal’s Algorithm"></a>Kruskal’s Algorithm</h1><p>어느 그래프의 Subgraph 중, 다음 조건을 만족하는 그래프</p>
+<ol>
+<li>본 그래프의 모든 노드를 포함</li>
+<li>모든 노드가 서로 연결 (Connected Graph)</li>
+<li>사이클이 존재하지 않음 (Acyclic Graph)</li>
+</ol>
+<p>위 조건들을 만족하는 그래프 중 간선 가중치의 합이 최소인 그래프</p>
+<ul>
+<li>무향 그래프일 때 동작함</li>
+<li>미로 생성에도 사용됨</li>
+</ul>
+<h2 id="알고리즘-동작"><a href="#알고리즘-동작" class="headerlink" title="알고리즘 동작"></a>알고리즘 동작</h2><p>그리디하게 동작하는 알고리즘</p>
+<ol>
+<li>모든 간선을 가중치를 기준으로 오름차순 정렬 (O(eloge))</li>
+<li>작은 가중치의 간선부터 하나씩 선택하여 MST를 구성한다.</li>
+<li>이 과정에서 사이클을 형성하는 간선은 선택하지 않는다.</li>
+<li>사이클 형성을 판단하는 알고리즘은 Union-Find 알고리즘</li>
+</ol>
+<h2 id="union-find"><a href="#union-find" class="headerlink" title="union find"></a>union find</h2><h3 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h3><p>각 노드들이 집합에 포합되어 있다고 가정하고, 같은 집합에 포함시킴</p>
+<ul>
+<li>각 노드들이 들어있는 집합의 루트노드를 다른 집합의 루트를 바라보게</li>
+</ul>
+<h3 id="Union-최적화"><a href="#Union-최적화" class="headerlink" title="Union 최적화"></a>Union 최적화</h3><ul>
+<li>union-by-rank<ul>
+<li>rank가 증가하는 속도를 O(logN)으로 줄여주는 효과</li>
+</ul>
+</li>
+</ul>
+<h3 id="Find"><a href="#Find" class="headerlink" title="Find"></a>Find</h3><p>각 노드들의 집합의 루트 노드를 찾는 과정이다</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find(x) = find(parent(x))</span><br></pre></td></tr></table></figure>
+
+<h3 id="Find-최적화"><a href="#Find-최적화" class="headerlink" title="Find 최적화"></a>Find 최적화</h3><ul>
+<li>Path Comprehension<ul>
+<li>memoization으로 됨</li>
+</ul>
+</li>
+</ul>
+<h2 id="최적화"><a href="#최적화" class="headerlink" title="최적화"></a>최적화</h2><p>유니온과 파인드 둘다 최적화를 함으로써 최적의 결과를 얻을 수 있다.<br>해당 알고리즘의 시간 복잡도는 따라서, O(eloge) + O(v)가 된다.</p>
+<h1 id="Prim-Algorithm"><a href="#Prim-Algorithm" class="headerlink" title="Prim Algorithm"></a>Prim Algorithm</h1><p>크루스칼과는 다르게, vertex를 기준으로 인접 노드들을 하나씩 추가해나가는 방법</p>
+<ul>
+<li>하나에서부터 점점 확장해나가는 방식이라고 할 수 있음<ul>
+<li>그래서 union find가 필요없이 현재 집합에 있는지 여부로만 구현 가능</li>
+</ul>
+</li>
+<li>선택한 노드로부터 가장 낮은 가중치를 갖는 간선으로 이어지는 노드 선택<ul>
+<li>이 과정을 모든 노드가 선택될때까지 반복 (O(V^2))</li>
+<li>최적화 알고리즘 적용 시 시간복잡도는 O(ElogV)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Kruscal-vs-Prim"><a href="#Kruscal-vs-Prim" class="headerlink" title="Kruscal vs Prim"></a>Kruscal vs Prim</h2><ul>
+<li>O(ElogE) vs O(ElogV)</li>
+<li>sparse 하면 크루스칼 사용</li>
+<li>dense 하면 프림 사용</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1432,106 +1566,6 @@
 <h1 id="Homework-6"><a href="#Homework-6" class="headerlink" title="Homework #6"></a>Homework #6</h1><ul>
 <li>프로그래머스 레벨 2 달성</li>
 <li>작성 코드, 스크린샷 제출</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/30/ps/ps-210330/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/30/ps/ps-210330/" class="post-title-link" itemprop="url">BOJ 2583 - 영역 구하기</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-03-30 11:29:23" itemprop="dateCreated datePublished" datetime="2021-03-30T11:29:23+09:00">2021-03-30</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-01 22:42:37" itemprop="dateModified" datetime="2021-05-01T22:42:37+09:00">2021-05-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Problem-Solving-영역-구하기-S1"><a href="#Problem-Solving-영역-구하기-S1" class="headerlink" title="Problem Solving - 영역 구하기(S1)"></a>Problem Solving - 영역 구하기(S1)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/2583">[Link]</a></h3><blockquote>
-<p>눈금의 간격이 1인 M×N(M,N≤100)크기의 모눈종이가 있다. 이 모눈종이 위에 눈금에 맞추어 K개의 직사각형을 그릴 때, 이들 K개의 직사각형의 내부를 제외한 나머지 부분이 몇 개의 분리된 영역으로 나누어진다.<br>M, N과 K 그리고 K개의 직사각형의 좌표가 주어질 때, K개의 직사각형 내부를 제외한 나머지 부분이 몇 개의 분리된 영역으로 나누어지는지, 그리고 분리된 각 영역의 넓이가 얼마인지를 구하여 이를 출력하는 프로그램을 작성하시오.</p>
-</blockquote>
-<h3 id="2-입력"><a href="#2-입력" class="headerlink" title="2. 입력"></a>2. 입력</h3><blockquote>
-<p>첫째 줄에 M과 N, 그리고 K가 빈칸을 사이에 두고 차례로 주어진다. M, N, K는 모두 100 이하의 자연수이다. 둘째 줄부터 K개의 줄에는 한 줄에 하나씩 직사각형의 왼쪽 아래 꼭짓점의 x, y좌표값과 오른쪽 위 꼭짓점의 x, y좌표값이 빈칸을 사이에 두고 차례로 주어진다. 모눈종이의 왼쪽 아래 꼭짓점의 좌표는 (0,0)이고, 오른쪽 위 꼭짓점의 좌표는(N,M)이다. 입력되는 K개의 직사각형들이 모눈종이 전체를 채우는 경우는 없다.</p>
-</blockquote>
-<h3 id="3-예제-입-출력"><a href="#3-예제-입-출력" class="headerlink" title="3. 예제 입/출력"></a>3. 예제 입/출력</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">입력</span><br><span class="line"></span><br><span class="line">5 7 3</span><br><span class="line">0 2 4 4</span><br><span class="line">1 1 2 5</span><br><span class="line">4 0 6 2</span><br><span class="line"></span><br><span class="line">출력</span><br><span class="line"></span><br><span class="line">3</span><br><span class="line">1 7 13</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-풀이"><a href="#4-풀이" class="headerlink" title="4. 풀이"></a>4. 풀이</h3><p>주어진 사각형들의 꼭지점 정보들을 바탕으로 먼저 사각형을 2차원 배열에 칠한 후, 해당 부분을 제외한 나머지 빈 공간을 bfs로 탐색해주며 각각의 넓이와 빈 공간의 개수를 탐색해주었다.</p>
-<p>이 때 조심해야 하는 것은, 주어진 꼭짓점의 좌표 특징은 x축 좌-&gt; 우, 그리고 y축 하 -&gt; 상의 방향으로 주어져있기 때문에 배열에 인덱스로 대입할 때 주의해야 한다.</p>
-<h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">m, n, k, pointList</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">paint</span>(<span class="params">point</span>):</span></span><br><span class="line">        x1, y1, x2, y2 = point</span><br><span class="line">        y1, y2 = m - y1, m - y2</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(y2, y1):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(x1, x2):</span><br><span class="line">                mapp[i][j] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">bfs</span>(<span class="params">row, col</span>):</span></span><br><span class="line">        q = deque([(row, col)])</span><br><span class="line">        mapp[row][col] = <span class="number">1</span></span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> q:</span><br><span class="line">            r, c = q.pop()</span><br><span class="line">            cnt += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> d <span class="keyword">in</span> dirs:</span><br><span class="line">                nr, nc = r + d[<span class="number">0</span>], c + d[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> <span class="number">0</span> &lt;= nr &lt; m <span class="keyword">and</span> <span class="number">0</span> &lt;= nc &lt; n <span class="keyword">and</span> mapp[nr][nc] == <span class="number">0</span>:</span><br><span class="line">                    mapp[nr][nc] = <span class="number">1</span></span><br><span class="line">                    q.append((nr, nc))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> cnt</span><br><span class="line"></span><br><span class="line">    cnt = <span class="number">0</span></span><br><span class="line">    ans = []</span><br><span class="line">    mapp = [[<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n)] <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(m)]</span><br><span class="line">    dirs = [(<span class="number">1</span>, <span class="number">0</span>), (<span class="number">0</span>, -<span class="number">1</span>), (-<span class="number">1</span>, <span class="number">0</span>), (<span class="number">0</span>, <span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> point <span class="keyword">in</span> pointList:</span><br><span class="line">        paint(point)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(m):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            <span class="keyword">if</span> mapp[i][j] == <span class="number">0</span>:</span><br><span class="line">                ans.append(bfs(i, j))</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">    ans.sort()</span><br><span class="line">    ans = <span class="built_in">str</span>(cnt) + <span class="string">&#x27;\n&#x27;</span> + <span class="string">&#x27; &#x27;</span>.join(<span class="built_in">map</span>(<span class="built_in">str</span>, ans))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">m, n, k = <span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split())</span><br><span class="line">pointList = [<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split())) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(k)]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(solution(m, n, k, pointList))</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-분류"><a href="#5-분류" class="headerlink" title="5. 분류"></a>5. 분류</h3><ul>
-<li>그래프 이론</li>
-<li>그래프 탐색</li>
-<li>너비 우선 탐색 (BFS)</li>
 </ul>
 
       
