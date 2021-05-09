@@ -89,7 +89,7 @@
         <li class="menu-item menu-item-html/css"><a href="/categories/HTML-CSS/" rel="section"><i class="fa fa-bookmark fa-fw"></i>HTML/CSS</a></li>
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">8</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">40</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">41</span></a></li>
   </ul>
 </nav>
 
@@ -135,7 +135,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-count">41</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -197,7 +197,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/05/html-css/vlive-3/">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/07/html-css/vlive-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/my.png">
@@ -210,7 +210,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/05/html-css/vlive-3/" class="post-title-link" itemprop="url">VLIVE 프로젝트 - 마크업과 고려사항</a>
+          <a href="/2021/05/07/html-css/vlive-4/" class="post-title-link" itemprop="url">VLIVE 프로젝트 - 디자인과 마무리</a>
         </h2>
 
         <div class="post-meta-container">
@@ -220,10 +220,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">작성일</span>
-      
 
-      <time title="Post created: 2021-05-05 16:33:20 / Updated at: 23:03:49" itemprop="dateCreated datePublished" datetime="2021-05-05T16:33:20+09:00">2021-05-05</time>
+      <time title="Post created: 2021-05-07 14:31:25" itemprop="dateCreated datePublished" datetime="2021-05-07T14:31:25+09:00">2021-05-07</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-09 15:06:42" itemprop="dateModified" datetime="2021-05-09T15:06:42+09:00">2021-05-09</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -248,7 +254,129 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="VLIVE-팀-프로젝트"><a href="#VLIVE-팀-프로젝트" class="headerlink" title="VLIVE 팀 프로젝트"></a>VLIVE 팀 프로젝트</h1><h2 id="나의-역할"><a href="#나의-역할" class="headerlink" title="나의 역할"></a>나의 역할</h2><p><a href="https://dooyeong20.github.io/2021/05/01/html-css/vlive-1/">VLIVE 첫 번째 편</a> 에서 보라색, 빨간색, 파란색 영역으로 콘텐츠들을 구분했었다. 그리고 나의 역할은 파란색 부분인 비디오(헤더, 비디오 영상 컨테이너) 부분과 댓글 컨테이너 부분이다.</p>
+          <h1 id="VLIVE-팀-프로젝트"><a href="#VLIVE-팀-프로젝트" class="headerlink" title="VLIVE 팀 프로젝트"></a>VLIVE 팀 프로젝트</h1><ul>
+<li><a href="https://dooyeong20.github.io/vlive/01_team/src/">완성된 프로젝트 보러가기</a></li>
+</ul>
+<h2 id="비디오-부분-디자인-고려사항"><a href="#비디오-부분-디자인-고려사항" class="headerlink" title="비디오 부분 디자인 고려사항"></a>비디오 부분 디자인 고려사항</h2><p>비디오 부분을 디자인할 때, 가장 먼저 눈에 띈 것은 모바일 환경에서 스크롤을 내릴 때 비디오(헤더와 비디오 플레이어 부분)가 화면 상단에 <code>sticy</code> 되는 형상이었다.</p>
+<img src="/images/sticky.gif" width=300>
+
+<h3 id="Sticky…"><a href="#Sticky…" class="headerlink" title="Sticky…?"></a>Sticky…?</h3><p>그래서 처음엔 단순히 비디오의 헤더봐 비디오 플레이어 부분에 <code>position: sticky</code>를 주려고 하였다. 하지만 그 결과는 다음과 같았다.</p>
+<img src="/images/sticky_1.gif" width=300>
+
+<p>문제가 무엇이었을까… 그것은 바로 <code>position: sticky</code>가 가지는 원래 성질때문이었다. <code>sitcky</code> 속성은 부모 컨테이너 내부에서만 동작하는 성질을 가지고 있었기 때문에 이러한 현상이 발생한 것이다.</p>
+<h3 id="So…"><a href="#So…" class="headerlink" title="So…"></a>So…</h3><p>마크업을 변경하지 않는 이상 이러한 문제를 해결할 방법을 찾지 못했고, 따라서 javaScript를 사용해 동적으로 <code>is-fixed</code>라는 클래스를 부여해 조건부로 화면 상단에 <code>position: fixed</code>를 해주는 방식을 선택하였다.<br>위화 같은 선택은 크롬, 파이어폭스, 엣지, 사파리 등 거의 모든 브라우저에서 제대로 동작했지만 역시 우리의 인터넷 익스플로러는 쉽게 동작해주지 않았다.</p>
+<p>익스플로러는 미디어쿼리와 동적인 클래스부여가 함께 동작할 때 동적인 클래스의 스타일 속성을 그대로 적용시키지 못하였기 때문이다.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&amp;__content &#123;</span><br><span class="line">  <span class="comment">// 미디어 쿼리, 동적인 클래스 추가</span></span><br><span class="line">  <span class="keyword">@include</span> sticky &#123;</span><br><span class="line">    &amp;<span class="selector-class">.is-fixed</span> &#123;</span><br><span class="line">      <span class="attribute">position</span>: fixed; <span class="comment">// 위 두가지가 한번에 주어졌을 때 IE에서 이를 인식하지 못하는 문제 발생</span></span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>따라서 미디어쿼리를 다음과 같이 변경시켜준 후에야 제대로 동작하게 되었다.</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&amp;__content &#123;</span><br><span class="line">  &amp;<span class="selector-class">.is-fixed</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed; <span class="comment">// 이렇게 미디어 쿼리를 제거해주고,</span></span><br><span class="line">    ...              <span class="comment">// 그 대신에 javaScript로 미디어 쿼리 조건을 체크해줌</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="/images/sticky_2.gif" width=300>
+
+<h2 id="댓글-부분-디자인-고려사항"><a href="#댓글-부분-디자인-고려사항" class="headerlink" title="댓글 부분 디자인 고려사항"></a>댓글 부분 디자인 고려사항</h2><p>댓글 디자인은 기술적으로 크게 어렵거나 고려할만한 부분이 없었다고 생각된다. 하지만, 개인적으로 한가지 아쉬운 점이 있었는데 바로 댓글 입력창 애니메이션 부분이었다. 아래는 실제 VLIVE 사이트의 댓글 입력칸인데, 댓글을 입력하기 위해서 클릭할 경우 아래와 같이 한순간에 펼쳐지는 방법을 선택하고 있었다.</p>
+<img src="/images/comment_1.gif" width=600>
+
+<p>하지만 이는 어딘가 부자연스럽고 딱딱한 느낌을 준다고 생각했고, 클론 코딩하는 입장에서 조금 더 사용자의 경험을 좋게하기 위해서 아래와 같이 약간 부드럽게 수정해보았다.</p>
+<img src="/images/comment_2.gif" width=600>
+
+<h2 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h2><p>이번 클론 코딩의 주 목적은 접근성와 웹 표준에 목표를 두는 것이었다. 그리고 이번 클론 코딩을 하며 WCAG 2.1 의 기준을 최대한 준수하기 위해 Tab Focus, Color Contrast 및 Logical Sequence 등을 최대한 고려해 약 일주인간 진행해보았다.</p>
+<p>그래서 그런지 디자인 상으로는 크게 어려운 점이 없었지만 웹 표준과 접근성을 고려해서 마크업 단계에서부터 Semantic한 태그들의 사용 및 WAI-ARIA를 고려하며 프로젝트를 진행하다보니 작업 속도가 생각보다 더뎠다.</p>
+<p>하지만 결과적으로 웹 사이트의 접근성와 SEO 등의 성능을 측정해주는 lighthouse의 측정에서 높은 점수를 획득할 수 있어 뿌듯했고, 실제 VLIVE와 비슷한 수준의 디자인을 뽑아낼 수 있어서 아쉬운 점이 있었지만 그래도 만족스러운 팀 프로젝트였다고 생각한다.</p>
+<h3 id="Before"><a href="#Before" class="headerlink" title="Before"></a>Before</h3><img src="/images/lighthouse_before.png" width=500>
+
+<h3 id="After"><a href="#After" class="headerlink" title="After"></a>After</h3><img src="/images/lighthouse_after.png" width=500>
+
+<p>이번 프로젝트로 스스로 정말 많이 성장한 것을 느꼈고, 다음 프로젝트를 진행한다면 더 잘할 수 있을 것 같다는 자신감도 생기게 되었다.</p>
+<ul>
+<li><a href="https://dooyeong20.github.io/vlive/01_team/src/">완성된 프로젝트 보러가기</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/05/html-css/vlive-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/05/html-css/vlive-3/" class="post-title-link" itemprop="url">VLIVE 프로젝트 - 마크업과 고려사항</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-05-05 16:33:20" itemprop="dateCreated datePublished" datetime="2021-05-05T16:33:20+09:00">2021-05-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-09 15:06:15" itemprop="dateModified" datetime="2021-05-09T15:06:15+09:00">2021-05-09</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/Project/" itemprop="url" rel="index"><span itemprop="name">Project</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="VLIVE-팀-프로젝트"><a href="#VLIVE-팀-프로젝트" class="headerlink" title="VLIVE 팀 프로젝트"></a>VLIVE 팀 프로젝트</h1><ul>
+<li><a href="https://dooyeong20.github.io/vlive/01_team/src/">완성된 프로젝트 보러가기</a></li>
+</ul>
+<h2 id="나의-역할"><a href="#나의-역할" class="headerlink" title="나의 역할"></a>나의 역할</h2><p><a href="https://dooyeong20.github.io/2021/05/01/html-css/vlive-1/">VLIVE 첫 번째 편</a> 에서 보라색, 빨간색, 파란색 영역으로 콘텐츠들을 구분했었다. 그리고 나의 역할은 파란색 부분인 비디오(헤더, 비디오 영상 컨테이너) 부분과 댓글 컨테이너 부분이다.</p>
 <img src="/images/3-video.png" width=600>
 
 <p>이렇게 생긴 동영상 부분과</p>
@@ -332,7 +460,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-05 22:09:43" itemprop="dateModified" datetime="2021-05-05T22:09:43+09:00">2021-05-05</time>
+        <time title="Updated at: 2021-05-09 15:06:12" itemprop="dateModified" datetime="2021-05-09T15:06:12+09:00">2021-05-09</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -358,7 +486,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="VLIVE-팀-프로젝트"><a href="#VLIVE-팀-프로젝트" class="headerlink" title="VLIVE 팀 프로젝트"></a>VLIVE 팀 프로젝트</h1><h2 id="VLIVE-반응형-프로토타이핑"><a href="#VLIVE-반응형-프로토타이핑" class="headerlink" title="VLIVE 반응형 프로토타이핑"></a>VLIVE 반응형 프로토타이핑</h2><p>VLIVE는 반응형 레이아웃 배치 breakpoint가 크게 총 2개이다. 모바일, 태블릿, 데스크탑 모드 총 3개의 반응형 레이아웃을 제공하고 있는 것을 보았고, <a href="https://dooyeong20.github.io/2021/05/01/html-css/vlive-1/">지난 글</a>에서 볼 수 있듯이 헤더, 좌/우측 컨테이너 그리고 메인(동영상)컨테이너, 그리고 댓글 컨테이너로 구성되어 있는 것을 확인했다.</p>
+          <h1 id="VLIVE-팀-프로젝트"><a href="#VLIVE-팀-프로젝트" class="headerlink" title="VLIVE 팀 프로젝트"></a>VLIVE 팀 프로젝트</h1><ul>
+<li><a href="https://dooyeong20.github.io/vlive/01_team/src/">완성된 프로젝트 보러가기</a></li>
+</ul>
+<h2 id="VLIVE-반응형-프로토타이핑"><a href="#VLIVE-반응형-프로토타이핑" class="headerlink" title="VLIVE 반응형 프로토타이핑"></a>VLIVE 반응형 프로토타이핑</h2><p>VLIVE는 반응형 레이아웃 배치 breakpoint가 크게 총 2개이다. 모바일, 태블릿, 데스크탑 모드 총 3개의 반응형 레이아웃을 제공하고 있는 것을 보았고, <a href="https://dooyeong20.github.io/2021/05/01/html-css/vlive-1/">지난 글</a>에서 볼 수 있듯이 헤더, 좌/우측 컨테이너 그리고 메인(동영상)컨테이너, 그리고 댓글 컨테이너로 구성되어 있는 것을 확인했다.</p>
 <p>따라서 이대로 레이아웃을 짜보았는데, VLIVE는 원래 <code>flex</code> 로 배치되어 있었지만 나는 <code>grid</code> 를 사용해 배치해보았다. 왜냐하면 큰 단위의 전체적인 배치를 하고, 반응형에 대응하기에는 <code>grid</code> 가 적합하다고 판단했기 때문이다.</p>
 <h3 id="데스크탑-레이아웃"><a href="#데스크탑-레이아웃" class="headerlink" title="데스크탑 레이아웃"></a>데스크탑 레이아웃</h3><img src="/images/proto-1.png" width="800">
 
@@ -524,7 +655,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-02 16:48:32" itemprop="dateModified" datetime="2021-05-02T16:48:32+09:00">2021-05-02</time>
+        <time title="Updated at: 2021-05-09 15:06:03" itemprop="dateModified" datetime="2021-05-09T15:06:03+09:00">2021-05-09</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -550,7 +681,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="VLIVE-팀-프로젝트"><a href="#VLIVE-팀-프로젝트" class="headerlink" title="VLIVE 팀 프로젝트"></a>VLIVE 팀 프로젝트</h1><p>단순한 디자인 및 기능 클론 코딩을 넘어서, 웹 표준 및 접근성을 고려해 WCAG 2.1에 조금 더 부합하는 VLIVE를 클론 코딩하는 것이 이번 팀 프로젝트의 목표이다.</p>
+          <h1 id="VLIVE-팀-프로젝트"><a href="#VLIVE-팀-프로젝트" class="headerlink" title="VLIVE 팀 프로젝트"></a>VLIVE 팀 프로젝트</h1><ul>
+<li><a href="https://dooyeong20.github.io/vlive/01_team/src/">완성된 프로젝트 보러가기</a></li>
+</ul>
+<p>단순한 디자인 및 기능 클론 코딩을 넘어서, 웹 표준 및 접근성을 고려해 WCAG 2.1에 조금 더 부합하는 VLIVE를 클론 코딩하는 것이 이번 팀 프로젝트의 목표이다.</p>
 <p>총 3명이서 프로젝트를 진행하며, VLIVE의 전체 서비스(페이지 및 기능)을 구현하는 것이 아니라, 중요한 페이지 하나를 선정해 기본적으로 반응형을 고려해 구현을 한다. 이 때 기존 웹을 분석해 아쉬운 점을 분석해보고 이를 토대로 웹 표준과 접근성을 최대한 고려해 코드를 짤 것이다.</p>
 <h2 id="VLIVE-웹-페이지의-구조"><a href="#VLIVE-웹-페이지의-구조" class="headerlink" title="VLIVE 웹 페이지의 구조"></a>VLIVE 웹 페이지의 구조</h2><p>VLIVE 는 크게 desktop, tablet, mobile 이렇게 총 3가지 사이즈(기기)에 반응형으로 대응하고 있다.</p>
 <h3 id="데스크탑-버전"><a href="#데스크탑-버전" class="headerlink" title="데스크탑 버전"></a>데스크탑 버전</h3><img src="/images/desktop.png" width="800"/>
@@ -1364,144 +1498,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/21/html-css/html-css-12/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/21/html-css/html-css-12/" class="post-title-link" itemprop="url">HTML layout(2)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-04-21 12:56:00" itemprop="dateCreated datePublished" datetime="2021-04-21T12:56:00+09:00">2021-04-21</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-05 23:07:03" itemprop="dateModified" datetime="2021-05-05T23:07:03+09:00">2021-05-05</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="WAI-WCAG"><a href="#WAI-WCAG" class="headerlink" title="WAI - WCAG"></a>WAI - WCAG</h2><p>웹 컨텐츠 접근성 가이드라인</p>
-<ul>
-<li>모든 컨텐츠에 담을 필요는 없지만, 의미가 있는 컨텐츠에는 heading을 붙여주는 것이 중요하다.</li>
-<li>컨텐츠에 따라서 제목을 어떻게 정해줄지 고민해야 한다.</li>
-</ul>
-<h2 id="특수문자-변환"><a href="#특수문자-변환" class="headerlink" title="특수문자 변환"></a>특수문자 변환</h2><p><code>&amp;</code> ,<code>&lt;</code>, <code>&gt;</code>등등 특수문자의 경우에는 html문서 내에 삽입하면 안되고, entity name을 지정해서 표현해주어야 한다.</p>
-<ul>
-<li><code>&amp;emp;</code>, <code>&amp;lt;</code>, <code>&amp;gt;</code> 등등</li>
-</ul>
-<h2 id="Attribute-vs-Property"><a href="#Attribute-vs-Property" class="headerlink" title="Attribute vs Property"></a>Attribute vs Property</h2><ul>
-<li><p>Attribute는 추가적인 정보이다.</p>
-<ul>
-<li>additional information</li>
-</ul>
-</li>
-<li><p>Property는 태초부터의 특징, 특성이다.</p>
-</li>
-</ul>
-<h2 id="레이아웃시-고려할-점"><a href="#레이아웃시-고려할-점" class="headerlink" title="레이아웃시 고려할 점"></a>레이아웃시 고려할 점</h2><p>레이아웃은 다양한 방식으로</p>
-<h2 id="DOM-CSSOM-Render-Tree"><a href="#DOM-CSSOM-Render-Tree" class="headerlink" title="DOM CSSOM Render Tree"></a>DOM CSSOM Render Tree</h2><p>내부적인 파싱을 통해 DOM트리를 그린다.</p>
-<ul>
-<li>누가 부모고, 누가 자식이고, 어떤 id, class등을 가졌는지 계층구조</li>
-</ul>
-<p>CSSOM</p>
-<ul>
-<li>어떤 스타일을 가지고 있는지</li>
-</ul>
-<p>Render Tree</p>
-<ul>
-<li>위 두 가지 정보로 다시 구성된다.</li>
-</ul>
-<p>만약 reflow가 계속 발생한다면 성능이 계속 떨어진다.</p>
-<h2 id="GPU-가속-reflow-repaint-browser-render-등"><a href="#GPU-가속-reflow-repaint-browser-render-등" class="headerlink" title="GPU 가속, reflow, repaint, browser render 등"></a>GPU 가속, reflow, repaint, browser render 등</h2><h2 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position: absolute"></a>position: absolute</h2><p>position: absoute, float 등 normal flow를 벗어나게되면 width와 height를 가지게 된다(inline이더라도)</p>
-<p><code>width: 100%</code>와 <code>width: inherit</code>은 다르다. inherit은 패딩을 포함하지 않음</p>
-<h2 id="background-image-css"><a href="#background-image-css" class="headerlink" title="background image css"></a>background image css</h2><p>background-position 에다가 % 로 옵션을 주게되면 배경의 부모 width와 height의 % 와 이미지의 width, height의 %가 만나는 점을 기준으로 렌더링 하게 된다.</p>
-<p>여러장의 이미지를 배치할 때</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bg</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: pink;</span><br><span class="line">  <span class="comment">/*</span></span><br><span class="line"><span class="comment">  개별 속성</span></span><br><span class="line"><span class="comment">  background-image: url(./images/ani_flower_01.png),</span></span><br><span class="line"><span class="comment">    url(./images/ani_flower_02.png);</span></span><br><span class="line"><span class="comment">  background-repeat: no-repeat;</span></span><br><span class="line"><span class="comment">  background-position: 0 -10px, 670px 0;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">./images/ani_flower_01.png</span>) no-repeat <span class="number">0</span> -<span class="number">10px</span>, pink <span class="built_in">url</span>(<span class="string">./images/ani_flower_02.png</span>) no-repeat <span class="number">670px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><p>normal flow를 벗어나게 된 후 z-index를 통해서 순서를 정해줄 수 있다.</p>
-<h2 id="noopener-amp-noreferrer"><a href="#noopener-amp-noreferrer" class="headerlink" title="noopener &amp; noreferrer"></a>noopener &amp; noreferrer</h2><ul>
-<li><p>noopener</p>
-<ul>
-<li>_blank로 연결한 페이지가 이 전 페이지(opener)의 window객체에 부분적으로 접근할 수 있는데, 이를 방지하기 위해 rel 속성으로 noopener를 추가할 수 있다.</li>
-</ul>
-</li>
-<li><p>noreferrer</p>
-<ul>
-<li>noopener와 유사하게 새로 열린 페이지가 window객체를 조작할 수 없게 방지한다.</li>
-<li>더 나아가 자신이 어느 페이지로부터 참조되었는지 숨긴 상태로 동작한다.</li>
-<li>즉, 새로 열린 페이지는 해당 접근이 direct access로 알게되는 것이다.</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="다음 페이지"></i></a>
   </nav>
 <script src="/js/comments.js"></script>
 </div>
