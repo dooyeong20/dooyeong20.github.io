@@ -90,7 +90,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">9</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">42</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">43</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -189,6 +189,120 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/12/html-css/html-css-04/" class="post-title-link" itemprop="url">HTML 주요 범위, 메타데이터</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-04-12 11:28:06" itemprop="dateCreated datePublished" datetime="2021-04-12T11:28:06+09:00">2021-04-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-05 23:06:38" itemprop="dateModified" datetime="2021-05-05T23:06:38+09:00">2021-05-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="HTML-주요-범위와-메타데이터"><a href="#HTML-주요-범위와-메타데이터" class="headerlink" title="HTML 주요 범위와 메타데이터"></a>HTML 주요 범위와 메타데이터</h1><h2 id="블록-요소"><a href="#블록-요소" class="headerlink" title="블록 요소"></a>블록 요소</h2><ul>
+<li>DIV, H1, P 등</li>
+<li>사용가능한 최대 가로 너비를 사용</li>
+<li>가로 사이즈를 지정하지 않고 height만 지정해준다면 가로사이즈를 끝까지 채움</li>
+<li><code>width: 100%; height: 0;</code>으로 <strong>시작</strong> (auto)</li>
+<li>수직으로 쌓임</li>
+<li>margin, padding 위,아래,좌,우 모두 사용 가능</li>
+<li>For Layout</li>
+</ul>
+<h2 id="인라인-요소"><a href="#인라인-요소" class="headerlink" title="인라인 요소"></a>인라인 요소</h2><ul>
+<li><p>SPAN, IMG</p>
+</li>
+<li><p>필요한 만큼의 너비만 사용</p>
+</li>
+<li><p>크기를 지정할 수 없음</p>
+</li>
+<li><p><code>width: 0; height: 0;</code>으로 <strong>시작</strong> (auto)</p>
+</li>
+<li><p>수평으로 쌓임</p>
+</li>
+<li><p>태그 사이에 띄어쓰기가 페이지에 그대로 보인다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 띄어쓰기가 없음 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 띄어쓰기가 들어감 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>margin, padding 위,아래를 사용할 수 없다.</p>
+</li>
+<li><p>For Text</p>
+</li>
+</ul>
+<h2 id="인라인-블록-요소-변경"><a href="#인라인-블록-요소-변경" class="headerlink" title="인라인, 블록 요소 변경"></a>인라인, 블록 요소 변경</h2><p><code>display</code>속성을 활용해 변경할 수 있다.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block; <span class="comment">/* 블럭 요소로 바뀜 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline; <span class="comment">/* 인라인 요소로 바뀜 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="메타데이터"><a href="#메타데이터" class="headerlink" title="메타데이터"></a>메타데이터</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;ko&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 문서의 정보 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">content</span>=<span class="string">&quot;&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>문서의 제목<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 문서의 내용 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1265,102 +1379,6 @@
 <h3 id="3-풀이"><a href="#3-풀이" class="headerlink" title="3. 풀이"></a>3. 풀이</h3><p>문제는 재귀의 구현능력을 보는 문제였던 것 같다.<br>어떻게 재귀를 구현해야하는지 넘버링이 잘 되어있기 때문에 그냥 변환과정대로만 구현하면 되는 문제였다.</p>
 <p>올바른 문자열인지 구하는 메서드를 구현해 아래 코드와 같이 재귀적으로 문제를 풀어주었다.</p>
 <h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">p</span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">is_correct</span>(<span class="params">st</span>):</span></span><br><span class="line">        s = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> ch <span class="keyword">in</span> st:</span><br><span class="line">            <span class="keyword">if</span> ch  == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">                s.append(ch)</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> s <span class="keyword">and</span> s[-<span class="number">1</span>] == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">                s.pop()</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> <span class="keyword">not</span> s <span class="keyword">else</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> p == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">        <span class="keyword">return</span> p</span><br><span class="line"></span><br><span class="line">    cnt = <span class="number">0</span></span><br><span class="line">    u, v = <span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span></span><br><span class="line">    u_end = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> p:</span><br><span class="line">        <span class="keyword">if</span> ch == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">            cnt += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            cnt -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> u_end:</span><br><span class="line">            u += ch</span><br><span class="line">            <span class="keyword">if</span> cnt == <span class="number">0</span>:</span><br><span class="line">                u_end = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            v += ch</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> is_correct(u):</span><br><span class="line">        <span class="keyword">return</span> u + solution(v)</span><br><span class="line"></span><br><span class="line">    tmp = <span class="string">&#x27;(&#x27;</span> + solution(v) + <span class="string">&#x27;)&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(u)-<span class="number">1</span>):</span><br><span class="line">        tmp += <span class="string">&#x27;(&#x27;</span> <span class="keyword">if</span> u[i] == <span class="string">&#x27;)&#x27;</span> <span class="keyword">else</span> <span class="string">&#x27;)&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> tmp</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/02/ps/prog-43236/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/02/ps/prog-43236/" class="post-title-link" itemprop="url">Programmers - 징검다리</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-04-02 21:16:23" itemprop="dateCreated datePublished" datetime="2021-04-02T21:16:23+09:00">2021-04-02</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-02 16:49:56" itemprop="dateModified" datetime="2021-05-02T16:49:56+09:00">2021-05-02</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/Programmers/" itemprop="url" rel="index"><span itemprop="name">Programmers</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Problem-Solving-징검다리-Level-4"><a href="#Problem-Solving-징검다리-Level-4" class="headerlink" title="Problem Solving - 징검다리 (Level 4)"></a>Problem Solving - 징검다리 (Level 4)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/43236">[Link]</a></h3><p>출발지점부터 distance만큼 떨어진 곳에 도착지점이 있습니다. 그리고 그사이에는 바위들이 놓여있습니다. 바위 중 몇 개를 제거하려고 합니다.<br>예를 들어, 도착지점이 25만큼 떨어져 있고, 바위가 [2, 14, 11, 21, 17] 지점에 놓여있을 때 바위 2개를 제거하면 출발지점, 도착지점, 바위 간의 거리가 아래와 같습니다.</p>
-<p>제거한 바위의 위치 각 바위 사이의 거리 거리의 최솟값</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[21, 17]	[2, 9, 3, 11]	2</span><br><span class="line">[2, 21]	    [11, 3, 3, 8]	3</span><br><span class="line">[2, 11]	    [14, 3, 4, 4]	3</span><br><span class="line">[11, 21]	[2, 12, 3, 8]	2</span><br><span class="line">[2, 14] 	[11, 6, 4, 4]	4</span><br></pre></td></tr></table></figure>
-
-<p>위에서 구한 거리의 최솟값 중에 가장 큰 값은 4입니다.</p>
-<p>출발지점부터 도착지점까지의 거리 distance, 바위들이 있는 위치를 담은 배열 rocks, 제거할 바위의 수 n이 매개변수로 주어질 때, 바위를 n개 제거한 뒤 각 지점 사이의 거리의 최솟값 중에 가장 큰 값을 return 하도록 solution 함수를 작성해주세요.</p>
-<p>제한사항<br>도착지점까지의 거리 distance는 1 이상 1,000,000,000 이하입니다.<br>바위는 1개 이상 50,000개 이하가 있습니다.<br>n 은 1 이상 바위의 개수 이하입니다.</p>
-<h3 id="2-입력-출력"><a href="#2-입력-출력" class="headerlink" title="2. 입력/출력"></a>2. 입력/출력</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">distance	rocks	                n	return</span><br><span class="line">25          [2, 14, 11, 21, 17]     2   4</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-풀이"><a href="#3-풀이" class="headerlink" title="3. 풀이"></a>3. 풀이</h3><p>문제의 카테고리가 이분탐색인 것을 알고 있는 상태로 풀이를 시작했지만, 어떻게 구현해야 하는지 감이 잘 오지 않는 문제였다. 하지만 징검다리를 지우고 <code>distance</code>를 구해주는 것이 아닌, <code>distance</code>를 가지고 지울 징검다리의 개수를 얻어 이분탐색을 진행해야 한다는 힌트를 얻은 뒤 아래와 같이 구현하였다.</p>
-<p>먼저 <code>distance</code>를 구해주기 위해 최솟값인 0부터 최대값인 1000000000 사이를 이분탐색 해주었는데, 해당 <code>distance</code>를 징검다리에 적용했을 때 몇 개의 징검다리가 삭제되어야 하는지를 활용해 탐색해주었다.</p>
-<p>그리고 가능한 값 중 최댓값을 구해야하는 것에 주의해주어야 한다.</p>
-<h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">distance, rocks, n</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_count</span>(<span class="params">dis</span>):</span></span><br><span class="line">        prev = <span class="number">0</span></span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> r <span class="keyword">in</span> rocks:</span><br><span class="line">            <span class="keyword">if</span> r - prev &lt; dis:</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                prev = r</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> cnt</span><br><span class="line"></span><br><span class="line">    ans = <span class="number">0</span></span><br><span class="line">    l, r = <span class="number">0</span>, <span class="number">1000000000</span></span><br><span class="line">    rocks.sort()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> l &lt;= r:</span><br><span class="line">        m = (l + r) // <span class="number">2</span></span><br><span class="line">        tmp_cnt = get_count(m)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> tmp_cnt &lt;= n:</span><br><span class="line">            l = m + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            r = m - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> l - <span class="number">1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
