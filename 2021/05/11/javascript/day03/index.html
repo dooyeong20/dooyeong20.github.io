@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta name="description" content="표현식(expression)과 문(statement)용어 정리표현식(expression)과 문(statement)에 대해서 말하기 전, 몇 가지 용어에 대한 개념을 확실하게 짚고 넘어가보겠다. 값값이란 표현식(expression)이 평가되어 생성된 결과이다. 110 + 20;  이 때 10 + 20 이라는 식이 평가되어 30 이라는 값이 생성된 것이다. 리">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 03 - 표현식(expression) &amp; 문(statement)">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/05/11/javascript/day03/index.html">
+<meta property="og:site_name" content="행복한 두영&#39;s 블로그">
+<meta property="og:description" content="표현식(expression)과 문(statement)용어 정리표현식(expression)과 문(statement)에 대해서 말하기 전, 몇 가지 용어에 대한 개념을 확실하게 짚고 넘어가보겠다. 값값이란 표현식(expression)이 평가되어 생성된 결과이다. 110 + 20;  이 때 10 + 20 이라는 식이 평가되어 30 이라는 값이 생성된 것이다. 리">
+<meta property="og:locale" content="ko_KR">
+<meta property="article:published_time" content="2021-05-11T11:30:06.000Z">
+<meta property="article:modified_time" content="2021-05-12T08:30:06.295Z">
+<meta property="article:author" content="dooyeong">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://dooyeong20.github.io/2021/05/11/javascript/day03/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;05&#x2F;11&#x2F;javascript&#x2F;day03&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;11&#x2F;javascript&#x2F;day03&#x2F;&quot;,&quot;title&quot;:&quot;JavaScript 03 - 표현식(expression) &amp; 문(statement)&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>JavaScript 03 - 표현식(expression) & 문(statement) | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">행복한 두영's 블로그</h1>
+      <i class="logo-line"></i>
+    </a>
+      <img class="custom-logo-image" src="/images/devpost.svg" alt="행복한 두영's 블로그">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>홈</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>카테고리<span class="badge">10</span></a></li>
+        <li class="menu-item menu-item-자료구조-알고리즘"><a href="/categories/DS-Algorithm/" rel="section"><i class="fa fa-bookmark fa-fw"></i>자료구조 알고리즘</a></li>
+        <li class="menu-item menu-item-html/css"><a href="/categories/HTML-CSS/" rel="section"><i class="fa fa-bookmark fa-fw"></i>HTML/CSS</a></li>
+        <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
+        <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">49</span></a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          목차
+        </li>
+        <li class="sidebar-nav-overview">
+          흝어보기
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%ED%91%9C%ED%98%84%EC%8B%9D-expression-%EA%B3%BC-%EB%AC%B8-statement"><span class="nav-number">1.</span> <span class="nav-text">표현식(expression)과 문(statement)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9A%A9%EC%96%B4-%EC%A0%95%EB%A6%AC"><span class="nav-number">1.1.</span> <span class="nav-text">용어 정리</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EA%B0%92"><span class="nav-number">1.1.1.</span> <span class="nav-text">값</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EB%A6%AC%ED%84%B0%EB%9F%B4"><span class="nav-number">1.1.2.</span> <span class="nav-text">리터럴</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%91%9C%ED%98%84%EC%8B%9D-expression-%EC%9D%B4%EB%9E%80"><span class="nav-number">1.2.</span> <span class="nav-text">표현식(expression)이란?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8-statement-%EC%9D%B4%EB%9E%80"><span class="nav-number">1.3.</span> <span class="nav-text">문(statement)이란?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%91%9C%ED%98%84%EC%8B%9D%EA%B3%BC-%EB%AC%B8%EC%9D%98-%EA%B4%80%EA%B3%84"><span class="nav-number">1.4.</span> <span class="nav-text">표현식과 문의 관계</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="dooyeong"
+      src="/images/my.png">
+  <p class="site-author-name" itemprop="name">dooyeong</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">포스트</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">카테고리</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">태그</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dooyeong20" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dooyeong20" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:noviced22@gmail.com" title="E-Mail → mailto:noviced22@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/dooyeong20" class="github-corner" title="Follow Github - dooyeong20" aria-label="Follow Github - dooyeong20" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/11/javascript/day03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JavaScript 03 - 표현식(expression) & 문(statement)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-05-11 20:30:06" itemprop="dateCreated datePublished" datetime="2021-05-11T20:30:06+09:00">2021-05-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-12 17:30:06" itemprop="dateModified" datetime="2021-05-12T17:30:06+09:00">2021-05-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="표현식-expression-과-문-statement"><a href="#표현식-expression-과-문-statement" class="headerlink" title="표현식(expression)과 문(statement)"></a>표현식(expression)과 문(statement)</h1><h2 id="용어-정리"><a href="#용어-정리" class="headerlink" title="용어 정리"></a>용어 정리</h2><p>표현식(expression)과 문(statement)에 대해서 말하기 전, 몇 가지 용어에 대한 개념을 확실하게 짚고 넘어가보겠다.</p>
+<h3 id="값"><a href="#값" class="headerlink" title="값"></a>값</h3><p>값이란 표현식(expression)이 평가되어 생성된 결과이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> + <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+
+<p>이 때 <code>10 + 20</code> 이라는 식이 평가되어 <code>30</code> 이라는 값이 생성된 것이다.</p>
+<h3 id="리터럴"><a href="#리터럴" class="headerlink" title="리터럴"></a>리터럴</h3><p>리터럴(literal) 이란 사람이 이해할 수 있는 약속된 문자나 기호를 사용해서 값을 생성하는 표기 방식을 의미한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> three = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> hello = <span class="string">&#x27;hello&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>위 <code>3</code> 이라는 것은 우리가 아는 아라비아 숫자 <code>3</code> 이지만 자바스크립트 엔진에게는 숫자 리터럴이 되는 것이다. 그리고 ‘hello’는 문자열 리터럴이 되는 것이다. 표현식이나 평가가 없이 그 자체로 값인 것이다.</p>
+<h2 id="표현식-expression-이란"><a href="#표현식-expression-이란" class="headerlink" title="표현식(expression)이란?"></a>표현식(expression)이란?</h2><p>그렇다면 표현식은 무엇일까?</p>
+<p>표현식은 값이 될 수 있는 문(statement)이다. 즉 평가되어 값을 생성하거나 기존의 값을 참조하는 것이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> score = <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
+
+<p>위는 100 이라는 숫자 리터럴로 변수를 선언하고 초기화한 것이다. 그리고 리터럴은 값으로 평가되기 때문에 리터럴도 표현식이 된다는 점에 주목해야 한다</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> score = <span class="number">123</span> * <span class="number">456</span>;</span><br></pre></td></tr></table></figure>
+
+<p>그리고 위의 예시에서도 123 * 456 이라는 식이 평가되어 값을 가지기 때문에 위의 예시도 표현식에 해당된다.</p>
+<h2 id="문-statement-이란"><a href="#문-statement-이란" class="headerlink" title="문(statement)이란?"></a>문(statement)이란?</h2><p>문은 표현식과 헷갈릴 수 있지만, 이 둘을 잘 구분한다면 자바스크립트 코드를 읽고 실행 결과를 예측하는데 큰 도움이 될 수 있다.</p>
+<p>문은 프로그램을 구성하는 기본 단위, 최소 실행 단위이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = <span class="number">1</span> + <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<p>위 한 줄의 코드는 문(statement)이다. 그리고</p>
+<ul>
+<li>var</li>
+<li>sum</li>
+<li>=</li>
+<li>1</li>
+<li>-</li>
+<li>2</li>
+</ul>
+<p>라는 문법적으로 더 나눌 수 없는 코드의 기본 요소인 토큰들로 이루어진다.</p>
+<p>그리고 많이 들어봤던 선언문, 조건문, 반복문 등이 모두 여기서 말하는 “문”에 해당한다.</p>
+<h2 id="표현식과-문의-관계"><a href="#표현식과-문의-관계" class="headerlink" title="표현식과 문의 관계"></a>표현식과 문의 관계</h2><p>많이 헷갈리는 부분인데, 표현식은 문의 일부일 수도 있으며 그 자체로 문이 될 수도 있다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span> + <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<p>이 때 위 코드는 표현식이면서 완전한 문이 되지만, 아래 코드는 변수의 선언문으로써 값으로 평가될 수 없기 때문에 표현식이 될 수 없다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x;</span><br></pre></td></tr></table></figure>
+
+<p>하지만 “되”와 “돼”를 “하”와 “해”에 대입하여 생각해 구분하는 것과 같이 위 둘도 쉽게 구분할 수 있는 방법이 있다. 그것은 바로 변수에 할당해보는 것이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="keyword">var</span> x;</span><br></pre></td></tr></table></figure>
+
+<p>먼저 표현식이 아닌 선언문을 변수 foo에 할당할 수는 없다. 하지만 아래 코드는 가능하다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = (x = <span class="number">1</span> + <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// foo = 3</span></span><br></pre></td></tr></table></figure>
+
+<p>할당문을 값처럼 변수에 할당한 것이다. 왜 이것이 가능하냐면 표현식 문인 할당문은 할당한 “값”으로 평가되기 때문이다.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/05/11/javascript/day02/" rel="prev" title="JavaScript 02 - 변수">
+                  <i class="fa fa-chevron-left"></i> JavaScript 02 - 변수
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/05/11/javascript/day04/" rel="next" title="JavaScript 04 - 데이터 타입">
+                  JavaScript 04 - 데이터 타입 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dooyeong</span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script size="100" alpha="0.3" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+
+
+
+
+
+</body>
+</html>
