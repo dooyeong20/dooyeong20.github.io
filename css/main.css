@@ -2981,12 +2981,12 @@ body * {
   font-weight: 600 !important;
 }
 .main-inner {
-  background-color: rgba(51,51,51,0.5);
+  background-color: rgba(255,255,255,0.05);
 }
 .custom-logo-image {
   width: 120px;
   height: 120px;
-  background-color: #ccc;
+  background-color: rgba(255,255,255,0.05);
 }
 .site-brand-container {
   background: none;
@@ -3002,7 +3002,8 @@ body * {
   display: block;
 }
 .site-brand-container .site-meta .brand {
-  color: #ccc;
+  color: #fff;
+  text-shadow: 1px 1px #181818;
 }
 .custom-logo-image {
   box-sizing: border-box;
