@@ -90,7 +90,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">51</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">52</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -198,6 +198,122 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/13/ps/prog-42888/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/13/ps/prog-42888/" class="post-title-link" itemprop="url">Programmers - 2019 KAKAO BLIND RECRUITMENT 오픈 채팅방</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-13 15:16:23 / Updated at: 15:28:29" itemprop="dateCreated datePublished" datetime="2021-05-13T15:16:23+09:00">2021-05-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/Programmers/" itemprop="url" rel="index"><span itemprop="name">Programmers</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Problem-Solving-2019-KAKAO-BLIND-RECRUITMENT-오픈-채팅방"><a href="#Problem-Solving-2019-KAKAO-BLIND-RECRUITMENT-오픈-채팅방" class="headerlink" title="Problem Solving - 2019 KAKAO BLIND RECRUITMENT 오픈 채팅방"></a>Problem Solving - 2019 KAKAO BLIND RECRUITMENT 오픈 채팅방</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/42888">[Link]</a></h3><p>카카오톡 오픈채팅방에서는 친구가 아닌 사람들과 대화를 할 수 있는데, 본래 닉네임이 아닌 가상의 닉네임을 사용하여 채팅방에 들어갈 수 있다.</p>
+<p>신입사원인 김크루는 카카오톡 오픈 채팅방을 개설한 사람을 위해, 다양한 사람들이 들어오고, 나가는 것을 지켜볼 수 있는 관리자창을 만들기로 했다. 채팅방에 누군가 들어오면 다음 메시지가 출력된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;[닉네임]님이 들어왔습니다.&quot;</span><br></pre></td></tr></table></figure>
+
+<p>채팅방에서 누군가 나가면 다음 메시지가 출력된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;[닉네임]님이 나갔습니다.&quot;</span><br></pre></td></tr></table></figure>
+
+<p>채팅방에서 닉네임을 변경하는 방법은 다음과 같이 두 가지이다.</p>
+<p>채팅방을 나간 후, 새로운 닉네임으로 다시 들어간다.<br>채팅방에서 닉네임을 변경한다.<br>닉네임을 변경할 때는 기존에 채팅방에 출력되어 있던 메시지의 닉네임도 전부 변경된다.</p>
+<p>예를 들어, 채팅방에 “Muzi”와 “Prodo”라는 닉네임을 사용하는 사람이 순서대로 들어오면 채팅방에는 다음과 같이 메시지가 출력된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;Muzi님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br></pre></td></tr></table></figure>
+
+<p>채팅방에 있던 사람이 나가면 채팅방에는 다음과 같이 메시지가 남는다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;Muzi님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Muzi님이 나갔습니다.&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Muzi가 나간후 다시 들어올 때, Prodo 라는 닉네임으로 들어올 경우 기존에 채팅방에 남아있던 Muzi도 Prodo로 다음과 같이 변경된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 나갔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br></pre></td></tr></table></figure>
+
+<p>채팅방은 중복 닉네임을 허용하기 때문에, 현재 채팅방에는 Prodo라는 닉네임을 사용하는 사람이 두 명이 있다. 이제, 채팅방에 두 번째로 들어왔던 Prodo가 Ryan으로 닉네임을 변경하면 채팅방 메시지는 다음과 같이 변경된다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Ryan님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 나갔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br></pre></td></tr></table></figure>
+
+<p>채팅방에 들어오고 나가거나, 닉네임을 변경한 기록이 담긴 문자열 배열 record가 매개변수로 주어질 때, 모든 기록이 처리된 후, 최종적으로 방을 개설한 사람이 보게 되는 메시지를 문자열 배열 형태로 return 하도록 solution 함수를 완성하라.</p>
+<h3 id="2-입력-출력"><a href="#2-입력-출력" class="headerlink" title="2. 입력/출력"></a>2. 입력/출력</h3><table>
+<thead>
+<tr>
+<th>record</th>
+<th>result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[&quot;Enter uid1234 Muzi&quot;, &quot;Enter uid4567 Prodo&quot;,&quot;Leave uid1234&quot;, &quot;Enter uid1234 Prodo&quot;,&quot;Change uid4567 Ryan&quot;] </code></td>
+<td><code>[&quot;Prodo님이 들어왔습니다.&quot;, &quot;Ryan님이 들어왔습니다.&quot;, &quot;Prodo님이 나갔습니다.&quot;, &quot;Prodo님이 들어왔습니다.&quot;]</code></td>
+</tr>
+</tbody></table>
+<h3 id="3-풀이"><a href="#3-풀이" class="headerlink" title="3. 풀이"></a>3. 풀이</h3><p>2019 kakao 블라인드 채용의 1번 문제이다. 역시 아무리 카카오라도 1번 문제 정도는 쉽게 가는 것 같다. 입력의 길이가 <code>100,000</code> 이기 때문에 시간 복잡도에 큰 부담 없이 단순히 구현하면 되는 문제이다.</p>
+<p>각각의 <code>record</code> 마다 고유한 <code>uid</code> 가 주어지기 때문에 이를 통해서 딕셔너리로 해당 사용자의 이름을 저장해 변화가 일어날 때마다 즉시 업데이트 해주고, 또 나가거나 들어올 때의 <code>record</code> 의 인덱스를 저장해놓아 나중에 해당 인덱스에 해당하는 사용자들의 이름을 저장된 딕셔너리의 이름으로 할당해주면 간단하게 풀리는 문제였다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 예시</span></span><br><span class="line">nameDict = &#123;</span><br><span class="line">    <span class="string">&#x27;uid1234&#x27;</span> : [<span class="string">&#x27;prodo&#x27;</span>, [<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>]],</span><br><span class="line">    <span class="string">&#x27;uid1236&#x27;</span> : [<span class="string">&#x27;muzi&#x27;</span>, [<span class="number">1</span>, <span class="number">3</span>]]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ans = [<span class="string">&#x27;prodo 들어왔습니다&#x27;</span>, <span class="string">&#x27;muzi 들어왔습니다&#x27;</span>, <span class="string">&#x27;prodo 나갔습니다&#x27;</span>, <span class="string">&#x27;muzi 나갔습니다&#x27;</span>, <span class="string">&#x27;prodo 들어왔습니다&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">record</span>):</span></span><br><span class="line">    ans = []</span><br><span class="line">    nameDict = &#123;&#125;</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> r <span class="keyword">in</span> record:</span><br><span class="line">        r = r.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> r[<span class="number">0</span>] == <span class="string">&#x27;Enter&#x27;</span>:</span><br><span class="line">            ans.append(<span class="number">1</span>)</span><br><span class="line">            uid, name = r[<span class="number">1</span>], r[<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> uid <span class="keyword">not</span> <span class="keyword">in</span> nameDict:</span><br><span class="line">                nameDict[uid] = [name, [i]]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                nameDict[uid][<span class="number">0</span>] = name</span><br><span class="line">                nameDict[uid][<span class="number">1</span>].append(i)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">elif</span> r[<span class="number">0</span>] == <span class="string">&#x27;Leave&#x27;</span>:</span><br><span class="line">            ans.append(<span class="number">0</span>)</span><br><span class="line">            uid = r[<span class="number">1</span>]</span><br><span class="line">            nameDict[uid][<span class="number">1</span>].append(i)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            uid, name = r[<span class="number">1</span>], r[<span class="number">2</span>]</span><br><span class="line">            nameDict[uid][<span class="number">0</span>] = name</span><br><span class="line">            i -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> nameDict:</span><br><span class="line">        name, idxList = nameDict[k]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> idx <span class="keyword">in</span> idxList:</span><br><span class="line">            <span class="keyword">if</span> ans[idx] &gt; <span class="number">0</span>:</span><br><span class="line">                ans[idx] = <span class="string">f&#x27;<span class="subst">&#123;name&#125;</span>님이 들어왔습니다.&#x27;</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans[idx] = <span class="string">f&#x27;<span class="subst">&#123;name&#125;</span>님이 나갔습니다.&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/12/javascript/day06/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -229,7 +345,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-13 14:37:49" itemprop="dateModified" datetime="2021-05-13T14:37:49+09:00">2021-05-13</time>
+        <time title="Updated at: 2021-05-14 13:10:27" itemprop="dateModified" datetime="2021-05-14T13:10:27+09:00">2021-05-14</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -287,6 +403,10 @@
 </li>
 </ul>
 <p>명시적인 타입 변환이든 암묵적인 타입 변환이든 사실 중요한 것은 개발자가 코드가 어떻게 동작할지 정확하게 예측할 수 있어야 한다는 점이다. 만약 암묵적으로 타입이 변할 수 있다는 사실을 모르고 개발을 하다보면 암묵적 타입변환 때문에 디버깅에 많은 시간을 허비할 수 있기도 하고, 예상치 못한 에러가 발생할 수 있기 때문이다.</p>
+<h3 id="예외-사항들"><a href="#예외-사항들" class="headerlink" title="예외 사항들"></a>예외 사항들</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[] == <span class="literal">true</span>; <span class="comment">// false</span></span><br><span class="line"><span class="literal">null</span> == <span class="number">0</span>; <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p>위 두 예시를 보면 이상할 것이다. <code>[]</code> 는 truthy 한 값이고 true 는 truthy 니까 당연히 true 가 나오는 것이 맞는 것 같다. 그리고 같은 이유로 아래의 null 은 falsy 하며 0 도 falsy 하기 때문에 비교하면 true 가 나오는 것이 맞는 것같다.</p>
+<p>이를 설명하기 전, 먼저 동등 연산자의 전용 알고리즘이 따로 존재하는데, 이 알고리즘은 좌측과 우측에 boolean 값이 있으면 먼저 숫자로 형 변환을 진행한 다음에 비교를 시작하기 때문에 이러한 현상이 발생하게 되는 것이다.</p>
 <h2 id="단축-평가"><a href="#단축-평가" class="headerlink" title="단축 평가"></a>단축 평가</h2><p>앞서 알아본 논리 연산자 부분에서 or 연산(<code>||</code>)과 and 연산(<code>&amp;&amp;</code>)에 대해서 알아보았는데, 이 연산의 결과는 꼭 boolean 값이 아닌 점에 주의해야 한다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;kim&#x27;</span> &amp;&amp; <span class="string">&#x27;lee&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
@@ -1253,131 +1373,6 @@
 <blockquote>
 <p>프로그래밍은 요구사항의 집합을 분석해서 적절한 자료구조와 함수의 집합으로 변환한 후, 그 흐름을 제어하는 것이다.</p>
 </blockquote>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/09/javascript/intro/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/09/javascript/intro/" class="post-title-link" itemprop="url">JavaScript 정리 시작</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-05-09 17:44:06" itemprop="dateCreated datePublished" datetime="2021-05-09T17:44:06+09:00">2021-05-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-12 15:49:41" itemprop="dateModified" datetime="2021-05-12T15:49:41+09:00">2021-05-12</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="JavaScript를-배우는-마음가짐"><a href="#JavaScript를-배우는-마음가짐" class="headerlink" title="JavaScript를 배우는 마음가짐"></a>JavaScript를 배우는 마음가짐</h2><p>자바스크립트를 안좋게 보는 사람들이 많이 있다. 내가 생각했을 때 그 이유 중 하나는 javaScript의 탄생 배경이 조금 특별하기 때문이다. 대부분의 프로그래밍 언어는 애플리케이션을 개발하기 위한 범용적인 용도로 설계되었지만, 자바스크립트는 웹페이지의 단순한 보조 기능을 처리하기 위한 제한적인 용도를 목적으로 태어났다. 따라서 자바스크립트를 브라우저 전용 프로그래밍 언어라고 한정지어 생각하는 의견이 없지 않아 있기 때문에 조금 오해를 받는 면이 있는 것 같다.</p>
-<p>하지만 현재 자바스크립트는 절대 무시할 수 없을만큼 성장했고, 웹 브라우저에서만 동작하는 것이 아니라 Node.js 라는 자바스크립트 실행환경이 탄생함에 따라 서버, 로보틱스, 모바일, 인공지능 등 그 사용범위가 매우 넓어졌고 앞으로도 계속 넓어질 것이라고 생각한다. 그리고 자바스크립트는 Java나 C와 같이 크게 변동사항이 없이 안정적인 상태를 유지하는 언어들과는 달리, 계속 버전별로 새로운 기능이 추가되어 나가는 진화하는 언어라는 인식이 강하게 박혀있고 성장하는 언어라는 느낌이 너무 강하게 든다.</p>
-<p>그래서 개인적으로 문법만 아는 것이 아니라 동작 원리와 개념 등을 심도있게 배우고 싶은 마음이 들기 때문에 자바스크립트라는 언어를 뿌리 깊게 이해하는 것을 목적으로 JavaScript를 공부할 것이다.</p>
-<p>나는 javaScript를 “사용할 줄 아는 사람” 이 되는 것이 목표가 아니다. 누가 보더라도 감탄할만한, 잘 모르는 사람이 나의 코드를 보더라도 javaScript에 대한 나의 이해의 깊이가 느껴질만큼 깨끗하고 아름다운 코드를 짤 것이다.</p>
-<h2 id="개념과-동작-원리-이해의-중요성"><a href="#개념과-동작-원리-이해의-중요성" class="headerlink" title="개념과 동작 원리 이해의 중요성"></a>개념과 동작 원리 이해의 중요성</h2><p>프로그래밍 언어의 기본 개념과 동작 원리를 이해하는 것은 결국 내 생각을 코드로 구현해야하기 때문이라고 생각한다. 그리고 그 이해가 깊으면 깊을수록 더 퀄리티가 높은 코드를 짤 수 있을 것이다. 한번에 모든 것을 학습하려고 욕심내지는 않을 것이다. 그러다보면 놓치는 것이 많아지고 놓친 것을 인지하지조차 못할 수도 있기 때문이다. 또한 학습한 것을 실제로 적용할 때에는 라이브 코딩을 직접 보고만 있는다던가, 이미 구현할 줄 아는 간단한 예제들을 실습하며 나의 실력에 만족하는 의미 없는 연습을 하지 않아야 한다.</p>
-<p>연습을 할 때에는, “의식적인 연습” 을 해야만 한다. 의지를 가지고 학습한 것을 녹여낼 수 있으며 나의 실력을 약간 벗어나는 정도의 도전의지를 가지로 임할 수 있는 학습이어야 한다. 앞으로 javaScript를 학습하며 위 내용을 잊지 않고 간직할 것이다.</p>
-<h2 id="어떠한-개발자가-좋은-개발자인가"><a href="#어떠한-개발자가-좋은-개발자인가" class="headerlink" title="어떠한 개발자가 좋은 개발자인가"></a>어떠한 개발자가 좋은 개발자인가</h2><ul>
-<li><p>“빨리” 보다는 “제대로” 학습하는 사람</p>
-</li>
-<li><p>코드 한 줄을 짤 때에도, 여러가지 방법들 중 “왜” 하필 그 방법을 선택했는지 설명하고, 책임질 수 있는 사람</p>
-</li>
-<li><p>되면 왜 되고 안되면 왜 안되는지 정확하게 아는 사람</p>
-</li>
-<li><p>인터넷 검색을 통해 얻은 결과들을 짜집기 하는 것이 자신의 실력이라고 착각하지 않는 사람</p>
-</li>
-<li><p>자신의 코드가 어떻게 동작하는지 정확하게 예측하고 코드를 짜는 사람</p>
-</li>
-<li><p>어떻게든 동작하는 코드를 짜고 만족하지 않고 가독성이 높은, 유지보수가 편한 코드를 짜기 위해 노력하는 사람</p>
-</li>
-<li><p>“왜” 에 대한 물음에 정확하게 답할 수 있는 사람</p>
-</li>
-</ul>
-<p>좋은 개발자가 되기 위해서 화이팅!</p>
-<blockquote>
-<p>빨리 가는 유일한 방법은 제대로 가는 것이다.<br>- Robert C. Martin, “Clean Code” 저자</p>
-</blockquote>
-<h2 id="프론트엔드-개발자가-하는-일"><a href="#프론트엔드-개발자가-하는-일" class="headerlink" title="프론트엔드 개발자가 하는 일"></a>프론트엔드 개발자가 하는 일</h2><p>애플리케이션 사용자가 애플리케이션과 소통하기 위한 창구(UI)를 구현한다.</p>
-<p>HTML과 CSS로는 UI 구조를 짜고 예쁘게 꾸밀 수는 있지만, 사용자와 서로 상호작용하는 기능 등을 커버하지 못하기 때문에 JavaScript를 활용하여 커버한다. 이러한 JavaScript를 통해서 잘 꾸며진 화면에서 추가적인 기능이 동작할 수 있도록 한다.</p>
-<ul>
-<li>상태정보를 서버로 전송</li>
-<li>서버에서 데이터를 받아 UI에 표시</li>
-</ul>
-<h2 id="프론트엔드-개발자-필요-덕목"><a href="#프론트엔드-개발자-필요-덕목" class="headerlink" title="프론트엔드 개발자 필요 덕목"></a>프론트엔드 개발자 필요 덕목</h2><ol>
-<li><p>빠른 학습능력</p>
-<p>프론트는 라이브러리나 툴들이 수시로 변화하기 때문에 빠른 학습능력이 매우 필요하다. 따라서 아주 탄탄한 기본기가 반드시 필요한데, 이 때 javaScript에 대한 깊은 이해가 여기서 말하는 기본기에 해당한다고 생각한다.</p>
-<p>그리고 기본적인 “용어”를 아는 것이 아래 협업과도 큰 관련이 있다. 여기서 말하는 용어란, 개념을 정확히 아는 것이다. 개념을 정확히 아는 것이란, 내가 상대방이 정확히 알 수 있도록 설명할 수 있어야 한다. 함께 일을 하는 과정에서 무엇인가를 설명해야 할 때, 소위 말하는 개떡같이 말해도 찰떡같이 알아듣는 사람과 더 함께 일하고 싶기 마련이다.</p>
-</li>
-<li><p>협업 능력</p>
-<p>협업은 대부분 말로, 문서로 하기 때문에 “커뮤니케이션”이 매우 중요하다. 의사소통을 하기 위해서는 서로 알고 있는 지식의 수준이 비슷해야 한다. 위에서 말한 “용어”를 아는 것과도 연관이 있다. 예를 들어 지금의 내가 의사, 변호사들과 해당 분야에 대해서 토론하고 함께 일할 수 없는 것과 마찬가지이다.</p>
-<p>의사소통을 제대로 못하고 무작정 일을 시작하면 서로가 같은 목표를 보고있다고 보장하지 못하기 때문에 아무리 각자가 열심히 일을 한다고 한들 의미가 없이 시간낭비를 하는 것과 마찬가지가 되는 것이다.</p>
-</li>
-</ol>
 
       
     </div>
