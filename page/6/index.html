@@ -90,7 +90,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">56</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">58</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-count">58</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -189,6 +189,273 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/29/ds-algo/ds-algo-05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/29/ds-algo/ds-algo-05/" class="post-title-link" itemprop="url">이진탐색트리와 그래프</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-03-29 13:47:17" itemprop="dateCreated datePublished" datetime="2021-03-29T13:47:17+09:00">2021-03-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-01 17:58:17" itemprop="dateModified" datetime="2021-05-01T17:58:17+09:00">2021-05-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="이전-강의-복습"><a href="#이전-강의-복습" class="headerlink" title="이전 강의 복습"></a>이전 강의 복습</h3><ul>
+<li><p>‘is’ 와 ‘==’</p>
+<ul>
+<li>== : 값을 비교해서 같으면 True</li>
+<li>is : 동일한 객체인지를 확인해서 같으면 True</li>
+</ul>
+</li>
+<li><p>참고로, 파이썬에서는 id()가 유일학 객체를 구분하는 수단(주소값은 알 수 없음)</p>
+</li>
+<li><p>파이썬은 모든 값이 다 객체임. 모두.</p>
+<ul>
+<li>원시타입이 없음</li>
+</ul>
+</li>
+<li><p>재귀보다 스택(반복문)이 성능이 훨씬 좋다. 하지만 읽기가 좀 힘들다.</p>
+</li>
+</ul>
+<h1 id="이진-탐색-트리-Binary-Search-Trees"><a href="#이진-탐색-트리-Binary-Search-Trees" class="headerlink" title="이진 탐색 트리(Binary Search Trees)"></a>이진 탐색 트리(Binary Search Trees)</h1><ul>
+<li>노드 값에 ‘순서’, ‘크고 작음’이 있어서 비교를 할 수가 있다.(알파벳, 숫자 등도 포함)</li>
+<li>왼쪽 서브트리가 더 작고 오른쪽 서브트리 요소(노드)들이 더 크다.</li>
+<li>자료를 넣는 순서에 영향을 받는다.</li>
+<li>O(logN) ~ O(n) 사이 어딘가에 존재하게 된다.</li>
+<li>자료의 중복이 허용되지 않음</li>
+<li>(굳이 따지자면) 탐색 최적화</li>
+</ul>
+<h2 id="자료의-탐색"><a href="#자료의-탐색" class="headerlink" title="자료의 탐색"></a>자료의 탐색</h2><ul>
+<li>Skewed 경우 : O(n)</li>
+<li>Balance 경우 : O(logN)</li>
+</ul>
+<h2 id="자료의-삽입"><a href="#자료의-삽입" class="headerlink" title="자료의 삽입"></a>자료의 삽입</h2><ul>
+<li>일치하는 노드가 발견되면 종료</li>
+<li>일치하는 노드가 없으면 마지막 노드의 좌(작을 때), 우(클 때)에 삽입.</li>
+</ul>
+<h2 id="자료의-삭제"><a href="#자료의-삭제" class="headerlink" title="자료의 삭제"></a>자료의 삭제</h2><p>세가지 경우가 존재함<br>삭제를 하기 위해 search를 할 때는 부모노드를 추적해야 한다.</p>
+<ol>
+<li>삭제할 노드의 자식이 없을 때</li>
+<li>삭제할 노드가 좌/우 중 하나의 자식이 있는 경우</li>
+<li>삭제한 노드가 좌, 우 자식 모두 가지고 있는 경우 (매우 복잡)</li>
+</ol>
+<br>
+
+<h1 id="그래프"><a href="#그래프" class="headerlink" title="그래프"></a>그래프</h1><p>객체간의 짝을 이루는 구조를 나타냄. 가장 유연하다 (ADT 임)</p>
+<ul>
+<li>vertex와 이를 잇는 edge로 이루어져 있다.</li>
+<li>방향이 있거나(유유) 없을(무향) 수 있다.</li>
+<li>edge에는 가중치라는 것이 있다.(클수록 연결의 강도가 클 수도있고, 작아질 수도 있다.)</li>
+</ul>
+<h2 id="그래프와-트리-관계"><a href="#그래프와-트리-관계" class="headerlink" title="그래프와 트리 관계"></a>그래프와 트리 관계</h2><p>트리는 DAG(Directed Acyclic Graph)의 일종이며 회로(사이클)이 없고, 방향성이 존재한다.</p>
+<h2 id="그래프의-종류"><a href="#그래프의-종류" class="headerlink" title="그래프의 종류"></a>그래프의 종류</h2><ul>
+<li>무향 그래프(양쪽으로 다 연결되어 있는 것으로 생각할 수 있다.)</li>
+<li>유향 그래프<ul>
+<li>같은 노드를 잇더라도 방향에 따라서 가중치가 다를 수 있다.</li>
+</ul>
+</li>
+<li>다중 그래프<ul>
+<li>하나의 vertex에서 다른 vertex로 가는 edge가 여러 개 있을 수 있다</li>
+<li>자기 자신으로 연결되는 edge가 있을 수 있다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="그래프-용어"><a href="#그래프-용어" class="headerlink" title="그래프 용어"></a>그래프 용어</h2><ul>
+<li>path: edge들의 시퀀스</li>
+<li>회로(Cycle, Circuit): 트리와는 다르게 사이클이 존재할 수 있다. 자기 자신으로 다시 돌아올 수 있음.</li>
+<li>부분 그래프(Subgraph): 그래프에 속하는 그래프<ul>
+<li>모든 노드끼리 연결이 안되어 있어도 그래프임 즉, 1-7-3 6 4 이렇게 (1,7,3),(6), (4) 이렇게 구성해도 connected graph가 아닌 subgraph이다.</li>
+</ul>
+</li>
+<li>연결 그래프(connected graph): 임의의 노드와 임의의 노드를 연결하는 edge가 있다. 즉, 어떻게든 path를 구성해서 노드간에 이동할 수 있다.</li>
+</ul>
+<h2 id="그래프-구현-방법"><a href="#그래프-구현-방법" class="headerlink" title="그래프 구현 방법"></a>그래프 구현 방법</h2><ul>
+<li>인접 리스트: Sparse 할 경우 유리함<ul>
+<li>각 vertex마다 연결된 vertex들을 쭉 리스트로 나열함</li>
+<li>인접 리스트에서 순서는 중요하지 않음<ul>
+<li>트리는 left, right(순서)가 중요하지만 그래프는 중요하지 않음</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>인접 행렬 - Dense할 경우 유리함<ul>
+<li>노드들간에 연결이 다 되어 있을 수록 유리</li>
+<li>무향 그래프인 경우, 인접 행렬에서 row=colum 축에 대칭임</li>
+<li>가중치가 있을 경우 (v1, v2)에 1대신에 가중치를 적음</li>
+<li>행렬이 값으로 차있을 경우(dense) 효율적</li>
+</ul>
+</li>
+</ul>
+<h1 id="Homework-6"><a href="#Homework-6" class="headerlink" title="Homework #6"></a>Homework #6</h1><ul>
+<li>이진 탐색 트리 구현 (remove까지)</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/29/ps/boj-1991/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/29/ps/boj-1991/" class="post-title-link" itemprop="url">BOJ 1991 - 트리 순회</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-03-29 10:41:23" itemprop="dateCreated datePublished" datetime="2021-03-29T10:41:23+09:00">2021-03-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-02 16:49:01" itemprop="dateModified" datetime="2021-05-02T16:49:01+09:00">2021-05-02</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Problem-Solving-트리-순회-S1"><a href="#Problem-Solving-트리-순회-S1" class="headerlink" title="Problem Solving - 트리 순회(S1)"></a>Problem Solving - 트리 순회(S1)</h1><h2 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/1991">[Link]</a></h2><blockquote>
+<p>이진 트리를 입력받아 전위 순회(preorder traversal), 중위 순회(inorder traversal), 후위 순회(postorder traversal)한 결과를 출력하는 프로그램을 작성하시오.</p>
+</blockquote>
+<h2 id="2-입력"><a href="#2-입력" class="headerlink" title="2. 입력"></a>2. 입력</h2><blockquote>
+<p>첫째 줄에는 이진 트리의 노드의 개수 N(1≤N≤26)이 주어진다. 둘째 줄부터 N개의 줄에 걸쳐 각 노드와 그의 왼쪽 자식 노드, 오른쪽 자식 노드가 주어진다. 노드의 이름은 A부터 차례대로 영문자 대문자로 매겨지며, 항상 A가 루트 노드가 된다. 자식 노드가 없는 경우에는 .으로 표현된다.</p>
+</blockquote>
+<h2 id="3-예제-입-출력"><a href="#3-예제-입-출력" class="headerlink" title="3. 예제 입/출력"></a>3. 예제 입/출력</h2><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">7</span><br><span class="line">A B C</span><br><span class="line">B D .</span><br><span class="line">C E F</span><br><span class="line">E . .</span><br><span class="line">F . G</span><br><span class="line">D . .</span><br><span class="line">G . .</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="4-풀이"><a href="#4-풀이" class="headerlink" title="4. 풀이"></a>4. 풀이</h2><p>이 문제는 단순히 트리를 preorder, inorder, postorder 방식으로 순회하는 문제였다.<br>각각의 경우를 재귀적인 방법을 활용해 풀이했다.</p>
+<h2 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">preorder</span>(<span class="params">tree</span>):</span></span><br><span class="line">    s = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recursive</span>(<span class="params">node</span>):</span></span><br><span class="line">        <span class="keyword">nonlocal</span> s</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> node == <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        s += node</span><br><span class="line">        recursive(tree[node][<span class="number">0</span>])</span><br><span class="line">        recursive(tree[node][<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    recursive(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">inorder</span>(<span class="params">tree</span>):</span></span><br><span class="line">    s = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recursive</span>(<span class="params">node</span>):</span></span><br><span class="line">        <span class="keyword">nonlocal</span> s</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> node == <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        recursive(tree[node][<span class="number">0</span>])</span><br><span class="line">        s += node</span><br><span class="line">        recursive(tree[node][<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line">    recursive(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">postorder</span>(<span class="params">tree</span>):</span></span><br><span class="line">    s = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recursive</span>(<span class="params">node</span>):</span></span><br><span class="line">        <span class="keyword">nonlocal</span> s</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> node == <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        recursive(tree[node][<span class="number">0</span>])</span><br><span class="line">        recursive(tree[node][<span class="number">1</span>])</span><br><span class="line">        s += node</span><br><span class="line"></span><br><span class="line">    recursive(<span class="string">&#x27;A&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">n, treeDict</span>):</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        root, left, right = stdin.readline().split()</span><br><span class="line">        treeDict[root] = [left, right]</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(preorder(treeDict))</span><br><span class="line">    <span class="built_in">print</span>(inorder(treeDict))</span><br><span class="line">    <span class="built_in">print</span>(postorder(treeDict))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">treeDict = <span class="built_in">dict</span>()</span><br><span class="line">solution(n, treeDict)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-분류"><a href="#5-분류" class="headerlink" title="5. 분류"></a>5. 분류</h2><ul>
+<li>트리</li>
+<li>재귀</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
