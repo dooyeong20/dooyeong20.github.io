@@ -90,7 +90,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">58</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">59</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-count">59</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -189,6 +189,107 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/02/html-css/vlive-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/02/html-css/vlive-2/" class="post-title-link" itemprop="url">VLIVE 프로젝트 - 반응형 레이아웃 분석</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-05-02 16:33:20" itemprop="dateCreated datePublished" datetime="2021-05-02T16:33:20+09:00">2021-05-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-09 15:06:12" itemprop="dateModified" datetime="2021-05-09T15:06:12+09:00">2021-05-09</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/Project/" itemprop="url" rel="index"><span itemprop="name">Project</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="VLIVE-팀-프로젝트"><a href="#VLIVE-팀-프로젝트" class="headerlink" title="VLIVE 팀 프로젝트"></a>VLIVE 팀 프로젝트</h1><ul>
+<li><a href="https://dooyeong20.github.io/vlive/01_team/src/">완성된 프로젝트 보러가기</a></li>
+</ul>
+<h2 id="VLIVE-반응형-프로토타이핑"><a href="#VLIVE-반응형-프로토타이핑" class="headerlink" title="VLIVE 반응형 프로토타이핑"></a>VLIVE 반응형 프로토타이핑</h2><p>VLIVE는 반응형 레이아웃 배치 breakpoint가 크게 총 2개이다. 모바일, 태블릿, 데스크탑 모드 총 3개의 반응형 레이아웃을 제공하고 있는 것을 보았고, <a href="https://dooyeong20.github.io/2021/05/01/html-css/vlive-1/">지난 글</a>에서 볼 수 있듯이 헤더, 좌/우측 컨테이너 그리고 메인(동영상)컨테이너, 그리고 댓글 컨테이너로 구성되어 있는 것을 확인했다.</p>
+<p>따라서 이대로 레이아웃을 짜보았는데, VLIVE는 원래 <code>flex</code> 로 배치되어 있었지만 나는 <code>grid</code> 를 사용해 배치해보았다. 왜냐하면 큰 단위의 전체적인 배치를 하고, 반응형에 대응하기에는 <code>grid</code> 가 적합하다고 판단했기 때문이다.</p>
+<h3 id="데스크탑-레이아웃"><a href="#데스크탑-레이아웃" class="headerlink" title="데스크탑 레이아웃"></a>데스크탑 레이아웃</h3><img src="/images/proto-1.png" width="800">
+
+<p>데스크탑 레이아웃은 헤더와 좌우측 컨테이너, 그리고 메인과 댓글 창의 배치가 위와 같이 되어있다.</p>
+<h3 id="태블릿-레이아웃"><a href="#태블릿-레이아웃" class="headerlink" title="태블릿 레이아웃"></a>태블릿 레이아웃</h3><img src="/images/proto-2.png" width="500">
+
+<p>태블릿 레이아웃은 우측 컨테이너가 메인 컨테이너와 댓글 컨테이너 사이로 배치되는 것을 확인할 수 있는데, 이 때문에 <code>flex</code> 배치보다 <code>grid</code> 배치를 선택하게 되었다.</p>
+<h3 id="모바일-레이아웃"><a href="#모바일-레이아웃" class="headerlink" title="모바일 레이아웃"></a>모바일 레이아웃</h3><img src="/images/proto-3.png" width="300">
+
+<p>모바일 레이아웃은 위 태블릿 레이아웃에서 좌측 컨테이너가 토글로 숨어있는 형태로 구성된다.</p>
+<h3 id="grid-설정-CSS"><a href="#grid-설정-CSS" class="headerlink" title="grid 설정 (CSS)"></a>grid 설정 (CSS)</h3><p>위에서 <code>grid</code> 배치를 사용했다고 했는데, 아래와 같이 코드를 짜서 구성하였다.</p>
+<img src="/images/proto-4.png" width="400">
+
+<p>다음은 위 VLIVE 마크업을 해볼 차례이다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1400,127 +1501,6 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.float-parent</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>과 같은 방식을 주로 사용하곤 한다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/19/html-css/html-css-10/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/19/html-css/html-css-10/" class="post-title-link" itemprop="url">Web과 HTML</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-04-19 13:02:06" itemprop="dateCreated datePublished" datetime="2021-04-19T13:02:06+09:00">2021-04-19</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-05 23:06:57" itemprop="dateModified" datetime="2021-05-05T23:06:57+09:00">2021-05-05</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="환경에-대한-이해"><a href="#환경에-대한-이해" class="headerlink" title="환경에 대한 이해"></a>환경에 대한 이해</h2><ol>
-<li>다양한 Platform</li>
-<li>Cross Browsing</li>
-<li>SEO (Search Engine Optimization)</li>
-<li>저사양 또는 저속회선</li>
-</ol>
-<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>1993년 최초버전. W3C가 XHTML1.0을 구체화하기 위해 XHTML2.0작업을 진행을 시도</p>
-<ul>
-<li><p>HTML 4.01 vs XHTML 1.0</p>
-<ul>
-<li>재정의 한 것이기 때문에 비슷함</li>
-<li>HTML 은 자유도가 너무 높았음</li>
-<li>애플, 모질라, 오페라가 w3c와 별개로 작업함(WHATWG)</li>
-</ul>
-</li>
-<li><p>HTML5 정보 구조를 명확히 할 수 있도록 아웃라인 알고리즘(?)이라는 것이 있음</p>
-</li>
-<li><p>HTML5는 HTML 4.01과 XHTML1.0을 모두 수용했다.</p>
-</li>
-</ul>
-<h2 id="Naming"><a href="#Naming" class="headerlink" title="Naming"></a>Naming</h2><ol>
-<li>S (snake): main_content</li>
-<li>K (kebob): main-content</li>
-<li>C (camel): mainContent</li>
-<li>P ()</li>
-</ol>
-<h4 id="용어"><a href="#용어" class="headerlink" title="용어"></a>용어</h4><ul>
-<li>전체적인 변천사, 맥락을 알아야 함</li>
-<li>DTD (Strict, Transitional, Frameset)</li>
-<li>XHTML1.0, 2.0</li>
-<li>W3C가 XHTML 2.0실패를 인정 후 WAHTWG 표준안을 대부분 수용해서 HTML5 탄생</li>
-<li>WAI - A(accessbility)RIA<ul>
-<li>R: Role</li>
-<li>P: Property</li>
-<li>S: State</li>
-</ul>
-</li>
-</ul>
 
       
     </div>
