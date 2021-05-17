@@ -90,7 +90,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">52</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">56</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">52</span>
+          <span class="site-state-item-count">56</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -189,6 +189,517 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-07/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/12/html-css/html-css-07/" class="post-title-link" itemprop="url">HTML 멀티미디어 & 내장 콘텐츠 (1)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-04-12 16:58:06" itemprop="dateCreated datePublished" datetime="2021-04-12T16:58:06+09:00">2021-04-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-05 23:06:46" itemprop="dateModified" datetime="2021-05-05T23:06:46+09:00">2021-05-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="멀티미디어-amp-내장-콘텐츠-Tag"><a href="#멀티미디어-amp-내장-콘텐츠-Tag" class="headerlink" title="멀티미디어 &amp; 내장 콘텐츠 Tag"></a>멀티미디어 &amp; 내장 콘텐츠 Tag</h1><h2 id="lt-img-gt-Tag"><a href="#lt-img-gt-Tag" class="headerlink" title="&lt;img&gt; Tag"></a><code>&lt;img&gt;</code> Tag</h2><p>이미지 삽입을 위한 태그</p>
+<ul>
+<li><code>src</code>: (필수)이미지 URL</li>
+<li><code>alt</code>: (필수)이미지의 대체텍스트</li>
+<li><code>width</code>: 이미지의 가로 너비 (px 없이 숫자만)</li>
+<li><code>height</code>: 이미지의 세로 너비 (px 없이 숫자만)</li>
+<li><code>srcset</code>: 브라우저에게 제시할 <strong>이미지 URL</strong>과 <strong>원본 크기의 목록</strong>을 정의</li>
+<li><code>sizes</code>: 미디어 조건과 해당 조건일 때 <strong>이미지 최적화 크기의 목록</strong>을 정의</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">src 속성은 srcset을 사용할 수 없는 환경에서 동작</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- srcset, sizes --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 다양한 디스플레이 해상도에 맞는 최적의 이미지를 브라우저가 선택해서 사용 --&gt;</span></span><br><span class="line">&lt;img</span><br><span class="line">  srcset=&quot;images/heropy_small.png 400w, images/heropy_medium.png 700w, images/heropy_large.png 1000w&quot;</span><br><span class="line">  sizes=&quot;(max-width: 500px) 444px,</span><br><span class="line">         (max-width: 800px) 777px,</span><br><span class="line">         1222px&quot;</span><br><span class="line">  src=&quot;images/heropy.png&quot;</span><br><span class="line">  alt=&quot;HEROPY&quot;</span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line">&lt;img</span><br><span class="line">  srcset=&quot;경로 원본크기,</span><br><span class="line">          경로 원본크기,</span><br><span class="line">          경로 원본크기&quot;</span><br><span class="line">  sizes=&quot;(미디어조건) 최적화출력크기,</span><br><span class="line">         (미디어조건) 최적화출력크기,</span><br><span class="line">         기본출력크기&quot;</span><br><span class="line">  src=&quot;경로&quot;</span><br><span class="line">  alt=&quot;대체텍스트&quot;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="srcset"><a href="#srcset" class="headerlink" title="srcset"></a>srcset</h3><h4 id="srcset-amp-sizes-link"><a href="#srcset-amp-sizes-link" class="headerlink" title="srcset &amp; sizes link"></a><a target="_blank" rel="noopener" href="https://heropy.blog/2019/06/16/html-img-srcset-and-sizes/">srcset &amp; sizes link</a></h4><p>브라우저에 제시할(사용할) 이미지들과 그 이미지들의 원본 크기를 지정</p>
+<ul>
+<li>사이즈별로 2장 이상 준비하여 srcset 속성에 작성</li>
+<li>px단위가 아닌 w 디스크립터 혹은 x 디스크립터를 입력해야 하며, <strong>작은 크기 이미지부터 순서대로 입력</strong></li>
+<li>늘려서 사용하는 것 보다는 <strong>줄여서 사용할 수 있는 가장 가까운 크기의 사진</strong>을 선택</li>
+</ul>
+<h3 id="W-unit"><a href="#W-unit" class="headerlink" title="W unit"></a>W unit</h3><p>Width descriptor)는 이미지의 원본 크기(가로 너비)를 의미</p>
+<ul>
+<li><code>400x300(px)</code> 크기 이미지의 w 값은 <code>400w</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">지정된 w 디스크립터를 통해 각 이미지의 최적화된 픽셀 밀도를 계산</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;images/heropy_small.png 400w, images/heropy_medium.png 700w, images/heropy_large.png 1000w&quot;</span> <span class="attr">src</span>=<span class="string">&quot;images/heropy.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;HEROPY&quot;</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">뷰포트 너비가 400px 이하일 때 heropy_small.png(400px)사용</span></span><br><span class="line"><span class="comment">뷰포트 너비가 401~700px 일 때 heropy_medium.png(700px)사용</span></span><br><span class="line"><span class="comment">뷰포트 너비가 701px 이상일 때 heropy_large.png(1000px)사용</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>고정된 이미지 크기를 유지하려면 width 속성을 추가<br>sizes 속성과는 다른 개념</li>
+</ul>
+<h3 id="X-unit"><a href="#X-unit" class="headerlink" title="X unit"></a>X unit</h3><p>x 디스크립터(Device pixel ratio descriptor)는 이미지의 비율 의도</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;images/heropy_small.png 1x, images/heropy_medium.png 1.75x, images/heropy_large.png 2.5x&quot;</span> <span class="attr">src</span>=<span class="string">&quot;images/heropy.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;HEROPY&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>디바이스의 픽셀 비율(Device pixel ratio)과 일치하는 값으로 최적화 선택</li>
+<li>정수(integer) 값으로 제공하는 것이 좋음</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">w 디스크립터를 사용하면 x 디스크립터를 사용하지 않아도 됨</span><br><span class="line">많은 경우 w 디스크립터의 사용을 추천</span><br></pre></td></tr></table></figure>
+
+<p>2</p>
+<h3 id="sizes"><a href="#sizes" class="headerlink" title="sizes"></a>sizes</h3><p>미디어조건과 그 조건에 해당하는 이미지의 <strong>‘최적화 출력 크기’</strong> 를 지정</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;images/heropy_small.png 400w, images/heropy_medium.png 700w, images/heropy_large.png 1000w&quot;</span> <span class="attr">sizes</span>=<span class="string">&quot;(min-width: 1000px) 700px&quot;</span> <span class="attr">src</span>=<span class="string">&quot;images/heropy.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;HEROPY&quot;</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">뷰포트 너비가 400px 이하일 때 heropy_small.png(400px) 사용.</span></span><br><span class="line"><span class="comment">뷰포트 너비가 401~700px 일 때 heropy_medium.png(700px) 사용.</span></span><br><span class="line"><span class="comment">뷰포트 너비가 701~999px 일 때 heropy_large.png(1000px) 사용.</span></span><br><span class="line"><span class="comment">뷰포트 너비가 1000px 이상일 때 heropy_medium.png(700px) 사용.</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;images/heropy_small.png 400w, images/heropy_medium.png 700w, images/heropy_large.png 1000w&quot;</span> <span class="attr">sizes</span>=<span class="string">&quot;500px&quot;</span> <span class="attr">src</span>=<span class="string">&quot;images/heropy.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;HEROPY&quot;</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 뷰포트 너비와 상관없이 heropy_medium.png만 사용 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- heropy_medium.png는 500px의 크기를 가짐 (원래는 700px 크기의 이미지 --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;images/heropy_small.png 400w, images/heropy_medium.png 700w, images/heropy_large.png 1000w&quot;</span> <span class="attr">width</span>=<span class="string">&quot;500&quot;</span> <span class="attr">src</span>=<span class="string">&quot;images/heropy.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;HEROPY&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 뷰포트 너비가 400px 이하일 때 heropy_small.png 사용.</span></span><br><span class="line"><span class="comment">뷰포트 너비가 401~700px 일 때 heropy_medium.png 사용.</span></span><br><span class="line"><span class="comment">뷰포트 너비가 701px 이상일 때 heropy_large.png 사용.</span></span><br><span class="line"><span class="comment">뷰포트 너비에 따라 사용되는 이미지가 달라지지만 크기는 500px로 고정 --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h3><p><a target="_blank" rel="noopener" href="https://heropy.blog/2019/06/16/html-img-srcset-and-sizes/">srcset &amp; sizes link</a></p>
+<ul>
+<li>width는 이미지의 ‘출력 크기’만 지정</li>
+<li>sizes는 이미지의 ‘출력 크기’ + ‘최적 크기’도 함께 지정</li>
+<li>따라서 sizes=”500px”이 지정된 첫번째 예제는 500px에 최적화된 이미지로 heropy_medium.png를 사용했고 이미지 크기도 500px로 설정</li>
+<li><strong>sizes와 width를 같이 작성할 경우 width가 우선</strong></li>
+<li>srcset과 sizes는 IE를 지원하지 않음</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-06/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/12/html-css/html-css-06/" class="post-title-link" itemprop="url">HTML 인라인 텍스트</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-04-12 16:25:06" itemprop="dateCreated datePublished" datetime="2021-04-12T16:25:06+09:00">2021-04-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-05 23:06:44" itemprop="dateModified" datetime="2021-05-05T23:06:44+09:00">2021-05-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="인라인-텍스트"><a href="#인라인-텍스트" class="headerlink" title="인라인 텍스트"></a>인라인 텍스트</h1><h2 id="A-Tag"><a href="#A-Tag" class="headerlink" title="A Tag"></a>A Tag</h2><p>다른 페이지, <strong>같은 페이지 위치(#, 해시 태그)</strong>, <strong>파일</strong>, 이메일 주소, 전화번호 등 <strong>다른 URL</strong>로 넘어가는 하이퍼링크, Anchor</p>
+<h3 id="속성들"><a href="#속성들" class="headerlink" title="속성들"></a>속성들</h3><ul>
+<li>download: 리소스를 다운로드하는 용도로 사용됨을 의미 (Boolean)</li>
+<li>href: 링크 URL</li>
+<li>hreflang: 링크 URL 언어 (<code>ko</code>, <code>en</code> 등)</li>
+<li>rel: 현재 문서와 URL강늬 관계 (<code>license</code>, <code>prev</code>, <code>next</code> 등)</li>
+<li>target: 링크 URL 위치 (<code>_self</code>, <code>_blank</code>)</li>
+<li>type: 해당 URL의 MIME 타입 (<code>test/html</code>)</li>
+</ul>
+<h2 id="Span-Tag"><a href="#Span-Tag" class="headerlink" title="Span Tag"></a>Span Tag</h2><p>본질적으로 아무것도 나타내지 않은 콘텐츠영역을 설정</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/12/html-css/html-css-05/" class="post-title-link" itemprop="url">HTML 콘텐츠 구분, 문자 콘텐츠</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-04-12 12:18:06" itemprop="dateCreated datePublished" datetime="2021-04-12T12:18:06+09:00">2021-04-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-05 23:06:41" itemprop="dateModified" datetime="2021-05-05T23:06:41+09:00">2021-05-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="HTML-콘텐츠-구분"><a href="#HTML-콘텐츠-구분" class="headerlink" title="HTML 콘텐츠 구분"></a>HTML 콘텐츠 구분</h1><h2 id="BODY-내-구조-개념"><a href="#BODY-내-구조-개념" class="headerlink" title="BODY 내 구조 개념"></a>BODY 내 구조 개념</h2><p>body 태그는 정보의 구조들을 나타냄</p>
+<ul>
+<li>의미가 없는 <code>div</code> 태그들로 도배하면 좋지 않다.</li>
+<li><code>header</code> 태그, <code>ul</code>, <code>li</code> 등 의미를 가지는 태그들을 사용해야 한다.</li>
+<li>일반적으로 영역을 나타내는 태그들은 <code>block</code>요소이다</li>
+</ul>
+<h2 id="콘텐츠-구분"><a href="#콘텐츠-구분" class="headerlink" title="콘텐츠 구분"></a>콘텐츠 구분</h2><h3 id="Header-Tag"><a href="#Header-Tag" class="headerlink" title="Header Tag"></a>Header Tag</h3><p>소개나 탐색을 돕는 그룹을 나타냄</p>
+<ul>
+<li>로고</li>
+<li>검색바</li>
+<li>메뉴 등</li>
+</ul>
+<blockquote>
+<p><code>header</code>나 <code>footer</code>는 후손이 될 수 없다.</p>
+</blockquote>
+<h3 id="Footer-Tag"><a href="#Footer-Tag" class="headerlink" title="Footer Tag"></a>Footer Tag</h3><p>작성자 구획, 저작권 데이터, 관련 문서 등에 대한 링크, 정보를 포함한다.<br>일반적으로 사이트 하단의 정보들을 포함</p>
+<blockquote>
+<p><code>header</code>나 <code>footer</code>는 후손이 될 수 없다.</p>
+</blockquote>
+<h3 id="H-Tag"><a href="#H-Tag" class="headerlink" title="H Tag"></a>H Tag</h3><p><strong>6단계</strong>의 문서 제목을 지칭<br>h1 ~ h6까지 존재</p>
+<ul>
+<li>크기 조절을 위해서 <code>h</code> 태그를 사용하는 것은 좋지 않고, 대신 css의 font-size 속성을 사용해야 함</li>
+<li>제목 단계를 건너뛰면 좋지 않음</li>
+<li>h1은 한 페이지에 하나씩만 사용해야 함</li>
+<li>추천하는 방식정도</li>
+</ul>
+<h3 id="Main-Tag"><a href="#Main-Tag" class="headerlink" title="Main Tag"></a>Main Tag</h3><p><code>&lt;body&gt;</code> 의 주요 콘텐츠를 나타내는 태그<br>문서 핵심 주제 및 핵심 기능성 등과 직접적으로 연관된 콘텐츠들로 구성</p>
+<ul>
+<li>문서에 하나의 <code>&lt;main&gt;</code>만 존재해야 함</li>
+<li>IE에서 지원하지 않음</li>
+</ul>
+<h3 id="Article-Tag"><a href="#Article-Tag" class="headerlink" title="Article Tag"></a>Article Tag</h3><p><strong>독립적</strong>으로 구분되거나 <strong>재사용 가능</strong>한 영역을 설정<br>매거진/신문 기사, 블로그 등</p>
+<ul>
+<li>일반적으로 <code>&lt;h1&gt;</code> ~ <code>&lt;h6&gt;</code>를 포함하여 식별.</li>
+<li>작성일자와 시간을 <code>&lt;time&gt;</code>의 datetime 속성으로 작성.</li>
+<li><code>article</code> 태그 안에 <code>section</code> 태그가 있어도 되고, 그 반대도 가능함</li>
+</ul>
+<h3 id="Section-Tag"><a href="#Section-Tag" class="headerlink" title="Section Tag"></a>Section Tag</h3><p>문서의 일반적인 영역을 설정</p>
+<ul>
+<li>영역을 의미하기 때문에 일반적으로 <code>&lt;h1&gt;</code> ~ <code>&lt;h6&gt;</code>를 포함하여 식별</li>
+<li><code>div</code>와 차이: 의미가 있기 때문에 <code>h</code>태그로 제목을 포함함</li>
+<li><strong>독림성</strong>을 가지는 <code>article</code> 태그와 함께 사용할 수 있음</li>
+</ul>
+<h3 id="Aside-Tag"><a href="#Aside-Tag" class="headerlink" title="Aside Tag"></a>Aside Tag</h3><p>문서의 별도 콘텐츠를 설정</p>
+<ul>
+<li>보통 광고나 기타 링크 등의 사이드바를 설정</li>
+</ul>
+<h3 id="Nav-Tag"><a href="#Nav-Tag" class="headerlink" title="Nav Tag"></a>Nav Tag</h3><p>다른 페이지 링크를 제공하는 영역</p>
+<ul>
+<li>Navigation, 보통 메뉴(Home, About, Contact), 목차, 색인</li>
+<li><code>ol</code>, <code>ul</code> 태그와 함께 메뉴들을 보여줄 때 자주 사용됨</li>
+</ul>
+<h3 id="Address-Tag"><a href="#Address-Tag" class="headerlink" title="Address Tag"></a>Address Tag</h3><p><code>&lt;body&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code> 등에서 연락처 정보를 제공하기 위해 포함</p>
+<ul>
+<li>block 요소</li>
+</ul>
+<h3 id="Div-Tag"><a href="#Div-Tag" class="headerlink" title="Div Tag"></a>Div Tag</h3><p>본질적으로 아무것도 나타내지 않는 콘텐츠 영역</p>
+<ul>
+<li>Division, 꾸미는 용도</li>
+</ul>
+<h2 id="문자-구분"><a href="#문자-구분" class="headerlink" title="문자 구분"></a>문자 구분</h2><h3 id="ol-ul-li-Tag"><a href="#ol-ul-li-Tag" class="headerlink" title="ol, ul, li Tag"></a>ol, ul, li Tag</h3><p>각 항목<code>&lt;li&gt;</code> 의 정렬된 목록<code>&lt;ol&gt;</code>이나 정렬되지 않은 목록<code>&lt;ul&gt;</code>을 설정</p>
+<ul>
+<li><code>&lt;ol&gt;</code>과 <code>&lt;ul&gt;</code>은 자식으로 <code>&lt;li&gt;</code>만 포함 가능</li>
+<li><code>&lt;li&gt;</code>는 단독으로 사용할 수 없으며, <code>&lt;ol&gt;</code>이나 <code>&lt;ul&gt;</code>에 자식으로 포함되어야 함</li>
+<li>정렬된 목록(<code>&lt;ol&gt;</code>)의 항목 순서는 중요도를 의미할 수 있음</li>
+</ul>
+<h4 id="ol-속성"><a href="#ol-속성" class="headerlink" title="ol 속성"></a>ol 속성</h4><ul>
+<li><strong>start</strong>: 항목에 매겨지는 번호의 시작 값 숫자(Number)</li>
+<li><strong>type</strong>: 항목에 매겨지는 번호의 유형 a, A, i, I, 1</li>
+<li><strong>reversed</strong>: 항목의 순서만 바뀌고 물리적 위치는 바뀌지 않음</li>
+</ul>
+<h4 id="li-속성"><a href="#li-속성" class="headerlink" title="li 속성"></a>li 속성</h4><ul>
+<li><strong>value</strong>: 항목의 순서를 설정 숫자(Number) <strong>이하 항목들</strong>의 순서가 다시 지정됨</li>
+</ul>
+<h3 id="dl-dt-dd"><a href="#dl-dt-dd" class="headerlink" title="dl, dt, dd"></a>dl, dt, dd</h3><p>용어(<code>&lt;dt&gt;</code>)와 정의(<code>&lt;dd&gt;</code>) 쌍들의 영역(<code>&lt;dl&gt;</code>)을 설정</p>
+<ul>
+<li>block 요소</li>
+<li>Description List, Definition Details, Definition Term</li>
+<li><strong><code>&lt;dl&gt;</code>은 <code>&lt;dd&gt;</code>, <code>&lt;dt&gt;</code>만을 포함해야 함</strong></li>
+<li>키(key)/값(value) 형태를 표시할 때 유용</li>
+<li>근데 <code>dl</code> 태그안에 <code>div</code> 와 같은 태그를 넣을 수 없기 때문에 스타일링하기 힘듬</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Coffee<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Coffee is a brewed drink !<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dt</span>&gt;</span>Milk<span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dd</span>&gt;</span>Milk is a nutrient-rich, white liquid !<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dfn</span>&gt;</span>Coffeee<span class="tag">&lt;/<span class="name">dfn</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Coffee is ~<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dfn</span>&gt;</span>Milk<span class="tag">&lt;/<span class="name">dfn</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>Milk is ~<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/12/html-css/html-css-04/" class="post-title-link" itemprop="url">HTML 주요 범위, 메타데이터</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-04-12 11:28:06" itemprop="dateCreated datePublished" datetime="2021-04-12T11:28:06+09:00">2021-04-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-05 23:06:38" itemprop="dateModified" datetime="2021-05-05T23:06:38+09:00">2021-05-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="HTML-주요-범위와-메타데이터"><a href="#HTML-주요-범위와-메타데이터" class="headerlink" title="HTML 주요 범위와 메타데이터"></a>HTML 주요 범위와 메타데이터</h1><h2 id="블록-요소"><a href="#블록-요소" class="headerlink" title="블록 요소"></a>블록 요소</h2><ul>
+<li>DIV, H1, P 등</li>
+<li>사용가능한 최대 가로 너비를 사용</li>
+<li>가로 사이즈를 지정하지 않고 height만 지정해준다면 가로사이즈를 끝까지 채움</li>
+<li><code>width: 100%; height: 0;</code>으로 <strong>시작</strong> (auto)</li>
+<li>수직으로 쌓임</li>
+<li>margin, padding 위,아래,좌,우 모두 사용 가능</li>
+<li>For Layout</li>
+</ul>
+<h2 id="인라인-요소"><a href="#인라인-요소" class="headerlink" title="인라인 요소"></a>인라인 요소</h2><ul>
+<li><p>SPAN, IMG</p>
+</li>
+<li><p>필요한 만큼의 너비만 사용</p>
+</li>
+<li><p>크기를 지정할 수 없음</p>
+</li>
+<li><p><code>width: 0; height: 0;</code>으로 <strong>시작</strong> (auto)</p>
+</li>
+<li><p>수평으로 쌓임</p>
+</li>
+<li><p>태그 사이에 띄어쓰기가 페이지에 그대로 보인다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 띄어쓰기가 없음 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 띄어쓰기가 들어감 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>margin, padding 위,아래를 사용할 수 없다.</p>
+</li>
+<li><p>For Text</p>
+</li>
+</ul>
+<h2 id="인라인-블록-요소-변경"><a href="#인라인-블록-요소-변경" class="headerlink" title="인라인, 블록 요소 변경"></a>인라인, 블록 요소 변경</h2><p><code>display</code>속성을 활용해 변경할 수 있다.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block; <span class="comment">/* 블럭 요소로 바뀜 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline; <span class="comment">/* 인라인 요소로 바뀜 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="메타데이터"><a href="#메타데이터" class="headerlink" title="메타데이터"></a>메타데이터</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;ko&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 문서의 정보 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;&quot;</span> <span class="attr">content</span>=<span class="string">&quot;&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>문서의 제목<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 문서의 내용 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -910,457 +1421,6 @@
 <li>카카오 blind 문제 풀기</li>
 <li>다익스트라 예습</li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/06/ds-algo/ds-algo-10/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/06/ds-algo/ds-algo-10/" class="post-title-link" itemprop="url">다이나믹 프로그래밍</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-04-06 14:00:57" itemprop="dateCreated datePublished" datetime="2021-04-06T14:00:57+09:00">2021-04-06</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-01 17:58:54" itemprop="dateModified" datetime="2021-05-01T17:58:54+09:00">2021-05-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="DP"><a href="#DP" class="headerlink" title="DP"></a>DP</h1><p>두 가지 조건을 만족해야만 동적프로그래밍이라고 할 수 있다.</p>
-<ul>
-<li>Optimal Substructure: 부분 문제들의 최적해가 전체의 최적해를 이루어야 한다.<ul>
-<li>잘게 쪼개진 부분 그때그때 최적의 선택을 해나간다(그리디 greedy)</li>
-<li>Optimal Substructure가 아닌데 그리디로 풀면 최적해가 아니게 된다.</li>
-</ul>
-</li>
-<li>Overlapping Sub-Problems: 동일한 부분 문제가 여러번 발생해야 한다.<ul>
-<li>이 조건이 만족되지 않으면 분할정복(Divide &amp; Conquer) 문제라고 한다.(merge sort, quick sort)</li>
-</ul>
-</li>
-<li>중복되는 연산을 미리 캐싱해 두고, 중복 연산이 발생할 때 마다 참조하여 연산을 줄인다. (Memoization)</li>
-</ul>
-<h2 id="DP-종류"><a href="#DP-종류" class="headerlink" title="DP 종류"></a>DP 종류</h2><ul>
-<li>Top-Down 접근법<ul>
-<li>큰 문제부터 시작하여, 작은 문제로 나누는 접근법</li>
-<li>일반적으로 재귀적으로 구현(Recursion)할 때 사용된다.</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fibo = <span class="built_in">dict</span>()</span><br><span class="line">fibo[<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line">fibo[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n <span class="keyword">in</span> fibo:</span><br><span class="line">        <span class="keyword">return</span> fibo[n]</span><br><span class="line"></span><br><span class="line">    res = fibonacci(n-<span class="number">1</span>) + fibonacci(n-<span class="number">2</span>)</span><br><span class="line">    fibo[n] = res</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Bottom-Up 접근법<ul>
-<li>문제를 미리 나누어 두고, 작은 문제의 답을 모아 큰 문제를 해결하는 접근법</li>
-<li>일반적으로 반복적으로 구현(Iteration)할 때 사용된다.</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span>(<span class="params">n</span>):</span></span><br><span class="line">    fibo = [<span class="literal">None</span>] * (n + <span class="number">1</span>)</span><br><span class="line">    fibo[<span class="number">0</span>], fibo[<span class="number">1</span>] = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, n + <span class="number">1</span>):</span><br><span class="line">        fibo[i] = fibo[i - <span class="number">1</span>] + fibo[i - <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fibo[n]</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>DP를 너무 naive하게 사용하다보면 O(n)의 공간을 낭비하게 된다.</li>
-</ul>
-<h2 id="DP-활용-0-1-배낭-문제-Knapsack"><a href="#DP-활용-0-1-배낭-문제-Knapsack" class="headerlink" title="DP 활용 - 0-1 배낭 문제(Knapsack)"></a>DP 활용 - 0-1 배낭 문제(Knapsack)</h2><ul>
-<li><p>배낭에 담을 수 있는 무게의 최대값이 정해져 있을 때, 배낭에 담은 짐의 가치가 최대가 되게 하는 문제</p>
-</li>
-<li><p>각 짐은 무게와 가치를 가지고 있으며, 0-1 배낭 문제에서는 짐을 쪼갤 수 없다.</p>
-</li>
-<li><p>dp 반복적으로 다 구하는 것 tabulization</p>
-</li>
-</ul>
-<h1 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h1><p>두 개 다 풀기</p>
-<ul>
-<li>직사각형문제</li>
-<li>도둑질문제</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/05/ds-algo/ds-algo-09/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/05/ds-algo/ds-algo-09/" class="post-title-link" itemprop="url">해시</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-04-05 14:00:57" itemprop="dateCreated datePublished" datetime="2021-04-05T14:00:57+09:00">2021-04-05</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-01 17:58:48" itemprop="dateModified" datetime="2021-05-01T17:58:48+09:00">2021-05-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="해시"><a href="#해시" class="headerlink" title="해시"></a>해시</h1><p>해시는 항상 해시함수를 사용하기 때문에 해시 함수를 잘 선택하는 것은 매우 중요하다.</p>
-<ul>
-<li>key는 중복이 불가능</li>
-<li>value는 가능</li>
-</ul>
-<h2 id="Bucket"><a href="#Bucket" class="headerlink" title="Bucket"></a>Bucket</h2><ul>
-<li>자료를 저장하는 저장소</li>
-<li>몇 번째 인덱스에 저장할지에 대한 정보를 구하기 위해서 해시함수를 사용한다</li>
-<li>다른 입력이지만, 해시 값(버킷 인덱스)이 같아서 충돌이 발생할 수 있다</li>
-<li>크기가 부족하면 두 배씩</li>
-</ul>
-<h2 id="해시-테이블-해시-셋이랑-다름"><a href="#해시-테이블-해시-셋이랑-다름" class="headerlink" title="해시 테이블 (해시 셋이랑 다름)"></a>해시 테이블 (해시 셋이랑 다름)</h2><ul>
-<li>key와 value로 이루어져 있다</li>
-<li>key에 대해 해시 값을 구하고, 이 값을 인덱스로 하여 value를 저장한다</li>
-<li>key와 value를 같이 입력한다</li>
-</ul>
-<h2 id="충돌"><a href="#충돌" class="headerlink" title="충돌"></a>충돌</h2><ul>
-<li>모든 값이 해시충돌이 발생하는 경우엔 O(n)의 탐색성능이 된다.</li>
-</ul>
-<h2 id="충돌-해결법"><a href="#충돌-해결법" class="headerlink" title="충돌 해결법"></a>충돌 해결법</h2><ul>
-<li>개방 주소법</li>
-<li>체이닝</li>
-</ul>
-<h2 id="Open-Addressing-Closed-Hashing"><a href="#Open-Addressing-Closed-Hashing" class="headerlink" title="Open Addressing(Closed Hashing)"></a>Open Addressing(Closed Hashing)</h2><ul>
-<li>Open Addressing (개방 주소법)</li>
-<li>Closed Hashing이라고도 함</li>
-<li>충돌이 일어났다면, 다른 index를 선택한다<ul>
-<li>선형 탐사(Linear Probing) : 정해진 값만큼 index를 이동함(예: 1)<ul>
-<li>Sparse 할 경우에 좋음</li>
-<li>open addressing 쓸때는 선형 탐사를 많이 쓴다</li>
-</ul>
-</li>
-<li>이차 탐사(Quadratic Probing) : 인덱스를 제곱해서 이동함</li>
-<li>이중 해싱(Double Hashing) : 별도의 해시 함수를 이용해 이동 간격을 정함</li>
-</ul>
-</li>
-</ul>
-<h3 id="선형-탐색-문제점"><a href="#선형-탐색-문제점" class="headerlink" title="선형 탐색 문제점"></a>선형 탐색 문제점</h3><ul>
-<li>Linear 로 진행해야하는데, 만약 중간 값이 삭제된 경우 그 뒤의 (충돌 중복된 값)들을 찾아보러 가지 않기 때문에 삭제된 자리에 더미 데이터를 남겨둬야 한다</li>
-</ul>
-<h2 id="Hash-Chaining"><a href="#Hash-Chaining" class="headerlink" title="Hash Chaining"></a>Hash Chaining</h2><ul>
-<li>링크드 리스트를 활용한다.</li>
-<li>자료 자체를 노드로 해야한다</li>
-<li>노드 말고도 리스트(튜플)로 만들어도 된다(구현해봐야함)<ul>
-<li>[1, [4, [9, [10, None]]]]</li>
-</ul>
-</li>
-<li>인덱스를 이동할 필요도 없기 때문에 더 단순함(노드가 저장)</li>
-</ul>
-<h2 id="충돌-해결-결론"><a href="#충돌-해결-결론" class="headerlink" title="충돌 해결 결론"></a>충돌 해결 결론</h2><ul>
-<li>일반적인 경우 해시 충돌이 많이 일어나지 않기 때문에 O(1)의 시간복잡도라고 생각하면 된다.</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/03/ps/prog-60058/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/03/ps/prog-60058/" class="post-title-link" itemprop="url">Programmers - 괄호변환</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-04-03 17:04:23" itemprop="dateCreated datePublished" datetime="2021-04-03T17:04:23+09:00">2021-04-03</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-02 16:49:44" itemprop="dateModified" datetime="2021-05-02T16:49:44+09:00">2021-05-02</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/Programmers/" itemprop="url" rel="index"><span itemprop="name">Programmers</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Problem-Solving-관호변환-Level-2"><a href="#Problem-Solving-관호변환-Level-2" class="headerlink" title="Problem Solving - 관호변환 (Level 2)"></a>Problem Solving - 관호변환 (Level 2)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/60058">[Link]</a></h3><p>카카오에 신입 개발자로 입사한 “콘”은 선배 개발자로부터 개발역량 강화를 위해 다른 개발자가 작성한 소스 코드를 분석하여 문제점을 발견하고 수정하라는 업무 과제를 받았습니다. 소스를 컴파일하여 로그를 보니 대부분 소스 코드 내 작성된 괄호가 개수는 맞지만 짝이 맞지 않은 형태로 작성되어 오류가 나는 것을 알게 되었습니다.<br>수정해야 할 소스 파일이 너무 많아서 고민하던 “콘”은 소스 코드에 작성된 모든 괄호를 뽑아서 올바른 순서대로 배치된 괄호 문자열을 알려주는 프로그램을 다음과 같이 개발하려고 합니다.</p>
-<p>용어의 정의<br>‘(‘ 와 ‘)’ 로만 이루어진 문자열이 있을 경우, ‘(‘ 의 개수와 ‘)’ 의 개수가 같다면 이를 균형잡힌 괄호 문자열이라고 부릅니다.<br>그리고 여기에 ‘(‘와 ‘)’의 괄호의 짝도 모두 맞을 경우에는 이를 올바른 괄호 문자열이라고 부릅니다.<br>예를 들어, “(()))(“와 같은 문자열은 “균형잡힌 괄호 문자열” 이지만 “올바른 괄호 문자열”은 아닙니다.<br>반면에 “(())()”와 같은 문자열은 “균형잡힌 괄호 문자열” 이면서 동시에 “올바른 괄호 문자열” 입니다.</p>
-<p>‘(‘ 와 ‘)’ 로만 이루어진 문자열 w가 “균형잡힌 괄호 문자열” 이라면 다음과 같은 과정을 통해 “올바른 괄호 문자열”로 변환할 수 있습니다.</p>
-<ol>
-<li>입력이 빈 문자열인 경우, 빈 문자열을 반환합니다.</li>
-<li>문자열 w를 두 “균형잡힌 괄호 문자열” u, v로 분리합니다. 단, u는 “균형잡힌 괄호 문자열”로 더 이상 분리할 수 없어야 하며, v는 빈 문자열이 될 수 있습니다.</li>
-<li>문자열 u가 “올바른 괄호 문자열” 이라면 문자열 v에 대해 1단계부터 다시 수행합니다.<br>3-1. 수행한 결과 문자열을 u에 이어 붙인 후 반환합니다.</li>
-<li>문자열 u가 “올바른 괄호 문자열”이 아니라면 아래 과정을 수행합니다.<br>4-1. 빈 문자열에 첫 번째 문자로 ‘(‘를 붙입니다.<br>4-2. 문자열 v에 대해 1단계부터 재귀적으로 수행한 결과 문자열을 이어 붙입니다.<br>4-3. ‘)’를 다시 붙입니다.<br>4-4. u의 첫 번째와 마지막 문자를 제거하고, 나머지 문자열의 괄호 방향을 뒤집어서 뒤에 붙입니다.<br>4-5. 생성된 문자열을 반환합니다.<br>“균형잡힌 괄호 문자열” p가 매개변수로 주어질 때, 주어진 알고리즘을 수행해 “올바른 괄호 문자열”로 변환한 결과를 return 하도록 solution 함수를 완성해 주세요.</li>
-</ol>
-<p>매개변수 설명<br>p는 ‘(‘ 와 ‘)’ 로만 이루어진 문자열이며 길이는 2 이상 1,000 이하인 짝수입니다.<br>문자열 p를 이루는 ‘(‘ 와 ‘)’ 의 개수는 항상 같습니다.<br>만약 p가 이미 “올바른 괄호 문자열”이라면 그대로 return 하면 됩니다.</p>
-<h3 id="2-입력-출력"><a href="#2-입력-출력" class="headerlink" title="2. 입력/출력"></a>2. 입력/출력</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p	            result</span><br><span class="line"></span><br><span class="line">&quot;(()())()&quot;	    &quot;(()())()&quot;</span><br><span class="line">&quot;)(&quot;	        &quot;()&quot;</span><br><span class="line">&quot;()))((()&quot;	    &quot;()(())()&quot;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-풀이"><a href="#3-풀이" class="headerlink" title="3. 풀이"></a>3. 풀이</h3><p>문제는 재귀의 구현능력을 보는 문제였던 것 같다.<br>어떻게 재귀를 구현해야하는지 넘버링이 잘 되어있기 때문에 그냥 변환과정대로만 구현하면 되는 문제였다.</p>
-<p>올바른 문자열인지 구하는 메서드를 구현해 아래 코드와 같이 재귀적으로 문제를 풀어주었다.</p>
-<h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">p</span>):</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">is_correct</span>(<span class="params">st</span>):</span></span><br><span class="line">        s = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> ch <span class="keyword">in</span> st:</span><br><span class="line">            <span class="keyword">if</span> ch  == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">                s.append(ch)</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> s <span class="keyword">and</span> s[-<span class="number">1</span>] == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">                s.pop()</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span> <span class="keyword">if</span> <span class="keyword">not</span> s <span class="keyword">else</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> p == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">        <span class="keyword">return</span> p</span><br><span class="line"></span><br><span class="line">    cnt = <span class="number">0</span></span><br><span class="line">    u, v = <span class="string">&#x27;&#x27;</span>, <span class="string">&#x27;&#x27;</span></span><br><span class="line">    u_end = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> ch <span class="keyword">in</span> p:</span><br><span class="line">        <span class="keyword">if</span> ch == <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">            cnt += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            cnt -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> u_end:</span><br><span class="line">            u += ch</span><br><span class="line">            <span class="keyword">if</span> cnt == <span class="number">0</span>:</span><br><span class="line">                u_end = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            v += ch</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> is_correct(u):</span><br><span class="line">        <span class="keyword">return</span> u + solution(v)</span><br><span class="line"></span><br><span class="line">    tmp = <span class="string">&#x27;(&#x27;</span> + solution(v) + <span class="string">&#x27;)&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(u)-<span class="number">1</span>):</span><br><span class="line">        tmp += <span class="string">&#x27;(&#x27;</span> <span class="keyword">if</span> u[i] == <span class="string">&#x27;)&#x27;</span> <span class="keyword">else</span> <span class="string">&#x27;)&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> tmp</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/02/ps/prog-43236/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/02/ps/prog-43236/" class="post-title-link" itemprop="url">Programmers - 징검다리</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-04-02 21:16:23" itemprop="dateCreated datePublished" datetime="2021-04-02T21:16:23+09:00">2021-04-02</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-02 16:49:56" itemprop="dateModified" datetime="2021-05-02T16:49:56+09:00">2021-05-02</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/Programmers/" itemprop="url" rel="index"><span itemprop="name">Programmers</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Problem-Solving-징검다리-Level-4"><a href="#Problem-Solving-징검다리-Level-4" class="headerlink" title="Problem Solving - 징검다리 (Level 4)"></a>Problem Solving - 징검다리 (Level 4)</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/43236">[Link]</a></h3><p>출발지점부터 distance만큼 떨어진 곳에 도착지점이 있습니다. 그리고 그사이에는 바위들이 놓여있습니다. 바위 중 몇 개를 제거하려고 합니다.<br>예를 들어, 도착지점이 25만큼 떨어져 있고, 바위가 [2, 14, 11, 21, 17] 지점에 놓여있을 때 바위 2개를 제거하면 출발지점, 도착지점, 바위 간의 거리가 아래와 같습니다.</p>
-<p>제거한 바위의 위치 각 바위 사이의 거리 거리의 최솟값</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[21, 17]	[2, 9, 3, 11]	2</span><br><span class="line">[2, 21]	    [11, 3, 3, 8]	3</span><br><span class="line">[2, 11]	    [14, 3, 4, 4]	3</span><br><span class="line">[11, 21]	[2, 12, 3, 8]	2</span><br><span class="line">[2, 14] 	[11, 6, 4, 4]	4</span><br></pre></td></tr></table></figure>
-
-<p>위에서 구한 거리의 최솟값 중에 가장 큰 값은 4입니다.</p>
-<p>출발지점부터 도착지점까지의 거리 distance, 바위들이 있는 위치를 담은 배열 rocks, 제거할 바위의 수 n이 매개변수로 주어질 때, 바위를 n개 제거한 뒤 각 지점 사이의 거리의 최솟값 중에 가장 큰 값을 return 하도록 solution 함수를 작성해주세요.</p>
-<p>제한사항<br>도착지점까지의 거리 distance는 1 이상 1,000,000,000 이하입니다.<br>바위는 1개 이상 50,000개 이하가 있습니다.<br>n 은 1 이상 바위의 개수 이하입니다.</p>
-<h3 id="2-입력-출력"><a href="#2-입력-출력" class="headerlink" title="2. 입력/출력"></a>2. 입력/출력</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">distance	rocks	                n	return</span><br><span class="line">25          [2, 14, 11, 21, 17]     2   4</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-풀이"><a href="#3-풀이" class="headerlink" title="3. 풀이"></a>3. 풀이</h3><p>문제의 카테고리가 이분탐색인 것을 알고 있는 상태로 풀이를 시작했지만, 어떻게 구현해야 하는지 감이 잘 오지 않는 문제였다. 하지만 징검다리를 지우고 <code>distance</code>를 구해주는 것이 아닌, <code>distance</code>를 가지고 지울 징검다리의 개수를 얻어 이분탐색을 진행해야 한다는 힌트를 얻은 뒤 아래와 같이 구현하였다.</p>
-<p>먼저 <code>distance</code>를 구해주기 위해 최솟값인 0부터 최대값인 1000000000 사이를 이분탐색 해주었는데, 해당 <code>distance</code>를 징검다리에 적용했을 때 몇 개의 징검다리가 삭제되어야 하는지를 활용해 탐색해주었다.</p>
-<p>그리고 가능한 값 중 최댓값을 구해야하는 것에 주의해주어야 한다.</p>
-<h4 id="Solution-py"><a href="#Solution-py" class="headerlink" title="Solution.py"></a>Solution.py</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">distance, rocks, n</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_count</span>(<span class="params">dis</span>):</span></span><br><span class="line">        prev = <span class="number">0</span></span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> r <span class="keyword">in</span> rocks:</span><br><span class="line">            <span class="keyword">if</span> r - prev &lt; dis:</span><br><span class="line">                cnt += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                prev = r</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> cnt</span><br><span class="line"></span><br><span class="line">    ans = <span class="number">0</span></span><br><span class="line">    l, r = <span class="number">0</span>, <span class="number">1000000000</span></span><br><span class="line">    rocks.sort()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> l &lt;= r:</span><br><span class="line">        m = (l + r) // <span class="number">2</span></span><br><span class="line">        tmp_cnt = get_count(m)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> tmp_cnt &lt;= n:</span><br><span class="line">            l = m + <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            r = m - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> l - <span class="number">1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
