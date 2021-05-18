@@ -90,7 +90,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">59</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">60</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-count">60</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -189,6 +189,99 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/17/ps/leetcode_1048/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/17/ps/leetcode_1048/" class="post-title-link" itemprop="url">leetcode 1048. Longest String Chain</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-17 21:19:23 / Updated at: 21:29:27" itemprop="dateCreated datePublished" datetime="2021-05-17T21:19:23+09:00">2021-05-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="104-Maximum-Depth-of-Binary-Tree"><a href="#104-Maximum-Depth-of-Binary-Tree" class="headerlink" title="104. Maximum Depth of Binary Tree"></a>104. Maximum Depth of Binary Tree</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/longest-string-chain/">여기서</a> 문제를 풀어볼 수 있습니다.</li>
+</ul>
+<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>Given a list of words, each word consists of English lowercase letters.</p>
+<p>Let’s say word1 is a predecessor of word2 if and only if we can add exactly one letter anywhere in word1 to make it equal to word2. For example, “abc” is a predecessor of “abac”.</p>
+<p>A word chain is a sequence of words [word_1, word_2, …, word_k] with k &gt;= 1, where word_1 is a predecessor of word_2, word_2 is a predecessor of word_3, and so on.</p>
+<p>Return the longest possible length of a word chain with words chosen from the given list of words.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: words &#x3D; [&quot;a&quot;,&quot;b&quot;,&quot;ba&quot;,&quot;bca&quot;,&quot;bda&quot;,&quot;bdca&quot;]</span><br><span class="line">Output: 4</span><br><span class="line"></span><br><span class="line">Explanation: One of the longest word chain is &quot;a&quot;,&quot;ba&quot;,&quot;bda&quot;,&quot;bdca&quot;.</span><br></pre></td></tr></table></figure>
+
+<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 1 &lt;&#x3D; words.length &lt;&#x3D; 1000</span><br><span class="line">- 1 &lt;&#x3D; words[i].length &lt;&#x3D; 16</span><br><span class="line">- words[i] only consists of English lowercase letters.</span><br></pre></td></tr></table></figure>
+
+<h2 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h2><p>문제 자체는 ‘가장 긴 바이토닉 수열’ 과 비슷한 문제였다. <code>words</code> 를 탐색하여 자신보다 작은 모든 값과 비교해주며 조건에 맞다면 해당 dp 값 + 1 로 갱신해 주는 것이다. (<code>O(N^2)</code>).</p>
+<p>기본적인 문자열 + DP 로 접근해서 문제를 풀어주었다. 맨 처음, 한 단어가 그 다음 단어와 비교했을 때 문제에서 주어진 조건과 일치하려면, 문자열 길이의 차이가 1이어야 하고, 또한 한 문자를 제외한 나머지 문자의 순서와 종류가 그대로 일치해야 한다. 따라서 <code>check</code> 라는 함수를 두어 <code>a</code> 와 <code>b</code> 의 길이를 먼저 비교해 차이가 1이 아니라면 무조건 <code>False</code> 를 리턴해주었다. 왜냐하면 길이의 차이가 1이 아닌 경우 어떠한 방식으로도 문제에서 주어진 조건인 ‘다른 문자열에 한 문자를 추가한다’를 만족할 수 없기 때문이다.</p>
+<p>그리고 그 한 문자를 빼고 나머지는 종류와 순서가 모두 맞아야 하므로, <code>while</code> 문을 통해 문자들을 차례대로 (포인터 두 개) 비교해주며 한 단어만 틀린 경우에만 <code>True</code> 를 리턴해주도록 하였다.</p>
+<p>처음에 문제를 풀 때는 <code>dp[i]</code> 를 설정해줄 때 단순히 <code>dp[i] = dp[j] + 1</code> 로 설정해주어 논리적 오류를 범했다. 이게 왜 안되냐면, 도중에 더 작은 값이 나올 수 도 있기 때문에, 항상 자신과도 비교해 더 큰 값으로 할당해주어야 하기 때문이다. <code>dp[i] = max(dp[i], dp[j] + 1)</code> 이렇게 말이다. 그리고 <code>ans</code> 도 마찬가지로 항상 자신과 비교해주어 큰 값으로 리턴해주어야 한다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestStrChain</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">check</span>(<span class="params">b, a</span>):</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(b) - <span class="built_in">len</span>(a) != <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">            i = j = <span class="number">0</span></span><br><span class="line">            cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(a):</span><br><span class="line">                <span class="keyword">if</span> a[i] != b[j]:</span><br><span class="line">                    <span class="keyword">if</span> cnt &gt; <span class="number">0</span>:</span><br><span class="line">                        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">                    j += <span class="number">1</span></span><br><span class="line">                    cnt += <span class="number">1</span></span><br><span class="line">                    <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">        dp = [<span class="number">1</span>] * <span class="built_in">len</span>(words)</span><br><span class="line">        ans = <span class="number">1</span></span><br><span class="line">        words.sort(key=<span class="keyword">lambda</span> x: <span class="built_in">len</span>(x))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(words)):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i):</span><br><span class="line">                <span class="keyword">if</span> check(words[i], words[j]):</span><br><span class="line">                    dp[i] = <span class="built_in">max</span>(dp[i], dp[j] + <span class="number">1</span>)</span><br><span class="line">                    ans = <span class="built_in">max</span>(ans, dp[i])</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>(ans)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1342,121 +1435,6 @@
 
 <p>옵셔널 체이닝 연산자와 null 병합 연산자는 실제로 많이 쓰일 것 같다는 생각이 들었다. 예전에 Java Spring 으로 백엔드 프로젝트를 진행했을 때, null pointer exception 을 수백번 만난 것 같은데… 오늘 정리한 내용들을 바탕으로 자바스크립트의 좋은 기능을 활용해 예외 처리를 잘 해줄 수 있을 것 같다.</p>
 <p>날이 갈수록 자바스크립트가 마음에 든다! 더 열심히 공부해야지!</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/12/javascript/day05/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/12/javascript/day05/" class="post-title-link" itemprop="url">JavaScript 05 - 제어문</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-      
-
-      <time title="Post created: 2021-05-12 19:52:06 / Updated at: 20:44:06" itemprop="dateCreated datePublished" datetime="2021-05-12T19:52:06+09:00">2021-05-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="제어문"><a href="#제어문" class="headerlink" title="제어문"></a>제어문</h1><p>제어문은 어떠한 프로그래밍 언어든 아주 중요한 역할을 한다. 주어진 조건에 따라서 특정한 코드 블록을 실행하거나 반복할 때 사용하는데, 이렇게 제어를 통해 코드의 실행 흐름을 제어할 수 있다. 하지만 흐름을 제어한다고해서 다 좋은 것은 아니고 코드의 흐름이 복잡해져 가독성 측면에서 좋지 않을 수도 있기 때문에 제어문을 남발하면 안된다.</p>
-<h2 id="블록문"><a href="#블록문" class="headerlink" title="블록문"></a>블록문</h2><p>블록문은 코드 블록, 블록 이라고 부르기도 하는데 그냥 중괄호 한 쌍으로 묶여 있는 실행단위를 말한다.</p>
-<p>아래는 예시 코드이다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">var</span> foo = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (foo &lt; <span class="number">100</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;under 100&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>그리고 한 가지 참고할 점은 블록문의 끝에는 <code>;</code> 를 붙이지 않는다는 것인데, 왜냐하면 블록문의 마지막 중괄호(닫는 괄호)는 항상 종료를 의미하는 그 자체적으로 자체 종결성을 가지기 때문이다.</p>
-<h2 id="조건문"><a href="#조건문" class="headerlink" title="조건문"></a>조건문</h2><p>조건문은 위 예시에서와 같이 <code>if</code>, <code>else</code>, <code>switch</code> 라는 키워드를 통해 코드블록의 실행을 결정하는 것이다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> number = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (number &lt; <span class="number">20</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;20 미만&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (number &lt; <span class="number">30</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;20 이상 30 미만&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;30 이상&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>이 때 조건식의 자리에 표현식이 들어올 때는 그 값이 만약 boolean 값이 아니더라도 암묵적으로 형변환이 수행되어 <code>true</code>, <code>false</code> 값으로 평가되게 된다.</p>
-<p>예를 들어서 아래와 같은 코드는 조건식이 <code>134</code> 로, <code>true</code> 로 형변환이 이루어져 <code>if</code> 조건문이 참이되어 코드블록이 실행되게 된다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">30</span> + <span class="number">104</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;hello&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>그리고 <code>if</code> 조건문 내부의 코드 라인이 1줄이라면 중괄호를 생략할 수 있다. 하지만 중괄호를 써주는 것이 일반적이기 때문에 여기서는 중괄호를 포함하고 있다.</p>
-<p>그리고 <code>if</code> 조건문은 삼항연산자로도 바꿀 수 있다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (x &lt; <span class="number">10</span>) &#123;</span><br><span class="line">  x++;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  x--;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">x = x &lt; <span class="number">10</span> ? x + <span class="number">1</span> : x - <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-
-<p>위 코드와 아래 코드는 서로 같은 코드이다. 여기서 주의해야 할 점은 삼항연산자는 표현식이기 때문에 평가될 수 있고 변수에 할당될 수 있기 때문에 위와 같이 <code>x</code> 에 할당할 수 있지만, <code>if</code> 문 같은 경우에는 표현식이 아니기 때문에 변수에 할당할 수 없다는 점을 알아야 한다.</p>
-<h2 id="반복문"><a href="#반복문" class="headerlink" title="반복문"></a>반복문</h2><p>반복문도 프로그래밍의 흐름 제어에서 아주 중요한 역할을 하고 시간 복잡도에 영향을 주는 메인 요소이다. 조건에 따라 일정한 코드 블록을 반복적으로 수행하는 것이고, 이 때 조건을 잘 체크하여 무한루프가 형성되지 않도록 하는 주의가 필요하다.</p>
-<p>자바스크립트에서는 기본적으로 <code>for</code>, <code>while</code>, <code>do while</code> 문을 제공한다.</p>
-<blockquote>
-<p>자바스크립트는 forEach, map, filter 등 다양한 메서드들이 존재하며 반복문처럼 Array의 각 요소를 iterate 할 때 사용된다.</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// for문 형식</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// while문 형식</span></span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (i &lt; <span class="number">10</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i++);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// do while문 형식</span></span><br><span class="line">i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i++);</span><br><span class="line">&#125; <span class="keyword">while</span> (i &lt; <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="break"><a href="#break" class="headerlink" title="break"></a>break</h3><p>이 때 while 문에서 조건식에 <code>true</code> 가 되는 값을 주어 무한루프를 만든 후, 반복문 내부에서 조건식을 만족했을 때만 루프가 종료되도록 <code>if</code> 조건문으로 <code>break</code> 키워드를 사용해 반복문을 빠져나올 수 있다.</p>
-<p>그리고 이번에 새로 알게된 점은 반복문을 포함한 특정 코드블록에 label 을 달아놓아 해당 label 반복문을 선택적으로 탈출할 수 있다는 점이다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">outer: <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i, j);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (i === <span class="number">1</span> &amp;&amp; j === <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">break</span> outer;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>그리고 꼭 반복문이 아니더라도 특정한 코드블록을 탈출할 수 있다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">myBlock: &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">  <span class="keyword">break</span> myBlock;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h3><p><code>break</code> 키워드와 반대로, <code>continue</code> 는 실행 중인 코드 블록의 위치에서 실행을 중단하고 탈출하는 것이 아니라, 바로 다음 단계의 반복으로 넘어가도록 흐름을 제어하는 키워드이다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="keyword">continue</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  count++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(count);</span><br></pre></td></tr></table></figure>
-
-<p>위 코드처럼 <code>i</code> 가 만약 홀수라면 <code>continue</code> 키워드를 통해 반복문을 종료하는 것이 아니라 바로 다음 단계의 반복 단계인 <code>i + 1</code> 번째로 넘어가서 다시 반복문을 수행하도록 하게 만드는 것이 <code>continue</code> 이다.</p>
-<p>따라서 만약 반복문 내부에서 <code>if</code> 문이 필요할 때, 해당 조건문이 너무 길어진다면 <code>continue</code> 를 사용해 <code>if</code> 조건문에 해당하지 않을 때를 제외해주는 것이 코드상 더 깔끔할 것이다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> word = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; word.length; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (word[i] !== <span class="string">&#x27;l&#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">  count++;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;hi hi&#x27;</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;apple&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>

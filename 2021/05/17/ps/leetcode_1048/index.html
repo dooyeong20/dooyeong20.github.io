@@ -22,29 +22,29 @@
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="백준 18119 - 단어 암기 백준 13459번 에서 풀어볼 수 있습니다.  문제설명준석이는 영어 단어를 외우려고 한다. 사전에는 N가지 단어가 적혀 있다. 모든 단어는 소문자이다. 단어 안에 있는 모든 알파벳을 알 때, 그 단어를 완전히 안다고 한다. 다음과 같은 쿼리들이 주어진다. 1231 x : 알파벳 x를 잊는다.2 x : 알파벳 x를 기억해 낸다.">
+<meta name="description" content="104. Maximum Depth of Binary Tree 여기서 문제를 풀어볼 수 있습니다.  문제 설명Given a list of words, each word consists of English lowercase letters. Let’s say word1 is a predecessor of word2 if and only if we can add">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BOJ 18119 - 단어 암기">
-<meta property="og:url" content="https://dooyeong20.github.io/2021/05/10/ps/boj-18119/index.html">
+<meta property="og:title" content="leetcode 1048. Longest String Chain">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/05/17/ps/leetcode_1048/index.html">
 <meta property="og:site_name" content="행복한 두영&#39;s 블로그">
-<meta property="og:description" content="백준 18119 - 단어 암기 백준 13459번 에서 풀어볼 수 있습니다.  문제설명준석이는 영어 단어를 외우려고 한다. 사전에는 N가지 단어가 적혀 있다. 모든 단어는 소문자이다. 단어 안에 있는 모든 알파벳을 알 때, 그 단어를 완전히 안다고 한다. 다음과 같은 쿼리들이 주어진다. 1231 x : 알파벳 x를 잊는다.2 x : 알파벳 x를 기억해 낸다.">
+<meta property="og:description" content="104. Maximum Depth of Binary Tree 여기서 문제를 풀어볼 수 있습니다.  문제 설명Given a list of words, each word consists of English lowercase letters. Let’s say word1 is a predecessor of word2 if and only if we can add">
 <meta property="og:locale" content="ko_KR">
-<meta property="article:published_time" content="2021-05-10T11:23:23.000Z">
-<meta property="article:modified_time" content="2021-05-10T11:41:17.413Z">
+<meta property="article:published_time" content="2021-05-17T12:19:23.000Z">
+<meta property="article:modified_time" content="2021-05-17T12:29:27.674Z">
 <meta property="article:author" content="dooyeong">
-<meta property="article:tag" content="BOJ">
 <meta property="article:tag" content="PS">
+<meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://dooyeong20.github.io/2021/05/10/ps/boj-18119/">
+<link rel="canonical" href="https://dooyeong20.github.io/2021/05/17/ps/leetcode_1048/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;05&#x2F;10&#x2F;ps&#x2F;boj-18119&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;10&#x2F;ps&#x2F;boj-18119&#x2F;&quot;,&quot;title&quot;:&quot;BOJ 18119 - 단어 암기&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;05&#x2F;17&#x2F;ps&#x2F;leetcode_1048&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;17&#x2F;ps&#x2F;leetcode_1048&#x2F;&quot;,&quot;title&quot;:&quot;leetcode 1048. Longest String Chain&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>BOJ 18119 - 단어 암기 | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
+<title>leetcode 1048. Longest String Chain | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
   
 
 
@@ -127,7 +127,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EB%B0%B1%EC%A4%80-18119-%EB%8B%A8%EC%96%B4-%EC%95%94%EA%B8%B0"><span class="nav-number">1.</span> <span class="nav-text">백준 18119 - 단어 암기</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C%EC%84%A4%EB%AA%85"><span class="nav-number">1.1.</span> <span class="nav-text">문제설명</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%92%80%EC%9D%B4"><span class="nav-number">1.2.</span> <span class="nav-text">풀이</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#104-Maximum-Depth-of-Binary-Tree"><span class="nav-number">1.</span> <span class="nav-text">104. Maximum Depth of Binary Tree</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C-%EC%84%A4%EB%AA%85"><span class="nav-number">1.1.</span> <span class="nav-text">문제 설명</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Constraints"><span class="nav-number">1.2.</span> <span class="nav-text">Constraints</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C-%ED%92%80%EC%9D%B4"><span class="nav-number">1.3.</span> <span class="nav-text">문제 풀이</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -206,7 +206,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/10/ps/boj-18119/">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/17/ps/leetcode_1048/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/my.png">
@@ -219,7 +219,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          BOJ 18119 - 단어 암기
+          leetcode 1048. Longest String Chain
         </h1>
 
         <div class="post-meta-container">
@@ -231,7 +231,7 @@
       <span class="post-meta-item-text">작성일</span>
       
 
-      <time title="Post created: 2021-05-10 20:23:23 / Updated at: 20:41:17" itemprop="dateCreated datePublished" datetime="2021-05-10T20:23:23+09:00">2021-05-10</time>
+      <time title="Post created: 2021-05-17 21:19:23 / Updated at: 21:29:27" itemprop="dateCreated datePublished" datetime="2021-05-17T21:19:23+09:00">2021-05-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -243,7 +243,7 @@
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
+          <a href="/categories/Problem-Solving/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
         </span>
     </span>
 
@@ -257,21 +257,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="백준-18119-단어-암기"><a href="#백준-18119-단어-암기" class="headerlink" title="백준 18119 - 단어 암기"></a>백준 18119 - 단어 암기</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/18119">백준 13459번</a> 에서 풀어볼 수 있습니다.</li>
+        <h1 id="104-Maximum-Depth-of-Binary-Tree"><a href="#104-Maximum-Depth-of-Binary-Tree" class="headerlink" title="104. Maximum Depth of Binary Tree"></a>104. Maximum Depth of Binary Tree</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/longest-string-chain/">여기서</a> 문제를 풀어볼 수 있습니다.</li>
 </ul>
-<h2 id="문제설명"><a href="#문제설명" class="headerlink" title="문제설명"></a>문제설명</h2><p>준석이는 영어 단어를 외우려고 한다. 사전에는 N가지 단어가 적혀 있다. 모든 단어는 소문자이다. 단어 안에 있는 모든 알파벳을 알 때, 그 단어를 완전히 안다고 한다.</p>
-<p>다음과 같은 쿼리들이 주어진다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 x : 알파벳 x를 잊는다.</span><br><span class="line">2 x : 알파벳 x를 기억해 낸다.</span><br><span class="line">처음에 모든 알파벳을 기억하는 상태고, 모음은 완벽하게 외웠기 때문에 절대 잊지 않는다.</span><br></pre></td></tr></table></figure>
+<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>Given a list of words, each word consists of English lowercase letters.</p>
+<p>Let’s say word1 is a predecessor of word2 if and only if we can add exactly one letter anywhere in word1 to make it equal to word2. For example, “abc” is a predecessor of “abac”.</p>
+<p>A word chain is a sequence of words [word_1, word_2, …, word_k] with k &gt;= 1, where word_1 is a predecessor of word_2, word_2 is a predecessor of word_3, and so on.</p>
+<p>Return the longest possible length of a word chain with words chosen from the given list of words.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: words &#x3D; [&quot;a&quot;,&quot;b&quot;,&quot;ba&quot;,&quot;bca&quot;,&quot;bda&quot;,&quot;bdca&quot;]</span><br><span class="line">Output: 4</span><br><span class="line"></span><br><span class="line">Explanation: One of the longest word chain is &quot;a&quot;,&quot;ba&quot;,&quot;bda&quot;,&quot;bdca&quot;.</span><br></pre></td></tr></table></figure>
 
-<p>각 쿼리마다 완전히 알고 있는 단어의 개수를 출력하는 문제이다.</p>
-<h2 id="풀이"><a href="#풀이" class="headerlink" title="풀이"></a>풀이</h2><p>이 문제는 비트마스킹을 연습하기 위한 문제이다. 각 알파벳의 암기 여부를 26자리 비트를 통해 기억하고, 각 쿼리마다 모든 단어들과 and 연산을 통해 각 자리의 비트들(알파벳들)이 겹치는지(암기하고 있는지) 확인해준다.</p>
-<p>그리고 이 때, ans라는 변수에 빈 문자열을 저장해놓았다가 각 쿼리마다 값과 함께 <code>\n</code> 값을 저장해주고 이를 마지막에 한번에 출력해주는 방식은 시간 초과가 났다.</p>
-<p>아래 코드 예시</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ans = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    ans += <span class="built_in">str</span>(i) + <span class="string">&#x27;\n&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(ans)</span><br></pre></td></tr></table></figure>
+<h2 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 1 &lt;&#x3D; words.length &lt;&#x3D; 1000</span><br><span class="line">- 1 &lt;&#x3D; words[i].length &lt;&#x3D; 16</span><br><span class="line">- words[i] only consists of English lowercase letters.</span><br></pre></td></tr></table></figure>
 
-<p>따라서 그냥 그때그때 출력해주는 방식으로 문제를 풀어주었다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"></span><br><span class="line">N, M = <span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split())</span><br><span class="line">wordList = [<span class="number">0</span>] * N</span><br><span class="line"></span><br><span class="line"><span class="comment"># 각 단어들을 비트로 저장해준다. 예) abc =&gt; 111, acce =&gt; 10101</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">    word = stdin.readline().strip()</span><br><span class="line">    tmp = <span class="number">0</span></span><br><span class="line">    a = <span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> w <span class="keyword">in</span> word:</span><br><span class="line">        tmp |= <span class="number">1</span> &lt;&lt; <span class="built_in">ord</span>(w) - a</span><br><span class="line"></span><br><span class="line">    wordList[i] = tmp</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">status = (<span class="number">1</span> &lt;&lt; <span class="number">27</span>) - <span class="number">1</span>      <span class="comment"># 현재 기억 정보(초기에는 모든 단어들을 알고 있음 =&gt; 11111...111)</span></span><br><span class="line">aeiou = <span class="built_in">set</span>(<span class="string">&#x27;aeiou&#x27;</span>)        <span class="comment"># 모음은 까먹지 않기 때문에 제외</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(M):</span><br><span class="line">    cmd, ch = stdin.readline().split()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ch <span class="keyword">in</span> aeiou:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> cmd == <span class="string">&#x27;1&#x27;</span>:          <span class="comment"># 잊어 버리는 연산(not + and 연산)</span></span><br><span class="line">        status &amp;= ~(<span class="number">1</span> &lt;&lt; (<span class="built_in">ord</span>(ch) - <span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>)))</span><br><span class="line">    <span class="keyword">else</span>:                   <span class="comment"># 기억해내는 연산(or) 연산</span></span><br><span class="line">        status |= (<span class="number">1</span> &lt;&lt; (<span class="built_in">ord</span>(ch) - <span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>)))</span><br><span class="line"></span><br><span class="line">    cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):      <span class="comment"># 각 단어들에 대해서 현재 상태와 비교(and 연산)해서 단어를 암기 중인지 파악함</span></span><br><span class="line">        <span class="keyword">if</span> wordList[i] &amp; status == wordList[i]:</span><br><span class="line">            cnt += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(cnt)              <span class="comment"># 연산 후 알고 있는 단어의 개수를 출력함</span></span><br></pre></td></tr></table></figure>
+<h2 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h2><p>문제 자체는 ‘가장 긴 바이토닉 수열’ 과 비슷한 문제였다. <code>words</code> 를 탐색하여 자신보다 작은 모든 값과 비교해주며 조건에 맞다면 해당 dp 값 + 1 로 갱신해 주는 것이다. (<code>O(N^2)</code>).</p>
+<p>기본적인 문자열 + DP 로 접근해서 문제를 풀어주었다. 맨 처음, 한 단어가 그 다음 단어와 비교했을 때 문제에서 주어진 조건과 일치하려면, 문자열 길이의 차이가 1이어야 하고, 또한 한 문자를 제외한 나머지 문자의 순서와 종류가 그대로 일치해야 한다. 따라서 <code>check</code> 라는 함수를 두어 <code>a</code> 와 <code>b</code> 의 길이를 먼저 비교해 차이가 1이 아니라면 무조건 <code>False</code> 를 리턴해주었다. 왜냐하면 길이의 차이가 1이 아닌 경우 어떠한 방식으로도 문제에서 주어진 조건인 ‘다른 문자열에 한 문자를 추가한다’를 만족할 수 없기 때문이다.</p>
+<p>그리고 그 한 문자를 빼고 나머지는 종류와 순서가 모두 맞아야 하므로, <code>while</code> 문을 통해 문자들을 차례대로 (포인터 두 개) 비교해주며 한 단어만 틀린 경우에만 <code>True</code> 를 리턴해주도록 하였다.</p>
+<p>처음에 문제를 풀 때는 <code>dp[i]</code> 를 설정해줄 때 단순히 <code>dp[i] = dp[j] + 1</code> 로 설정해주어 논리적 오류를 범했다. 이게 왜 안되냐면, 도중에 더 작은 값이 나올 수 도 있기 때문에, 항상 자신과도 비교해 더 큰 값으로 할당해주어야 하기 때문이다. <code>dp[i] = max(dp[i], dp[j] + 1)</code> 이렇게 말이다. 그리고 <code>ans</code> 도 마찬가지로 항상 자신과 비교해주어 큰 값으로 리턴해주어야 한다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestStrChain</span>(<span class="params">self, words: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">check</span>(<span class="params">b, a</span>):</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">len</span>(b) - <span class="built_in">len</span>(a) != <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">            i = j = <span class="number">0</span></span><br><span class="line">            cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(a):</span><br><span class="line">                <span class="keyword">if</span> a[i] != b[j]:</span><br><span class="line">                    <span class="keyword">if</span> cnt &gt; <span class="number">0</span>:</span><br><span class="line">                        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">                    j += <span class="number">1</span></span><br><span class="line">                    cnt += <span class="number">1</span></span><br><span class="line">                    <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">        dp = [<span class="number">1</span>] * <span class="built_in">len</span>(words)</span><br><span class="line">        ans = <span class="number">1</span></span><br><span class="line">        words.sort(key=<span class="keyword">lambda</span> x: <span class="built_in">len</span>(x))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(words)):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i):</span><br><span class="line">                <span class="keyword">if</span> check(words[i], words[j]):</span><br><span class="line">                    dp[i] = <span class="built_in">max</span>(dp[i], dp[j] + <span class="number">1</span>)</span><br><span class="line">                    ans = <span class="built_in">max</span>(ans, dp[i])</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span>(ans)</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -281,22 +282,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/BOJ/" rel="tag"><i class="fa fa-tag"></i> BOJ</a>
               <a href="/tags/PS/" rel="tag"><i class="fa fa-tag"></i> PS</a>
+              <a href="/tags/LeetCode/" rel="tag"><i class="fa fa-tag"></i> LeetCode</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/05/10/javascript/day01/" rel="prev" title="JavaScript 01 -  자바스크립트와 프로그래밍">
-                  <i class="fa fa-chevron-left"></i> JavaScript 01 -  자바스크립트와 프로그래밍
+                <a href="/2021/05/17/javascript/day13/" rel="prev" title="JavaScript 13 - 프로퍼티 어트리뷰트">
+                  <i class="fa fa-chevron-left"></i> JavaScript 13 - 프로퍼티 어트리뷰트
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/05/11/ps/leetcode_104/" rel="next" title="leetcode 104. Maximum Depth of Binary Tree">
-                  leetcode 104. Maximum Depth of Binary Tree <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

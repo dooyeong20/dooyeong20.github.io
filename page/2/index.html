@@ -90,7 +90,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">59</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">60</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-count">60</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -189,6 +189,121 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/12/javascript/day05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/12/javascript/day05/" class="post-title-link" itemprop="url">JavaScript 05 - 제어문</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-12 19:52:06 / Updated at: 20:44:06" itemprop="dateCreated datePublished" datetime="2021-05-12T19:52:06+09:00">2021-05-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="제어문"><a href="#제어문" class="headerlink" title="제어문"></a>제어문</h1><p>제어문은 어떠한 프로그래밍 언어든 아주 중요한 역할을 한다. 주어진 조건에 따라서 특정한 코드 블록을 실행하거나 반복할 때 사용하는데, 이렇게 제어를 통해 코드의 실행 흐름을 제어할 수 있다. 하지만 흐름을 제어한다고해서 다 좋은 것은 아니고 코드의 흐름이 복잡해져 가독성 측면에서 좋지 않을 수도 있기 때문에 제어문을 남발하면 안된다.</p>
+<h2 id="블록문"><a href="#블록문" class="headerlink" title="블록문"></a>블록문</h2><p>블록문은 코드 블록, 블록 이라고 부르기도 하는데 그냥 중괄호 한 쌍으로 묶여 있는 실행단위를 말한다.</p>
+<p>아래는 예시 코드이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">var</span> foo = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (foo &lt; <span class="number">100</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;under 100&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>그리고 한 가지 참고할 점은 블록문의 끝에는 <code>;</code> 를 붙이지 않는다는 것인데, 왜냐하면 블록문의 마지막 중괄호(닫는 괄호)는 항상 종료를 의미하는 그 자체적으로 자체 종결성을 가지기 때문이다.</p>
+<h2 id="조건문"><a href="#조건문" class="headerlink" title="조건문"></a>조건문</h2><p>조건문은 위 예시에서와 같이 <code>if</code>, <code>else</code>, <code>switch</code> 라는 키워드를 통해 코드블록의 실행을 결정하는 것이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> number = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (number &lt; <span class="number">20</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;20 미만&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (number &lt; <span class="number">30</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;20 이상 30 미만&#x27;</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;30 이상&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>이 때 조건식의 자리에 표현식이 들어올 때는 그 값이 만약 boolean 값이 아니더라도 암묵적으로 형변환이 수행되어 <code>true</code>, <code>false</code> 값으로 평가되게 된다.</p>
+<p>예를 들어서 아래와 같은 코드는 조건식이 <code>134</code> 로, <code>true</code> 로 형변환이 이루어져 <code>if</code> 조건문이 참이되어 코드블록이 실행되게 된다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="number">30</span> + <span class="number">104</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;hello&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>그리고 <code>if</code> 조건문 내부의 코드 라인이 1줄이라면 중괄호를 생략할 수 있다. 하지만 중괄호를 써주는 것이 일반적이기 때문에 여기서는 중괄호를 포함하고 있다.</p>
+<p>그리고 <code>if</code> 조건문은 삼항연산자로도 바꿀 수 있다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (x &lt; <span class="number">10</span>) &#123;</span><br><span class="line">  x++;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  x--;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">x = x &lt; <span class="number">10</span> ? x + <span class="number">1</span> : x - <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>위 코드와 아래 코드는 서로 같은 코드이다. 여기서 주의해야 할 점은 삼항연산자는 표현식이기 때문에 평가될 수 있고 변수에 할당될 수 있기 때문에 위와 같이 <code>x</code> 에 할당할 수 있지만, <code>if</code> 문 같은 경우에는 표현식이 아니기 때문에 변수에 할당할 수 없다는 점을 알아야 한다.</p>
+<h2 id="반복문"><a href="#반복문" class="headerlink" title="반복문"></a>반복문</h2><p>반복문도 프로그래밍의 흐름 제어에서 아주 중요한 역할을 하고 시간 복잡도에 영향을 주는 메인 요소이다. 조건에 따라 일정한 코드 블록을 반복적으로 수행하는 것이고, 이 때 조건을 잘 체크하여 무한루프가 형성되지 않도록 하는 주의가 필요하다.</p>
+<p>자바스크립트에서는 기본적으로 <code>for</code>, <code>while</code>, <code>do while</code> 문을 제공한다.</p>
+<blockquote>
+<p>자바스크립트는 forEach, map, filter 등 다양한 메서드들이 존재하며 반복문처럼 Array의 각 요소를 iterate 할 때 사용된다.</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// for문 형식</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// while문 형식</span></span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (i &lt; <span class="number">10</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i++);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// do while문 형식</span></span><br><span class="line">i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i++);</span><br><span class="line">&#125; <span class="keyword">while</span> (i &lt; <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="break"><a href="#break" class="headerlink" title="break"></a>break</h3><p>이 때 while 문에서 조건식에 <code>true</code> 가 되는 값을 주어 무한루프를 만든 후, 반복문 내부에서 조건식을 만족했을 때만 루프가 종료되도록 <code>if</code> 조건문으로 <code>break</code> 키워드를 사용해 반복문을 빠져나올 수 있다.</p>
+<p>그리고 이번에 새로 알게된 점은 반복문을 포함한 특정 코드블록에 label 을 달아놓아 해당 label 반복문을 선택적으로 탈출할 수 있다는 점이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">outer: <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i, j);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (i === <span class="number">1</span> &amp;&amp; j === <span class="number">1</span>) &#123;</span><br><span class="line">      <span class="keyword">break</span> outer;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>그리고 꼭 반복문이 아니더라도 특정한 코드블록을 탈출할 수 있다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">myBlock: &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">1</span>);</span><br><span class="line">  <span class="keyword">break</span> myBlock;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h3><p><code>break</code> 키워드와 반대로, <code>continue</code> 는 실행 중인 코드 블록의 위치에서 실행을 중단하고 탈출하는 것이 아니라, 바로 다음 단계의 반복으로 넘어가도록 흐름을 제어하는 키워드이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="keyword">continue</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  count++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(count);</span><br></pre></td></tr></table></figure>
+
+<p>위 코드처럼 <code>i</code> 가 만약 홀수라면 <code>continue</code> 키워드를 통해 반복문을 종료하는 것이 아니라 바로 다음 단계의 반복 단계인 <code>i + 1</code> 번째로 넘어가서 다시 반복문을 수행하도록 하게 만드는 것이 <code>continue</code> 이다.</p>
+<p>따라서 만약 반복문 내부에서 <code>if</code> 문이 필요할 때, 해당 조건문이 너무 길어진다면 <code>continue</code> 를 사용해 <code>if</code> 조건문에 해당하지 않을 때를 제외해주는 것이 코드상 더 깔끔할 것이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> word = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; word.length; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (word[i] !== <span class="string">&#x27;l&#x27;</span>) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">  count++;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;hi hi&#x27;</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;apple&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1231,119 +1346,6 @@
 <ul>
 <li><a href="https://dooyeong20.github.io/vlive/01_team/src/">완성된 프로젝트 보러가기</a></li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/05/html-css/vlive-3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/05/html-css/vlive-3/" class="post-title-link" itemprop="url">VLIVE 프로젝트 - 마크업과 고려사항</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-05-05 16:33:20" itemprop="dateCreated datePublished" datetime="2021-05-05T16:33:20+09:00">2021-05-05</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-09 15:06:15" itemprop="dateModified" datetime="2021-05-09T15:06:15+09:00">2021-05-09</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/Project/" itemprop="url" rel="index"><span itemprop="name">Project</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="VLIVE-팀-프로젝트"><a href="#VLIVE-팀-프로젝트" class="headerlink" title="VLIVE 팀 프로젝트"></a>VLIVE 팀 프로젝트</h1><ul>
-<li><a href="https://dooyeong20.github.io/vlive/01_team/src/">완성된 프로젝트 보러가기</a></li>
-</ul>
-<h2 id="나의-역할"><a href="#나의-역할" class="headerlink" title="나의 역할"></a>나의 역할</h2><p><a href="https://dooyeong20.github.io/2021/05/01/html-css/vlive-1/">VLIVE 첫 번째 편</a> 에서 보라색, 빨간색, 파란색 영역으로 콘텐츠들을 구분했었다. 그리고 나의 역할은 파란색 부분인 비디오(헤더, 비디오 영상 컨테이너) 부분과 댓글 컨테이너 부분이다.</p>
-<img src="/images/3-video.png" width=600>
-
-<p>이렇게 생긴 동영상 부분과</p>
-<img src="/images/3-comment.png" width=600>
-
-<p>이렇게 생긴 댓글창(아래로 스크롤 되는) 부분이 내가 맡은 역할이다. 따라서 해당 부분의 마크업과 스타일링을 해나가야 한다.</p>
-<h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><p>마크업을 진행할 때, 최대한 <code>semantic</code> 하게 코드를 짜기 위해서 최대한 의미를 가지고 있는 태그들을 활용하려고 노력했고, 웹 표준과 접근성 측면에서도 충분히 고려해보았다. Tab 순서, Screen Reader와 같은 보조기기들을 활용한 웹 콘텐츠 접근 및 마크업의 논리적인 순서 등을 고려하며 디자인만을 베끼는 단순한 클론 코딩을 피하려고 노력했다.</p>
-<h3 id="Video-부분-마크업"><a href="#Video-부분-마크업" class="headerlink" title="Video 부분 마크업"></a>Video 부분 마크업</h3><p>비디오 컨테이너 내부의 마크업은 채널 정보를 담고 있는 header 부분, video 부분(video content와 video detail), 그리고 하트와 댓글을 남길 수 있는 video post 부분으로 나누어서 마크업을 진행했다.</p>
-<img src="/images/3_video_mu.png" width=600>
-
-<p>크게 이렇게 나누어 마크업을 진행한 이유는, 나중에 <code>video__header</code> 와 <code>video__content</code> 를 상단에 sticky 하도록 구현해야 하기 때문이다.</p>
-<blockquote>
-<p>나중에 알게된 사실이지만, sticky를 사용하면 자신의 부모 컨테이너까지만 sticky가 적용되기 때문에 sticky가 적용된 상태로 아래에 있는 댓글을 읽을 수 없었다. 따라서 이부분은 나중에 javascript로 body가 얼마나 스크롤 되었는지를 판단해서 <code>video__header</code> 와 <code>video__content</code> 클래스에 is-fixed 부여해주어 <code>position: fixed</code>로 처리를 해주는 방식을 선택하였다.</p>
-</blockquote>
-<h3 id="Comment-부분-마크업"><a href="#Comment-부분-마크업" class="headerlink" title="Comment 부분 마크업"></a>Comment 부분 마크업</h3><img src="/images/3_comment_mu.png" width=600>
-
-<p>Comment 부분은 위 코드와 같이 크게 버튼 부분(라이브 채팅 보는 버튼), 댓글을 다는 form 부분, 그리고 작성된 댓글들을 확인할 수 있는 <code>comments__container</code> 부분으로 구성하였다.</p>
-<p>후에 스타일링을 할 때, <code>form</code> 부분을 저렇게 작성을 한 후에, <code>focus-within</code> 을 이용해 fieldset에 애니메이션을 적용해주어 사용자가 댓글을 입력하고자 할 때 댓글 입력창을 유동적으로 변경해주었다.</p>
-<img src="/images/3_anim.gif" width=600>
-
-<p>위 gif는 나중에 스타일링까지 마친 후의 댓글 입력 창이다. 실제 VLIVE 앱과는 차이가 있지만, 아래 결과물이 만족스럽기 때문에 완전히 똑같이 따라서 구현하지는 않았다.</p>
-<h3 id="마크업-결과화면"><a href="#마크업-결과화면" class="headerlink" title="마크업 결과화면"></a>마크업 결과화면</h3><img src="/images/3_mu1.png" width=700>
-<img src="/images/3_mu2.png" width=700>
-<img src="/images/3_mu3.png" width=700>
-
-<p>이제 이렇게 못생긴 페이지를 실제 VLIVE 앱과 같이 꾸밀 차례이다.</p>
 
       
     </div>
