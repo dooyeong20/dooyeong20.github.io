@@ -90,7 +90,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">63</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">64</span></a></li>
   </ul>
 </nav>
 
@@ -136,7 +136,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-count">64</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -189,6 +189,94 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/20/ps/leetcode_102/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="행복한 두영's 블로그">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/20/ps/leetcode_102/" class="post-title-link" itemprop="url">leetcode 102. Binary Tree Level Order Traversal</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-20 19:35:23 / Updated at: 19:39:54" itemprop="dateCreated datePublished" datetime="2021-05-20T19:35:23+09:00">2021-05-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="102-Binary-Tree-Level-Order-Traversal"><a href="#102-Binary-Tree-Level-Order-Traversal" class="headerlink" title="102. Binary Tree Level Order Traversal"></a>102. Binary Tree Level Order Traversal</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/binary-tree-level-order-traversal/">여기서</a> 문제를 풀어볼 수 있습니다.</li>
+</ul>
+<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>Given the root of a binary tree, return the level order traversal of its nodes’ values. (i.e., from left to right, level by level).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: root &#x3D; [3,9,20,null,null,15,7]</span><br><span class="line">Output: [[3],[9,20],[15,7]]</span><br></pre></td></tr></table></figure>
+
+<img src="/images/leet_102.png">
+
+<h2 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h2><p>아주 단순한… bfs 문제이다. 각 노드의 레벨들을 순회하면서 각 레벨을 마킹해주어, <code>ans</code> 의 각 인덱스(레벨별 노드)에 리스트를 추가해주면 끝이나는 문제이다. medium 난이도의 문제이지만, 트리라는 자료구조를 사용해서 그런지 조금 난이도가 높게 측정이 된 것이 아닌가 하는 생각이 들었다.</p>
+<p>queue 를 이용해 bfs를 할 수 있는 수준이면 무난하게 풀 수 있는 문제였다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">levelOrder</span>(<span class="params">self, root: TreeNode</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line"></span><br><span class="line">        q = deque()</span><br><span class="line">        q.append((root, <span class="number">0</span>))</span><br><span class="line">        ans = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> q:</span><br><span class="line">            node, lev = q.popleft()</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> lev == <span class="built_in">len</span>(ans):</span><br><span class="line">                ans.append([])</span><br><span class="line"></span><br><span class="line">            ans[lev].append(node.val)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> node.left:</span><br><span class="line">                q.append((node.left, lev + <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> node.right:</span><br><span class="line">                q.append((node.right, lev + <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -629,10 +717,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">작성일</span>
-      
 
-      <time title="Post created: 2021-05-17 18:02:06 / Updated at: 20:34:30" itemprop="dateCreated datePublished" datetime="2021-05-17T18:02:06+09:00">2021-05-17</time>
+      <time title="Post created: 2021-05-17 18:02:06" itemprop="dateCreated datePublished" datetime="2021-05-17T18:02:06+09:00">2021-05-17</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-20 17:38:01" itemprop="dateModified" datetime="2021-05-20T17:38:01+09:00">2021-05-20</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -979,7 +1073,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-17 17:56:41" itemprop="dateModified" datetime="2021-05-17T17:56:41+09:00">2021-05-17</time>
+        <time title="Updated at: 2021-05-20 16:36:35" itemprop="dateModified" datetime="2021-05-20T16:36:35+09:00">2021-05-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1025,8 +1119,8 @@
 
 <p>위 예제의 실행 결과는 bar 함수의 상위 스코프가 무엇인지에 따라 결정된다. 두 가지 패턴을 예측할 수 있다.</p>
 <ul>
-<li>함수를 어디서 호출했는지</li>
-<li>함수를 어디서 정의했는지</li>
+<li>함수를 어디서 <strong>호출</strong>했는지</li>
+<li>함수를 어디서 <strong>정의</strong>했는지</li>
 </ul>
 <p>첫 번째 방식으로 함수의 상위 스코프를 결정한다면 bar 함수의 상위 스코프는 foo 함수의 지역 스코프와 전역 스코프일 것이다. 두 번째 방식으로 함수의 상위 스코프를 결정한다면 bar 함수의 상위 스코프는 전역 스코프일 것이다.</p>
 <p>첫 번째 방식을 동적 스코프(dynamic scope)라 한다. 함수를 정의하는 시점에는 함수가 어디서 호출될지 알 수 없다. 따라서 함수가 호출되는 시점에 동적으로 상위 스코프를 결정해야 하기 때문에 동적 스코프라고 부른다.</p>
@@ -1035,7 +1129,7 @@
 <p>자바스크립트는 렉시컬 스코프를 따르므로 함수를 어디서 호출했는지가 아니라 함수를 어디서 정의했는지에 따라 상위 스코프를 결정한다. 함수가 호출된 위치는 상위 스코프 결정에 어떠한 영향도 주지 않는다. 즉, 함수의 상위 스코프는 언제나 자신이 정의된 스코프다.</p>
 <p>이처럼 함수의 상위 스코프는 함수 정의가 실행될 때 정적으로 결정된다. 함수 정의(함수 선언문 또는 함수 표현식)가 실행되어 생성된 함수 객체는 이렇게 결정된 상위 스코프를 기억한다. 함수가 호출될 때마다 함수의 상위 스코프를 참조할 필요가 있기 때문이다.</p>
 </blockquote>
-<p>또한 렉시컬 스코프는 클로저와 깊은 관계가 있다. 이에 대해서는 뒤에서 자세히 정리하겠다.</p>
+<p>즉, 자바스크립트에서는 자신이 정의된 곳이 상위 스코프이다. 렉시컬 스코프는 클로저와 깊은 관계가 있기 때문에 확실히 개념을 숙지해야 한다.</p>
 
       
     </div>
@@ -1093,7 +1187,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-20 13:56:59" itemprop="dateModified" datetime="2021-05-20T13:56:59+09:00">2021-05-20</time>
+        <time title="Updated at: 2021-05-20 15:00:41" itemprop="dateModified" datetime="2021-05-20T15:00:41+09:00">2021-05-20</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1185,8 +1279,9 @@
 <p>함수 이름이 있는 기명 즉시 실행 함수도 사용할 수 있다. 하지만 그룹 연산자 ‘()’ 내의 기명 함수는 함수 선언문이 아니라 함수 리터럴로 평가되며 함수 이름은 함수 몸체에서만 참조할 수 있는 식별자이므로 즉시 실행 함수를 다시 호출할 수는 없다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 즉시 실행 함수도 일반 함수처럼 값을 반환할 수 있다.</span></span><br><span class="line"><span class="keyword">var</span> res = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">3</span>;</span><br><span class="line">  <span class="keyword">var</span> b = <span class="number">5</span>;</span><br><span class="line">  <span class="keyword">return</span> a * b;</span><br><span class="line">&#125;)();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(res); <span class="comment">// 15</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 즉시 실행 함수에도 일반 함수처럼 인수를 전달할 수 있다.</span></span><br><span class="line">res = (<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a * b;</span><br><span class="line">&#125;)(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(res); <span class="comment">// 15</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="재귀-함수"><a href="#재귀-함수" class="headerlink" title="재귀 함수"></a>재귀 함수</h3><p>함수가 자기 자신을 호출하는 것을 재귀 호출(recursive call)이라 한다. 재귀 함수(recursive function)는 자기 자신을 호출하는 행위, 즉 재귀 호출을 수행하는 함수를 말한다.</p>
+<h3 id="재귀-함수"><a href="#재귀-함수" class="headerlink" title="재귀 함수"></a>재귀 함수</h3><p>함수가 자기 자신을 호출하는 것을 재귀 호출(recursive call)이라 한다. 재귀 함수는 자기 자신을 호출하는 행위, 즉 재귀 호출을 수행하는 함수를 말한다.</p>
 <p>재귀함수는 dfs 등에서 사용되는 중요한 함수이다.</p>
+<p>그리고 재귀함수에서는 탈출 조건이 매우 중요하다. 만약 재귀 함수에 탈출조건이 없다면, <code>stack overflow</code> 에러가 발생하게 된다. 왜냐하면 함수 호출을 할 때마다 함수가 stack 에 쌓이게 되는데, 탈출 조건이 없다면 이 stack 이 가득 찰 때까지 반복되어 stack overflow 가 발생하게 되는 것이다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">countdown</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (n &lt; <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.log(n);</span><br><span class="line">  countdown(n - <span class="number">1</span>); <span class="comment">// 재귀 호출</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">countdown(<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
 
 <p>이렇게 재귀 함수를 사용하면 반복되는 처리를 반복문 없이 구현할 수 있다.</p>
@@ -1195,137 +1290,16 @@
 <p>함수 선언문의 경우 ES6 이전에는 코드의 최상위 또는 다른 함수 내부에서만 정의할 수 있었으나 ES6부터는 if 문이나 for 문 등의 코드 블록 내에서도 정의할 수 있다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inner</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> y = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(x + y); <span class="comment">// 3</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  inner();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">outer();</span><br></pre></td></tr></table></figure>
 
-<h3 id="콜백-함수"><a href="#콜백-함수" class="headerlink" title="콜백 함수"></a>콜백 함수</h3><p>콜백 함수란, 함수의 변하지 않는 공통 로직은 미리 정의해 두고, 경우에 따라 변경되는 로직은 추상화해서 함수 외부에서 함수 내부로 전달하는 방법을 통해 함수의 효율성을 향상시키는 것이다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">/ 외부에서 전달받은 f를 n만큼 반복 호출한다</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">repeat</span>(<span class="params">n, f</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    f(i); <span class="comment">// i를 전달하면서 f를 호출</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> logAll = <span class="function"><span class="keyword">function</span> (<span class="params">i</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 반복 호출할 함수를 인수로 전달한다.</span></span><br><span class="line">repeat(<span class="number">5</span>, logAll); <span class="comment">// 0 1 2 3 4</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> logOdds = <span class="function"><span class="keyword">function</span> (<span class="params">i</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">2</span>) <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 반복 호출할 함수를 인수로 전달한다.</span></span><br><span class="line">repeat(<span class="number">5</span>, logOdds); <span class="comment">// 1 3</span></span><br></pre></td></tr></table></figure>
+<h3 id="콜백-함수"><a href="#콜백-함수" class="headerlink" title="콜백 함수"></a>콜백 함수</h3><p>콜백 함수란 함수의 변하지 않는 공통 로직은 미리 정의해 두고, 경우에 따라 변경되는 로직은 추상화해서 함수 외부에서 함수 내부로 전달하는 방법을 통해 함수의 효율성을 향상시키는 것이다.</p>
+<p>즉, 함수가 바로 호출되는 것이 아니라 나중에 호출되는 것이다.</p>
+<p>고차함수가 콜백함수를 호출하지 않는 경우(<code>setTimeout</code> 등) 비동기라고 한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 외부에서 전달받은 f를 n만큼 반복 호출한다</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">repeat</span>(<span class="params">n, f</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    f(i); <span class="comment">// i를 전달하면서 f를 호출</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> logAll = <span class="function"><span class="keyword">function</span> (<span class="params">i</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 반복 호출할 함수를 인수로 전달한다.</span></span><br><span class="line">repeat(<span class="number">5</span>, logAll); <span class="comment">// 0 1 2 3 4</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> logOdds = <span class="function"><span class="keyword">function</span> (<span class="params">i</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">2</span>) <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 반복 호출할 함수를 인수로 전달한다.</span></span><br><span class="line">repeat(<span class="number">5</span>, logOdds); <span class="comment">// 1 3</span></span><br></pre></td></tr></table></figure>
 
 <p>이렇게 함수의 매개변수를 통해 다른 함수의 내부로 전달되는 함수를 콜백 함수(callback function)라고 하며, 매개변수를 통해 함수의 외부에서 콜백 함수를 전달받은 함수를 고차 함수(Higher-Order Function, HOF)라고 한다. 고차 함수는 콜백 함수를 자신의 일부분으로 합성한다.</p>
 <p>콜백 함수는 고차 함수에 의해 호출되며 이때 고차 함수는 필요에 따라 콜백 함수에 인수를 전달할 수 있다. 따라서 고차 함수에 콜백 함수를 전달할 때 콜백 함수를 호출하지 않고 함수 자체를 전달해야 한다.</p>
 <h3 id="순수-함수와-비순수-함수"><a href="#순수-함수와-비순수-함수" class="headerlink" title="순수 함수와 비순수 함수"></a>순수 함수와 비순수 함수</h3><p>함수형 프로그래밍에서는 어떤 외부 상태에 의존하지도 않고 변경하지도 않는, 즉 부수 효과가 없는 함수를 순수 함수(pure function)라 하고, 외부 상태에 의존하거나 외부 상태를 변경하는, 즉 부수 효과가 있는 함수를 비순수 함수(impure function)라고 한다.</p>
 <p>함수형 프로그래밍은 결국 순수 함수를 통해 부수 효과를 최대한 억제해 오류를 피하고 프로그램의 안정성을 높이려는 노력의 일환이라 할 수 있다. 자바스크립트는 멀티 패러다임 언어이므로 객체지향 프로그래밍뿐만 아니라 함수형 프로그래밍을 적극적으로 활용하고 있다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add(<span class="number">1</span>, <span class="number">2</span>); <span class="comment">// 3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// --------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  res: <span class="number">0</span>,</span><br><span class="line">  x: <span class="number">1</span>,</span><br><span class="line">  y: <span class="number">2</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  obj.res = obj.x - obj.y;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> obj.res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">remove(obj); <span class="comment">// -1, obj가 변경됨(&#x27;res&#x27;)</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/16/javascript/day08/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 블로그">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/16/javascript/day08/" class="post-title-link" itemprop="url">JavaScript 08 - 객체와 원시값의 비교</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-05-16 16:12:06" itemprop="dateCreated datePublished" datetime="2021-05-16T16:12:06+09:00">2021-05-16</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-17 16:35:47" itemprop="dateModified" datetime="2021-05-17T16:35:47+09:00">2021-05-17</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="객체-vs-원시값"><a href="#객체-vs-원시값" class="headerlink" title="객체 vs 원시값"></a>객체 vs 원시값</h1><p>원시 타입과 객체 타입은 크게 세 가지 측면에서 다르다.</p>
-<ul>
-<li><p>원시 타입의 값, 즉 원시값은 변경 불가능한 값(immutable value)이다. 이에 비해 객체(참조) 타입의 값, 즉 객체는 변경 가능한 값(mutable value)이다.</p>
-</li>
-<li><p>원시값을 변수에 할당하면 변수(확보된 메모리 공간)에는 실제 값이 저장된다. 이에 비해 객체를 변수에 할당하면 변수(확보된 메모리 공간)에는 참조값이 저장된다.</p>
-</li>
-<li><p>원시값을 갖는 변수를 다른 변수에 할당하면 원본의 원시값이 복사되어 전달된다. 이를 값에 의한 전달(pass by value)이라 한다. 이에 비해 객체를 가리키는 변수를 다른 변수에 할당하면 원본의 참조값이 복사되어 전달된다. 이를 참조에 의한 전달(pass by reference)이라 한다.</p>
-</li>
-</ul>
-<h2 id="원시값"><a href="#원시값" class="headerlink" title="원시값"></a>원시값</h2><p>원시 타입(primitive type)의 값, 즉 원시값은 변경 불가능한 값(immutable value)이다. 변경 불가능하다는 것은 변수가 아니라 값에 대한 진술이다. 원시값은 어떤 일이 있어도 불변하며 이러한 원시값의 특성은 데이터의 신뢰성을 보장한다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">14</span>;</span><br><span class="line"></span><br><span class="line">a = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
-
-<p>이 때 14 라는 값이 20 으로 변경된 것이 아니라, <code>a</code> 변수에 할당된 값이 14에서 20으로 재할당 되는 것이다. 이때 변수가 참조하던 메모리 공간의 주소가 바뀐다. 원시값의 이러한 특성을 불변성(immutability)이라 한다.</p>
-<h3 id="문자열-불변성"><a href="#문자열-불변성" class="headerlink" title="문자열 불변성"></a>문자열 불변성</h3><p>ECMAScript 사양에 문자열 타입(2byte)과 숫자 타입(8byte) 이외의 원시 타입은 크기를 명확히 규정하고 있지는 않아서 브라우저 제조사의 구현에 따라 원시 타입의 크기는 다를 수 있다.</p>
-<p>문자열은 0개 이상의 문자(character)로 이뤄진 집합이며 1개의 문자는 2바이트의 메모리 공간에 저장한다. 자바스크립트는 개발자의 편의를 위해 원시 타입인 문자열 타입을 제공하고 있다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">a = <span class="string">&#x27;hi~&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>유사 배열 객체(array-like object)</p>
-<p>유사 배열 객체란 마치 배열처럼 인덱스로 프로퍼티 값에 접근할 수 있고 length 프로퍼티를 갖는 객체를 말한다. 문자열은 마치 배열처럼 인덱스를 통해 각 문자에 접근할 수 있으며, length 프로퍼티를 갖기 때문에 유사 배열 객체이고 for 문으로 순회할 수도 있다.</p>
-<p>원시값을 객체처럼 사용하면 원시값을 감싸는 래퍼 객체로 자동 변환된다.</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;string&#x27;</span>;</span><br><span class="line"></span><br><span class="line">str[<span class="number">0</span>] = <span class="string">&#x27;S&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(str); <span class="comment">// string</span></span><br></pre></td></tr></table></figure>
-
-<p>위 코드처럼 문자열의 일부를 변경할 수는 없고, 재할당만이 가능하다. 하지만 에러를 발생시키지는 않는다.</p>
-<h2 id="객체"><a href="#객체" class="headerlink" title="객체"></a>객체</h2><p>객체는 프로퍼티의 개수가 정해져 있지 않으며, 동적으로 추가되고 삭제할 수 있다. 프로퍼티의 값에도 제약이 없기 때문에 객체는 원시값과 같이 확보해야 할 메모리 공간의 크기를 사전에 정해 둘 수 없다.</p>
-<p>객체(참조) 타입의 값, 즉 객체는 변경 가능한 값(mutable value)이다.</p>
-<p>원시값을 할당한 변수는 원시값 자체를 값으로 갖는다. 하지만 객체를 할당한 변수가 기억하는 메모리 주소를 통해 메모리 공간에 접근하면 참조값(reference value)에 접근할 수 있다. 참조값은 생성된 객체가 저장된 메모리 공간의 주소, 그 자체다.</p>
-<p>원시값은 변경 불가능한 값이므로 원시값을 갖는 변수의 값을 변경하려면 재할당 외에는 방법이 없다. 하지만 객체는 변경 가능한 값이다. 따라서 객체를 할당한 변수는 재할당 없이 객체를 직접 변경할 수 있다. 즉, 재할당 없이 프로퍼티를 동적으로 추가할 수도 있고 프로퍼티 값을 갱신할 수도 있으며 프로퍼티 자체를 삭제할 수도 있다.</p>
-<p>이 경우에는 메모리에 저장된 객체를 직접 수정할 수 있다. 이때 객체를 할당한 변수에 재할당을 하지 않았으므로 객체를 할당한 변수의 참조값은 변경되지 않는다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">&#x27;Lee&#x27;</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">person.name = <span class="string">&#x27;kim&#x27;</span>;</span><br><span class="line">person.age = <span class="number">14</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// person 의 값(참조 주소)은 변하지 않는다.</span></span><br></pre></td></tr></table></figure>
-
-<p>원시값과는 다르게 여러 개의 식별자가 하나의 객체를 공유할 수 있다.</p>
-<h3 id="얕은-복사와-깊은-복사"><a href="#얕은-복사와-깊은-복사" class="headerlink" title="얕은 복사와 깊은 복사"></a>얕은 복사와 깊은 복사</h3><p>얕은 복사(shallow copy)와 깊은 복사(deep copy)가 있다.<br>객체를 프로퍼티 값으로 갖는 객체의 경우 얕은 복사는 한 단계까지만 복사하는 것을 말하고 깊은 복사는 객체에 중첩되어 있는 객체까지 모두 복사하는 것을 말한다.</p>
-<p>얕은 복사와 깊은 복사로 생성된 객체는 원본과는 다른 객체다.</p>
-<p>하지만 얕은 복사는 객체에 중첩되어 있는 객체의 경우 참조값을 복사하고 깊은 복사는 객체에 중첩되어 있는 객체까지 모두 복사해서 원시값처럼 완전한 복사본을 만든다는 차이가 있다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line"></span><br><span class="line">a[<span class="number">0</span>] = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>];</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="built_in">console</span>.log(b);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 둘 다 [[10, 20, 30], 4, 5]</span></span><br><span class="line"></span><br><span class="line">a = [[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">b = [...a];</span><br><span class="line">a[<span class="number">0</span>] = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>];</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">//  [[10, 20, 30], 4, 5]</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">//  [[1, 2, 3], 4, 5]</span></span><br></pre></td></tr></table></figure>
-
-<p>참조에 의한 전달은 메모리 주소를 그대로 넘겨주기 때문에 해당 참조값을 통해 값을 수정할 경우 같은 값을 참조하고 있는 변수들의 값도 함께 변화할 수 있어 주의해야 한다.</p>
-<p>실무에서는 깊은 복사를 할 때에는 검증된 라이브러리를 사용하면 된다.</p>
 
       
     </div>

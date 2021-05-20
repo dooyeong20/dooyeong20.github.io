@@ -22,29 +22,31 @@
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="HTML 문법기본 형태요소, 태그로 이루어져 있음. 태그와 요소는 거의 같은 것 12345678&lt;TAG&gt;CONTENT&lt;&#x2F;TAG&gt;&lt;h1&gt;토끼와 거북이&lt;&#x2F;h1&gt;&lt;p&gt;옛날 옛적에 토끼와 거북이가 살았습니다 ...&lt;&#x2F;p&gt;&lt;!-- 다음과 같이 이해할 수 있습니다. --&gt;&lt;주제1&gt;토">
+<meta name="description" content="102. Binary Tree Level Order Traversal 여기서 문제를 풀어볼 수 있습니다.  문제 설명Given the root of a binary tree, return the level order traversal of its nodes’ values. (i.e., from left to right, level by level). 12I">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML 기본 문법">
-<meta property="og:url" content="https://dooyeong20.github.io/2021/04/12/html-css/html-css-02/index.html">
+<meta property="og:title" content="leetcode 102. Binary Tree Level Order Traversal">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/05/20/ps/leetcode_102/index.html">
 <meta property="og:site_name" content="행복한 두영&#39;s 블로그">
-<meta property="og:description" content="HTML 문법기본 형태요소, 태그로 이루어져 있음. 태그와 요소는 거의 같은 것 12345678&lt;TAG&gt;CONTENT&lt;&#x2F;TAG&gt;&lt;h1&gt;토끼와 거북이&lt;&#x2F;h1&gt;&lt;p&gt;옛날 옛적에 토끼와 거북이가 살았습니다 ...&lt;&#x2F;p&gt;&lt;!-- 다음과 같이 이해할 수 있습니다. --&gt;&lt;주제1&gt;토">
+<meta property="og:description" content="102. Binary Tree Level Order Traversal 여기서 문제를 풀어볼 수 있습니다.  문제 설명Given the root of a binary tree, return the level order traversal of its nodes’ values. (i.e., from left to right, level by level). 12I">
 <meta property="og:locale" content="ko_KR">
-<meta property="article:published_time" content="2021-04-12T02:00:06.000Z">
-<meta property="article:modified_time" content="2021-05-05T14:06:33.435Z">
+<meta property="og:image" content="https://dooyeong20.github.io/images/leet_102.png">
+<meta property="article:published_time" content="2021-05-20T10:35:23.000Z">
+<meta property="article:modified_time" content="2021-05-20T10:39:54.097Z">
 <meta property="article:author" content="dooyeong">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="css">
+<meta property="article:tag" content="PS">
+<meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dooyeong20.github.io/images/leet_102.png">
 
 
-<link rel="canonical" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-02/">
+<link rel="canonical" href="https://dooyeong20.github.io/2021/05/20/ps/leetcode_102/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;04&#x2F;12&#x2F;html-css&#x2F;html-css-02&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;04&#x2F;12&#x2F;html-css&#x2F;html-css-02&#x2F;&quot;,&quot;title&quot;:&quot;HTML 기본 문법&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;05&#x2F;20&#x2F;ps&#x2F;leetcode_102&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;20&#x2F;ps&#x2F;leetcode_102&#x2F;&quot;,&quot;title&quot;:&quot;leetcode 102. Binary Tree Level Order Traversal&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>HTML 기본 문법 | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
+<title>leetcode 102. Binary Tree Level Order Traversal | 행복한 두영's 블로그</title><script src="/js/config.js"></script>
   
 
 
@@ -127,7 +129,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML-%EB%AC%B8%EB%B2%95"><span class="nav-number">1.</span> <span class="nav-text">HTML 문법</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EA%B8%B0%EB%B3%B8-%ED%98%95%ED%83%9C"><span class="nav-number">1.1.</span> <span class="nav-text">기본 형태</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%86%8D%EC%84%B1%EA%B3%BC-%EA%B0%92"><span class="nav-number">1.2.</span> <span class="nav-text">속성과 값</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%B6%80%EB%AA%A8-%EC%9E%90%EC%8B%9D-%EC%9A%94%EC%86%8C"><span class="nav-number">1.3.</span> <span class="nav-text">부모, 자식 요소</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#102-Binary-Tree-Level-Order-Traversal"><span class="nav-number">1.</span> <span class="nav-text">102. Binary Tree Level Order Traversal</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C-%EC%84%A4%EB%AA%85"><span class="nav-number">1.1.</span> <span class="nav-text">문제 설명</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C-%ED%92%80%EC%9D%B4"><span class="nav-number">1.2.</span> <span class="nav-text">문제 풀이</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -206,7 +208,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-02/">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/20/ps/leetcode_102/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/my.png">
@@ -219,7 +221,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          HTML 기본 문법
+          leetcode 102. Binary Tree Level Order Traversal
         </h1>
 
         <div class="post-meta-container">
@@ -229,27 +231,21 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">작성일</span>
+      
 
-      <time title="Post created: 2021-04-12 11:00:06" itemprop="dateCreated datePublished" datetime="2021-04-12T11:00:06+09:00">2021-04-12</time>
+      <time title="Post created: 2021-05-20 19:35:23 / Updated at: 19:39:54" itemprop="dateCreated datePublished" datetime="2021-05-20T19:35:23+09:00">2021-05-20</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-05 23:06:33" itemprop="dateModified" datetime="2021-05-05T23:06:33+09:00">2021-05-05</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+          <a href="/categories/Problem-Solving/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
         </span>
     </span>
 
@@ -263,29 +259,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="HTML-문법"><a href="#HTML-문법" class="headerlink" title="HTML 문법"></a>HTML 문법</h1><h2 id="기본-형태"><a href="#기본-형태" class="headerlink" title="기본 형태"></a>기본 형태</h2><p>요소, 태그로 이루어져 있음. 태그와 요소는 거의 같은 것</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TAG</span>&gt;</span>CONTENT<span class="tag">&lt;/<span class="name">TAG</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>토끼와 거북이<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>옛날 옛적에 토끼와 거북이가 살았습니다 ...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 다음과 같이 이해할 수 있습니다. --&gt;</span></span><br><span class="line">&lt;주제1&gt;토끼와 거북이&lt;/주제1&gt;</span><br><span class="line">&lt;문단&gt;옛날 옛적에 토끼와 거북이가 살았습니다 ...&lt;/문단&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>태그는 열리고(open) 닫히는(close) 태그 구조를 가지고 있으며 이는 한 쌍</li>
+        <h1 id="102-Binary-Tree-Level-Order-Traversal"><a href="#102-Binary-Tree-Level-Order-Traversal" class="headerlink" title="102. Binary Tree Level Order Traversal"></a>102. Binary Tree Level Order Traversal</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/binary-tree-level-order-traversal/">여기서</a> 문제를 풀어볼 수 있습니다.</li>
 </ul>
-<h2 id="속성과-값"><a href="#속성과-값" class="headerlink" title="속성과 값"></a>속성과 값</h2><p>태그(요소)의 기능을 확장하기 위해 ‘속성’을 사용</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TAG</span> 속성=<span class="string">&quot;값&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">TAG</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;./my_photo.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;내 프로필 사진&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;name&quot;</span>&gt;</span>홍길동<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 다음과 같이 이해할 수 있습니다. --&gt;</span></span><br><span class="line">&lt;이미지삽입 소스위치=&quot;./my_photo.jpg&quot; 대체텍스트=&quot;내 프로필 사진&quot; /&gt;</span><br><span class="line">&lt;의미없는분할 태그별명=&quot;name&quot;&gt;홍길동&lt;/의미없는분할&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>Given the root of a binary tree, return the level order traversal of its nodes’ values. (i.e., from left to right, level by level).</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: root &#x3D; [3,9,20,null,null,15,7]</span><br><span class="line">Output: [[3],[9,20],[15,7]]</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li><code>&lt;img /&gt;</code>는 이미지를 삽입할 때 사용하는 태그</li>
-<li>src(source)라는 속성을 사용해서 삽입할 이미지의 경로를 지정</li>
-<li>alt(alternative)라는 속성은 이미지를 출력하지 못하는 상황에 이미지 대신 보여질 텍스트를 지정</li>
-<li><code>&lt;div&gt;&lt;/div&gt;</code>는 의미를 가지지 않는 태그</li>
-<li>닫히는 태그가 없으면 빈 태그(Empty Tag)</li>
-</ul>
-<h2 id="부모-자식-요소"><a href="#부모-자식-요소" class="headerlink" title="부모, 자식 요소"></a>부모, 자식 요소</h2><p>태그A가 태그B의 콘텐츠로 사용되면, 태그B는 태그A의 부모 요소, 태그A는 태그B의 자식 요소</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">PARENT</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">CHILD</span>&gt;</span><span class="tag">&lt;/<span class="name">CHILD</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">PARENT</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">&quot;fruits&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>과일 목록<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>사과<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>딸기<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>바나나<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>오렌지<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 다음과 같이 이해할 수 있습니다. --&gt;</span></span><br><span class="line">&lt;섹션영역 태그별명=&quot;fruits&quot;&gt;</span><br><span class="line">  &lt;주제1&gt;과일 목록&lt;/주제1&gt;</span><br><span class="line">  &lt;순서없는목록&gt;</span><br><span class="line">    &lt;항목&gt;사과&lt;/항목&gt;</span><br><span class="line">    &lt;항목&gt;딸기&lt;/항목&gt;</span><br><span class="line">    &lt;항목&gt;바나나&lt;/항목&gt;</span><br><span class="line">    &lt;항목&gt;오렌지&lt;/항목&gt;</span><br><span class="line">  &lt;/순서없는목록&gt;</span><br><span class="line">&lt;/섹션영역&gt;</span><br></pre></td></tr></table></figure>
+<img src="/images/leet_102.png">
 
-<ul>
-<li><code>&lt;ul&gt;</code>은 <code>&lt;section&gt;</code>의 자식 요소이면서 <code>&lt;li&gt;</code>의 부모 요소</li>
-<li>부모보다 높다면 조상(상위)요소</li>
-</ul>
+<h2 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h2><p>아주 단순한… bfs 문제이다. 각 노드의 레벨들을 순회하면서 각 레벨을 마킹해주어, <code>ans</code> 의 각 인덱스(레벨별 노드)에 리스트를 추가해주면 끝이나는 문제이다. medium 난이도의 문제이지만, 트리라는 자료구조를 사용해서 그런지 조금 난이도가 높게 측정이 된 것이 아닌가 하는 생각이 들었다.</p>
+<p>queue 를 이용해 bfs를 할 수 있는 수준이면 무난하게 풀 수 있는 문제였다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">levelOrder</span>(<span class="params">self, root: TreeNode</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line"></span><br><span class="line">        q = deque()</span><br><span class="line">        q.append((root, <span class="number">0</span>))</span><br><span class="line">        ans = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> q:</span><br><span class="line">            node, lev = q.popleft()</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> lev == <span class="built_in">len</span>(ans):</span><br><span class="line">                ans.append([])</span><br><span class="line"></span><br><span class="line">            ans[lev].append(node.val)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> node.left:</span><br><span class="line">                q.append((node.left, lev + <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> node.right:</span><br><span class="line">                q.append((node.right, lev + <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -295,22 +279,19 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/html/" rel="tag"><i class="fa fa-tag"></i> html</a>
-              <a href="/tags/css/" rel="tag"><i class="fa fa-tag"></i> css</a>
+              <a href="/tags/PS/" rel="tag"><i class="fa fa-tag"></i> PS</a>
+              <a href="/tags/LeetCode/" rel="tag"><i class="fa fa-tag"></i> LeetCode</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/04/12/html-css/html-css-01/" rel="prev" title="HTML/CSS/JavaScript와 웹 표준, 접근성">
-                  <i class="fa fa-chevron-left"></i> HTML/CSS/JavaScript와 웹 표준, 접근성
+                <a href="/2021/05/18/ps/boj-2580/" rel="prev" title="BOJ 2580 - 스도쿠">
+                  <i class="fa fa-chevron-left"></i> BOJ 2580 - 스도쿠
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/04/12/html-css/html-css-03/" rel="next" title="CSS 기본 문법과 선택자">
-                  CSS 기본 문법과 선택자 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
