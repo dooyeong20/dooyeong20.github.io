@@ -2984,9 +2984,9 @@ body * {
   background-color: rgba(255,255,255,0.05);
 }
 .custom-logo-image {
-  width: 120px;
-  height: 120px;
-  background-color: rgba(255,255,255,0.05);
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
 }
 .site-brand-container {
   background: none;
@@ -2998,7 +2998,7 @@ body * {
   border-radius: 20px;
 }
 .site-meta .brand::before {
-  content: "꾸준한 개미";
+  content: 'I ❤️ JavaScript';
   display: block;
 }
 .site-brand-container .site-meta .brand {
@@ -3007,6 +3007,6 @@ body * {
 }
 .custom-logo-image {
   box-sizing: border-box;
-  padding: 1rem;
+  padding: 0.3rem;
   border-radius: 20px;
 }
