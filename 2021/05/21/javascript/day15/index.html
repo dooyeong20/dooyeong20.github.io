@@ -22,28 +22,28 @@
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="자바스크립트와 프로그래밍자바스크립트는 태생이 애플리케이션 개발용 언어가 아니고, 웹 브라우저를 위한 한정적인 언어이다. 따라서 아주 간단하게 사용되는 경량의, 어떻게 보면 무시받는 언어였다. 또 자바스크립트는 암묵적으로 에러를 처리해주는 기능(magic)이 많아서 장점이라고 볼 수도 있지만 이런 기능이 오히려 개발자들을 힘들게 하는 경우도 많다. 개념과 동">
+<meta name="description" content="함수와 일급 객체일급 객체일급 객체란,  무명의 리터럴로 생성할 수 있다. 즉, 런타임에 생성이 가능하다. 변수나 자료구조(객체, 배열 등)에 저장할 수 있다. 함수의 매개변수에게 전달할 수 있다. 함수의 반환값으로 사용할 수 있다.  라는 조건을 만족하는 객체이다. 자바스크립트에서는 함수는 위 조건들을 만족하기 때문에 일급 객체인 것이다. 즉, 함수를 일">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript 01 -  자바스크립트와 프로그래밍">
-<meta property="og:url" content="https://dooyeong20.github.io/2021/05/10/javascript/day01/index.html">
+<meta property="og:title" content="JavaScript 15 - 일급 객체">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/05/21/javascript/day15/index.html">
 <meta property="og:site_name" content="두영&#39;s 공간">
-<meta property="og:description" content="자바스크립트와 프로그래밍자바스크립트는 태생이 애플리케이션 개발용 언어가 아니고, 웹 브라우저를 위한 한정적인 언어이다. 따라서 아주 간단하게 사용되는 경량의, 어떻게 보면 무시받는 언어였다. 또 자바스크립트는 암묵적으로 에러를 처리해주는 기능(magic)이 많아서 장점이라고 볼 수도 있지만 이런 기능이 오히려 개발자들을 힘들게 하는 경우도 많다. 개념과 동">
+<meta property="og:description" content="함수와 일급 객체일급 객체일급 객체란,  무명의 리터럴로 생성할 수 있다. 즉, 런타임에 생성이 가능하다. 변수나 자료구조(객체, 배열 등)에 저장할 수 있다. 함수의 매개변수에게 전달할 수 있다. 함수의 반환값으로 사용할 수 있다.  라는 조건을 만족하는 객체이다. 자바스크립트에서는 함수는 위 조건들을 만족하기 때문에 일급 객체인 것이다. 즉, 함수를 일">
 <meta property="og:locale" content="ko_KR">
-<meta property="article:published_time" content="2021-05-10T07:44:06.000Z">
-<meta property="article:modified_time" content="2021-05-10T08:35:39.414Z">
+<meta property="article:published_time" content="2021-05-21T07:42:06.000Z">
+<meta property="article:modified_time" content="2021-05-21T08:13:45.643Z">
 <meta property="article:author" content="dooyeong">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://dooyeong20.github.io/2021/05/10/javascript/day01/">
+<link rel="canonical" href="https://dooyeong20.github.io/2021/05/21/javascript/day15/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;05&#x2F;10&#x2F;javascript&#x2F;day01&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;10&#x2F;javascript&#x2F;day01&#x2F;&quot;,&quot;title&quot;:&quot;JavaScript 01 -  자바스크립트와 프로그래밍&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;05&#x2F;21&#x2F;javascript&#x2F;day15&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;21&#x2F;javascript&#x2F;day15&#x2F;&quot;,&quot;title&quot;:&quot;JavaScript 15 - 일급 객체&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>JavaScript 01 -  자바스크립트와 프로그래밍 | 두영's 공간</title><script src="/js/config.js"></script>
+<title>JavaScript 15 - 일급 객체 | 두영's 공간</title><script src="/js/config.js"></script>
   
 
 
@@ -127,7 +127,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%99%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D"><span class="nav-number">1.</span> <span class="nav-text">자바스크립트와 프로그래밍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EA%B0%9C%EB%85%90%EA%B3%BC-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC%EC%9D%98-%EC%A4%91%EC%9A%94%EC%84%B1"><span class="nav-number">1.1.</span> <span class="nav-text">개념과 동작 원리의 중요성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EA%B3%B5%EB%B6%80-%EB%B0%A9%EB%B2%95%EC%9D%98-%EC%A2%85%EB%A5%98"><span class="nav-number">1.2.</span> <span class="nav-text">공부 방법의 종류</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%99%80-ECMAScript"><span class="nav-number">1.3.</span> <span class="nav-text">자바스크립트와 ECMAScript</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%ED%95%A8%EC%88%98%EC%99%80-%EC%9D%BC%EA%B8%89-%EA%B0%9D%EC%B2%B4"><span class="nav-number">1.</span> <span class="nav-text">함수와 일급 객체</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%BC%EA%B8%89-%EA%B0%9D%EC%B2%B4"><span class="nav-number">1.1.</span> <span class="nav-text">일급 객체</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%95%A8%EC%88%98-%EA%B0%9D%EC%B2%B4%EC%9D%98-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0"><span class="nav-number">1.2.</span> <span class="nav-text">함수 객체의 프로퍼티</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#arguments"><span class="nav-number">1.2.1.</span> <span class="nav-text">arguments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#caller"><span class="nav-number">1.2.2.</span> <span class="nav-text">caller</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#length"><span class="nav-number">1.2.3.</span> <span class="nav-text">length</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#name"><span class="nav-number">1.2.4.</span> <span class="nav-text">name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#proto"><span class="nav-number">1.2.5.</span> <span class="nav-text">__proto__</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prototype"><span class="nav-number">1.2.6.</span> <span class="nav-text">prototype</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -206,7 +206,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/10/javascript/day01/">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/21/javascript/day15/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/my.png">
@@ -219,7 +219,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          JavaScript 01 -  자바스크립트와 프로그래밍
+          JavaScript 15 - 일급 객체
         </h1>
 
         <div class="post-meta-container">
@@ -231,7 +231,7 @@
       <span class="post-meta-item-text">작성일</span>
       
 
-      <time title="Post created: 2021-05-10 16:44:06 / Updated at: 17:35:39" itemprop="dateCreated datePublished" datetime="2021-05-10T16:44:06+09:00">2021-05-10</time>
+      <time title="Post created: 2021-05-21 16:42:06 / Updated at: 17:13:45" itemprop="dateCreated datePublished" datetime="2021-05-21T16:42:06+09:00">2021-05-21</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -257,37 +257,33 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="자바스크립트와-프로그래밍"><a href="#자바스크립트와-프로그래밍" class="headerlink" title="자바스크립트와 프로그래밍"></a>자바스크립트와 프로그래밍</h1><p>자바스크립트는 태생이 애플리케이션 개발용 언어가 아니고, 웹 브라우저를 위한 한정적인 언어이다. 따라서 아주 간단하게 사용되는 경량의, 어떻게 보면 무시받는 언어였다. 또 자바스크립트는 암묵적으로 에러를 처리해주는 기능(magic)이 많아서 장점이라고 볼 수도 있지만 이런 기능이 오히려 개발자들을 힘들게 하는 경우도 많다.</p>
-<h2 id="개념과-동작-원리의-중요성"><a href="#개념과-동작-원리의-중요성" class="headerlink" title="개념과 동작 원리의 중요성"></a>개념과 동작 원리의 중요성</h2><p>위와 같이 자바스크립트는 태생이 애플리케이션 개발용이 아니었기 때문에 현재 자바스크립트로 개발을 하기 위해서는 내부 동작 원리를 정확하게 알고 사용해야 한다. 왜냐하면 이제는 더 이상 예전의 그 간단하고 쉽게 사용할 수 있는 자바스크립트가 아니고, 제대로 사용하지 않는다면 버그 투성이 애플리케이션이 될 것이기 때문이다.</p>
-<p>예를 들어서, 자바스크립트에서는 객체를 생성하는 방법이 총 5개가 있기 때문에 어떠한 상황에서 어떠한 방법을 사용할지 선택해서 적용해야 한다. 이제는 자바스크립트를 깊게 공부해야할 필요성이 생기고 있는 것이다. DOM 컨트롤에서 끝이나는 공부가 아니라 더 깊이, 더 정확한 내용까지 알아야 할 것이다.</p>
-<h2 id="공부-방법의-종류"><a href="#공부-방법의-종류" class="headerlink" title="공부 방법의 종류"></a>공부 방법의 종류</h2><ol>
-<li>Top-down</li>
-</ol>
+        <h1 id="함수와-일급-객체"><a href="#함수와-일급-객체" class="headerlink" title="함수와 일급 객체"></a>함수와 일급 객체</h1><h2 id="일급-객체"><a href="#일급-객체" class="headerlink" title="일급 객체"></a>일급 객체</h2><p>일급 객체란,</p>
 <ul>
-<li>흥미를 가지고 공부할 수 있다.</li>
-<li>하지만 학습 과정에 있어서 지식에 구멍이 뚫려 아예 들어보지도 못한 부분이 존재할 수도 있다.</li>
+<li>무명의 리터럴로 생성할 수 있다. 즉, 런타임에 생성이 가능하다.</li>
+<li>변수나 자료구조(객체, 배열 등)에 저장할 수 있다.</li>
+<li>함수의 매개변수에게 전달할 수 있다.</li>
+<li>함수의 반환값으로 사용할 수 있다.</li>
 </ul>
-<ol start="2">
-<li>Bottom-up</li>
-</ol>
-<ul>
-<li>한 번 쭉 훑어볼 수 있어서 지식에 구멍이 뚫릴 일이 없다.</li>
-<li>하지만 고된 일이다.</li>
-</ul>
-<p>그리고 이번 자바스크립트를 공부할 때에는 아주 탄탄한 기본기, 깊게 공부하기 위해서 Bottom-up 방식을 선택해 아래와 같은 순서로 공부할 것이다.</p>
-<ol>
-<li>기본 개념과 동작원리(이해: 용어 및 개념, 문법)</li>
-<li>코딩 스킬(숙달: 의식적 연습, API, 라이브러리)</li>
-<li>프로젝트(경험)</li>
-</ol>
-<h2 id="자바스크립트와-ECMAScript"><a href="#자바스크립트와-ECMAScript" class="headerlink" title="자바스크립트와 ECMAScript"></a>자바스크립트와 ECMAScript</h2><p>자바스크립트는 컴파일 언어와 인터프리터 언어 둘 중 하나라고 정확히 단정지을 순 없지만, 따지자면 인터프리터 언어와 더 가깝다고 할 수 있다. 그리고 이러한 자바스크립트는 ECMAScript가 규정하는 핵심 문법을 포함하고 있다. ECMAScript는 자바스크립트의 표준 사양을 말하며 언어의 타입, 객체와 프로퍼티, 함수 등의 핵심 문법을 규정한다. 그리고 이러한 ECMAScript 사양을 준수해 브라우저 내장 자바스크립트 엔진을 구현하게 되는 것이다.</p>
-<p>브라우저에서 동작하는 자바스크립틑 DOM이라고 불리는 객체가 있지만 ECMAScript에는 그러한 명세가 없다. 예를 들어, Node.js에서는 다음과 같은 코드가 동작하지 않는다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">&quot;This code doesn&#x27;t work !&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>라는 조건을 만족하는 객체이다. 자바스크립트에서는 함수는 위 조건들을 만족하기 때문에 일급 객체인 것이다.</p>
+<p>즉, 함수를 일반적인 객체와 동일하게 사용할 수 있다는 것이다. 값으로써 사용할 수 있기 때문에 인수로 넘길 수 있고, 변수에 할당할 수 있고, 함수의 리턴 값으로 반환할 수도 있다.</p>
+<h2 id="함수-객체의-프로퍼티"><a href="#함수-객체의-프로퍼티" class="headerlink" title="함수 객체의 프로퍼티"></a>함수 객체의 프로퍼티</h2><p>함수는 객체이기 때문에, 아래와 같이 프로퍼티를 가질 수 있다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">arguments</span>: <span class="literal">null</span></span><br><span class="line">caller: <span class="literal">null</span></span><br><span class="line">length: <span class="number">0</span></span><br><span class="line">name: <span class="string">&quot;a&quot;</span></span><br><span class="line">prototype: &#123;<span class="attr">constructor</span>: ƒ&#125;</span><br><span class="line">__proto__: ƒ ()</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 
-<p>왜냐하면 ECMAScript에는 Client-side API에 대한 사양이 없기 때문이다. 따라서 Node.js 에서는 ECMAScript에 있는 사양만 동작하는 것이다. 반대로, 브라우저에서 동작하는 javaScript에는 사용자의 컴퓨터에서 동작하기 때문에 보안상 파일 시스템에 대한 API가 동작하지 않는다(읽는 것은 가능).</p>
-<blockquote>
-<p>프로그래밍은 요구사항의 집합을 분석해서 적절한 자료구조와 함수의 집합으로 변환한 후, 그 흐름을 제어하는 것이다.</p>
-</blockquote>
+<h3 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h3><p>함수 객체 프로퍼티 중 <code>arguments</code> 프로퍼티는 함수를 호출할 때 넘겨진 인수들을 담고 있는 유사 배열 객체이다.</p>
+<p>함수의 매개변수보다 더 많은 인수가 넘어오더라도 이를 무시하지 않고, <code>arguments</code> 에 차곡차곡 저장해놓는 것이다.</p>
+<p>참고로, 이와 비슷한 역할을 수행하는 Rest 파라미터라는 것도 있으며 사용법은 아래와 같다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sum(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>arguments</code> 는 유사 배열 객체이지만, <code>args</code> 같은 경우에는 배열이다. 따라서 <code>args</code> 를 가지고 <code>map</code>, <code>filter</code> 등의 배열 전용 고차함수를 사용할 수 있다.</p>
+<h3 id="caller"><a href="#caller" class="headerlink" title="caller"></a>caller</h3><p><code>caller</code> 는 비표준 프로퍼티이고, 자신의 함수 자신을 호출한 함수를 가리킨다. 많이 사용되지 않으므로 코드를 읽을 수 있을 정도로만 참고해두면 될 것 같다.</p>
+<h3 id="length"><a href="#length" class="headerlink" title="length"></a>length</h3><p>함수의 <code>length</code> 프로퍼티는 함수 정의시 선언한 매개변수의 개수이다. <code>arguments</code> 의 <code>length</code> 와 헷갈리면 안되는 것이, 함수의 <code>length</code> 객체는 매개변수의 개수이고, <code>arguments</code> 의 <code>length</code> 객체는 전달되는 인수의 개수이기 때문이다.</p>
+<h3 id="name"><a href="#name" class="headerlink" title="name"></a>name</h3><p><code>name</code> 은 함수의 이름을 나타낸다. 정식 표준이 되긴했지만, 사실 쓸 일이 많지 않다.</p>
+<p>참고로 <code>name</code> 프로퍼티는 ES5, ES6 에서 각자 동작을 달리하기 때문에 주의해야 한다.</p>
+<h3 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a>__proto__</h3><p>함수도 마찬가지로 prototype 을 가지며, 다른 객체와 마찬가지로 <code>foo.prototype</code> 로 접근할 수 있다.</p>
+<p>이 <code>prototype</code> 은 함수 객체만 가지고 있는데, <code>__proto__</code> 의 경우에도 브라우저에서 <code>console.dir</code> 로 확인할 수 있는데 이는 사용자가 확인하기 쉽도록 표현해준 것이다.</p>
+<h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h3><p><code>prototype</code> 프로퍼티는 <code>new</code> 를 통해서 생성자 함수를 호출할 수 있는 함수 객체인 construcor 가 소유한 프로퍼티이다.</p>
+<p>non-constructor 객체는 prototype 이 없다.</p>
+<p><code>prototype</code> 은 함수가 객체를 생성할 때(new 로 호출되었을 때) 생성할 인스턴스의 프로토타입 객체를 가리키는 역할을 한다.</p>
 
     </div>
 
@@ -304,14 +300,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/05/09/javascript/intro/" rel="prev" title="JavaScript 정리 시작">
-                  <i class="fa fa-chevron-left"></i> JavaScript 정리 시작
+                <a href="/2021/05/20/ps/boj-10942/" rel="prev" title="BOJ 10942 - 팰린드롬?">
+                  <i class="fa fa-chevron-left"></i> BOJ 10942 - 팰린드롬?
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/05/10/ps/boj-18119/" rel="next" title="BOJ 18119 - 단어 암기">
-                  BOJ 18119 - 단어 암기 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>

@@ -22,15 +22,15 @@
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="객체 생성 (생성자 사용)앞서 객체 리터럴로 객체를 생성하는 법에 대해서 알아보았다. 이번에는 리터럴이 아니라 생성자 함수를 사용해 객체를 만드는 법에 대해서 알아보겠다. Object 생성자 함수new 연산자로 Object 생성자 함수를 호출하게 되면 비어있는 객체가 생성된다. 이후에 프로퍼티를 추가해 객체를 완성시킬 수 있다. 123456789const">
+<meta name="description" content="객체 생성 (생성자 사용)앞서 객체 리터럴로 객체를 생성하는 법에 대해서 알아보았다. 이번에는 리터럴이 아니라 생성자 함수를 사용해 객체를 만드는 법에 대해서 알아보겠다. 하지만 생각보다 생성자 함수를 사용하는 빈도는 낮다. 왜냐하면 객체가 여러 개 필요하다면, (예를 들어서 TODO 리스트의 리스트 요소 객체의 경우) 함수를 만들어 객체 리터럴을 그때마다">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 14 - 객체 생성 (생성자)">
 <meta property="og:url" content="https://dooyeong20.github.io/2021/05/18/javascript/day14/index.html">
-<meta property="og:site_name" content="행복한 두영&#39;s 공간">
-<meta property="og:description" content="객체 생성 (생성자 사용)앞서 객체 리터럴로 객체를 생성하는 법에 대해서 알아보았다. 이번에는 리터럴이 아니라 생성자 함수를 사용해 객체를 만드는 법에 대해서 알아보겠다. Object 생성자 함수new 연산자로 Object 생성자 함수를 호출하게 되면 비어있는 객체가 생성된다. 이후에 프로퍼티를 추가해 객체를 완성시킬 수 있다. 123456789const">
+<meta property="og:site_name" content="두영&#39;s 공간">
+<meta property="og:description" content="객체 생성 (생성자 사용)앞서 객체 리터럴로 객체를 생성하는 법에 대해서 알아보았다. 이번에는 리터럴이 아니라 생성자 함수를 사용해 객체를 만드는 법에 대해서 알아보겠다. 하지만 생각보다 생성자 함수를 사용하는 빈도는 낮다. 왜냐하면 객체가 여러 개 필요하다면, (예를 들어서 TODO 리스트의 리스트 요소 객체의 경우) 함수를 만들어 객체 리터럴을 그때마다">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2021-05-18T03:42:06.000Z">
-<meta property="article:modified_time" content="2021-05-18T04:45:18.948Z">
+<meta property="article:modified_time" content="2021-05-21T08:23:07.046Z">
 <meta property="article:author" content="dooyeong">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
@@ -43,7 +43,7 @@
 <script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;05&#x2F;18&#x2F;javascript&#x2F;day14&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;18&#x2F;javascript&#x2F;day14&#x2F;&quot;,&quot;title&quot;:&quot;JavaScript 14 - 객체 생성 (생성자)&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>JavaScript 14 - 객체 생성 (생성자) | 행복한 두영's 공간</title><script src="/js/config.js"></script>
+<title>JavaScript 14 - 객체 생성 (생성자) | 두영's 공간</title><script src="/js/config.js"></script>
   
 
 
@@ -72,10 +72,11 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">행복한 두영's 공간</h1>
+      <h1 class="site-title">두영's 공간</h1>
       <i class="logo-line"></i>
     </a>
-      <img class="custom-logo-image" src="/images/devpost.jpg" alt="행복한 두영's 공간">
+      <p class="site-subtitle" itemprop="description">두영's 공간</p>
+      <img class="custom-logo-image" src="/images/devpost.jpg" alt="두영's 공간">
   </div>
 
   <div class="site-nav-right">
@@ -95,7 +96,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">65</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">66</span></a></li>
   </ul>
 </nav>
 
@@ -126,7 +127,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1-%EC%83%9D%EC%84%B1%EC%9E%90-%EC%82%AC%EC%9A%A9"><span class="nav-number">1.</span> <span class="nav-text">객체 생성 (생성자 사용)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98"><span class="nav-number">1.1.</span> <span class="nav-text">Object 생성자 함수</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EA%B0%9D%EC%B2%B4-%EB%A6%AC%ED%84%B0%EB%9F%B4-%EC%83%9D%EC%84%B1%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90"><span class="nav-number">1.2.</span> <span class="nav-text">객체 리터럴 생성의 문제점</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98%EC%97%90-%EC%9D%98%ED%95%9C-%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1%EC%9D%98-%EC%9E%A5%EC%A0%90"><span class="nav-number">1.3.</span> <span class="nav-text">생성자 함수에 의한 객체 생성의 장점</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98%EC%9D%98-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%83%9D%EC%84%B1-%EA%B3%BC%EC%A0%95"><span class="nav-number">1.4.</span> <span class="nav-text">생성자 함수의 인스턴스 생성 과정</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructor-amp-non-constructor"><span class="nav-number">1.5.</span> <span class="nav-text">constructor &amp; non-constructor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%BC%EB%B0%98-%ED%95%A8%EC%88%98%EB%A1%9C%EC%8D%A8%EC%9D%98-this"><span class="nav-number">1.6.</span> <span class="nav-text">일반 함수로써의 this</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new-target"><span class="nav-number">1.7.</span> <span class="nav-text">new.target</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1-%EC%83%9D%EC%84%B1%EC%9E%90-%EC%82%AC%EC%9A%A9"><span class="nav-number">1.</span> <span class="nav-text">객체 생성 (생성자 사용)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98"><span class="nav-number">1.1.</span> <span class="nav-text">Object 생성자 함수</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EA%B0%9D%EC%B2%B4-%EB%A6%AC%ED%84%B0%EB%9F%B4-%EC%83%9D%EC%84%B1%EC%9D%98-%EB%AC%B8%EC%A0%9C%EC%A0%90"><span class="nav-number">1.2.</span> <span class="nav-text">객체 리터럴 생성의 문제점</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98%EC%97%90-%EC%9D%98%ED%95%9C-%EA%B0%9D%EC%B2%B4-%EC%83%9D%EC%84%B1%EC%9D%98-%EC%9E%A5%EC%A0%90"><span class="nav-number">1.3.</span> <span class="nav-text">생성자 함수에 의한 객체 생성의 장점</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%83%9D%EC%84%B1%EC%9E%90-%ED%95%A8%EC%88%98%EC%9D%98-%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%83%9D%EC%84%B1-%EA%B3%BC%EC%A0%95"><span class="nav-number">1.4.</span> <span class="nav-text">생성자 함수의 인스턴스 생성 과정</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%A4%91%EB%B3%B5%EB%90%9C-%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0"><span class="nav-number">1.4.1.</span> <span class="nav-text">중복된 프로퍼티</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#constructor-amp-non-constructor"><span class="nav-number">1.5.</span> <span class="nav-text">constructor &amp; non-constructor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%BC%EB%B0%98-%ED%95%A8%EC%88%98%EB%A1%9C%EC%8D%A8%EC%9D%98-this"><span class="nav-number">1.6.</span> <span class="nav-text">일반 함수로써의 this</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new-target"><span class="nav-number">1.7.</span> <span class="nav-text">new.target</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -135,14 +136,14 @@
     <img class="site-author-image" itemprop="image" alt="dooyeong"
       src="/images/my.png">
   <p class="site-author-name" itemprop="name">dooyeong</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">좋은 개발자 기술 블로그</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-count">66</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -210,11 +211,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/my.png">
       <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="행복한 두영's 공간">
+      <meta itemprop="name" content="두영's 공간">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -228,10 +229,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">작성일</span>
-      
 
-      <time title="Post created: 2021-05-18 12:42:06 / Updated at: 13:45:18" itemprop="dateCreated datePublished" datetime="2021-05-18T12:42:06+09:00">2021-05-18</time>
+      <time title="Post created: 2021-05-18 12:42:06" itemprop="dateCreated datePublished" datetime="2021-05-18T12:42:06+09:00">2021-05-18</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-21 17:23:07" itemprop="dateModified" datetime="2021-05-21T17:23:07+09:00">2021-05-21</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -257,6 +264,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <h1 id="객체-생성-생성자-사용"><a href="#객체-생성-생성자-사용" class="headerlink" title="객체 생성 (생성자 사용)"></a>객체 생성 (생성자 사용)</h1><p>앞서 객체 리터럴로 객체를 생성하는 법에 대해서 알아보았다. 이번에는 리터럴이 아니라 생성자 함수를 사용해 객체를 만드는 법에 대해서 알아보겠다.</p>
+<p>하지만 생각보다 생성자 함수를 사용하는 빈도는 낮다. 왜냐하면 객체가 여러 개 필요하다면, (예를 들어서 TODO 리스트의 리스트 요소 객체의 경우) 함수를 만들어 객체 리터럴을 그때마다 리턴해주면 된다. 즉 반복문과 조합하면 어차피 여러 개를 만들 수 있다. 하지만 한 번에 한 개씩이 아니라 한 번에 여러 개의 객체가 동시에 생성되어야 한다면 객체 생성을 쓰면 되는 것이다.</p>
 <h2 id="Object-생성자-함수"><a href="#Object-생성자-함수" class="headerlink" title="Object 생성자 함수"></a>Object 생성자 함수</h2><p><code>new</code> 연산자로 <code>Object</code> 생성자 함수를 호출하게 되면 비어있는 객체가 생성된다. 이후에 프로퍼티를 추가해 객체를 완성시킬 수 있다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"></span><br><span class="line">person.name = <span class="string">&#x27;Lee&#x27;</span>;</span><br><span class="line">person.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Hi! My name is &#x27;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person);</span><br><span class="line"><span class="comment">// &#123;name: &quot;Lee&quot;, sayHello: ƒ&#125;</span></span><br></pre></td></tr></table></figure>
 
@@ -275,9 +283,13 @@
 <li>생성자 함수로 호출: 생성자 함수가 생성할 인스턴스</li>
 </ul>
 <p>이 <code>this</code> 라는 것은 아주 중요한 키워드이기 때문에 헷갈리지 않도록 확실히 정리해야할 필요가 있다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 일반적인 함수로서 호출</span></span><br><span class="line">foo(); <span class="comment">// window(or global)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 메서드로서 호출</span></span><br><span class="line"><span class="keyword">const</span> obj = &#123; foo &#125;;</span><br><span class="line">obj.foo(); <span class="comment">// obj</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 생성자 함수로서 호출</span></span><br><span class="line"><span class="keyword">const</span> inst = <span class="keyword">new</span> foo(); <span class="comment">// inst</span></span><br></pre></td></tr></table></figure>
+<p>앞서 살펴본 lexical scope 는 정적으로 선언된 곳을 기준으로 스코프를 결정했었다. 하지만 <code>this</code> 가 결정될 때는 동적으로 결정이 된다는 점이 매우 중요하다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 일반적인 함수로서 호출</span></span><br><span class="line">foo(); <span class="comment">// window(or global)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 메서드로서 호출</span></span><br><span class="line"><span class="keyword">const</span> obj = &#123; foo &#125;;</span><br><span class="line">obj.foo(); <span class="comment">// obj</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 생성자 함수로서 호출채ㅜㄴ</span></span><br><span class="line"><span class="keyword">const</span> inst = <span class="keyword">new</span> foo(); <span class="comment">// inst</span></span><br></pre></td></tr></table></figure>
 
-<p><code>this</code> 에 대한 더 자세한 내용은 뒤에서 따로 정리하도록 하겠다.</p>
+<p>아래 결과를 예측해보자.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> o1 = &#123;</span><br><span class="line">  p: <span class="built_in">this</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(o1.p); <span class="comment">// ?</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> o2 = &#123;</span><br><span class="line">  f: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(o1.p);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">o2.f(); <span class="comment">// ?</span></span><br><span class="line"><span class="keyword">new</span> o2.f(); <span class="comment">// ?</span></span><br></pre></td></tr></table></figure>
+
+<p>결과는 둘 다 전역객체(window or global)이다. 이렇듯 <code>this</code> 는 매우 변덕스럽기 때문에 잘 알고 써야한다. <code>this</code> 에 대한 더 자세한 내용은 뒤에서 따로 정리하도록 하겠다.</p>
 <h2 id="생성자-함수의-인스턴스-생성-과정"><a href="#생성자-함수의-인스턴스-생성-과정" class="headerlink" title="생성자 함수의 인스턴스 생성 과정"></a>생성자 함수의 인스턴스 생성 과정</h2><p>생성자 함수의 역할에 대해서 생각해보면, 생성자 함수는 인스턴스를 생성하는 것과 생성된 인스턴스를 초기화(인스턴스 프로퍼티 추가 및 초기값 할당)해야한다. 생성자 함수가 인스턴스를 생성하는 것은 물론 필수이다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Circle</span>(<span class="params">radius</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.radius = radius;</span><br><span class="line">  <span class="built_in">this</span>.getDiameter = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span> * <span class="built_in">this</span>.radius;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> circle1 = <span class="keyword">new</span> Circle(<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
 
@@ -296,6 +308,10 @@
 
 <p>그런데 명시적으로 원시값을 리턴할 경우에는 원시값이 무시되고 바인딩 된 <code>this</code> 가 반환되게 된다.</p>
 <p>따라서 정상적인 동작을 위해서 생성자 함수 내부에서는 <code>return</code> 문을 생략해야 한다.</p>
+<h3 id="중복된-프로퍼티"><a href="#중복된-프로퍼티" class="headerlink" title="중복된 프로퍼티"></a>중복된 프로퍼티</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">  <span class="built_in">this</span>.sayHi = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`hello my name is <span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>`</span>);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// this.sayHi() &#123; ~~~ &#125;</span></span><br><span class="line">  <span class="comment">// this로 표현할 때는 메서드 축약표현을 사용할 수 없다.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> me = <span class="keyword">new</span> Person(<span class="string">&#x27;Lee&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> you = <span class="keyword">new</span> Person(<span class="string">&#x27;Kim&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> park = <span class="keyword">new</span> Person(<span class="string">&#x27;Park&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>위 코드에서 name 프로퍼티는 각각의 인스턴스마다 고유의 값을 가지고 있기 때문에 인스턴스의 프로퍼티로 <code>name</code> 이라는 키를 각자 가지게 하는 것은 합당해보인다. 하지만 <code>sayHi</code> 의 경우에는 어떨까?</p>
+<p><code>sayHi</code> 는 같은 인스턴스들에 상관없이 항상 같은 동작을 하면서도 인스턴스의 수 만큼 메서드가 계속 새로 생성이 된다. 이는 합당해보이지 않는다. 따라서 이러한 경우에는 <code>Person</code> prototype에 sayHi 메서드를 추가해 공통적으로 소유하는 것이 합리적일 것이다.</p>
 <h2 id="constructor-amp-non-constructor"><a href="#constructor-amp-non-constructor" class="headerlink" title="constructor &amp; non-constructor"></a>constructor &amp; non-constructor</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">const</span> bar = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> baz = &#123;</span><br><span class="line">  x: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;, <span class="comment">// 프로퍼티 x의 값으로 할당된 것은 일반 함수로 정의된 함수다. 이는 메서드로 인정하지 않는다.</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> foo(); <span class="comment">// 가능</span></span><br><span class="line"><span class="keyword">new</span> bar(); <span class="comment">// 가능</span></span><br><span class="line"><span class="keyword">new</span> baz.x(); <span class="comment">// 가능</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> arrow = <span class="function">() =&gt;</span> &#123;&#125;;</span><br><span class="line"><span class="keyword">new</span> arrow(); <span class="comment">// TypeError: arrow is not a constructor</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  <span class="function"><span class="title">x</span>(<span class="params"></span>)</span> &#123;&#125;, <span class="comment">// 메서드 정의: ES6의 메서드 축약 표현만을 메서드로 인정한다.</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> obj.x(); <span class="comment">// TypeError: obj.x is not a constructor</span></span><br></pre></td></tr></table></figure>
 
 <p>즉 모든 함수는 callable 하지만 모든 함수가 constructor 로써 동작하지는 않는다는 것을 확인할 수 있다.<br><code>new</code> 연산자를 붙인다 하더라도 arrow function과 ES6 문법의 축약 표현 메서드는 constructor 로써 사용할 수 없는 것이다.</p>
