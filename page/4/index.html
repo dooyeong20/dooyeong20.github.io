@@ -93,7 +93,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">66</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">68</span></a></li>
   </ul>
 </nav>
 
@@ -139,7 +139,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">66</span>
+          <span class="site-state-item-count">68</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -192,6 +192,200 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/02/ps/boj-12025/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/02/ps/boj-12025/" class="post-title-link" itemprop="url">BOJ 12025 - 장난꾸러기 영훈</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-02 15:38:23 / Updated at: 16:50:07" itemprop="dateCreated datePublished" datetime="2021-05-02T15:38:23+09:00">2021-05-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="백준-12025-장난꾸러기-영훈"><a href="#백준-12025-장난꾸러기-영훈" class="headerlink" title="백준 12025 - 장난꾸러기 영훈"></a>백준 12025 - 장난꾸러기 영훈</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/12025">백준 12025번</a> 에서 풀어볼 수 있습니다.</li>
+</ul>
+<h2 id="문제설명"><a href="#문제설명" class="headerlink" title="문제설명"></a>문제설명</h2><p>희현이는 인터넷 ID를 만들 때 주로 쓰는 비밀번호가 있다. 하지만 이 비밀번호는 너무 길어서 희현이는 항상 쪽지에 적어 다니면서 확인을 한다. 하지만 장난꾸러기 영훈이는 이 쪽지를 가져가 1들 중 몇 개를 6로, 6들 중 몇 개를 1로 바꾸고 2들 중 몇 개를 7로 7들 중 몇 개를 2으로 바꾸는 장난을 쳤다. 따라서 영훈이가 장난쳐놓은 비밀번호 무용지물이 되었다. 왜냐하면 1이라고 쓰여 있어도 1 또는 6일수가 있고, 또한 6이라 쓰여 있어도 1 또는 6일수가 있다. 2과 7에서도 마찬가지이다. 하지만 희현이는 이러한 상황에 대비하여 비밀번호에 대한 한 가지 단서를 만들어 놓았는데 이는 다음과 같다.</p>
+<p>비밀번호 수열의 숫자 중 1과 6을 모두 1로, 2와 7을 모두 2으로 바꾼 숫자와 1과 6을 모두 6으로 2과 7을 모두 7로 바꾼 숫자 사이에 가능한 경우를 모두 사전순으로 나열한 다음 그 중 k번째가 비밀번호이다.</p>
+<p>따라서 이 단서를 통해 멘붕에 빠진 희현이를 도와 비밀번호를 다시 찾아보자.</p>
+<h3 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h3><ul>
+<li>비밀번호의 길이는 60자까지이고 첫 숫자가 0일수도 있다.)</li>
+<li>둘째 줄에 숫자 k가 주어진다. (k ≤ 2^63 – 1)</li>
+</ul>
+<h2 id="풀이"><a href="#풀이" class="headerlink" title="풀이"></a>풀이</h2><p>이 문제는 1,2,6,7 만 추출해낸 다음 순열로 문제를 풀 수도 있다. 하지만 주어진 k 입력의 크기가 2^63 -1 로 매우 크기 때문에 100% 시간초과가 날 것이라고 생각했다. 그리고 k 번째의 순열을 O(1)로 찾기 위해서 비트마스킹을 사용했는데, 어떻게 사용되는지 아래에서 보자.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. k &#x3D; 0</span><br><span class="line">&gt; 0000</span><br><span class="line"></span><br><span class="line">2. k &#x3D; 1</span><br><span class="line">&gt; 0001</span><br><span class="line"></span><br><span class="line">3. k &#x3D; 2</span><br><span class="line">&gt; 0010</span><br></pre></td></tr></table></figure>
+
+<p>이런식으로 이진수를 사용하게되면 자동적으로 k 번째에 해당하는 flag 조합을 쉽고 빠르게 구할 수 있게 된다. 따라서 주어진 비밀번호에서 1,2,6,7의 개수를 추출해 해당 개수만큼에 해당하는 비트열을 만든다음, 그 길이에 따른 k 번째 비트(순열)을 구해줄 수 있다. 예를 들어 <code>1122</code> 라는 문자열이 있을 때, 3 번째 비트는 <code>0010</code> 가 된다. 따라서 <code>1</code>에 해당하는 수를 큰 값으로 배치해주고, <code>0</code>에 해당하는 수를 작은 값으로 배치해주면 된다. 즉, 위 예시에서는 <code>1172</code>가 답이 되는 것이다.</p>
+<h2 id="소스-코드"><a href="#소스-코드" class="headerlink" title="소스 코드"></a>소스 코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"></span><br><span class="line">password = stdin.readline().strip()</span><br><span class="line">k = <span class="built_in">int</span>(stdin.readline())</span><br><span class="line">bit = <span class="number">1</span></span><br><span class="line">cnt = <span class="number">0</span></span><br><span class="line">ans = <span class="string">&#x27;&#x27;</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 비밀번호를 받아 1,2,6,7 일 경우에만 저장해놓음</span></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> password:</span><br><span class="line">    <span class="keyword">if</span> p == <span class="string">&#x27;1&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;6&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;2&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;7&#x27;</span>:</span><br><span class="line">        bit &lt;&lt;= <span class="number">1</span></span><br><span class="line">        cnt += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 만약 구하려는 k 번째가 가능한 순열의 경우의 수를 넘는다면 바로 종료</span></span><br><span class="line"><span class="keyword">if</span> k &gt; bit:</span><br><span class="line">    <span class="built_in">print</span>(-<span class="number">1</span>)</span><br><span class="line">    exit(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># bit의 길이를 맞춰주기 위해 좌측에 &#x27;0&#x27;으로 패딩처리</span></span><br><span class="line">bit = <span class="built_in">str</span>(<span class="built_in">bin</span>(bit - <span class="number">1</span> &amp; (k-<span class="number">1</span>))[<span class="number">2</span>:])</span><br><span class="line">bit = <span class="string">&#x27;0&#x27;</span> * (cnt - <span class="built_in">len</span>(bit)) + bit</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 해당 비트에 해당하는 경우에 따라서 수를 정해서 ans 에 저장해나감</span></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> password:</span><br><span class="line">    <span class="keyword">if</span> p == <span class="string">&#x27;1&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;6&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;2&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;7&#x27;</span>:</span><br><span class="line">        <span class="keyword">if</span> bit[i] == <span class="string">&#x27;0&#x27;</span>:</span><br><span class="line">            <span class="keyword">if</span> p == <span class="string">&#x27;6&#x27;</span>:</span><br><span class="line">                ans += <span class="string">&#x27;1&#x27;</span></span><br><span class="line">            <span class="keyword">elif</span> p == <span class="string">&#x27;7&#x27;</span>:</span><br><span class="line">                ans += <span class="string">&#x27;2&#x27;</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans += p</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> p == <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">            ans += <span class="string">&#x27;6&#x27;</span></span><br><span class="line">        <span class="keyword">elif</span> p == <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">            ans += <span class="string">&#x27;7&#x27;</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            ans += p</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    ans += p</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(ans)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h2><img src="/images/210502-1.png" width="800">
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/01/html-css/vlive-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/01/html-css/vlive-1/" class="post-title-link" itemprop="url">VLIVE 프로젝트 - 계획</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-05-01 16:27:20" itemprop="dateCreated datePublished" datetime="2021-05-01T16:27:20+09:00">2021-05-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-09 15:06:03" itemprop="dateModified" datetime="2021-05-09T15:06:03+09:00">2021-05-09</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/Project/" itemprop="url" rel="index"><span itemprop="name">Project</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="VLIVE-팀-프로젝트"><a href="#VLIVE-팀-프로젝트" class="headerlink" title="VLIVE 팀 프로젝트"></a>VLIVE 팀 프로젝트</h1><ul>
+<li><a href="https://dooyeong20.github.io/vlive/01_team/src/">완성된 프로젝트 보러가기</a></li>
+</ul>
+<p>단순한 디자인 및 기능 클론 코딩을 넘어서, 웹 표준 및 접근성을 고려해 WCAG 2.1에 조금 더 부합하는 VLIVE를 클론 코딩하는 것이 이번 팀 프로젝트의 목표이다.</p>
+<p>총 3명이서 프로젝트를 진행하며, VLIVE의 전체 서비스(페이지 및 기능)을 구현하는 것이 아니라, 중요한 페이지 하나를 선정해 기본적으로 반응형을 고려해 구현을 한다. 이 때 기존 웹을 분석해 아쉬운 점을 분석해보고 이를 토대로 웹 표준과 접근성을 최대한 고려해 코드를 짤 것이다.</p>
+<h2 id="VLIVE-웹-페이지의-구조"><a href="#VLIVE-웹-페이지의-구조" class="headerlink" title="VLIVE 웹 페이지의 구조"></a>VLIVE 웹 페이지의 구조</h2><p>VLIVE 는 크게 desktop, tablet, mobile 이렇게 총 3가지 사이즈(기기)에 반응형으로 대응하고 있다.</p>
+<h3 id="데스크탑-버전"><a href="#데스크탑-버전" class="headerlink" title="데스크탑 버전"></a>데스크탑 버전</h3><img src="/images/desktop.png" width="800"/>
+
+<h3 id="태블릿-버전"><a href="#태블릿-버전" class="headerlink" title="태블릿 버전"></a>태블릿 버전</h3><img src="/images/tablet.png" width="600"/>
+
+<h3 id="모바일-버전"><a href="#모바일-버전" class="headerlink" title="모바일 버전"></a>모바일 버전</h3><img src="/images/mobile.png" width="350"/>
+
+<p>이에 따라 반응형으로 VLIVE를 클론 코딩해볼 것이다.</p>
+<h2 id="VLIVE-마크업-구조-분석"><a href="#VLIVE-마크업-구조-분석" class="headerlink" title="VLIVE 마크업 구조 분석"></a>VLIVE 마크업 구조 분석</h2><p>VLIVE는 아래 그림과 같이 크게 보라색 - 빨간색 - 파란색 컨테이너로 구분되며, 파란색 컨테이너는 <code>flex</code>처리되어 있는 것을 보았다. 아마도 이렇게 구성한 이유는 사이즈 감소(반응)함에 따라 배치를 다르게하기 위해서 그런 것같다.</p>
+<img src="/images/vlive-structure.png" width="800"/>
+
+<p>하지만 이번 프로젝트에서는 <code>flex</code>가 아닌 <code>grid</code>를 사용해서 레이아웃을 짜고 반응형에 대응하기로 계획하였다. 하지만 <code>grid</code>의 경우에는 IE 등 브라우저 호환성의 문제가 있기 때문에 추가적으로 크로스 브라우징 관련 이슈를 정리할 계획을 추가적으로 짤 것이고, 일단 이 다음에는 직접 간단하게 컨테이너의 반응형 배치를 한번 해볼 것이다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1327,306 +1521,6 @@
 <li>R: Role</li>
 <li>P: Property</li>
 <li>S: State</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/13/html-css/html-css-09/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/13/html-css/html-css-09/" class="post-title-link" itemprop="url">HTML 표 컨텐츠와 양식</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-04-13 15:02:06" itemprop="dateCreated datePublished" datetime="2021-04-13T15:02:06+09:00">2021-04-13</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-05 23:06:52" itemprop="dateModified" datetime="2021-05-05T23:06:52+09:00">2021-05-05</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="HTML-표-컨텐츠와-양식"><a href="#HTML-표-컨텐츠와-양식" class="headerlink" title="HTML 표 컨텐츠와 양식"></a>HTML 표 컨텐츠와 양식</h1><h2 id="표-컨텐츠"><a href="#표-컨텐츠" class="headerlink" title="표 컨텐츠"></a>표 컨텐츠</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">caption</span>&gt;</span></span><br><span class="line">    Fruits</span><br><span class="line">  <span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">colgroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">col</span> <span class="attr">span</span>=<span class="string">&quot;2&quot;</span> <span class="attr">style</span>=<span class="string">&quot;background-color: yellowgreen;&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">col</span> <span class="attr">style</span>=<span class="string">&quot;background-color: tomato;&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">colgroup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>ID<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>Price<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>F123A<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Apple<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$22<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>F098B<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>Banana<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>$19<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="table-tr-th-td"><a href="#table-tr-th-td" class="headerlink" title="table, tr, th, td"></a>table, tr, th, td</h2><ul>
-<li><code>table</code>: display=table</li>
-<li><code>tr</code>: display=table-row</li>
-<li><code>th</code>,<code>td</code>: display=table-cell</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">table 태그 에다가 border-collapse: collapse;</span><br><span class="line">입력해주면 윤곽선이 자연스럽게 정리된다.</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>th는 테이블의 헤더 역할을 한다(글씨가 두껍게 되고 등등)</li>
-</ul>
-<h2 id="th"><a href="#th" class="headerlink" title="th"></a>th</h2><ul>
-<li><code>abbr</code> : 열에 대한 간단한 소개</li>
-<li><code>headers</code>: 관련된 하나 이상의 다른 머리글 칸 <code>id</code>속성 값</li>
-<li><code>colspan</code></li>
-<li><code>rowspan</code></li>
-<li><code>span</code>: 자신이 누구 머리글 칸인지 명시 (col, colgroup, row, rowgroup, auto(row))</li>
-</ul>
-<h2 id="td"><a href="#td" class="headerlink" title="td"></a>td</h2><ul>
-<li><code>headers</code> : 보통 <code>th</code>의 <code>id</code>에 서연결한다.</li>
-<li><code>colspan</code></li>
-<li><code>rowspan</code></li>
-</ul>
-<h2 id="caption"><a href="#caption" class="headerlink" title="caption"></a>caption</h2><ul>
-<li>display는 table-caption이다</li>
-<li>테이블 태그 바로 하위에 작성하며 테이블 제목의 역할을 수행한다</li>
-</ul>
-<h2 id="양식-태그"><a href="#양식-태그" class="headerlink" title="양식 태그"></a>양식 태그</h2><h2 id="lt-form-gt"><a href="#lt-form-gt" class="headerlink" title="&lt;form&gt;"></a><code>&lt;form&gt;</code></h2><p>웹 서버에 정보를 제출하기위한 양식의 범위를 정함</p>
-<ul>
-<li><code>action</code>: 전송한 정보를 처리할 url</li>
-<li><code>autocomplete</code>: 사용자가 이전에 입력한 값으로 자동완성 할지 여부</li>
-<li><code>method</code>: 서버로 전송할 방식</li>
-<li><code>novalidate</code>: 유효성을 검사하지 않도록 지정</li>
-<li><code>target</code>: 서버로 전송 후 응답받을 방식을 지정</li>
-</ul>
-<h2 id="lt-input-gt"><a href="#lt-input-gt" class="headerlink" title="&lt;input&gt;"></a><code>&lt;input&gt;</code></h2><p>사용자에게 입력받을 데이터 양식</p>
-<ul>
-<li><p><code>autofocus</code>: 페이지가 로드될 때 자동으로 포커스</p>
-</li>
-<li><p><code>form</code>: 폼 바깥에 작성한 것을 이어주는 역할</p>
-</li>
-<li><p><code>type</code>: 입력할 수 있는 종류</p>
-<ul>
-<li><code>button</code></li>
-<li><code>checkbox</code></li>
-<li><code>color</code> 등</li>
-<li>예를 들어서,<code>type=number</code>과 같이 숫자를 입력하려고 했으면 숫자만 입력이 됨</li>
-<li><code>image</code> 이미지로 끝나지 않고, 제출 버튼으로 활용할 수 있다.</li>
-<li><code>reset</code> 데이터는 자신이 포함된 <code>form</code>태그 내의 <code>input</code>들을 초기화한다.</li>
-</ul>
-</li>
-<li><p><code>placeholder</code>: 사용자에게 힌트를 줌</p>
-</li>
-</ul>
-<h2 id="lt-label-gt"><a href="#lt-label-gt" class="headerlink" title="&lt;label&gt;"></a><code>&lt;label&gt;</code></h2><p>라벨 가능 요소(labelable)의 제목(Caption).</p>
-<ul>
-<li>for 속성으로 라벨 가능 요소를 참조하거나 콘텐츠로 포함.</li>
-<li>라벨 가능 요소: <code>&lt;button&gt;, &lt;input&gt;, &lt;progress&gt;, &lt;select&gt;, &lt;textarea&gt;</code></li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 라벨 가능 요소를 참조 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;user-agreement&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;user-agreement&quot;</span>&gt;</span>동의하십니까?<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 라벨 가능 요소를 포함 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> /&gt;</span>동의하십니까?<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="lt-button-gt"><a href="#lt-button-gt" class="headerlink" title="&lt;button&gt;"></a><code>&lt;button&gt;</code></h2><ul>
-<li>autofocus 페이지가 로드될 때 자동으로 포커스</li>
-<li>disabled 버튼을 비활성화</li>
-<li>form <code>&lt;form&gt;</code>의 id 속성 값</li>
-<li>name 폼 데이터와 함께 전송되는 버튼의 이름</li>
-<li>type 버튼의 타입<ul>
-<li><code>button</code>, <code>submit</code>, <code>reset</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="lt-textarea-gt"><a href="#lt-textarea-gt" class="headerlink" title="&lt;textarea&gt;"></a><code>&lt;textarea&gt;</code></h2><p>여러 줄의 일반 텍스트 양식</p>
-<ul>
-<li>display: inline-block</li>
-<li>rows 양식의 줄 수 숫자(Number)<ul>
-<li>default: 2</li>
-</ul>
-</li>
-</ul>
-<h2 id="lt-fieldset-gt-lt-legend-gt"><a href="#lt-fieldset-gt-lt-legend-gt" class="headerlink" title="&lt;fieldset&gt;, &lt;legend&gt;"></a><code>&lt;fieldset&gt;, &lt;legend&gt;</code></h2><p>같은 목적의 양식을 그룹화(<code>&lt;fieldset&gt;</code>)하여 제목(<code>&lt;legend&gt;</code>)을 지정</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-08/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/12/html-css/html-css-08/" class="post-title-link" itemprop="url">HTML 멀티미디어 & 내장 콘텐츠 (2)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-04-12 17:31:06" itemprop="dateCreated datePublished" datetime="2021-04-12T17:31:06+09:00">2021-04-12</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-05 23:06:49" itemprop="dateModified" datetime="2021-05-05T23:06:49+09:00">2021-05-05</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="멀티미디어-amp-내장-콘텐츠"><a href="#멀티미디어-amp-내장-콘텐츠" class="headerlink" title="멀티미디어 &amp; 내장 콘텐츠"></a>멀티미디어 &amp; 내장 콘텐츠</h1><h2 id="audio-Tag"><a href="#audio-Tag" class="headerlink" title="audio Tag"></a>audio Tag</h2><p>소리 콘텐츠(MP3)를 삽입, inline 요소</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">autoplay가 지정된 경우, preload는 무시</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>autoplay</code> 준비되면 바로 재생 불린(Boolean)</li>
-<li><code>controls</code> 제어 메뉴를 표시 불린(Boolean)</li>
-<li><code>loop</code> 재생이 끝나면 다시 처음부터 재생 불린(Boolean)</li>
-<li><code>preload</code> 페이지가 로드될 때 파일을 로드할지의 지정(힌트 제공)<ul>
-<li><code>none</code>: 로드하지 않음</li>
-<li><code>metadata</code>: 메타데이터만 로드</li>
-<li><code>auto</code>: 전체 파일 로드</li>
-</ul>
-</li>
-<li><code>src</code> 콘텐츠 URL</li>
-<li><code>muted</code> 음소거 여부 불린(Boolean)</li>
-</ul>
-<h2 id="video-Tag"><a href="#video-Tag" class="headerlink" title="video Tag"></a>video Tag</h2><p>동영상 콘텐츠 삽입, inline 요소</p>
-<ul>
-<li><code>autoplay</code> 준비되면 바로 재생 불린(Boolean)</li>
-<li><code>controls</code> 제어 메뉴를 표시 불린(Boolean)</li>
-<li><code>loop</code> 재생이 끝나면 다시 처음부터 재생 불린(Boolean)</li>
-<li><code>muted</code> 음소거 여부 불린(Boolean)</li>
-<li><code>poster</code> 동영상 썸네일 이미지 URL</li>
-<li><code>preload</code> 페이지가 로드될 때 파일을 로드할지의 지정(힌트 제공)<ul>
-<li><code>none</code>: 로드하지 않음</li>
-<li><code>metadata</code>: 메타데이터만 로드 (기본값)</li>
-<li><code>auto</code>: 전체 파일 로드</li>
-</ul>
-</li>
-<li><code>src</code> 콘텐츠 URL URL</li>
-<li><code>width</code> 동영상 가로 너비</li>
-<li><code>height</code> 동영상 세로 너비</li>
-</ul>
-<h2 id="figure-figcaption-tag"><a href="#figure-figcaption-tag" class="headerlink" title="figure, figcaption tag"></a>figure, figcaption tag</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">figure &#123; display: block; &#125;</span><br><span class="line">figcation &#123; display: inline; &#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">figure</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;milk.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;A milk&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">figcaption</span>&gt;</span>Milk is a nutrient-rich, white liquid.<span class="tag">&lt;/<span class="name">figcaption</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="iframe-Tag"><a href="#iframe-Tag" class="headerlink" title="iframe Tag"></a>iframe Tag</h2><p>다른 페이지를 현재 페이지에 삽입(HTML)</p>
-<ul>
-<li>inline 요소</li>
-<li>iframe tag(html)에다가 height, width 를 정할 수 있음</li>
-</ul>
-<h3 id="iframe-속성들"><a href="#iframe-속성들" class="headerlink" title="iframe 속성들"></a>iframe 속성들</h3><ul>
-<li><code>name</code></li>
-<li><code>frameborder</code> : 기본 값은 1</li>
-<li><code>allowfullscreen</code></li>
-<li><code>sandbox</code>: 보안을 위한 읽기 전용으로 삽입s<ul>
-<li><code>allow-form</code></li>
-<li><code>allow-scripts</code></li>
-<li><code>allow-same-origin</code>: 같은 출처(도메인) 리소스 사용 가능</li>
 </ul>
 </li>
 </ul>
