@@ -93,7 +93,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">68</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">70</span></a></li>
   </ul>
 </nav>
 
@@ -139,7 +139,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -192,6 +192,243 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/20/html-css/html-css-11/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 지식 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/20/html-css/html-css-11/" class="post-title-link" itemprop="url">HTML layout(1)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-04-20 13:32:06" itemprop="dateCreated datePublished" datetime="2021-04-20T13:32:06+09:00">2021-04-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-05 23:06:59" itemprop="dateModified" datetime="2021-05-05T23:06:59+09:00">2021-05-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="마크업"><a href="#마크업" class="headerlink" title="마크업"></a>마크업</h2><p>논리성이 중요함</p>
+<ul>
+<li>마크업은 논리적으로 와닿을 수 있도록 하는 것이 중요</li>
+<li>디자인을 보고 그대로 따라서 마크업 하는 것이 아니고, 실제 사용을 염두해두고 논리적인 순서에 따라 마크업하는 습관</li>
+<li>디자인 외적으로 최대한 semantic하게 마크업 해야 함</li>
+</ul>
+<h2 id="WAI-ARIA"><a href="#WAI-ARIA" class="headerlink" title="WAI-ARIA"></a>WAI-ARIA</h2><p>웹 표준, 접근성의 중요성</p>
+<ul>
+<li>fontawesome: aria-hidden=”true”</li>
+<li>display: none 보다는 접근성을 조금 더 고려한 aria-hidden을 이해해야 한다.</li>
+</ul>
+<h2 id="nav-tag"><a href="#nav-tag" class="headerlink" title="nav tag"></a>nav tag</h2><p>메뉴라고 다 네비게이션을 사용하지 말고, 실제로 중요한 메뉴에만 nav 태그를 사용한다.</p>
+<h2 id="a-tag와-aria"><a href="#a-tag와-aria" class="headerlink" title="a tag와 aria"></a>a tag와 aria</h2><p>button 태그를 사용하지 않고, a 태그를 버튼으로 쓰고자 한다면 다음 사항을 고려해야 함</p>
+<ul>
+<li>a 태그에 role=”button” 을 주어서 스크린 리더가 버튼으로 인식하도록 함</li>
+<li>aria-pressed=”true” : 눌렸을 때</li>
+<li>aria-haspopup=”true”: 뭔가를 가졌는지</li>
+</ul>
+<h2 id="컨텐츠-숨기기"><a href="#컨텐츠-숨기기" class="headerlink" title="컨텐츠 숨기기"></a>컨텐츠 숨기기</h2><p>릴반적으로 <code>position: absolute; top:-10000px</code> 혹은 <code>display: none</code> 과 같은 방법으로 컨텐츠를 숨기지만 이는 접근성 측면에서 좋은 방법이 아니다.<br>다음과 같은 방법을 통해서 컨텐츠를 숨긴다면, 스크린 리더가 해당 컨텐츠를 읽을 수 있으며, 확면단에서 감출 수 있으므로 좋은 방법 중 하나라고 할 수 있다.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.a11y-hidden</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: aqua;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: -<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">visibility</span>: hidden;</span><br><span class="line">  <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">  <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">  <span class="attribute">clip-path</span>: <span class="built_in">polygon</span>(<span class="number">0</span> <span class="number">0</span>, <span class="number">0</span> <span class="number">0</span>, <span class="number">0</span> <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="박스-border-표시하기"><a href="#박스-border-표시하기" class="headerlink" title="박스 border 표시하기"></a>박스 border 표시하기</h2><p>컨텐츠의 하단혹은 상단 등 선을 그어야 할 때 보통 <code>border</code> 프로퍼티를 활용한다. 하지만 <code>box-shadow</code> 속성을 통해서도 이를 충분히 구현할 수 있다.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* border 속성을 직접 주는 경우 */</span></span><br><span class="line"><span class="attribute">border-top</span>: <span class="number">2px</span> solid <span class="number">#000</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* box-shadow 속성을 통해서 border-top을 구현하는 경우 */</span></span><br><span class="line"><span class="attribute">box-shadow</span>: <span class="number">0</span> -<span class="number">2px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">#000</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="float-해제하는-방법들"><a href="#float-해제하는-방법들" class="headerlink" title="float 해제하는 방법들"></a>float 해제하는 방법들</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.float-parent</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flow-root;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.float-class</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>위 방식은, 사람들에게 많이 알려지지 않은 flow clear 방식이다. 보통은 float 자식들의 마지막 요소에 `clear: left | right | both 등으로 float을 해제한다.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">  <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>혹은</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.float-parent</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>과 같은 방식을 주로 사용하곤 한다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/19/html-css/html-css-10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 지식 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/19/html-css/html-css-10/" class="post-title-link" itemprop="url">Web과 HTML</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-04-19 13:02:06" itemprop="dateCreated datePublished" datetime="2021-04-19T13:02:06+09:00">2021-04-19</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-05 23:06:57" itemprop="dateModified" datetime="2021-05-05T23:06:57+09:00">2021-05-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="환경에-대한-이해"><a href="#환경에-대한-이해" class="headerlink" title="환경에 대한 이해"></a>환경에 대한 이해</h2><ol>
+<li>다양한 Platform</li>
+<li>Cross Browsing</li>
+<li>SEO (Search Engine Optimization)</li>
+<li>저사양 또는 저속회선</li>
+</ol>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>1993년 최초버전. W3C가 XHTML1.0을 구체화하기 위해 XHTML2.0작업을 진행을 시도</p>
+<ul>
+<li><p>HTML 4.01 vs XHTML 1.0</p>
+<ul>
+<li>재정의 한 것이기 때문에 비슷함</li>
+<li>HTML 은 자유도가 너무 높았음</li>
+<li>애플, 모질라, 오페라가 w3c와 별개로 작업함(WHATWG)</li>
+</ul>
+</li>
+<li><p>HTML5 정보 구조를 명확히 할 수 있도록 아웃라인 알고리즘(?)이라는 것이 있음</p>
+</li>
+<li><p>HTML5는 HTML 4.01과 XHTML1.0을 모두 수용했다.</p>
+</li>
+</ul>
+<h2 id="Naming"><a href="#Naming" class="headerlink" title="Naming"></a>Naming</h2><ol>
+<li>S (snake): main_content</li>
+<li>K (kebob): main-content</li>
+<li>C (camel): mainContent</li>
+<li>P ()</li>
+</ol>
+<h4 id="용어"><a href="#용어" class="headerlink" title="용어"></a>용어</h4><ul>
+<li>전체적인 변천사, 맥락을 알아야 함</li>
+<li>DTD (Strict, Transitional, Frameset)</li>
+<li>XHTML1.0, 2.0</li>
+<li>W3C가 XHTML 2.0실패를 인정 후 WAHTWG 표준안을 대부분 수용해서 HTML5 탄생</li>
+<li>WAI - A(accessbility)RIA<ul>
+<li>R: Role</li>
+<li>P: Property</li>
+<li>S: State</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1191,261 +1428,6 @@
 <ul>
 <li><code>&lt;ul&gt;</code>은 <code>&lt;section&gt;</code>의 자식 요소이면서 <code>&lt;li&gt;</code>의 부모 요소</li>
 <li>부모보다 높다면 조상(상위)요소</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/12/html-css/html-css-01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 지식 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/12/html-css/html-css-01/" class="post-title-link" itemprop="url">HTML/CSS/JavaScript와 웹 표준, 접근성</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-04-12 10:44:06" itemprop="dateCreated datePublished" datetime="2021-04-12T10:44:06+09:00">2021-04-12</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-05 23:06:26" itemprop="dateModified" datetime="2021-05-05T23:06:26+09:00">2021-05-05</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="HTML-CSS-JavaScript"><a href="#HTML-CSS-JavaScript" class="headerlink" title="HTML, CSS, JavaScript"></a>HTML, CSS, JavaScript</h2><p>웹에서 동작하는 3가지 언어들</p>
-<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>페이지에 제목, 문단, 표 이미지 등을 정의하고 <strong>구조</strong>와 의미를 부여하는 정적인 언어</p>
-<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p>Cascading Style Sheets 콘텐츠 구조를 <strong>꾸며주는 언어</strong> 웹의 시작적 표현을 담당.</p>
-<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>컨텐츠를 <strong>동적으로</strong> 꾸며주는 역할을 하는 언어</p>
-<ul>
-<li>HTML, CSS 역할도 할 수는 있지만, 동적인 업무에만 치중하는게 중요</li>
-</ul>
-<h2 id="웹-표준"><a href="#웹-표준" class="headerlink" title="웹 표준"></a>웹 표준</h2><p>웹 표준(Web Standard)이란 ‘웹에서 사용되는 표준 기술이나 규칙’</p>
-<ul>
-<li><p>W3C의 권고안에서 나온 기술들이 여기에 해당</p>
-</li>
-<li><p>브라우저를 만드는 업체(구글, MS, 애플 같은)에서 표준 기술을 해석하는 차이, 새로운 기술 삽입(표준화 제정 단계에 따른) 등으로 조금은 다르게 구동되는 브라우저가 생기게 됨</p>
-</li>
-<li><p>대부분의 경우 표준화 제정 단계의 <strong>‘권고안(REC)’</strong> 에 해당하는 기술을 표준이라고</p>
-</li>
-</ul>
-<h2 id="크로스-브라우징"><a href="#크로스-브라우징" class="headerlink" title="크로스 브라우징"></a>크로스 브라우징</h2><p>조금은 다르게 구동되는 여러 브라우저에서 동일한 사용자 경험(같은 화면, 같은 동작 등)을 줄 수 있도록 제작하는 기술, 방법</p>
-<ul>
-<li>IE에서도 동작하게 하는 것을 크로스 브라우징이라고 부르기도 합니다.(대부분의 경우 IE에서 문제가 없으면 다른 브라우저는 OK!</li>
-</ul>
-<h2 id="웹-접근성"><a href="#웹-접근성" class="headerlink" title="웹 접근성"></a>웹 접근성</h2><p><strong>일반 사용자</strong>부터 고령자, 장애인 같은 신체적, 환경적 조건에 <strong>제한이 있는 사용자</strong>를 포함해 모든 사용자들이 동등하게 접근할 수 있는 웹 콘텐츠를 제작하는 방법</p>
-<ul>
-<li>자막을 넣는 것</li>
-<li>키보드로만 사용가능한 웹</li>
-<li>대체 텍스트 등</li>
-<li>팀 버너스 리 경: 웹의 창시자</li>
-</ul>
-<h3 id="정보-통신-보조기기"><a href="#정보-통신-보조기기" class="headerlink" title="정보 통신 보조기기"></a>정보 통신 보조기기</h3><p>장애인의 경우 다음과 같은 정보 통신 보조기기를 통해 웹 콘텐츠에 접근</p>
-<ul>
-<li>개인 구매 혹은 정부 기관이나 장애인 복지시설에서 임대하여 사용</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1. 한손 사용자용 키보드: 편마비 장애인을 위해 한손으로 타이핑하게 디자인되어있는 키보드</span><br><span class="line"></span><br><span class="line">2. 큰 키 키보드: 키보드의 입력 버튼을 크게 만들어 손 떨림이나 상지 기능에 장애가 있는 분에게 적합하며, 키가드가 있어 오타를 방지할 수 있는 특수 키보드</span><br><span class="line"></span><br><span class="line">3. n-Abler 조이스틱: 팔의 움직임이 원활하지 못해 일반 마우스를 사용하기 어려운 분들을 위한 조이스틱 마우스</span><br><span class="line"></span><br><span class="line">4. SmartNav: 상지 및 하지를 사용하기 어려운 분들이 머리의 움직임을 통해(적외선 및 난반사 스티커 활용) 컨트롤할 수 있는 특수 마우스</span><br><span class="line"></span><br><span class="line">5. 소리 알리미: 소리 정보를 불빛과 진동으로 알려주는 청각장애인용 무선신호기</span><br></pre></td></tr></table></figure>
-
-<h3 id="웹-접근성-품질인증-마크"><a href="#웹-접근성-품질인증-마크" class="headerlink" title="웹 접근성 품질인증 마크"></a>웹 접근성 품질인증 마크</h3><p>장애인 및 고령자가 웹 사이트 이용에 불편이 없도록 웹 접근성 표준을 준수한 우수 사이트에 대해 품질을 인증</p>
-<ul>
-<li>과학기술정보통신부가 지정한 웹 접근성 품질인증 기관</li>
-<li>페이지 수에 따라 기본 100만원 이상의 심사 비용을 지불</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/09/ds-algo/ds-algo-13/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 지식 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/09/ds-algo/ds-algo-13/" class="post-title-link" itemprop="url">크루스칼 알고리즘</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-04-09 14:00:57" itemprop="dateCreated datePublished" datetime="2021-04-09T14:00:57+09:00">2021-04-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-01 17:59:20" itemprop="dateModified" datetime="2021-05-01T17:59:20+09:00">2021-05-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Kruskal’s-Algorithm"><a href="#Kruskal’s-Algorithm" class="headerlink" title="Kruskal’s Algorithm"></a>Kruskal’s Algorithm</h1><p>어느 그래프의 Subgraph 중, 다음 조건을 만족하는 그래프</p>
-<ol>
-<li>본 그래프의 모든 노드를 포함</li>
-<li>모든 노드가 서로 연결 (Connected Graph)</li>
-<li>사이클이 존재하지 않음 (Acyclic Graph)</li>
-</ol>
-<p>위 조건들을 만족하는 그래프 중 간선 가중치의 합이 최소인 그래프</p>
-<ul>
-<li>무향 그래프일 때 동작함</li>
-<li>미로 생성에도 사용됨</li>
-</ul>
-<h2 id="알고리즘-동작"><a href="#알고리즘-동작" class="headerlink" title="알고리즘 동작"></a>알고리즘 동작</h2><p>그리디하게 동작하는 알고리즘</p>
-<ol>
-<li>모든 간선을 가중치를 기준으로 오름차순 정렬 (O(eloge))</li>
-<li>작은 가중치의 간선부터 하나씩 선택하여 MST를 구성한다.</li>
-<li>이 과정에서 사이클을 형성하는 간선은 선택하지 않는다.</li>
-<li>사이클 형성을 판단하는 알고리즘은 Union-Find 알고리즘</li>
-</ol>
-<h2 id="union-find"><a href="#union-find" class="headerlink" title="union find"></a>union find</h2><h3 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h3><p>각 노드들이 집합에 포합되어 있다고 가정하고, 같은 집합에 포함시킴</p>
-<ul>
-<li>각 노드들이 들어있는 집합의 루트노드를 다른 집합의 루트를 바라보게</li>
-</ul>
-<h3 id="Union-최적화"><a href="#Union-최적화" class="headerlink" title="Union 최적화"></a>Union 최적화</h3><ul>
-<li>union-by-rank<ul>
-<li>rank가 증가하는 속도를 O(logN)으로 줄여주는 효과</li>
-</ul>
-</li>
-</ul>
-<h3 id="Find"><a href="#Find" class="headerlink" title="Find"></a>Find</h3><p>각 노드들의 집합의 루트 노드를 찾는 과정이다</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find(x) = find(parent(x))</span><br></pre></td></tr></table></figure>
-
-<h3 id="Find-최적화"><a href="#Find-최적화" class="headerlink" title="Find 최적화"></a>Find 최적화</h3><ul>
-<li>Path Comprehension<ul>
-<li>memoization으로 됨</li>
-</ul>
-</li>
-</ul>
-<h2 id="최적화"><a href="#최적화" class="headerlink" title="최적화"></a>최적화</h2><p>유니온과 파인드 둘다 최적화를 함으로써 최적의 결과를 얻을 수 있다.<br>해당 알고리즘의 시간 복잡도는 따라서, O(eloge) + O(v)가 된다.</p>
-<h1 id="Prim-Algorithm"><a href="#Prim-Algorithm" class="headerlink" title="Prim Algorithm"></a>Prim Algorithm</h1><p>크루스칼과는 다르게, vertex를 기준으로 인접 노드들을 하나씩 추가해나가는 방법</p>
-<ul>
-<li>하나에서부터 점점 확장해나가는 방식이라고 할 수 있음<ul>
-<li>그래서 union find가 필요없이 현재 집합에 있는지 여부로만 구현 가능</li>
-</ul>
-</li>
-<li>선택한 노드로부터 가장 낮은 가중치를 갖는 간선으로 이어지는 노드 선택<ul>
-<li>이 과정을 모든 노드가 선택될때까지 반복 (O(V^2))</li>
-<li>최적화 알고리즘 적용 시 시간복잡도는 O(ElogV)</li>
-</ul>
-</li>
-</ul>
-<h2 id="Kruscal-vs-Prim"><a href="#Kruscal-vs-Prim" class="headerlink" title="Kruscal vs Prim"></a>Kruscal vs Prim</h2><ul>
-<li>O(ElogE) vs O(ElogV)</li>
-<li>sparse 하면 크루스칼 사용</li>
-<li>dense 하면 프림 사용</li>
 </ul>
 
       
