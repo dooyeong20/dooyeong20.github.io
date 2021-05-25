@@ -93,7 +93,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">73</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">74</span></a></li>
   </ul>
 </nav>
 
@@ -139,7 +139,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">73</span>
+          <span class="site-state-item-count">74</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -192,6 +192,102 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/25/ps/boj-1167/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 지식 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/25/ps/boj-1167/" class="post-title-link" itemprop="url">BOJ 1167 - 트리의 지름</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-25 16:40:23 / Updated at: 16:52:13" itemprop="dateCreated datePublished" datetime="2021-05-25T16:40:23+09:00">2021-05-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="백준-1167-트리의-지름"><a href="#백준-1167-트리의-지름" class="headerlink" title="백준 1167 - 트리의 지름"></a>백준 1167 - 트리의 지름</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/1167">여기</a>에서 문제를 풀어볼 수 있습니다.</li>
+</ul>
+<h2 id="문제설명"><a href="#문제설명" class="headerlink" title="문제설명"></a>문제설명</h2><p>트리의 지름이란, 트리에서 임의의 두 점 사이의 거리 중 가장 긴 것을 말한다. 트리의 지름을 구하는 프로그램을 작성하시오.</p>
+<p>트리가 입력으로 주어진다. 먼저 첫 번째 줄에서는 트리의 정점의 개수 V가 주어지고 (2 ≤ V ≤ 100,000)둘째 줄부터 V개의 줄에 걸쳐 간선의 정보가 다음과 같이 주어진다. 정점 번호는 1부터 V까지 매겨져 있다.</p>
+<p>먼저 정점 번호가 주어지고, 이어서 연결된 간선의 정보를 의미하는 정수가 두 개씩 주어지는데, 하나는 정점번호, 다른 하나는 그 정점까지의 거리이다. 예를 들어 네 번째 줄의 경우 정점 3은 정점 1과 거리가 2인 간선으로 연결되어 있고, 정점 4와는 거리가 3인 간선으로 연결되어 있는 것을 보여준다. 각 줄의 마지막에는 -1이 입력으로 주어진다. 주어지는 거리는 모두 10,000 이하의 자연수이다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Input</span><br><span class="line">-----</span><br><span class="line">5</span><br><span class="line">1 3 2 -1</span><br><span class="line">2 4 4 -1</span><br><span class="line">3 1 2 4 3 -1</span><br><span class="line">4 2 4 3 3 5 6 -1</span><br><span class="line">5 4 6 -1</span><br><span class="line"></span><br><span class="line">Output</span><br><span class="line">------</span><br><span class="line">11</span><br></pre></td></tr></table></figure>
+
+<h2 id="풀이"><a href="#풀이" class="headerlink" title="풀이"></a>풀이</h2><p>해당 문제를 보고 처음에는 단순 dfs를 통해서 트리의 루트(혹은 리프)노드에서 다른 리프까지 탐색하는 과정을 통해서 최댓값을 찾을 수 있는지를 물어보는 문제인줄 알고 단순히 dfs를 통해서 아래와 같이 접근하려 해보았다.</p>
+<p>하지만 시간초과가 나서, 다시 생각을 해보니 로직 중</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(adjList)):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(adjList[i]) == <span class="number">1</span>:</span><br><span class="line">        ans = <span class="built_in">max</span>(ans, dfs(i, -<span class="number">2</span>, <span class="number">0</span>))</span><br></pre></td></tr></table></figure>
+
+<p>해당 부분에서 인접한 노드가 1인 노드들, 즉 리프 노드와 루트노드 각각 모두 dfs를 돌려주어 시간초과가 난 것이었다. 입력되는 V의 범위가 100,000 이기 때문에 나의 방식은 O(V^2)이 된 것이었고, 시간초과가 나는 것은 당연한 결과였다.</p>
+<p>그래서 어떻게든 다른 방법을 찾아야겠다고 생각했고, 단순히 완전 탐색이 아니라 지름을 구성하고 있는 양 꼭지점(?) 중 하나를 먼저 구할 수 있다는 힌트를 얻어 문제를 풀어주었다.</p>
+<p>임의의 노드에서 가장 멀리 있는 노드(가중치의 합이 가장 큰 노드)가 지름을 구성하는 두 노드 중 하나라는 점이다. 이러한 힌트 및 증명은 <a target="_blank" rel="noopener" href="https://blog.myungwoo.kr/112">이 블로그</a>를 참고하였다.</p>
+<p>따라서 bfs를 사용해 한 노드를 찾아주었고, 해당 노드에서 bfs를 한 번 더 수행해 해당 노드로부터의 가중치의 합(거리)를 구해주는 방식으로 문제를 풀어주었다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"></span><br><span class="line">V = <span class="built_in">int</span>(stdin.readline())</span><br><span class="line">adjList = [[] <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(V + <span class="number">1</span>)]</span><br><span class="line">distances = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(V + <span class="number">1</span>)]</span><br><span class="line">dot = [<span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(V):</span><br><span class="line">    info = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split()))</span><br><span class="line">    v = info[<span class="number">0</span>]</span><br><span class="line">    idx = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> info[idx] != -<span class="number">1</span>:</span><br><span class="line">        adjList[v].append((info[idx], info[idx+<span class="number">1</span>]))</span><br><span class="line">        idx += <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bfs</span>(<span class="params">i, j</span>):</span></span><br><span class="line">    q = deque()</span><br><span class="line">    v = [<span class="literal">False</span>] * (V + <span class="number">1</span>)</span><br><span class="line">    distances[i] = <span class="number">0</span></span><br><span class="line">    q.append(i)</span><br><span class="line">    v[i] = <span class="literal">True</span></span><br><span class="line">    maxDist = -<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> q:</span><br><span class="line">        cur = q.popleft()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> adj <span class="keyword">in</span> adjList[cur]:</span><br><span class="line">            <span class="keyword">if</span> v[adj[<span class="number">0</span>]]:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            v[adj[<span class="number">0</span>]] = <span class="literal">True</span></span><br><span class="line">            q.append(adj[<span class="number">0</span>])</span><br><span class="line">            distances[adj[<span class="number">0</span>]] = distances[cur] + adj[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> distances[adj[<span class="number">0</span>]] &gt; maxDist:</span><br><span class="line">                maxDist = distances[adj[<span class="number">0</span>]]</span><br><span class="line">                dot[j] = adj[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">bfs(<span class="number">1</span>, <span class="number">0</span>)       <span class="comment"># 지름을 구성하는 노드 중 하나를 먼저 구하는 bfs</span></span><br><span class="line">bfs(dot[<span class="number">0</span>], <span class="number">1</span>)  <span class="comment"># 지름을 구성하는 한 노드를 알 때, 나머지 노드를 구해주면서 가중치의 합을 구해주는 bfs</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(distances[dot[<span class="number">1</span>]])</span><br></pre></td></tr></table></figure>
+
+<p>지름을 구성하는 노드 중 하나를 먼저 알 수 있다는 아이디어가 있어야만 주어진 조건 내에서 문제를 풀 수 있었다. 지름을 구성하는 한 노드를 먼저 찾을 수 없었다면 아마도 풀지 못했을 것이다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1451,94 +1547,6 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pal</span>(<span class="params">nums, dp, s, e</span>):</span></span><br><span class="line">    <span class="keyword">if</span> (s, e) <span class="keyword">in</span> dp:</span><br><span class="line">        <span class="keyword">return</span> dp[(s, e)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> s == e:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> nums[s-<span class="number">1</span>] != nums[e-<span class="number">1</span>]:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> e - s == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> s + <span class="number">1</span> &lt;= e - <span class="number">1</span>:</span><br><span class="line">        dp[(s, e)] = pal(nums, dp, s+<span class="number">1</span>, e-<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> dp[(s, e)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N = <span class="built_in">int</span>(stdin.readline())</span><br><span class="line">nums = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split()))</span><br><span class="line">M = <span class="built_in">int</span>(stdin.readline())</span><br><span class="line">dp = <span class="built_in">dict</span>()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(M):</span><br><span class="line">    s, e = <span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split())</span><br><span class="line">    <span class="built_in">print</span>(pal(nums, dp, s, e))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>구현은 어렵지 않았지만, 이 문제가 dp 로 풀어야하는 문제면서 어떻게 dp로 풀 수 있을지 생각해내는 것이 어려운 문제였다.<br>양 끝을 비교해주고 그 값이 같다면 양 끝을 제외한 값이 팰린드롬인지 확인해주는 로직을 생각해냈다면 그 이후 구현은 단순 재귀이기 때문에 그렇게 어려운 문제는 아니라고 생각한다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/20/ps/leetcode_102/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 지식 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/20/ps/leetcode_102/" class="post-title-link" itemprop="url">leetcode 102. Binary Tree Level Order Traversal</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-      
-
-      <time title="Post created: 2021-05-20 19:35:23 / Updated at: 19:40:58" itemprop="dateCreated datePublished" datetime="2021-05-20T19:35:23+09:00">2021-05-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="102-Binary-Tree-Level-Order-Traversal"><a href="#102-Binary-Tree-Level-Order-Traversal" class="headerlink" title="102. Binary Tree Level Order Traversal"></a>102. Binary Tree Level Order Traversal</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/binary-tree-level-order-traversal/">여기서</a> 문제를 풀어볼 수 있습니다.</li>
-</ul>
-<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>Given the root of a binary tree, return the level order traversal of its nodes’ values. (i.e., from left to right, level by level).</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: root &#x3D; [3,9,20,null,null,15,7]</span><br><span class="line">Output: [[3],[9,20],[15,7]]</span><br></pre></td></tr></table></figure>
-
-<img src="/images/leet_102.png" width='400'>
-
-<h2 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h2><p>아주 단순한… bfs 문제이다. 각 노드의 레벨들을 순회하면서 각 레벨을 마킹해주어, <code>ans</code> 의 각 인덱스(레벨별 노드)에 리스트를 추가해주면 끝이나는 문제이다. medium 난이도의 문제이지만, 트리라는 자료구조를 사용해서 그런지 조금 난이도가 높게 측정이 된 것이 아닌가 하는 생각이 들었다.</p>
-<p>queue 를 이용해 bfs를 할 수 있는 수준이면 무난하게 풀 수 있는 문제였다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, left=None, right=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.left = left</span></span><br><span class="line"><span class="comment">#         self.right = right</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> deque</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">levelOrder</span>(<span class="params">self, root: TreeNode</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line"></span><br><span class="line">        q = deque()</span><br><span class="line">        q.append((root, <span class="number">0</span>))</span><br><span class="line">        ans = []</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> q:</span><br><span class="line">            node, lev = q.popleft()</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> lev == <span class="built_in">len</span>(ans):</span><br><span class="line">                ans.append([])</span><br><span class="line"></span><br><span class="line">            ans[lev].append(node.val)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> node.left:</span><br><span class="line">                q.append((node.left, lev + <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> node.right:</span><br><span class="line">                q.append((node.right, lev + <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
