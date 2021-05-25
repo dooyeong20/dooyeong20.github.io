@@ -93,7 +93,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">71</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">73</span></a></li>
   </ul>
 </nav>
 
@@ -139,7 +139,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">73</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -192,6 +192,187 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/18/ps/boj-2580/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 지식 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/18/ps/boj-2580/" class="post-title-link" itemprop="url">BOJ 2580 - 스도쿠</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-18 15:08:23 / Updated at: 15:14:50" itemprop="dateCreated datePublished" datetime="2021-05-18T15:08:23+09:00">2021-05-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Problem-Solving-스도쿠-G4"><a href="#Problem-Solving-스도쿠-G4" class="headerlink" title="Problem Solving - 스도쿠(G4)"></a>Problem Solving - 스도쿠(G4)</h1><p>해당 문제는 <a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/2580">여기</a>에서 풀어볼 수 있습니다.</p>
+<h2 id="문제"><a href="#문제" class="headerlink" title="문제"></a>문제</h2><p>스도쿠는 18세기 스위스 수학자가 만든 ‘라틴 사각형’이랑 퍼즐에서 유래한 것으로 현재 많은 인기를 누리고 있다. 이 게임은 가로, 세로 각각 9개씩 총 81개의 작은 칸으로 이루어진 정사각형 판 위에서 이뤄지는데, 게임 시작 전 일부 칸에는 1부터 9까지의 숫자 중 하나가 쓰여 있다.</p>
+<p>게임 시작 전 스도쿠 판에 쓰여 있는 숫자들의 정보가 주어질 때 모든 빈 칸이 채워진 최종 모습을 출력하는 프로그램을 작성하시오.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">Input</span><br><span class="line"></span><br><span class="line">0 3 5 4 6 9 2 7 8</span><br><span class="line">7 8 2 1 0 5 6 0 9</span><br><span class="line">0 6 0 2 7 8 1 3 5</span><br><span class="line">3 2 1 0 4 6 8 9 7</span><br><span class="line">8 0 4 9 1 3 5 0 6</span><br><span class="line">5 9 6 8 2 0 4 1 3</span><br><span class="line">9 1 7 6 5 2 0 8 0</span><br><span class="line">6 0 3 7 0 1 9 5 2</span><br><span class="line">2 5 8 3 9 4 7 6 0</span><br><span class="line"></span><br><span class="line">Output</span><br><span class="line"></span><br><span class="line">1 3 5 4 6 9 2 7 8</span><br><span class="line">7 8 2 1 3 5 6 4 9</span><br><span class="line">4 6 9 2 7 8 1 3 5</span><br><span class="line">3 2 1 5 4 6 8 9 7</span><br><span class="line">8 7 4 9 1 3 5 2 6</span><br><span class="line">5 9 6 8 2 7 4 1 3</span><br><span class="line">9 1 7 6 5 2 3 8 4</span><br><span class="line">6 4 3 7 8 1 9 5 2</span><br><span class="line">2 5 8 3 9 4 7 6 1</span><br></pre></td></tr></table></figure>
+
+<h2 id="풀이"><a href="#풀이" class="headerlink" title="풀이"></a>풀이</h2><p>문제 조건에서 ‘항상 백트래킹으로 풀 수 있는 경우만 주어진다’ 라고 표시가 되어있기 때문에 백트래킹으로 풀어주었다. 제일 처음, 주어진 입력에 대해서 빈 칸의 인덱스들을 구해놓은 후, 해당 칸들에 1부터 9까지 차례대로 입력해주는데 입력하기 전 스도쿠 조건에 맞는지 매번 검사해주어 dfs 탐색 횟수를 크게 줄이는 것이 핵심이었던 것같다.</p>
+<p>그리고 스도쿠 조건을 검사해주는 <code>check</code> 함수에서 일일이 for 문을 돌아주면서 가로, 세로, 3*3 정사각형을 검사해주었는데 지금 생각해보니 각각의 경우에 대해서 set 를 선언해주어 백트래킹시마다 해당 set에 add 와 remove 연산을 해주었다면 in 연산으로 O(1) 만에 탐색할 수도 있었겠다는 생각이 든다.</p>
+<p>다음부터는 적절한 자료구조를 적극적으로 활용해 문제 해결의 효율성을 더욱 더 증가시켜야겠다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getEmpty</span>(<span class="params">empty</span>):</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(N):</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> board[i][j]:</span><br><span class="line">                empty.append((i, j))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> empty</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">check</span>(<span class="params">board, r, c, cur</span>):</span></span><br><span class="line">    lc = (c // <span class="number">3</span>) * <span class="number">3</span></span><br><span class="line">    lr = (r // <span class="number">3</span>) * <span class="number">3</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">9</span>):</span><br><span class="line">        <span class="keyword">if</span> board[i][c] == cur <span class="keyword">and</span> i != r:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">9</span>):</span><br><span class="line">        <span class="keyword">if</span> board[r][i] == cur <span class="keyword">and</span> i != c:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(lr, lr + <span class="number">3</span>):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(lc, lc + <span class="number">3</span>):</span><br><span class="line">            <span class="keyword">if</span> board[i][j] == cur <span class="keyword">and</span> (i, j) != (r, c):</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dfs</span>(<span class="params">lev, empty</span>):</span></span><br><span class="line">    <span class="keyword">if</span> found[<span class="number">0</span>]:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> lev == M:</span><br><span class="line">        found[<span class="number">0</span>] = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">for</span> b <span class="keyword">in</span> board:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>.join(<span class="built_in">map</span>(<span class="built_in">str</span>, b)))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    r, c = empty[lev]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> check(board, r, c, i):</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        board[r][c] = i</span><br><span class="line">        dfs(lev + <span class="number">1</span>, empty)</span><br><span class="line">        board[r][c] = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N = <span class="number">9</span></span><br><span class="line">board = [<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split())) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">9</span>)]</span><br><span class="line">empty = getEmpty([])</span><br><span class="line">M = <span class="built_in">len</span>(empty)</span><br><span class="line">found = [<span class="literal">False</span>]</span><br><span class="line">dfs(<span class="number">0</span>, empty)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/18/ps/prog-43238/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 지식 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/18/ps/prog-43238/" class="post-title-link" itemprop="url">Programmers - 입국심사</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-18 14:00:00 / Updated at: 14:07:14" itemprop="dateCreated datePublished" datetime="2021-05-18T14:00:00+09:00">2021-05-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/Programmers/" itemprop="url" rel="index"><span itemprop="name">Programmers</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Problem-Solving-입국-심사-level-3"><a href="#Problem-Solving-입국-심사-level-3" class="headerlink" title="Problem Solving - 입국 심사 (level 3)"></a>Problem Solving - 입국 심사 (level 3)</h1><p>해당 문제는 <a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/43238">여기</a>에서 풀어볼 수 있습니다.</p>
+<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>n명이 입국심사를 위해 줄을 서서 기다리고 있습니다. 각 입국심사대에 있는 심사관마다 심사하는데 걸리는 시간은 다릅니다.</p>
+<p>처음에 모든 심사대는 비어있습니다. 한 심사대에서는 동시에 한 명만 심사를 할 수 있습니다. 가장 앞에 서 있는 사람은 비어 있는 심사대로 가서 심사를 받을 수 있습니다. 하지만 더 빨리 끝나는 심사대가 있으면 기다렸다가 그곳으로 가서 심사를 받을 수도 있습니다.</p>
+<p>모든 사람이 심사를 받는데 걸리는 시간을 최소로 하고 싶습니다.</p>
+<p>입국심사를 기다리는 사람 수 n, 각 심사관이 한 명을 심사하는데 걸리는 시간이 담긴 배열 times가 매개변수로 주어질 때, 모든 사람이 심사를 받는데 걸리는 시간의 최솟값을 return 하도록 solution 함수를 작성해주세요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: n: 6, times: [7, 10]</span><br><span class="line">Output: 28</span><br></pre></td></tr></table></figure>
+
+<h2 id="제한-사항"><a href="#제한-사항" class="headerlink" title="제한 사항"></a>제한 사항</h2><ul>
+<li>입국심사를 기다리는 사람은 1명 이상 1,000,000,000명 이하입니다.</li>
+<li>각 심사관이 한 명을 심사하는데 걸리는 시간은 1분 이상 1,000,000,000분 이하입니다.</li>
+<li>심사관은 1명 이상 100,000명 이하입니다.</li>
+</ul>
+<h2 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h2><p>level 3 문제 치고는 매우 간단한 문제였다. 해당 문제가 이분 탐색 문제라는 것만 안다면 5분 이내에 풀 수 있을 정도의 문제였던 것같다.</p>
+<p>이 문제의 핵심은 이분 탐색과 <code>check</code> 함수이다. <code>check</code> 함수에서는 시간이 매개변수로 주어지고, 해당 시간에 총 몇명의 입국 심사를 진행할 수 있는지 구해 그 값을 리턴해준다.</p>
+<p>주어진 시간을 각 입국 심사관들이 심사하는 시간으로 나눈 몫 만큼의 사람들을 심사할 수 있다고 처리해주었고, 각각의 심사관들별로 이를 모두 구해주어 합산한 결과를 리턴해주도록 하였다.</p>
+<p>그리고 이분 탐색의 경우, 위 결과값이 필요한 경우(총 인원)보다 많거나 같다면, 시간을 더 줄여도 된다는 뜻이기 때문에 <code>en</code> 값을 낮춰주었고, 반대로 적다면 <code>st</code> 를 증가시켜 주는 방식으로 탐색을 진행해주었다. 많거나 같을 때 시간을 줄인 이유는, 문제에서 요구한 요구사항이 최소 시간이었기 때문이다.</p>
+<p>아래는 파이썬으로 풀이한 코드이다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">n, times</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">check</span>(<span class="params">totalTime</span>):</span></span><br><span class="line">        cnt = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> t <span class="keyword">in</span> times:</span><br><span class="line">            cnt += totalTime // t</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> cnt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    ans = <span class="number">0</span></span><br><span class="line">    st, en = <span class="number">1</span>, <span class="number">1000000000000000000</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> st &lt;= en:</span><br><span class="line">        mid = (st + en) // <span class="number">2</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> check(mid) &gt;= n:</span><br><span class="line">            en = mid - <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            st = mid + <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> en + <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1186,276 +1367,6 @@
 
 <p>참조에 의한 전달은 메모리 주소를 그대로 넘겨주기 때문에 해당 참조값을 통해 값을 수정할 경우 같은 값을 참조하고 있는 변수들의 값도 함께 변화할 수 있어 주의해야 한다.</p>
 <p>실무에서는 깊은 복사를 할 때에는 검증된 라이브러리를 사용하면 된다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/16/javascript/day07/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 지식 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/16/javascript/day07/" class="post-title-link" itemprop="url">JavaScript 07 - 객체 (리터럴)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-05-16 15:02:06" itemprop="dateCreated datePublished" datetime="2021-05-16T15:02:06+09:00">2021-05-16</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-17 14:49:45" itemprop="dateModified" datetime="2021-05-17T14:49:45+09:00">2021-05-17</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="자바스크립트의-객체"><a href="#자바스크립트의-객체" class="headerlink" title="자바스크립트의 객체"></a>자바스크립트의 객체</h1><h2 id="객체란"><a href="#객체란" class="headerlink" title="객체란?"></a>객체란?</h2><p>원시 타입이란 단 하나의 값만을 나타내는 자료형이고 객체 타입은 다양한 타입의 값(원시값 또는 다른 객체)을 하나의 단위로 구성한 복합적인 자료구조이다. 원시값은 변경이 불가능한 값, immutable value이지만 객체 타입의 값, 즉 객체는 변경 가능한 값, mutable value이다.</p>
-<p>객체는 0개 이상의 프로퍼티로 구성된 집합이며, 프로퍼티는 키와 값으로 구성된다. 함수도 프로퍼티 값으로 사용할 수 있는데, 프로퍼티 값이 함수일 경우 일반 함수와 구분하기 위해 메서드라 부른다.</p>
-<p>객체는 객체의 상태를 나타내는 값(프로퍼티)과 프로퍼티를 참조하고 조작할 수 있는 동작(메서드)을 모두 포함할 수 있기 때문에 상태와 동작을 하나의 단위로 구조화할 수 있어 유용하다.</p>
-<blockquote>
-<p>자바스크립트의 객체는 함수와 밀접한 관계를 가진다. 함수로 객체를 생성하기도 하며 함수 자체가 객체이기도 하다.</p>
-</blockquote>
-<h2 id="객체-리터럴과-생성"><a href="#객체-리터럴과-생성" class="headerlink" title="객체 리터럴과 생성"></a>객체 리터럴과 생성</h2><h3 id="인스턴스란"><a href="#인스턴스란" class="headerlink" title="인스턴스란?"></a>인스턴스란?</h3><p>인스턴스는 객체가 메모리에 저장되어 실제로 존재하는 것에 초점을 맞춘 용어이다.</p>
-<h2 id="자바스크립트의-객체-1"><a href="#자바스크립트의-객체-1" class="headerlink" title="자바스크립트의 객체"></a>자바스크립트의 객체</h2><p>자바스크립트는 프로토타입 기반 객체지향 언어로서 클래스 기반 객체지향 언어와는 달리 다양한 객체 생성 방법을 지원한다.</p>
-<ul>
-<li>객체 리터럴</li>
-<li>Object 생성자 함수</li>
-<li>생성자 함수</li>
-<li>Object.create 메서드</li>
-<li>클래스 (ES6</li>
-</ul>
-<h3 id="객체-리터럴"><a href="#객체-리터럴" class="headerlink" title="객체 리터럴"></a>객체 리터럴</h3><p>객체 리터럴은 중괄호’{}’ 내에 0개 이상의 프로퍼티를 정의한다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">&#x27;Kim&#x27;</span>,</span><br><span class="line">  sayHello: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`Hi <span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>.`</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> person);</span><br><span class="line"><span class="built_in">console</span>.log(person);</span><br></pre></td></tr></table></figure>
-
-<p>중괄호 내에 프로퍼티를 정의하지 않으면 빈 객체가 생성된다. 객체 리터럴은 값으로 평가되는 표현식이며 따라서 객체 리터럴의 닫는 중괄호 뒤에는 세미콜론을 붙인다.</p>
-<p>객체 리터럴에 프로퍼티를 포함시켜 객체를 생성함과 동시에 프로퍼티를 만들 수도 있고, 객체를 생성한 이후에 프로퍼티를 동적으로 추가할 수도 있다. 객체 리터럴 외의 객체 생성 방식은 모두 함수를 사용해 객체를 생성하며 이에 대한 내용은 나중에 함수를 배우며 정리할 것이다.</p>
-<h3 id="프로퍼티"><a href="#프로퍼티" class="headerlink" title="프로퍼티"></a>프로퍼티</h3><p>객체는 프로퍼티(property)들의 집합이며 프로퍼티는 키(key)와 값(value)으로 구성된다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">&#x27;Lee&#x27;</span>,</span><br><span class="line">  age: <span class="number">20</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>프로퍼티 키 : 빈 문자열을 포함하는 모든 문자열 또는 심벌 값</p>
-<p>프로퍼티 값 : 자바스크립트에서 사용할 수 있는 모든 값</p>
-</blockquote>
-<p>키의 이름이 식별자 네이밍 규칙을 준수하는 이름, 즉 자바스크립트에서 사용 가능한 유효한 이름인 경우 따옴표를 생략할 수 있다. 식별자 네이밍 규칙을 따르지 않는 이름의 경우에는 반드시 따옴표를 사용해야 한다.</p>
-<p>문자열 또는 문자열로 평가할 수 있는 표현식을 사용해 프로퍼티 키를 동적으로 생성할 수도 있다. var, function과 같은 예약어를 프로퍼티 키로 사용해도 에러가 발생하지 않지만 안쓰는 것이 좋다.</p>
-<p>이미 존재하는 프로퍼티 키를 중복 선언하면 나중에 선언한 프로퍼티가 먼저 선언한 프로퍼티를 덮어쓴다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">obj.name = <span class="string">&#x27;kim&#x27;</span>;</span><br><span class="line">obj[<span class="string">&#x27;age&#x27;</span>] = <span class="number">14</span>;</span><br><span class="line"></span><br><span class="line">obj.name = <span class="string">&#x27;lee&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// obj = &#123; name: &#x27;lee&#x27;, age: 14 &#125;;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="메서드"><a href="#메서드" class="headerlink" title="메서드"></a>메서드</h3><p>자바스크립트에서 사용할 수 있는 모든 값은 프로퍼티 값으로 사용할 수 있다. 자바스크립트의 함수는 객체(일급 객체)이기 때문에 함수는 값으로 취급할 수 있고, 따라서 프로퍼티 값으로 사용할 수 있다. 프로퍼티 값이 함수일 경우 일반 함수와 구분하기 위해 메서드라 부른다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  sayHello: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">person.sayHello(); <span class="comment">// &#x27;hello&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="프로퍼티-접근"><a href="#프로퍼티-접근" class="headerlink" title="프로퍼티 접근"></a>프로퍼티 접근</h3><ul>
-<li><p>마침표 프로퍼티 접근 연산자’.’를 사용하는 마침표 표기법(dot notation)</p>
-</li>
-<li><p>대괄호 프로퍼티 접근 연산자’[]’를 사용하는 대괄호 표기법(bracket notation)</p>
-</li>
-</ul>
-<p>위 두가지 방법이 존재한다.</p>
-<p>프로퍼티 키가 만약 식별자 네이밍 규칙을 준수한다면 마침표 표기법과 대괄호 표기법 상관 없이 아무거나 사용가능하다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  name: <span class="string">&#x27;Lee&#x27;</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.name);</span><br><span class="line"><span class="built_in">console</span>.log(person[<span class="string">&#x27;name&#x27;</span>]);</span><br></pre></td></tr></table></figure>
-
-<p>대괄호 표기법을 사용하는 경우에 프로퍼티 키는 반드시 따옴표를 사용한 문자열이어야 한다. 만약 따옴표로 감싸지 않은 이름을 그대로 사용하면 자바스크립트 엔진은 식별자(변수)로 해석한다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  age: <span class="number">14</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person[age]); <span class="comment">// ReferenceError: name is not defined</span></span><br><span class="line"><span class="built_in">console</span>.log(person[hobby]); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
-
-<p>객체에 존재하지 않는 프로퍼티에 접근하면 undefined를 반환한다. 이때 ReferenceError가 발생하지 않는다.</p>
-<p>프로퍼티 키가 식별자 네이밍 규칙을 준수하지 않는 이름, 즉 자바스크립트에서 사용 가능한 유효한 이름이 아니면 반드시 대괄호 표기법을 사용해야 한다. 이 때, 프로퍼티 키가 숫자로 이뤄진 문자열인 경우 따옴표를 생략할 수 있다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  <span class="string">&#x27;last-name&#x27;</span>: <span class="string">&#x27;kim&#x27;</span>,</span><br><span class="line">  age: <span class="number">14</span>,</span><br><span class="line">  <span class="number">41</span>: <span class="number">41</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">person[<span class="string">&#x27;last-name&#x27;</span>]; <span class="comment">// &#x27;kim&#x27;</span></span><br><span class="line">person[<span class="number">41</span>]; <span class="comment">// 41</span></span><br><span class="line">person[<span class="string">&#x27;41&#x27;</span>]; <span class="comment">// 41</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="프로퍼티-값-동적-생성-삭제"><a href="#프로퍼티-값-동적-생성-삭제" class="headerlink" title="프로퍼티 값 동적 생성, 삭제"></a>프로퍼티 값 동적 생성, 삭제</h3><p>존재하지 않는 프로퍼티에 값을 할당하면 프로퍼티가 동적으로 생성되어 추가되고 프로퍼티 값이 할당된다.</p>
-<p>그리고 delete 연산자를 통해 프로퍼티를 삭제할 수 있다. 만약 존재하지 않는 프로퍼티를 삭제하면 아무런 에러 없이 무시된다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">person.name = <span class="string">&#x27;kim&#x27;</span>;</span><br><span class="line">person.age = <span class="number">14</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> person.age;</span><br><span class="line"><span class="comment">// &#123;name: &#x27;kim&#125;;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="객체-리터럴-확장-기능-ES6"><a href="#객체-리터럴-확장-기능-ES6" class="headerlink" title="객체 리터럴 확장 기능 (ES6)"></a>객체 리터럴 확장 기능 (ES6)</h2><h3 id="프로퍼티-축약-기능"><a href="#프로퍼티-축약-기능" class="headerlink" title="프로퍼티 축약 기능"></a>프로퍼티 축약 기능</h3><p>ES6에서는 프로퍼티 값으로 변수를 사용하는 경우 변수 이름과 프로퍼티 키가 동일한 이름일 때, 프로퍼티 키를 생략(property shorthand)할 수 있다. 이때 프로퍼티 키는 변수 이름으로 자동 생성된다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES6</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>,</span><br><span class="line">  y = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123; x, y &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(obj); <span class="comment">// &#123;x: 1, y: 2&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="computed-property-name"><a href="#computed-property-name" class="headerlink" title="computed property name"></a>computed property name</h3><p>문자열 또는 문자열로 타입 변환할 수 있는 값으로 평가되는 표현식을 사용해 프로퍼티 키를 동적으로 생성할 수도 있다. 이 때, 프로퍼티 키로 사용할 표현식을 대괄호([])로 묶어야 한다.</p>
-<p>ES5에서 계산된 프로퍼티 이름으로 프로퍼티 키를 동적 생성하려면 객체 리터럴 외부에서 대괄호(‘[]’) 표기법을 사용해야 한다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5</span></span><br><span class="line"><span class="keyword">var</span> prefix = <span class="string">&#x27;prop&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">obj[prefix + <span class="string">&#x27;-&#x27;</span> + ++i] = i;</span><br><span class="line">obj[prefix + <span class="string">&#x27;-&#x27;</span> + ++i] = i;</span><br><span class="line">obj[prefix + <span class="string">&#x27;-&#x27;</span> + ++i] = i;</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#123;prop-1: 1, prop-2: 2, prop-3: 3&#125;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES6</span></span><br><span class="line"><span class="keyword">const</span> prefix = <span class="string">&#x27;prop&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  [<span class="string">`<span class="subst">$&#123;prefix&#125;</span>-<span class="subst">$&#123;++i&#125;</span>`</span>]: i,</span><br><span class="line">  [<span class="string">`<span class="subst">$&#123;prefix&#125;</span>-<span class="subst">$&#123;++i&#125;</span>`</span>]: i,</span><br><span class="line">  [<span class="string">`<span class="subst">$&#123;prefix&#125;</span>-<span class="subst">$&#123;++i&#125;</span>`</span>]: i,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// &#123;prop-1: 1, prop-2: 2, prop-3: 3&#125;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="메서드-축약-표현"><a href="#메서드-축약-표현" class="headerlink" title="메서드 축약 표현"></a>메서드 축약 표현</h3><p>ES6에서는 메서드를 정의할 때, function 키워드를 생략한 축약 표현을 사용할 수 있다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES5</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  name: <span class="string">&#x27;Lee&#x27;</span>,</span><br><span class="line">  sayHi: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Hi! &#x27;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.sayHi(); <span class="comment">// Hi! Lee</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ES6</span></span><br><span class="line"><span class="keyword">const</span> obj = &#123;</span><br><span class="line">  name: <span class="string">&#x27;Lee&#x27;</span>,</span><br><span class="line">  <span class="comment">// 메서드 축약 표현</span></span><br><span class="line">  <span class="function"><span class="title">sayHi</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Hi! &#x27;</span> + <span class="built_in">this</span>.name);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">obj.sayHi(); <span class="comment">// Hi! Lee</span></span><br></pre></td></tr></table></figure>
-
-<p>ES6의 메서드 축약 표현으로 정의한 메서드는 프로퍼티에 할당한 함수와 다르게 동작한다. 이에 대해서는 메서드 부분 설명에서 더 자세히 알아보겠다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/13/ps/prog-42888/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 지식 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/13/ps/prog-42888/" class="post-title-link" itemprop="url">Programmers - 2019 KAKAO BLIND RECRUITMENT 오픈 채팅방</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-      
-
-      <time title="Post created: 2021-05-13 15:16:23 / Updated at: 15:28:29" itemprop="dateCreated datePublished" datetime="2021-05-13T15:16:23+09:00">2021-05-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/Programmers/" itemprop="url" rel="index"><span itemprop="name">Programmers</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Problem-Solving-2019-KAKAO-BLIND-RECRUITMENT-오픈-채팅방"><a href="#Problem-Solving-2019-KAKAO-BLIND-RECRUITMENT-오픈-채팅방" class="headerlink" title="Problem Solving - 2019 KAKAO BLIND RECRUITMENT 오픈 채팅방"></a>Problem Solving - 2019 KAKAO BLIND RECRUITMENT 오픈 채팅방</h1><h3 id="1-문제-Link"><a href="#1-문제-Link" class="headerlink" title="1. 문제 [Link]"></a>1. 문제 <a target="_blank" rel="noopener" href="https://programmers.co.kr/learn/courses/30/lessons/42888">[Link]</a></h3><p>카카오톡 오픈채팅방에서는 친구가 아닌 사람들과 대화를 할 수 있는데, 본래 닉네임이 아닌 가상의 닉네임을 사용하여 채팅방에 들어갈 수 있다.</p>
-<p>신입사원인 김크루는 카카오톡 오픈 채팅방을 개설한 사람을 위해, 다양한 사람들이 들어오고, 나가는 것을 지켜볼 수 있는 관리자창을 만들기로 했다. 채팅방에 누군가 들어오면 다음 메시지가 출력된다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;[닉네임]님이 들어왔습니다.&quot;</span><br></pre></td></tr></table></figure>
-
-<p>채팅방에서 누군가 나가면 다음 메시지가 출력된다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;[닉네임]님이 나갔습니다.&quot;</span><br></pre></td></tr></table></figure>
-
-<p>채팅방에서 닉네임을 변경하는 방법은 다음과 같이 두 가지이다.</p>
-<p>채팅방을 나간 후, 새로운 닉네임으로 다시 들어간다.<br>채팅방에서 닉네임을 변경한다.<br>닉네임을 변경할 때는 기존에 채팅방에 출력되어 있던 메시지의 닉네임도 전부 변경된다.</p>
-<p>예를 들어, 채팅방에 “Muzi”와 “Prodo”라는 닉네임을 사용하는 사람이 순서대로 들어오면 채팅방에는 다음과 같이 메시지가 출력된다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;Muzi님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br></pre></td></tr></table></figure>
-
-<p>채팅방에 있던 사람이 나가면 채팅방에는 다음과 같이 메시지가 남는다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;Muzi님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Muzi님이 나갔습니다.&quot;</span><br></pre></td></tr></table></figure>
-
-<p>Muzi가 나간후 다시 들어올 때, Prodo 라는 닉네임으로 들어올 경우 기존에 채팅방에 남아있던 Muzi도 Prodo로 다음과 같이 변경된다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 나갔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br></pre></td></tr></table></figure>
-
-<p>채팅방은 중복 닉네임을 허용하기 때문에, 현재 채팅방에는 Prodo라는 닉네임을 사용하는 사람이 두 명이 있다. 이제, 채팅방에 두 번째로 들어왔던 Prodo가 Ryan으로 닉네임을 변경하면 채팅방 메시지는 다음과 같이 변경된다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Ryan님이 들어왔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 나갔습니다.&quot;</span><br><span class="line">&quot;Prodo님이 들어왔습니다.&quot;</span><br></pre></td></tr></table></figure>
-
-<p>채팅방에 들어오고 나가거나, 닉네임을 변경한 기록이 담긴 문자열 배열 record가 매개변수로 주어질 때, 모든 기록이 처리된 후, 최종적으로 방을 개설한 사람이 보게 되는 메시지를 문자열 배열 형태로 return 하도록 solution 함수를 완성하라.</p>
-<h3 id="2-입력-출력"><a href="#2-입력-출력" class="headerlink" title="2. 입력/출력"></a>2. 입력/출력</h3><table>
-<thead>
-<tr>
-<th>record</th>
-<th>result</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>[&quot;Enter uid1234 Muzi&quot;, &quot;Enter uid4567 Prodo&quot;,&quot;Leave uid1234&quot;, &quot;Enter uid1234 Prodo&quot;,&quot;Change uid4567 Ryan&quot;] </code></td>
-<td><code>[&quot;Prodo님이 들어왔습니다.&quot;, &quot;Ryan님이 들어왔습니다.&quot;, &quot;Prodo님이 나갔습니다.&quot;, &quot;Prodo님이 들어왔습니다.&quot;]</code></td>
-</tr>
-</tbody></table>
-<h3 id="3-풀이"><a href="#3-풀이" class="headerlink" title="3. 풀이"></a>3. 풀이</h3><p>2019 kakao 블라인드 채용의 1번 문제이다. 역시 아무리 카카오라도 1번 문제 정도는 쉽게 가는 것 같다. 입력의 길이가 <code>100,000</code> 이기 때문에 시간 복잡도에 큰 부담 없이 단순히 구현하면 되는 문제이다.</p>
-<p>각각의 <code>record</code> 마다 고유한 <code>uid</code> 가 주어지기 때문에 이를 통해서 딕셔너리로 해당 사용자의 이름을 저장해 변화가 일어날 때마다 즉시 업데이트 해주고, 또 나가거나 들어올 때의 <code>record</code> 의 인덱스를 저장해놓아 나중에 해당 인덱스에 해당하는 사용자들의 이름을 저장된 딕셔너리의 이름으로 할당해주면 간단하게 풀리는 문제였다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 예시</span></span><br><span class="line">nameDict = &#123;</span><br><span class="line">    <span class="string">&#x27;uid1234&#x27;</span> : [<span class="string">&#x27;prodo&#x27;</span>, [<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>]],</span><br><span class="line">    <span class="string">&#x27;uid1236&#x27;</span> : [<span class="string">&#x27;muzi&#x27;</span>, [<span class="number">1</span>, <span class="number">3</span>]]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ans = [<span class="string">&#x27;prodo 들어왔습니다&#x27;</span>, <span class="string">&#x27;muzi 들어왔습니다&#x27;</span>, <span class="string">&#x27;prodo 나갔습니다&#x27;</span>, <span class="string">&#x27;muzi 나갔습니다&#x27;</span>, <span class="string">&#x27;prodo 들어왔습니다&#x27;</span>]</span><br></pre></td></tr></table></figure>
-
-<h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">solution</span>(<span class="params">record</span>):</span></span><br><span class="line">    ans = []</span><br><span class="line">    nameDict = &#123;&#125;</span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> r <span class="keyword">in</span> record:</span><br><span class="line">        r = r.split(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> r[<span class="number">0</span>] == <span class="string">&#x27;Enter&#x27;</span>:</span><br><span class="line">            ans.append(<span class="number">1</span>)</span><br><span class="line">            uid, name = r[<span class="number">1</span>], r[<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> uid <span class="keyword">not</span> <span class="keyword">in</span> nameDict:</span><br><span class="line">                nameDict[uid] = [name, [i]]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                nameDict[uid][<span class="number">0</span>] = name</span><br><span class="line">                nameDict[uid][<span class="number">1</span>].append(i)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">elif</span> r[<span class="number">0</span>] == <span class="string">&#x27;Leave&#x27;</span>:</span><br><span class="line">            ans.append(<span class="number">0</span>)</span><br><span class="line">            uid = r[<span class="number">1</span>]</span><br><span class="line">            nameDict[uid][<span class="number">1</span>].append(i)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            uid, name = r[<span class="number">1</span>], r[<span class="number">2</span>]</span><br><span class="line">            nameDict[uid][<span class="number">0</span>] = name</span><br><span class="line">            i -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> nameDict:</span><br><span class="line">        name, idxList = nameDict[k]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> idx <span class="keyword">in</span> idxList:</span><br><span class="line">            <span class="keyword">if</span> ans[idx] &gt; <span class="number">0</span>:</span><br><span class="line">                ans[idx] = <span class="string">f&#x27;<span class="subst">&#123;name&#125;</span>님이 들어왔습니다.&#x27;</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans[idx] = <span class="string">f&#x27;<span class="subst">&#123;name&#125;</span>님이 나갔습니다.&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
