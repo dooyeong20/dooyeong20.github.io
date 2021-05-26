@@ -93,7 +93,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">75</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">76</span></a></li>
   </ul>
 </nav>
 
@@ -139,7 +139,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">75</span>
+          <span class="site-state-item-count">76</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -192,6 +192,132 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/04/06/ds-algo/ds-algo-10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 지식 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/04/06/ds-algo/ds-algo-10/" class="post-title-link" itemprop="url">다이나믹 프로그래밍</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-04-06 14:00:57" itemprop="dateCreated datePublished" datetime="2021-04-06T14:00:57+09:00">2021-04-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-01 17:58:54" itemprop="dateModified" datetime="2021-05-01T17:58:54+09:00">2021-05-01</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="DP"><a href="#DP" class="headerlink" title="DP"></a>DP</h1><p>두 가지 조건을 만족해야만 동적프로그래밍이라고 할 수 있다.</p>
+<ul>
+<li>Optimal Substructure: 부분 문제들의 최적해가 전체의 최적해를 이루어야 한다.<ul>
+<li>잘게 쪼개진 부분 그때그때 최적의 선택을 해나간다(그리디 greedy)</li>
+<li>Optimal Substructure가 아닌데 그리디로 풀면 최적해가 아니게 된다.</li>
+</ul>
+</li>
+<li>Overlapping Sub-Problems: 동일한 부분 문제가 여러번 발생해야 한다.<ul>
+<li>이 조건이 만족되지 않으면 분할정복(Divide &amp; Conquer) 문제라고 한다.(merge sort, quick sort)</li>
+</ul>
+</li>
+<li>중복되는 연산을 미리 캐싱해 두고, 중복 연산이 발생할 때 마다 참조하여 연산을 줄인다. (Memoization)</li>
+</ul>
+<h2 id="DP-종류"><a href="#DP-종류" class="headerlink" title="DP 종류"></a>DP 종류</h2><ul>
+<li>Top-Down 접근법<ul>
+<li>큰 문제부터 시작하여, 작은 문제로 나누는 접근법</li>
+<li>일반적으로 재귀적으로 구현(Recursion)할 때 사용된다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fibo = <span class="built_in">dict</span>()</span><br><span class="line">fibo[<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line">fibo[<span class="number">1</span>] = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n <span class="keyword">in</span> fibo:</span><br><span class="line">        <span class="keyword">return</span> fibo[n]</span><br><span class="line"></span><br><span class="line">    res = fibonacci(n-<span class="number">1</span>) + fibonacci(n-<span class="number">2</span>)</span><br><span class="line">    fibo[n] = res</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Bottom-Up 접근법<ul>
+<li>문제를 미리 나누어 두고, 작은 문제의 답을 모아 큰 문제를 해결하는 접근법</li>
+<li>일반적으로 반복적으로 구현(Iteration)할 때 사용된다.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fibonacci</span>(<span class="params">n</span>):</span></span><br><span class="line">    fibo = [<span class="literal">None</span>] * (n + <span class="number">1</span>)</span><br><span class="line">    fibo[<span class="number">0</span>], fibo[<span class="number">1</span>] = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, n + <span class="number">1</span>):</span><br><span class="line">        fibo[i] = fibo[i - <span class="number">1</span>] + fibo[i - <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fibo[n]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>DP를 너무 naive하게 사용하다보면 O(n)의 공간을 낭비하게 된다.</li>
+</ul>
+<h2 id="DP-활용-0-1-배낭-문제-Knapsack"><a href="#DP-활용-0-1-배낭-문제-Knapsack" class="headerlink" title="DP 활용 - 0-1 배낭 문제(Knapsack)"></a>DP 활용 - 0-1 배낭 문제(Knapsack)</h2><ul>
+<li><p>배낭에 담을 수 있는 무게의 최대값이 정해져 있을 때, 배낭에 담은 짐의 가치가 최대가 되게 하는 문제</p>
+</li>
+<li><p>각 짐은 무게와 가치를 가지고 있으며, 0-1 배낭 문제에서는 짐을 쪼갤 수 없다.</p>
+</li>
+<li><p>dp 반복적으로 다 구하는 것 tabulization</p>
+</li>
+</ul>
+<h1 id="Homework"><a href="#Homework" class="headerlink" title="Homework"></a>Homework</h1><p>두 개 다 풀기</p>
+<ul>
+<li>직사각형문제</li>
+<li>도둑질문제</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1400,170 +1526,6 @@
 <h2 id="5-분류"><a href="#5-분류" class="headerlink" title="5. 분류"></a>5. 분류</h2><ul>
 <li>트리</li>
 <li>재귀</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/03/26/ds-algo/ds-algo-04/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 지식 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/26/ds-algo/ds-algo-04/" class="post-title-link" itemprop="url">트리</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-03-26 12:52:17" itemprop="dateCreated datePublished" datetime="2021-03-26T12:52:17+09:00">2021-03-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-01 17:58:05" itemprop="dateModified" datetime="2021-05-01T17:58:05+09:00">2021-05-01</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/DS-Algorithm/" itemprop="url" rel="index"><span itemprop="name">DS & Algorithm</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="이전-복습"><a href="#이전-복습" class="headerlink" title="이전 복습"></a>이전 복습</h4><ul>
-<li>Composition -&gt; ex) ComposedLinkedQueue라는 클래스가 DoublyLinkedList를 사용함</li>
-<li>생명주기를 함께 함</li>
-<li>nested가 되려면 class 안에 class가 구현이 되어 완벽이 nested가 되어야 한다.</li>
-</ul>
-<h2 id="1-트리-비선형-자료구조"><a href="#1-트리-비선형-자료구조" class="headerlink" title="1. 트리 - 비선형 자료구조"></a>1. 트리 - 비선형 자료구조</h2><ul>
-<li>그래프의 일종, 여러 노드가 한 노드를 가르킬 수 없음(방향성이 있다고 보는 것(부모가 자식을 가르키는 구조라는 개념))<ul>
-<li>즉, 부모는 없거나(루트 노드) 하나밖에 없다</li>
-<li>root는 부모가 없기 때문에 자기 자신을 가르켜도 된다(?)</li>
-</ul>
-</li>
-<li>회로가(사이클이) 없고, 두 노드를 잇는 길이 하나뿐임</li>
-<li>root node가 하나 있고, 자식 노드가 있는 것이다<ul>
-<li>이 때, 자식의 수는 0 ~ n개가 있을 수도 있다</li>
-</ul>
-</li>
-</ul>
-<h3 id="1-1-트리의-구조"><a href="#1-1-트리의-구조" class="headerlink" title="1.1 트리의 구조"></a>1.1 트리의 구조</h3><p>선형이 아니기 때문에 다양한 용어들이 존재함</p>
-<ul>
-<li>Root node : 부모가 없는, 뿌리 노드</li>
-<li>leaf node : 자식이 없는 노드(leaf node간에도 level의 차이가 있을 수 있음)</li>
-<li>level(depth): root가 level 0, root부터의 거리를 level 을 정함</li>
-<li>internal node :star: : leaf node를 제외한 나머지 노드들(root node 포함) :star:</li>
-<li>height : tree에서 가장 높은 레벨</li>
-<li>edge : 노드들을 연결하는 간선</li>
-<li>path : :star: 경로를 따질때는 노드들은 빠지고 edge들만 따진다 :star:</li>
-</ul>
-<h3 id="1-2-트리의-특징"><a href="#1-2-트리의-특징" class="headerlink" title="1.2 트리의 특징"></a>1.2 트리의 특징</h3><ul>
-<li>하나의 노드에서 다른 노드로 이동하는 경로는 유일하다 :star:</li>
-<li>Acyclic(사이클이 없다)</li>
-<li>모든 노드는 서로 연결됨(외딴 섬이 없다)<ul>
-<li>따라서 하나의 edge를 끊으면 트리가 두개가 됨 (두 개의 sub-tree로 분리)</li>
-<li>leaf node만 잘라내도 leaf node가 root node가 되는 tree가 된다</li>
-</ul>
-</li>
-<li>edge = node - 1</li>
-</ul>
-<h2 id="2-이진-트리-Binary-Tree-종류"><a href="#2-이진-트리-Binary-Tree-종류" class="headerlink" title="2. 이진 트리(Binary Tree) 종류"></a>2. 이진 트리(Binary Tree) 종류</h2><p>자식이 최대 2개 있을 수 있는 트리<br>왼쪽, 오른쪽을 나누기 때문에 경우의 수는 총 4개이다.<br>자식 있을 경우, 없을 경우, 왼쪽만, 오른쪽만</p>
-<h3 id="2-1-정-이진-트리-full-binary-tree-Perfect-binary-tree"><a href="#2-1-정-이진-트리-full-binary-tree-Perfect-binary-tree" class="headerlink" title="2.1 정 이진 트리(full binary tree, Perfect binary tree)"></a>2.1 정 이진 트리(full binary tree, Perfect binary tree)</h3><p>꽉 차있는 binary tree</p>
-<ul>
-<li>모든 리프노드들의 level이 같음</li>
-<li>leaf node들을 제외한 모든 노드들이 자식 노드가 2개씩 있음</li>
-</ul>
-<h3 id="2-2-완전-이진-트리-Complete-binary-tree"><a href="#2-2-완전-이진-트리-Complete-binary-tree" class="headerlink" title="2.2 완전 이진 트리(Complete binary tree)"></a>2.2 완전 이진 트리(Complete binary tree)</h3><p>가장 흔하고 많이 다루는 트리<br>Perfect vs Complete (정 이진트리 vs 완전 이진 트리)</p>
-<ul>
-<li>height에 레벨 끝에서 2번째까지는 완전 다 차있음</li>
-<li>leaf node들은 :star: 왼쪽에서부터 오른쪽으로 :star: 차례대로 차있는 트리</li>
-</ul>
-<h3 id="2-3-군형-이진-트리-Balnaces-binary-tree-vs-Skewed-Tree"><a href="#2-3-군형-이진-트리-Balnaces-binary-tree-vs-Skewed-Tree" class="headerlink" title="2.3 군형 이진 트리(Balnaces binary tree vs Skewed Tree)"></a>2.3 군형 이진 트리(Balnaces binary tree vs Skewed Tree)</h3><ul>
-<li>Skewed : 한쪽으로 치우친 트리</li>
-<li>balance : 밸런스도 기준이 다양함<ul>
-<li>좌우 height 차이가 1 이하</li>
-<li>좌우 node 개수 차이가 3 이하</li>
-</ul>
-</li>
-</ul>
-<h2 id="3-이진-트리의-순회-Traversal-보통-재귀로-구현"><a href="#3-이진-트리의-순회-Traversal-보통-재귀로-구현" class="headerlink" title="3. 이진 트리의 순회(Traversal) (보통 재귀로 구현)"></a>3. 이진 트리의 순회(Traversal) (보통 재귀로 구현)</h2><p>목적은 잘 모르겠고 말그대로 순회하는 것임</p>
-<ul>
-<li>(전위) 깊이 우선 순회(:star:Preorder, DFS:star:)<ul>
-<li>node(root) -&gt; left -&gt; right</li>
-</ul>
-</li>
-<li>(중위) 대칭 순회 (:star: Inorder, Symmetric)<ul>
-<li>left -&gt; node(root) -&gt; right</li>
-</ul>
-</li>
-<li>후위 순회 (:star: Postorder :star:)<ul>
-<li>left -&gt; right -&gt; node(root)</li>
-</ul>
-</li>
-</ul>
-<h2 id="4-이진-트리의-탐색-Search"><a href="#4-이진-트리의-탐색-Search" class="headerlink" title="4. 이진 트리의 탐색(Search)"></a>4. 이진 트리의 탐색(Search)</h2><p>단순 순회가 아니라 특정한 값을 :star: 찾기 위한 것 :star:.</p>
-<ul>
-<li><p>너비 우선 (BFS)</p>
-<ul>
-<li>같은 level인 애들을 차례대로 봄</li>
-<li>루트 노드에서 가장 가까운 노드를 찾는다</li>
-</ul>
-</li>
-<li><p>깊이 우선 (DFS)</p>
-<ul>
-<li>depth가 증가하는 방향으로 이동하며 Search 함</li>
-</ul>
-</li>
 </ul>
 
       

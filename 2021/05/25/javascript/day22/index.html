@@ -22,15 +22,15 @@
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="클로저클로저는 자바스크립트가 가진 어렵다고 여겨지는 개념들 중 하나이다(참고로 클로저는 자바스크립트의 고유한 개념이 아닌 함수형 프로그래밍 언어에서 사용되는 특성이다). 하지만 실행 컨텍스트에 대한 사전 지식이 있다면 이해하기 어려운 개념은 아니다. MDN 에서는 클로저에 대해서 다음과 같이 정의하고 있다.  “A closure is the combinat">
+<meta name="description" content="클로저미리 결론부터 정리하자면, 좁은 의미의 클로저는  내부(중첩)함수가 외부 함수보다 더 오래 살아남고(생명 주기) 내부(중첩)함수가 외부 함수의 식별자 중 하나 이상을 참조하는  함수이다. 클로저는 자바스크립트가 가진 어렵다고 여겨지는 개념들 중 하나이다(참고로 클로저는 자바스크립트의 고유한 개념이 아닌 함수형 프로그래밍 언어에서 사용되는 특성이다).">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 22 - 클로저">
 <meta property="og:url" content="https://dooyeong20.github.io/2021/05/25/javascript/day22/index.html">
 <meta property="og:site_name" content="두영&#39;s 지식 공간">
-<meta property="og:description" content="클로저클로저는 자바스크립트가 가진 어렵다고 여겨지는 개념들 중 하나이다(참고로 클로저는 자바스크립트의 고유한 개념이 아닌 함수형 프로그래밍 언어에서 사용되는 특성이다). 하지만 실행 컨텍스트에 대한 사전 지식이 있다면 이해하기 어려운 개념은 아니다. MDN 에서는 클로저에 대해서 다음과 같이 정의하고 있다.  “A closure is the combinat">
+<meta property="og:description" content="클로저미리 결론부터 정리하자면, 좁은 의미의 클로저는  내부(중첩)함수가 외부 함수보다 더 오래 살아남고(생명 주기) 내부(중첩)함수가 외부 함수의 식별자 중 하나 이상을 참조하는  함수이다. 클로저는 자바스크립트가 가진 어렵다고 여겨지는 개념들 중 하나이다(참고로 클로저는 자바스크립트의 고유한 개념이 아닌 함수형 프로그래밍 언어에서 사용되는 특성이다).">
 <meta property="og:locale" content="ko_KR">
 <meta property="article:published_time" content="2021-05-25T04:15:06.000Z">
-<meta property="article:modified_time" content="2021-05-25T06:14:35.429Z">
+<meta property="article:modified_time" content="2021-05-26T07:44:49.958Z">
 <meta property="article:author" content="dooyeong">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
@@ -96,7 +96,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">75</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">76</span></a></li>
   </ul>
 </nav>
 
@@ -143,7 +143,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">75</span>
+          <span class="site-state-item-count">76</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -229,10 +229,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">작성일</span>
-      
 
-      <time title="Post created: 2021-05-25 13:15:06 / Updated at: 15:14:35" itemprop="dateCreated datePublished" datetime="2021-05-25T13:15:06+09:00">2021-05-25</time>
+      <time title="Post created: 2021-05-25 13:15:06" itemprop="dateCreated datePublished" datetime="2021-05-25T13:15:06+09:00">2021-05-25</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-26 16:44:49" itemprop="dateModified" datetime="2021-05-26T16:44:49+09:00">2021-05-26</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -257,7 +263,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="클로저"><a href="#클로저" class="headerlink" title="클로저"></a>클로저</h1><p>클로저는 자바스크립트가 가진 어렵다고 여겨지는 개념들 중 하나이다(참고로 클로저는 자바스크립트의 고유한 개념이 아닌 함수형 프로그래밍 언어에서 사용되는 특성이다). 하지만 실행 컨텍스트에 대한 사전 지식이 있다면 이해하기 어려운 개념은 아니다.</p>
+        <h1 id="클로저"><a href="#클로저" class="headerlink" title="클로저"></a>클로저</h1><p>미리 결론부터 정리하자면, 좁은 의미의 클로저는</p>
+<ul>
+<li>내부(중첩)함수가 외부 함수보다 더 오래 살아남고(생명 주기)</li>
+<li>내부(중첩)함수가 외부 함수의 식별자 중 하나 이상을 참조하는</li>
+</ul>
+<p>함수이다.</p>
+<p>클로저는 자바스크립트가 가진 어렵다고 여겨지는 개념들 중 하나이다(참고로 클로저는 자바스크립트의 고유한 개념이 아닌 함수형 프로그래밍 언어에서 사용되는 특성이다). 하지만 실행 컨텍스트에 대한 사전 지식이 있다면 이해하기 어려운 개념은 아니다.</p>
 <p>MDN 에서는 클로저에 대해서 다음과 같이 정의하고 있다.</p>
 <blockquote>
 <p>“A closure is the combination of a function and the lexical environment within which that function was declared.”</p>

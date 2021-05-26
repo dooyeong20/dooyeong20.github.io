@@ -93,7 +93,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">75</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">76</span></a></li>
   </ul>
 </nav>
 
@@ -139,7 +139,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">75</span>
+          <span class="site-state-item-count">76</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -192,6 +192,97 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/20/ps/boj-10942/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 지식 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/20/ps/boj-10942/" class="post-title-link" itemprop="url">BOJ 10942 - 팰린드롬?</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-20 21:00:23 / Updated at: 21:05:50" itemprop="dateCreated datePublished" datetime="2021-05-20T21:00:23+09:00">2021-05-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Problem-Solving-팰린드롬-G3"><a href="#Problem-Solving-팰린드롬-G3" class="headerlink" title="Problem Solving - 팰린드롬? (G3)"></a>Problem Solving - 팰린드롬? (G3)</h1><p><a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/10942">여기서</a> 풀어볼 수 있습니다.</p>
+<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>명우는 홍준이와 함께 팰린드롬 놀이를 해보려고 한다.</p>
+<p>먼저, 홍준이는 자연수 N개를 칠판에 적는다. 그 다음, 명우에게 질문을 총 M번 한다.</p>
+<p>각 질문은 두 정수 S와 E(1 ≤ S ≤ E ≤ N)로 나타낼 수 있으며, S번째 수부터 E번째 까지 수가 팰린드롬을 이루는지를 물어보며, 명우는 각 질문에 대해 팰린드롬이다 또는 아니다를 말해야 한다.</p>
+<p>예를 들어, 홍준이가 칠판에 적은 수가 1, 2, 1, 3, 1, 2, 1라고 하자.</p>
+<p>S = 1, E = 3인 경우 1, 2, 1은 팰린드롬이다.<br>S = 2, E = 5인 경우 2, 1, 3, 1은 팰린드롬이 아니다.<br>S = 3, E = 3인 경우 1은 팰린드롬이다.<br>S = 5, E = 7인 경우 1, 2, 1은 팰린드롬이다.<br>자연수 N개와 질문 M개가 모두 주어졌을 때, 명우의 대답을 구하는 프로그램을 작성하시오.</p>
+<h2 id="예제-입-출력"><a href="#예제-입-출력" class="headerlink" title="예제 입/출력"></a>예제 입/출력</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">입력</span><br><span class="line"></span><br><span class="line">7</span><br><span class="line">1 2 1 3 1 2 1</span><br><span class="line">4</span><br><span class="line">1 3</span><br><span class="line">2 5</span><br><span class="line">3 3</span><br><span class="line">5 7</span><br><span class="line"></span><br><span class="line">출력</span><br><span class="line"></span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<h2 id="풀이"><a href="#풀이" class="headerlink" title="풀이"></a>풀이</h2><p>팰린드롬을 구할 때 각 질문당(M) 각각 팰린드롬인지 아닌지 구해주게 되면 O(N^3) (N=2000) 이 걸리기 때문에 0.5초라는 제한시간 내에 절대 풀수 없다. 따라서 메모이제이션을 통해 이미 구한 값을 재활용 해주는 방식으로 빠르게 정답을 구해주는 것이 이 문제의 핵심이었다.</p>
+<p>원래는 bottom-up dp가 편하지만, 이번 문제에서는 재귀적인 풀이 방법이 가장 먼저 떠올라 top-down 메모이제이션으로 문제를 풀이했다.</p>
+<p>팰린 드롬을 체크해줄 때, 시작 숫자와 끝 숫자가 다르다면 무조건 0을 리턴해주었고 만약 같다면 그 안의 내용인 (시작숫자 + 1) ~ (끝 숫자 - 1)이 팰린드롬 수인지 재귀적으로 호출하여 구해주며 메모를 해주었다. 그리고 메모리 초과가 계속 떠서 depth 가 2 일 때 까지는 메모이제이션을 사용해주지 않고 리턴해주었다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pal</span>(<span class="params">nums, dp, s, e</span>):</span></span><br><span class="line">    <span class="keyword">if</span> (s, e) <span class="keyword">in</span> dp:</span><br><span class="line">        <span class="keyword">return</span> dp[(s, e)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> s == e:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> nums[s-<span class="number">1</span>] != nums[e-<span class="number">1</span>]:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> e - s == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> s + <span class="number">1</span> &lt;= e - <span class="number">1</span>:</span><br><span class="line">        dp[(s, e)] = pal(nums, dp, s+<span class="number">1</span>, e-<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> dp[(s, e)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N = <span class="built_in">int</span>(stdin.readline())</span><br><span class="line">nums = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split()))</span><br><span class="line">M = <span class="built_in">int</span>(stdin.readline())</span><br><span class="line">dp = <span class="built_in">dict</span>()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(M):</span><br><span class="line">    s, e = <span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split())</span><br><span class="line">    <span class="built_in">print</span>(pal(nums, dp, s, e))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>구현은 어렵지 않았지만, 이 문제가 dp 로 풀어야하는 문제면서 어떻게 dp로 풀 수 있을지 생각해내는 것이 어려운 문제였다.<br>양 끝을 비교해주고 그 값이 같다면 양 끝을 제외한 값이 팰린드롬인지 확인해주는 로직을 생각해냈다면 그 이후 구현은 단순 재귀이기 때문에 그렇게 어려운 문제는 아니라고 생각한다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1143,120 +1234,6 @@
 <h3 id="ES6-모듈"><a href="#ES6-모듈" class="headerlink" title="ES6 모듈"></a>ES6 모듈</h3><p>script 태그에 type=”module” 어트리뷰트를 추가하면 로드된 자바스크립트 파일은 모듈로서 동작한다. 모듈의 파일 확장자는 mjs를 권장한다.</p>
 <p>ES6 모듈은 파일 자체의 독자적인 모듈 스코프를 제공한다. 즉, 모듈 내에서 var 키워드로 선언한 변수는 더는 전역 변수가 아니며 window 객체의 프로퍼티도 아니다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;module&quot;</span> src=<span class="string">&quot;app.mjs&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/16/javascript/day10/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 지식 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/16/javascript/day10/" class="post-title-link" itemprop="url">JavaScript 10 - 스코프</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-05-16 19:12:06" itemprop="dateCreated datePublished" datetime="2021-05-16T19:12:06+09:00">2021-05-16</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-20 16:36:35" itemprop="dateModified" datetime="2021-05-20T16:36:35+09:00">2021-05-20</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="스코프란"><a href="#스코프란" class="headerlink" title="스코프란?"></a>스코프란?</h1><p>자바스크립트의 스코프는 다른 언어의 스코프와 구별되는 특징이 있으므로 주의가 필요하다. 그리고 var 키워드로 선언한 변수와 let 또는 const 키워드로 선언한 변수의 스코프도 다르게 동작한다. 스코프는 변수 그리고 함수와 깊은 관련이 있다.</p>
-<p>모든 식별자(변수 이름, 함수 이름, 클래스 이름 등)는 자신이 선언된 위치에 의해 다른 코드가 식별자 자신을 참조할 수 있는 유효 범위가 결정된다. 이를 스코프라 한다. 즉, 스코프는 식별자가 유효한 범위를 말하며 바스크립트 엔진이 식별자를 검색할 때 사용하는 규칙이라고도 할 수 있다.</p>
-<p>자바스크립트 엔진은 코드를 실행할 때 코드의 문맥(context)을 고려한다. 코드가 어디서 실행되며 주변에 어떤 코드가 있는지에 따라 위 예제의 ①과 ②처럼 동일한 코드도 다른 결과를 만들어 낸다.</p>
-<p>프로그래밍 언어에서는 스코프(유효 범위)를 통해 식별자인 변수 이름의 충돌을 방지하여 같은 이름의 변수를 사용할 수 있게 한다. 스코프 내에서 식별자는 유일해야 하지만 다른 스코프에는 같은 이름의 식별자를 사용할 수 있다. 즉, 스코프는 네임스페이스다.</p>
-<blockquote>
-<p>var 키워드로 선언된 변수는 같은 스코프 내에서 중복 선언이 허용된다. 이는 의도치 않게 변수값이 재할당되어 변경되는 부작용을 발생시킨다.<br>이는 좋은 현상이 아니기 때문에 지양해야 할 부분이다.<br>let이나 const 키워드로 선언된 변수는 같은 스코프 내에서 중복 선언을 허용하지 않는다.</p>
-</blockquote>
-<h2 id="스코프의-종류"><a href="#스코프의-종류" class="headerlink" title="스코프의 종류"></a>스코프의 종류</h2><p>코드는 전역(global)과 지역(local)으로 구분할 수 있다.</p>
-<p>전역에서 선언된 변수는 전역 스코프를 갖는 전역 변수이고, 지역에서 선언된 변수는 지역 스코프를 갖는 지역 변수다.</p>
-<p>전역 변수는 어디서든지 참조할 수 있다.</p>
-<p>지역이란 함수 몸체 내부를 말히며 지역 변수는 자신의 지역 스코프와 하위 지역 스코프에서 유효하다.</p>
-<h3 id="스코프-체인"><a href="#스코프-체인" class="headerlink" title="스코프 체인"></a>스코프 체인</h3><p>수는 전역에서 정의할 수도 있고 함수 몸체 내부에서 정의할 수도 있다. 함수는 중첩될 수 있으므로 함수의 지역 스코프도 중첩될 수 있다. 이는 스코프가 함수의 중첩에 의해 계층적 구조를 갖는다는 것을 의미한다.</p>
-<p>변수를 참조할 때 자바스크립트 엔진은 스코프 체인을 통해 변수를 참조하는 코드의 스코프에서 시작하여 상위 스코프 방향으로 이동하며 선언된 변수를 검색(identifier resolution)한다. 이를 통해 상위 스코프에서 선언한 변수를 하위 스코프에서도 참조할 수 있다.</p>
-<h2 id="함수레벨-스코프"><a href="#함수레벨-스코프" class="headerlink" title="함수레벨 스코프"></a>함수레벨 스코프</h2><p>대부분의 프로그래밍 언어는 함수 몸체만이 아니라 모든 코드 블록이 지역 스코프를 만든다. 이러한 특성을 블록 레벨 스코프(block level scope)라 한다.</p>
-<p>하지만 var 키워드로 선언된 변수는 오로지 함수의 코드 블록(함수 몸체)만을 지역 스코프로 인정한다. 이러한 특성을 함수 레벨 스코프(function level scope)라 한다.</p>
-<p>var 키워드로 선언된 변수는 오로지 함수의 코드 블록 만을 지역 스코프로 인정하지만, ES6에서 도입된 let, const 키워드는 블록 레벨 스코프를 지원한다.</p>
-<h2 id="렉시컬-스코프"><a href="#렉시컬-스코프" class="headerlink" title="렉시컬 스코프"></a>렉시컬 스코프</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> x = <span class="number">10</span>;</span><br><span class="line">  bar();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo(); <span class="comment">// 1</span></span><br><span class="line">bar(); <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
-
-<p>위 예제의 실행 결과는 bar 함수의 상위 스코프가 무엇인지에 따라 결정된다. 두 가지 패턴을 예측할 수 있다.</p>
-<ul>
-<li>함수를 어디서 <strong>호출</strong>했는지</li>
-<li>함수를 어디서 <strong>정의</strong>했는지</li>
-</ul>
-<p>첫 번째 방식으로 함수의 상위 스코프를 결정한다면 bar 함수의 상위 스코프는 foo 함수의 지역 스코프와 전역 스코프일 것이다. 두 번째 방식으로 함수의 상위 스코프를 결정한다면 bar 함수의 상위 스코프는 전역 스코프일 것이다.</p>
-<p>첫 번째 방식을 동적 스코프(dynamic scope)라 한다. 함수를 정의하는 시점에는 함수가 어디서 호출될지 알 수 없다. 따라서 함수가 호출되는 시점에 동적으로 상위 스코프를 결정해야 하기 때문에 동적 스코프라고 부른다.</p>
-<p>두 번째 방식을 렉시컬 스코프(lexical scope) 또는 정적 스코프(static scope)라 한다. 동적 스코프 방식처럼 상위 스코프가 동적으로 변하지 않고 함수 정의가 평가되는 시점에 상위 스코프가 정적으로 결정되기 때문에 정적 스코프라고 부른다. 자바스크립트를 비롯한 대부분의 프로그래밍 언어는 렉시컬 스코프를 따른다.</p>
-<blockquote>
-<p>자바스크립트는 렉시컬 스코프를 따르므로 함수를 어디서 호출했는지가 아니라 함수를 어디서 정의했는지에 따라 상위 스코프를 결정한다. 함수가 호출된 위치는 상위 스코프 결정에 어떠한 영향도 주지 않는다. 즉, 함수의 상위 스코프는 언제나 자신이 정의된 스코프다.</p>
-<p>이처럼 함수의 상위 스코프는 함수 정의가 실행될 때 정적으로 결정된다. 함수 정의(함수 선언문 또는 함수 표현식)가 실행되어 생성된 함수 객체는 이렇게 결정된 상위 스코프를 기억한다. 함수가 호출될 때마다 함수의 상위 스코프를 참조할 필요가 있기 때문이다.</p>
-</blockquote>
-<p>즉, 자바스크립트에서는 자신이 정의된 곳이 상위 스코프이다. 렉시컬 스코프는 클로저와 깊은 관계가 있기 때문에 확실히 개념을 숙지해야 한다.</p>
 
       
     </div>

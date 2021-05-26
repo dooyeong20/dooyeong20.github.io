@@ -93,7 +93,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">75</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">76</span></a></li>
   </ul>
 </nav>
 
@@ -139,7 +139,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">75</span>
+          <span class="site-state-item-count">76</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -192,6 +192,166 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/26/javascript/day23/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 지식 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/26/javascript/day23/" class="post-title-link" itemprop="url">JavaScript 23 - 클래스</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-05-26 19:56:06 / Updated at: 20:46:29" itemprop="dateCreated datePublished" datetime="2021-05-26T19:56:06+09:00">2021-05-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="클래스"><a href="#클래스" class="headerlink" title="클래스"></a>클래스</h1><p>자바스크립트는 앞선 포스트에서 계속 봐왔듯 프로토타입을 통해 강력하게 객체 지향을 지원하고 있다. 따라서 자바스크립트는 클래스가 필요 없는 객체지향 프로그래밍 언어이며 클래스 없이도 생성자 함수와 프로토타입을 통해 객체지향 언어의 상속을 구현할 수 있다.</p>
+<p>하지만 Java나 C#과 같은 언어들에 익숙한 사람들은 혼란을 느낄 수도 있기 때문에 ES6 부터 클래스를 통해 새로운 객체 생성 매커니즘을 제시한다.</p>
+<p>하지만 클래스와 생성자 함수는 모두 프로토타입 기반의 인스턴스를 생성하지만 정확히 동일하게 동작하지는 않는다. 클래스는 생성자 함수보다 엄격하며 생성자 함수에서는 제공하지 않는 기능도 제공한다.</p>
+<h2 id="클래스와-프로토타입의-차이점"><a href="#클래스와-프로토타입의-차이점" class="headerlink" title="클래스와 프로토타입의 차이점"></a>클래스와 프로토타입의 차이점</h2><ol>
+<li><p>클래스를 new 연산자 없이 호출하면 에러가 발행한다.<br>생성자 함수를 new 연산자 없이 호출하면 일반 함수로서 호출된다.</p>
+</li>
+<li><p>클래스는 상속을 지원하는 extends와 super 키워드를 제공한다.<br>생성자 함수는 extends와 super 키워드를 지원하지 않는다.</p>
+</li>
+<li><p>클래스는 호이스팅이 발생하지 않는 것처럼 동작한다.<br>함수 선언문으로 정의된 생성자 함수는 함수 호이스팅이, 함수 표현식으로 정의한 생성자 함수는 변수 호이스팅이 발생한다.</p>
+</li>
+<li><p>클래스 내의 모든 코드에는 암묵적으로 strict mode가 지정되어 실행되며 strict mode를 해제할 수 없다.<br>생성자 함수는 암묵적으로 strict mode가 지정되지 않는다.</p>
+</li>
+<li><p>클래스의 constructor, 프로토타입 메서드, 정적 메서드는 모두 프로퍼티 어트리뷰트 <code>[[Enumerable]]</code>의 값이 false다 (열거되지 않는다).</p>
+</li>
+</ol>
+<h2 id="클래스-정의"><a href="#클래스-정의" class="headerlink" title="클래스 정의"></a>클래스 정의</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 클래스 선언문</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 익명 클래스 표현식</span></span><br><span class="line"><span class="keyword">const</span> Person = <span class="class"><span class="keyword">class</span> </span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 기명 클래스 표현식</span></span><br><span class="line"><span class="keyword">const</span> Person = <span class="class"><span class="keyword">class</span> <span class="title">MyClass</span> </span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>클래스는 class 키워드를 사용하여 정의하며 일반적이지는 않지만 함수와 마찬가지로 표현식으로 클래스를 정의할 수도 있다. 이때 클래스는 함수와 마찬가지로 이름을 가질 수도 있고, 갖지 않을 수도 있다.</p>
+<p>클래스를 표현식으로 정의할 수 있다는 것은 클래스가 값으로 사용할 수 있는 일급 객체라는 것을 의미한다. 좀 더 자세히 말하자면 클래스는 함수다. 따라서 클래스는 값처럼 사용할 수 있는 일급 객체다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> Person); <span class="comment">// function</span></span><br></pre></td></tr></table></figure>
+
+<p>클래스 몸체에는 0개 이상의 메서드만 정의할 수 있다. 클래스 몸체에서 정의할 수 있는 메서드는 constructor(생성자), 프로토타입 메서드, 정적 메서드의 세 가지가 있다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 클래스 선언문</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 생성자</span></span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">name</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 프로토타입 메서드</span></span><br><span class="line">  <span class="function"><span class="title">sayHi</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`Hi! My name is <span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 정적 메서드</span></span><br><span class="line">  <span class="keyword">static</span> <span class="function"><span class="title">sayHello</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Hello!&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="클래스-호이스팅"><a href="#클래스-호이스팅" class="headerlink" title="클래스 호이스팅"></a>클래스 호이스팅</h2><p>클래스는 함수로 평가되기 때문에, 클래스는 함수 선언문과 같이 소스코드 평가 과정, 즉 런타임 이전에 먼저 평가되어 함수 객체를 생성한다. 단, 클래스는 클래스 정의 이전에 참조할 수 없다. 클래스는 let, const 키워드로 선언한 변수처럼 호이스팅된다고 볼 수 있다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(Person); <span class="comment">// ReferenceError: Cannot access &#x27;Person&#x27; before initialization</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 클래스 선언문</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="인스턴스-생성"><a href="#인스턴스-생성" class="headerlink" title="인스턴스 생성"></a>인스턴스 생성</h2><p>클래스는 생성자 함수이며 new 연산자와 함께 호출되어 인스턴스를 생성한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 인스턴스 생성</span></span><br><span class="line"><span class="keyword">const</span> me = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(me); <span class="comment">// Person &#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> me = Person(); <span class="comment">// TypeError: Class constructor Foo cannot be invoked without &#x27;new&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>함수는 new 연산자의 사용 여부에 따라 일반 함수로 호출되거나 인스턴스 생성을 위한 생성자 함수로 호출되지만 클래스는 인스턴스를 생성하는 것이 유일한 존재 이유이므로 반드시 new 연산자와 함께 호출해야 한다.</p>
+<h2 id="메서드"><a href="#메서드" class="headerlink" title="메서드"></a>메서드</h2><p>클래스 몸체에는 0개 이상의 메서드만 선언할 수 있으며 클래스 몸체에서 정의할 수 있는 메서드는 constructor(생성자), 프로토타입 메서드, 정적 메서드의 세 가지가 있다.</p>
+<h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h3><p>constructor는 인스턴스를 생성하고 초기화하기 위한 특수한 메서드다. <code>constructor</code> 이름을 변경할 수는 없다.</p>
+<p>아래 예제는 클래스와 생성자 함수의 사용을 비교해놓은 것이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 클래스</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">name</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 생성자 함수</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>클래스 몸체에 정의한 constructor는 단순한 메서드가 아니다. constructor는 메서드로 해석되는 것이 아니라 클래스가 평가되어 생성한 함수 객체 코드의 일부가 된다. 다시 말해, 클래스 정의가 평가되면 constructor의 기술된 동작을 하는 함수 객체가 생성된다.</p>
+<p>constructor는 클래스 내에 최대 한 개만 존재할 수 있으며, 생략할 수 없다. 만약 constructor를 생략하면 클래스에 빈 constructor가 암묵적으로 정의된다.</p>
+<p>인스턴스를 생성할 때 클래스 외부에서 인스턴스 프로퍼티의 초기값을 전달하려면 constructor에 매개변수를 선언하고 인스턴스를 생성할 때 초기값을 전달한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">name, address</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 인수로 인스턴스 초기화</span></span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.address = address;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> me = <span class="keyword">new</span> Person(<span class="string">&#x27;Lee&#x27;</span>, <span class="string">&#x27;Seoul&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>그리고 생성자 함수와 마찬가지의 이유로, constructor는 별도의 반환문을 갖지 않아야 한다.</p>
+<h3 id="프로토타입-메서드"><a href="#프로토타입-메서드" class="headerlink" title="프로토타입 메서드"></a>프로토타입 메서드</h3><p>생성자 함수를 사용해서 프로토타입 메서드를 생성하기 위해서는 다음과 같이 명시적으로 프로토타입에 메서드를 추가해야 했었다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.sayHi = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Hi! My name is <span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>`</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>하지만 클래스 몸체에서 정의한 메서드는 생성자 함수에 의한 객체 생성 방식과는 다르게 클래스의 prototype 프로퍼티에 메서드를 추가하지 않아도 기본적으로 프로토타입 메서드가 된다. 그리고 클래스가 생성한 인스턴스는 프로토타입 체인의 일원이 된다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">name</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">sayHi</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`Hi! My name is <span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>여기까지만 봐도 알 수 있지만, 클래스는 생성자 함수와 마찬가지로 프로토타입 기반의 객체 생성 매커니즘인 것이다.</p>
+<h3 id="정적-메서드"><a href="#정적-메서드" class="headerlink" title="정적 메서드"></a>정적 메서드</h3><p>정적메서드는 앞선 포스트에서 살펴본 것처럼, 인스턴스를 생성하지 않아도 호출할 수 있는 메서드를 말한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.sayHi = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Hi!&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Person.sayHi(); <span class="comment">// Hi!</span></span><br></pre></td></tr></table></figure>
+
+<p>클래스에서는 메서드에 <code>static</code> 키워드를 붙이면 정적 메서드(클래스 메서드)가 된다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">name</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> <span class="function"><span class="title">sayHi</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;Hi!&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>클래스는 클래스 정의(클래스 선언문이나 클래스 표현식)가 평가되는 시점에 함수 객체가 되므로 인스턴스와 달리 별다른 생성 과정이 필요 없고, 따라서 정적 메서드는 인스턴스를 생성하지 않아도 클래스로 직접 호출할 수 있다.</p>
+<p>참고로 정적 메서드는 인스턴스로 호출할 수 없다. 정적 메서드가 바인딩된 클래스는 인스턴스의 프로토타입 체인 상에 존재하지 않기 때문이다. 그리고 같은 이유로 정적 메서드는 인스턴스 프로퍼티를 참조할 수 없지만 프로토타입 메서드는 인스턴스 프로퍼티를 참조할 수 있다.</p>
+<h3 id="클래스-정의-메서드-특징"><a href="#클래스-정의-메서드-특징" class="headerlink" title="클래스 정의 메서드 특징"></a>클래스 정의 메서드 특징</h3><ul>
+<li><p>function 키워드를 생략한 <strong>메서드 축약 표현</strong>을 사용한다.</p>
+</li>
+<li><p>객체 리터럴과는 다르게 클래스에 메서드를 정의할 때는 <strong>콤마가 필요 없다</strong>.</p>
+</li>
+<li><p><strong>암묵적으로 strict 모드</strong>로 실행된다.</p>
+</li>
+<li><p>for…in 문이나 Object.keys 메서드 등으로 열거할 수 없다. 즉, 프로퍼티의 열거 가능 여부를 나타내며, 불리언 값을 갖는 프로퍼티 어트리뷰트 <strong><code>[[Enumerable]]</code>의 값이 false</strong>다. (</p>
+</li>
+<li><p>내부 메서드 <code>[[Construct]]</code>를 갖지 않는 <strong>non-constructor</strong>다. 따라서 new 연산자와 함께 호출할 수 없다.</p>
+</li>
+</ul>
+<h2 id="클래스-상속"><a href="#클래스-상속" class="headerlink" title="클래스 상속"></a>클래스 상속</h2><p>상속에 의한 클래스 확장은 지금까지 살펴본 프로토타입 기반 상속과는 다른 개념이다. 프로토타입 기반 상속은 프로토타입 체인을 통해 다른 객체의 자산을 상속받는 개념이지만 상속에 의한 클래스 확장은 기존 클래스를 상속받아 새로운 클래스를 확장(extends)하여 정의하는 것이다. 상속을 통해 클래스를 확장하려면 extends 키워드를 사용하여 상속받을 클래스를 정의한다.</p>
+<p>아래는 상속을 통해 Animal 클래스를 확장한 Bird 클래스 예시이다.</p>
+<p>(참고로 Java 를 공부해본 사람이라면 extends 하면 바로 떠오르는 그 extends가 맞을 것이다.)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">age, weight</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.age = age;</span><br><span class="line">    <span class="built_in">this</span>.weight = weight;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">eat</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;eat&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">move</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;move&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bird</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">fly</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;fly&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> bird = <span class="keyword">new</span> Bird(<span class="number">1</span>, <span class="number">5</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(bird); <span class="comment">// Bird &#123;age: 1, weight: 5&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(bird <span class="keyword">instanceof</span> Bird); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(bird <span class="keyword">instanceof</span> Animal); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(bird.eat()); <span class="comment">// eat</span></span><br><span class="line"><span class="built_in">console</span>.log(bird.move()); <span class="comment">// move</span></span><br><span class="line"><span class="built_in">console</span>.log(bird.fly()); <span class="comment">// fly</span></span><br></pre></td></tr></table></figure>
+
+<p>클래스는 상속을 통해 다른 클래스를 확장할 수 있는 문법인 extends 키워드가 기본적으로 제공된다. 그리고 클래스를 상속할 때, 인스턴스의 프로토타입 체인 뿐만이 아니라 클래스 간의 프로토타입 체인도 생성한다.</p>
+<h3 id="동적-상속"><a href="#동적-상속" class="headerlink" title="동적 상속"></a>동적 상속</h3><p>extends 키워드는 클래스뿐만 아니라 생성자 함수를 상속받아 클래스를 확장할 수도 있다. 단, extends 키워드 앞에는 반드시 클래스가 와야 한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 생성자 함수</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Base</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.a = a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 생성자 함수를 상속받는 서브클래스</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">Base</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> derived = <span class="keyword">new</span> Derived(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(derived); <span class="comment">// Derived &#123;a: 1&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>침고로, extends 키워드 다음에는 클래스뿐만이 아니라 <code>[[Construct]]</code> 내부 메서드를 갖는 함수 객체로 평가될 수 있는 모든 표현식을 사용할 수 있다. 이를 통해 동적으로 상속받을 대상을 결정할 수 있는 것이다.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Base1</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base2</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> condition = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">class Derived extends (condition ? Base1 : Base2) &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="서브-클래스의-constructor"><a href="#서브-클래스의-constructor" class="headerlink" title="서브 클래스의 constructor"></a>서브 클래스의 constructor</h3><p>서브클래스에서 constructor를 생략하면 클래스에 다음과 같은 constructor가 암묵적으로 정의된다. args는 new 연산자와 함께 클래스를 호출할 때 전달한 인수의 리스트다. super()는 수퍼클래스의 constructor를 호출하여 인스턴스를 생성한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">constructor</span>(<span class="params">...args</span>)</span> &#123; <span class="built_in">super</span>(...args); &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 수퍼클래스</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 서브클래스</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">Base</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params"></span>)</span> &#123; <span class="built_in">super</span>(); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -320,10 +480,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">작성일</span>
-      
 
-      <time title="Post created: 2021-05-25 13:15:06 / Updated at: 15:14:35" itemprop="dateCreated datePublished" datetime="2021-05-25T13:15:06+09:00">2021-05-25</time>
+      <time title="Post created: 2021-05-25 13:15:06" itemprop="dateCreated datePublished" datetime="2021-05-25T13:15:06+09:00">2021-05-25</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-26 16:44:49" itemprop="dateModified" datetime="2021-05-26T16:44:49+09:00">2021-05-26</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -348,7 +514,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="클로저"><a href="#클로저" class="headerlink" title="클로저"></a>클로저</h1><p>클로저는 자바스크립트가 가진 어렵다고 여겨지는 개념들 중 하나이다(참고로 클로저는 자바스크립트의 고유한 개념이 아닌 함수형 프로그래밍 언어에서 사용되는 특성이다). 하지만 실행 컨텍스트에 대한 사전 지식이 있다면 이해하기 어려운 개념은 아니다.</p>
+          <h1 id="클로저"><a href="#클로저" class="headerlink" title="클로저"></a>클로저</h1><p>미리 결론부터 정리하자면, 좁은 의미의 클로저는</p>
+<ul>
+<li>내부(중첩)함수가 외부 함수보다 더 오래 살아남고(생명 주기)</li>
+<li>내부(중첩)함수가 외부 함수의 식별자 중 하나 이상을 참조하는</li>
+</ul>
+<p>함수이다.</p>
+<p>클로저는 자바스크립트가 가진 어렵다고 여겨지는 개념들 중 하나이다(참고로 클로저는 자바스크립트의 고유한 개념이 아닌 함수형 프로그래밍 언어에서 사용되는 특성이다). 하지만 실행 컨텍스트에 대한 사전 지식이 있다면 이해하기 어려운 개념은 아니다.</p>
 <p>MDN 에서는 클로저에 대해서 다음과 같이 정의하고 있다.</p>
 <blockquote>
 <p>“A closure is the combination of a function and the lexical environment within which that function was declared.”</p>
@@ -491,10 +663,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">작성일</span>
-      
 
-      <time title="Post created: 2021-05-25 10:00:06 / Updated at: 10:41:36" itemprop="dateCreated datePublished" datetime="2021-05-25T10:00:06+09:00">2021-05-25</time>
+      <time title="Post created: 2021-05-25 10:00:06" itemprop="dateCreated datePublished" datetime="2021-05-25T10:00:06+09:00">2021-05-25</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-26 14:03:55" itemprop="dateModified" datetime="2021-05-26T14:03:55+09:00">2021-05-26</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -542,7 +720,7 @@
 <p><strong>3. 함수 코드 평가</strong></p>
 <p>함수 호출에 의해 실행 순서가 조정되면 함수 내부로 진입해 함수 내부의 문들을 실행하기 전에 함수 코드를 평가하며 실행 준비를 한다. 이 과정에서 매개변수 및 지역 변수 선언문이 먼저 실행되어 실행 컨텍스트가 관리하는 지역 스코프에 등록된다(arguments 객체가 생성되고 this 바인딩도 결정됨).</p>
 <p><strong>4. 함수 코드 실행</strong></p>
-<p>함수의 코드 평가가 끝이 남녀 함수 코드가 본격적으로 실행된다. 매개변수 및 지역 변수에 값이 할당되는 등의 문들이 실행된다.</p>
+<p>함수의 코드 평가가 끝나면 함수 코드가 본격적으로 실행된다. 매개변수 및 지역 변수에 값이 할당되는 등의 문들이 실행된다.</p>
 <blockquote>
 <ol>
 <li>선언에 의해 생성된 모든 식별자를 스코프를 구분하여 등록하고 상태 변화(식별자에 바인딩된 값의 변화)를 지속적으로 관리</li>
@@ -1456,97 +1634,6 @@
 <h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h3><p><code>prototype</code> 프로퍼티는 <code>new</code> 를 통해서 생성자 함수를 호출할 수 있는 함수 객체인 construcor 가 소유한 프로퍼티이다.</p>
 <p>non-constructor 객체는 prototype 이 없다.</p>
 <p><code>prototype</code> 은 함수가 객체를 생성할 때(new 로 호출되었을 때) 생성할 인스턴스의 프로토타입 객체를 가리키는 역할을 한다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/20/ps/boj-10942/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 지식 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/20/ps/boj-10942/" class="post-title-link" itemprop="url">BOJ 10942 - 팰린드롬?</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-      
-
-      <time title="Post created: 2021-05-20 21:00:23 / Updated at: 21:05:50" itemprop="dateCreated datePublished" datetime="2021-05-20T21:00:23+09:00">2021-05-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Problem-Solving-팰린드롬-G3"><a href="#Problem-Solving-팰린드롬-G3" class="headerlink" title="Problem Solving - 팰린드롬? (G3)"></a>Problem Solving - 팰린드롬? (G3)</h1><p><a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/10942">여기서</a> 풀어볼 수 있습니다.</p>
-<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>명우는 홍준이와 함께 팰린드롬 놀이를 해보려고 한다.</p>
-<p>먼저, 홍준이는 자연수 N개를 칠판에 적는다. 그 다음, 명우에게 질문을 총 M번 한다.</p>
-<p>각 질문은 두 정수 S와 E(1 ≤ S ≤ E ≤ N)로 나타낼 수 있으며, S번째 수부터 E번째 까지 수가 팰린드롬을 이루는지를 물어보며, 명우는 각 질문에 대해 팰린드롬이다 또는 아니다를 말해야 한다.</p>
-<p>예를 들어, 홍준이가 칠판에 적은 수가 1, 2, 1, 3, 1, 2, 1라고 하자.</p>
-<p>S = 1, E = 3인 경우 1, 2, 1은 팰린드롬이다.<br>S = 2, E = 5인 경우 2, 1, 3, 1은 팰린드롬이 아니다.<br>S = 3, E = 3인 경우 1은 팰린드롬이다.<br>S = 5, E = 7인 경우 1, 2, 1은 팰린드롬이다.<br>자연수 N개와 질문 M개가 모두 주어졌을 때, 명우의 대답을 구하는 프로그램을 작성하시오.</p>
-<h2 id="예제-입-출력"><a href="#예제-입-출력" class="headerlink" title="예제 입/출력"></a>예제 입/출력</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">입력</span><br><span class="line"></span><br><span class="line">7</span><br><span class="line">1 2 1 3 1 2 1</span><br><span class="line">4</span><br><span class="line">1 3</span><br><span class="line">2 5</span><br><span class="line">3 3</span><br><span class="line">5 7</span><br><span class="line"></span><br><span class="line">출력</span><br><span class="line"></span><br><span class="line">1</span><br><span class="line">0</span><br><span class="line">1</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
-
-<h2 id="풀이"><a href="#풀이" class="headerlink" title="풀이"></a>풀이</h2><p>팰린드롬을 구할 때 각 질문당(M) 각각 팰린드롬인지 아닌지 구해주게 되면 O(N^3) (N=2000) 이 걸리기 때문에 0.5초라는 제한시간 내에 절대 풀수 없다. 따라서 메모이제이션을 통해 이미 구한 값을 재활용 해주는 방식으로 빠르게 정답을 구해주는 것이 이 문제의 핵심이었다.</p>
-<p>원래는 bottom-up dp가 편하지만, 이번 문제에서는 재귀적인 풀이 방법이 가장 먼저 떠올라 top-down 메모이제이션으로 문제를 풀이했다.</p>
-<p>팰린 드롬을 체크해줄 때, 시작 숫자와 끝 숫자가 다르다면 무조건 0을 리턴해주었고 만약 같다면 그 안의 내용인 (시작숫자 + 1) ~ (끝 숫자 - 1)이 팰린드롬 수인지 재귀적으로 호출하여 구해주며 메모를 해주었다. 그리고 메모리 초과가 계속 떠서 depth 가 2 일 때 까지는 메모이제이션을 사용해주지 않고 리턴해주었다.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pal</span>(<span class="params">nums, dp, s, e</span>):</span></span><br><span class="line">    <span class="keyword">if</span> (s, e) <span class="keyword">in</span> dp:</span><br><span class="line">        <span class="keyword">return</span> dp[(s, e)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> s == e:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> nums[s-<span class="number">1</span>] != nums[e-<span class="number">1</span>]:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> e - s == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> s + <span class="number">1</span> &lt;= e - <span class="number">1</span>:</span><br><span class="line">        dp[(s, e)] = pal(nums, dp, s+<span class="number">1</span>, e-<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> dp[(s, e)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N = <span class="built_in">int</span>(stdin.readline())</span><br><span class="line">nums = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split()))</span><br><span class="line">M = <span class="built_in">int</span>(stdin.readline())</span><br><span class="line">dp = <span class="built_in">dict</span>()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(M):</span><br><span class="line">    s, e = <span class="built_in">map</span>(<span class="built_in">int</span>, stdin.readline().split())</span><br><span class="line">    <span class="built_in">print</span>(pal(nums, dp, s, e))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>구현은 어렵지 않았지만, 이 문제가 dp 로 풀어야하는 문제면서 어떻게 dp로 풀 수 있을지 생각해내는 것이 어려운 문제였다.<br>양 끝을 비교해주고 그 값이 같다면 양 끝을 제외한 값이 팰린드롬인지 확인해주는 로직을 생각해냈다면 그 이후 구현은 단순 재귀이기 때문에 그렇게 어려운 문제는 아니라고 생각한다.</p>
 
       
     </div>
