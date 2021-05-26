@@ -22,28 +22,29 @@
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 
 <script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;dooyeong20.github.io&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
-<meta name="description" content="자바스크립트와 프로그래밍자바스크립트는 태생이 애플리케이션 개발용 언어가 아니고, 웹 브라우저를 위한 한정적인 언어이다. 따라서 아주 간단하게 사용되는 경량의, 어떻게 보면 무시받는 언어였다. 또 자바스크립트는 암묵적으로 에러를 처리해주는 기능(magic)이 많아서 장점이라고 볼 수도 있지만 이런 기능이 오히려 개발자들을 힘들게 하는 경우도 많다. 개념과 동">
+<meta name="description" content="150. Evaluate Reverse Polish Notation 여기서 문제를 풀어볼 수 있습니다.  문제 설명Evaluate the value of an arithmetic expression in Reverse Polish Notation. Valid operators are +, -, *, &#x2F; Each operand may be an integer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript 01 -  자바스크립트와 프로그래밍">
-<meta property="og:url" content="https://dooyeong20.github.io/2021/05/10/javascript/day01/index.html">
+<meta property="og:title" content="leetcode 150. Evaluate Reverse Polish Notation">
+<meta property="og:url" content="https://dooyeong20.github.io/2021/05/20/ps/leetcode_/index.html">
 <meta property="og:site_name" content="두영&#39;s 지식 공간">
-<meta property="og:description" content="자바스크립트와 프로그래밍자바스크립트는 태생이 애플리케이션 개발용 언어가 아니고, 웹 브라우저를 위한 한정적인 언어이다. 따라서 아주 간단하게 사용되는 경량의, 어떻게 보면 무시받는 언어였다. 또 자바스크립트는 암묵적으로 에러를 처리해주는 기능(magic)이 많아서 장점이라고 볼 수도 있지만 이런 기능이 오히려 개발자들을 힘들게 하는 경우도 많다. 개념과 동">
+<meta property="og:description" content="150. Evaluate Reverse Polish Notation 여기서 문제를 풀어볼 수 있습니다.  문제 설명Evaluate the value of an arithmetic expression in Reverse Polish Notation. Valid operators are +, -, *, &#x2F; Each operand may be an integer">
 <meta property="og:locale" content="ko_KR">
-<meta property="article:published_time" content="2021-05-10T07:44:06.000Z">
-<meta property="article:modified_time" content="2021-05-10T08:35:39.414Z">
+<meta property="article:published_time" content="2021-05-20T10:35:23.000Z">
+<meta property="article:modified_time" content="2021-05-25T12:15:50.105Z">
 <meta property="article:author" content="dooyeong">
-<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="PS">
+<meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://dooyeong20.github.io/2021/05/10/javascript/day01/">
+<link rel="canonical" href="https://dooyeong20.github.io/2021/05/20/ps/leetcode_/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;05&#x2F;10&#x2F;javascript&#x2F;day01&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;10&#x2F;javascript&#x2F;day01&#x2F;&quot;,&quot;title&quot;:&quot;JavaScript 01 -  자바스크립트와 프로그래밍&quot;}</script>
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;ko&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;dooyeong20.github.io&#x2F;2021&#x2F;05&#x2F;20&#x2F;ps&#x2F;leetcode_&#x2F;&quot;,&quot;path&quot;:&quot;2021&#x2F;05&#x2F;20&#x2F;ps&#x2F;leetcode_&#x2F;&quot;,&quot;title&quot;:&quot;leetcode 150. Evaluate Reverse Polish Notation&quot;}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
-<title>JavaScript 01 -  자바스크립트와 프로그래밍 | 두영's 지식 공간</title><script src="/js/config.js"></script>
+<title>leetcode 150. Evaluate Reverse Polish Notation | 두영's 지식 공간</title><script src="/js/config.js"></script>
   
 
 
@@ -127,7 +128,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%99%80-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D"><span class="nav-number">1.</span> <span class="nav-text">자바스크립트와 프로그래밍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EA%B0%9C%EB%85%90%EA%B3%BC-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC%EC%9D%98-%EC%A4%91%EC%9A%94%EC%84%B1"><span class="nav-number">1.1.</span> <span class="nav-text">개념과 동작 원리의 중요성</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EA%B3%B5%EB%B6%80-%EB%B0%A9%EB%B2%95%EC%9D%98-%EC%A2%85%EB%A5%98"><span class="nav-number">1.2.</span> <span class="nav-text">공부 방법의 종류</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%99%80-ECMAScript"><span class="nav-number">1.3.</span> <span class="nav-text">자바스크립트와 ECMAScript</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#150-Evaluate-Reverse-Polish-Notation"><span class="nav-number">1.</span> <span class="nav-text">150. Evaluate Reverse Polish Notation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C-%EC%84%A4%EB%AA%85"><span class="nav-number">1.1.</span> <span class="nav-text">문제 설명</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EC%A0%9C-%ED%92%80%EC%9D%B4"><span class="nav-number">1.2.</span> <span class="nav-text">문제 풀이</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -206,7 +207,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="ko">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/10/javascript/day01/">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/20/ps/leetcode_/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/my.png">
@@ -219,7 +220,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          JavaScript 01 -  자바스크립트와 프로그래밍
+          leetcode 150. Evaluate Reverse Polish Notation
         </h1>
 
         <div class="post-meta-container">
@@ -229,21 +230,27 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">작성일</span>
-      
 
-      <time title="Post created: 2021-05-10 16:44:06 / Updated at: 17:35:39" itemprop="dateCreated datePublished" datetime="2021-05-10T16:44:06+09:00">2021-05-10</time>
+      <time title="Post created: 2021-05-20 19:35:23" itemprop="dateCreated datePublished" datetime="2021-05-20T19:35:23+09:00">2021-05-20</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-25 21:15:50" itemprop="dateModified" datetime="2021-05-25T21:15:50+09:00">2021-05-25</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
         </span>
           , 
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+          <a href="/categories/Problem-Solving/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
         </span>
     </span>
 
@@ -257,37 +264,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="자바스크립트와-프로그래밍"><a href="#자바스크립트와-프로그래밍" class="headerlink" title="자바스크립트와 프로그래밍"></a>자바스크립트와 프로그래밍</h1><p>자바스크립트는 태생이 애플리케이션 개발용 언어가 아니고, 웹 브라우저를 위한 한정적인 언어이다. 따라서 아주 간단하게 사용되는 경량의, 어떻게 보면 무시받는 언어였다. 또 자바스크립트는 암묵적으로 에러를 처리해주는 기능(magic)이 많아서 장점이라고 볼 수도 있지만 이런 기능이 오히려 개발자들을 힘들게 하는 경우도 많다.</p>
-<h2 id="개념과-동작-원리의-중요성"><a href="#개념과-동작-원리의-중요성" class="headerlink" title="개념과 동작 원리의 중요성"></a>개념과 동작 원리의 중요성</h2><p>위와 같이 자바스크립트는 태생이 애플리케이션 개발용이 아니었기 때문에 현재 자바스크립트로 개발을 하기 위해서는 내부 동작 원리를 정확하게 알고 사용해야 한다. 왜냐하면 이제는 더 이상 예전의 그 간단하고 쉽게 사용할 수 있는 자바스크립트가 아니고, 제대로 사용하지 않는다면 버그 투성이 애플리케이션이 될 것이기 때문이다.</p>
-<p>예를 들어서, 자바스크립트에서는 객체를 생성하는 방법이 총 5개가 있기 때문에 어떠한 상황에서 어떠한 방법을 사용할지 선택해서 적용해야 한다. 이제는 자바스크립트를 깊게 공부해야할 필요성이 생기고 있는 것이다. DOM 컨트롤에서 끝이나는 공부가 아니라 더 깊이, 더 정확한 내용까지 알아야 할 것이다.</p>
-<h2 id="공부-방법의-종류"><a href="#공부-방법의-종류" class="headerlink" title="공부 방법의 종류"></a>공부 방법의 종류</h2><ol>
-<li>Top-down</li>
-</ol>
-<ul>
-<li>흥미를 가지고 공부할 수 있다.</li>
-<li>하지만 학습 과정에 있어서 지식에 구멍이 뚫려 아예 들어보지도 못한 부분이 존재할 수도 있다.</li>
+        <h1 id="150-Evaluate-Reverse-Polish-Notation"><a href="#150-Evaluate-Reverse-Polish-Notation" class="headerlink" title="150. Evaluate Reverse Polish Notation"></a>150. Evaluate Reverse Polish Notation</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/evaluate-reverse-polish-notation/">여기서</a> 문제를 풀어볼 수 있습니다.</li>
 </ul>
-<ol start="2">
-<li>Bottom-up</li>
-</ol>
-<ul>
-<li>한 번 쭉 훑어볼 수 있어서 지식에 구멍이 뚫릴 일이 없다.</li>
-<li>하지만 고된 일이다.</li>
-</ul>
-<p>그리고 이번 자바스크립트를 공부할 때에는 아주 탄탄한 기본기, 깊게 공부하기 위해서 Bottom-up 방식을 선택해 아래와 같은 순서로 공부할 것이다.</p>
-<ol>
-<li>기본 개념과 동작원리(이해: 용어 및 개념, 문법)</li>
-<li>코딩 스킬(숙달: 의식적 연습, API, 라이브러리)</li>
-<li>프로젝트(경험)</li>
-</ol>
-<h2 id="자바스크립트와-ECMAScript"><a href="#자바스크립트와-ECMAScript" class="headerlink" title="자바스크립트와 ECMAScript"></a>자바스크립트와 ECMAScript</h2><p>자바스크립트는 컴파일 언어와 인터프리터 언어 둘 중 하나라고 정확히 단정지을 순 없지만, 따지자면 인터프리터 언어와 더 가깝다고 할 수 있다. 그리고 이러한 자바스크립트는 ECMAScript가 규정하는 핵심 문법을 포함하고 있다. ECMAScript는 자바스크립트의 표준 사양을 말하며 언어의 타입, 객체와 프로퍼티, 함수 등의 핵심 문법을 규정한다. 그리고 이러한 ECMAScript 사양을 준수해 브라우저 내장 자바스크립트 엔진을 구현하게 되는 것이다.</p>
-<p>브라우저에서 동작하는 자바스크립틑 DOM이라고 불리는 객체가 있지만 ECMAScript에는 그러한 명세가 없다. 예를 들어, Node.js에서는 다음과 같은 코드가 동작하지 않는다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">&quot;This code doesn&#x27;t work !&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="문제-설명"><a href="#문제-설명" class="headerlink" title="문제 설명"></a>문제 설명</h2><p>Evaluate the value of an arithmetic expression in Reverse Polish Notation.</p>
+<p>Valid operators are <code>+, -, *, /</code> Each operand may be an integer or another expression.</p>
+<p>Note that division between two integers should truncate toward zero.</p>
+<p>It is guaranteed that the given RPN expression is always valid. That means the expression would always evaluate to a result, and there will not be any division by zero operation.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Input: tokens &#x3D; [&quot;2&quot;,&quot;1&quot;,&quot;+&quot;,&quot;3&quot;,&quot;*&quot;]</span><br><span class="line">Output: 9</span><br><span class="line">Explanation: ((2 + 1) * 3) &#x3D; 9</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Input: tokens &#x3D; [&quot;10&quot;,&quot;6&quot;,&quot;9&quot;,&quot;3&quot;,&quot;+&quot;,&quot;-11&quot;,&quot;*&quot;,&quot;&#x2F;&quot;,&quot;*&quot;,&quot;17&quot;,&quot;+&quot;,&quot;5&quot;,&quot;+&quot;]</span><br><span class="line">Output: 22</span><br><span class="line">Explanation: ((10 * (6 &#x2F; ((9 + 3) * -11))) + 17) + 5</span><br><span class="line">&#x3D; ((10 * (6 &#x2F; (12 * -11))) + 17) + 5</span><br><span class="line">&#x3D; ((10 * (6 &#x2F; -132)) + 17) + 5</span><br><span class="line">&#x3D; ((10 * 0) + 17) + 5</span><br><span class="line">&#x3D; (0 + 17) + 5</span><br><span class="line">&#x3D; 17 + 5</span><br><span class="line">&#x3D; 22</span><br></pre></td></tr></table></figure>
 
-<p>왜냐하면 ECMAScript에는 Client-side API에 대한 사양이 없기 때문이다. 따라서 Node.js 에서는 ECMAScript에 있는 사양만 동작하는 것이다. 반대로, 브라우저에서 동작하는 javaScript에는 사용자의 컴퓨터에서 동작하기 때문에 보안상 파일 시스템에 대한 API가 동작하지 않는다(읽는 것은 가능).</p>
-<blockquote>
-<p>프로그래밍은 요구사항의 집합을 분석해서 적절한 자료구조와 함수의 집합으로 변환한 후, 그 흐름을 제어하는 것이다.</p>
-</blockquote>
+<h2 id="문제-풀이"><a href="#문제-풀이" class="headerlink" title="문제 풀이"></a>문제 풀이</h2><p>이 문제는 유명한 스택 문제인 후위 표기법 문제였다. 각각의 token 들을 순회하며, 연산자가 아니라면(숫자라면) 스택에 넣고 만약 연산자라면 스택 상위 2개를 연산한다음 다시 스택에 넣어주는 방식으로 연산을 하면 마지막에 스택에 단 하나의 수가 남게 된다. 따라서 그 수를 pop 해서 출력해주면 되는 쉬운 문제였다.</p>
+<p>이번 문제는 leetcode의 daily challenge 치고는 많이 쉬운 편이었던 것같다.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">evalRPN</span>(<span class="params">self, tokens: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">cal</span>(<span class="params">b, a, op</span>):</span></span><br><span class="line">            <span class="keyword">if</span> op == <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> a + b</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> op == <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> a - b</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> op == <span class="string">&#x27;*&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> a * b</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> op == <span class="string">&#x27;/&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">int</span>(a / b)</span><br><span class="line"></span><br><span class="line">        s = []</span><br><span class="line">        op = <span class="built_in">set</span>(<span class="string">&#x27;+-/*&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> t <span class="keyword">in</span> tokens:</span><br><span class="line">            <span class="keyword">if</span> t <span class="keyword">in</span> op:</span><br><span class="line">                s.append(cal(s.pop(), s.pop(), t))</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            s.append(<span class="built_in">int</span>(t))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> s.pop()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -297,20 +285,21 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
+              <a href="/tags/PS/" rel="tag"><i class="fa fa-tag"></i> PS</a>
+              <a href="/tags/LeetCode/" rel="tag"><i class="fa fa-tag"></i> LeetCode</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/05/09/javascript/intro/" rel="prev" title="JavaScript 정리 시작">
-                  <i class="fa fa-chevron-left"></i> JavaScript 정리 시작
+                <a href="/2021/05/18/ps/boj-2580/" rel="prev" title="BOJ 2580 - 스도쿠">
+                  <i class="fa fa-chevron-left"></i> BOJ 2580 - 스도쿠
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/05/10/ps/boj-18119/" rel="next" title="BOJ 18119 - 단어 암기">
-                  BOJ 18119 - 단어 암기 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/05/20/ps/leetcode_102/" rel="next" title="leetcode 102. Binary Tree Level Order Traversal">
+                  leetcode 102. Binary Tree Level Order Traversal <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
