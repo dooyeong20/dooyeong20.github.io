@@ -93,7 +93,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">77</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">79</span></a></li>
   </ul>
 </nav>
 
@@ -139,7 +139,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">77</span>
+          <span class="site-state-item-count">79</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -192,6 +192,271 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/11/javascript/day04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 지식 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/javascript/day04/" class="post-title-link" itemprop="url">JavaScript 04 - 데이터 타입</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-05-11 20:49:06" itemprop="dateCreated datePublished" datetime="2021-05-11T20:49:06+09:00">2021-05-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-14 14:33:00" itemprop="dateModified" datetime="2021-05-14T14:33:00+09:00">2021-05-14</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="데이터-타입"><a href="#데이터-타입" class="headerlink" title="데이터 타입"></a>데이터 타입</h1><p>데이터 타입이란 값의 “종류”를 말하는 것이다. <code>123</code> 은 숫자 타입이고(참로고 자바스크립트에는 정수형이나 실수형이 구분되지 않고 모두 실수로 처리된다), <code>hello</code> 는 문자 타입이다.</p>
+<h2 id="원시-타입-primitive-type"><a href="#원시-타입-primitive-type" class="headerlink" title="원시 타입(primitive type)"></a>원시 타입(primitive type)</h2><p>자바스크립트에는 총 6개의 원시 타입이 존재한다</p>
+<ul>
+<li><p>숫자 타입 (number): 정수와 실수를 구분하지 않고 숫자 타입으로 존재</p>
+</li>
+<li><p>문자열 타입 (string): 문자열</p>
+</li>
+<li><p>불리언 타입 (boolean): 논리적 참과 거짓 (true/false)</p>
+</li>
+<li><p>undefined 타입: <code>undefined</code> var 키워드로 선언된 변수에 암묵적으로 할당되는 값</p>
+</li>
+<li><p>null 타입: 값이 없다는 것을 의도적으로 명시하는 값</p>
+</li>
+<li><p>심볼(symbol): ES6 추가된 타입</p>
+</li>
+</ul>
+<p>그리고 객체 타입(object/reference type)</p>
+<p>헷갈리지 않도록 하기 위해 예시를 하나 들겠다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> one = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> two = <span class="string">&#x27;2&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>위에서 <code>one</code>은 숫자 타입, <code>two</code>는 문자열 타입이다.</p>
+</blockquote>
+<h2 id="각-타입별-특징"><a href="#각-타입별-특징" class="headerlink" title="각 타입별 특징"></a>각 타입별 특징</h2><h3 id="Number-타입"><a href="#Number-타입" class="headerlink" title="Number 타입"></a>Number 타입</h3><p>숫자 타입엔 특별한 세 가지 값들이 존재한다.</p>
+<ul>
+<li><code>Infinity</code></li>
+<li><code>-Infinity</code></li>
+<li><code>NaN</code></li>
+</ul>
+<p>자바스크립트는 대소문자를 구분하기 때문에 <code>nan</code> 과 같이 대소문자를 무시하고 사용할 수 없다는 점을 주의해야 한다.</p>
+<h3 id="String-타입"><a href="#String-타입" class="headerlink" title="String 타입"></a>String 타입</h3><p>일반적으로 <code>&quot; ... &quot;</code> <code>&#39; ... &#39;</code> 와 같이 큰 따옴표와 작은 따옴표로 감싸는 방법 외에도 백틱(`) 으로도 감쌀 수 있는데, 문자열 표현식을 삽입하는 경우에 매우 편리하고 가독성이 좋다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">25</span>;</span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;dooyeong&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6: 표현식 삽입</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`I&#x27;m <span class="subst">$&#123;age&#125;</span> and my name is <span class="subst">$&#123;name&#125;</span>.`</span>);</span><br></pre></td></tr></table></figure>
+
+<p>위와 같이 사용할 수 있으며 가독성이 좋은 것을 확인할 수 있다.</p>
+<h3 id="undefined-타입"><a href="#undefined-타입" class="headerlink" title="undefined 타입"></a>undefined 타입</h3><p>자바스크립트를 배우며 처음에 <code>undefined</code> 타입과 <code>null</code> 을 구분하지 못해 헤맸었다. 하지만 이제는 확실히 정리해 헷갈리지 않도록 할 것이다.</p>
+<p><code>undefined</code> 는 <code>var</code> 키워드로 선언한 변수가 암묵적으로 초기화되는 값이다. 즉, 메모리 공간을 할당받고 초기화가 되기 전까지 빈 상태로 있으면 쓰레기 값이 존재하게 되는데, 이러한 값을 남겨두지 않고 <code>undefined</code> 로 초기화 하는 것이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+
+<p>이렇듯 <code>undefined</code> 는 개발자가 의도적으로 할당해주기 위한 값이 아니라 자바스크립트 엔진이 변수를 초기화할 때 사용하는 값이기 때문에 개발자가 직접 <code>undefined</code> 를 사용하는 것은 좋지 않다. 그러한 경우에는 <code>null</code> 을 대신 사용하는 것이 좋을 것이다.</p>
+<blockquote>
+<p>DOM 에서 없는 요소를 선택했을 때는 <code>undefined</code> 가 아니라 <code>null</code> 값을 리턴하게 되는데 이 부분은 위 내용과 일관되지 않는 성격을 띄고 있기 때문에 주의해야 한다.</p>
+</blockquote>
+<h2 id="데이터-타입의-필요성"><a href="#데이터-타입의-필요성" class="headerlink" title="데이터 타입의 필요성"></a>데이터 타입의 필요성</h2><p>자바스크립트는 Java나 C 처럼 명시적으로 데이터 타입을 지정해주지 않는 동적인 언어이다. 그럼 이러한 동적인 언어인 자바스크립트에서는 어차피 데이터 타입을 자동으로 해석해줄텐데 왜 데이터 타입이라는 개념이 필요할까?</p>
+<p>그것은 컴퓨터가 메모리에 자료를 어떻게 저장하고 사용하는지에 대한 내용과 밀접하다. 아무리 자체적으로 변수의 타입을 측정해준다고 한들, 실제로 메모리에 저장해주는 단계에서는 해당 자료(값)을 메모리 어떠한 공간에 얼만큼 사용해야 하는지 또 사용할 때에는 어떻게 해석해야 하는지 등을 알아야 하기 때문이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">25</span>;</span><br></pre></td></tr></table></figure>
+
+<p>위 코드를 보면 age 라는 변수에 25 라는 숫자 타입의 값을 대입하려고 하고 있다. 이 때 숫자 타입은 8 바이트만큼을 차지하기 때문에 메모리에 공간을 할당하기 위해 8 바이트만큼의 공간을 확보해야 한다는 사실을 알아야한다.그리고 <code>age</code> 라는 변수를 사용할 때 변수가 참조하고 있는 메모리의 주소는 알지만, 한 번에 얼만큼의 바이트를 읽어와야 정보의 손실이 없을지 정확하게 알아야 하고 지금의 경우에는 8 바이트가 된다. 그리고 이렇게 읽는 것 까지 완료했다면 이제 읽어들인 정보를 어떻게 해석할지 알기 위해 데이터 타입이 필요하게 되는 것이다.</p>
+<p>정리하자면</p>
+<ul>
+<li>값을 저장할 때 <strong>확보해야 하는 메모리 공간의 크기</strong>를 결정하기 위해</li>
+<li>값을 참조할 때 <strong>한 번에 읽어 들여야 할 메모리 공간의 크기</strong>를 결정하기 위해</li>
+<li>메모리에서 읽어 들인 2진수를 <strong>어떻게 해석할지 결정</strong>하기 위해</li>
+</ul>
+<p>데이터 타입이 필요한 것이다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/11/javascript/day03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 지식 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/05/11/javascript/day03/" class="post-title-link" itemprop="url">JavaScript 03 - 표현식(expression) & 문(statement)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+
+      <time title="Post created: 2021-05-11 20:30:06" itemprop="dateCreated datePublished" datetime="2021-05-11T20:30:06+09:00">2021-05-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Updated at: 2021-05-12 17:30:06" itemprop="dateModified" datetime="2021-05-12T17:30:06+09:00">2021-05-12</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+        </span>
+          , 
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="표현식-expression-과-문-statement"><a href="#표현식-expression-과-문-statement" class="headerlink" title="표현식(expression)과 문(statement)"></a>표현식(expression)과 문(statement)</h1><h2 id="용어-정리"><a href="#용어-정리" class="headerlink" title="용어 정리"></a>용어 정리</h2><p>표현식(expression)과 문(statement)에 대해서 말하기 전, 몇 가지 용어에 대한 개념을 확실하게 짚고 넘어가보겠다.</p>
+<h3 id="값"><a href="#값" class="headerlink" title="값"></a>값</h3><p>값이란 표현식(expression)이 평가되어 생성된 결과이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> + <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+
+<p>이 때 <code>10 + 20</code> 이라는 식이 평가되어 <code>30</code> 이라는 값이 생성된 것이다.</p>
+<h3 id="리터럴"><a href="#리터럴" class="headerlink" title="리터럴"></a>리터럴</h3><p>리터럴(literal) 이란 사람이 이해할 수 있는 약속된 문자나 기호를 사용해서 값을 생성하는 표기 방식을 의미한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> three = <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> hello = <span class="string">&#x27;hello&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>위 <code>3</code> 이라는 것은 우리가 아는 아라비아 숫자 <code>3</code> 이지만 자바스크립트 엔진에게는 숫자 리터럴이 되는 것이다. 그리고 ‘hello’는 문자열 리터럴이 되는 것이다. 표현식이나 평가가 없이 그 자체로 값인 것이다.</p>
+<h2 id="표현식-expression-이란"><a href="#표현식-expression-이란" class="headerlink" title="표현식(expression)이란?"></a>표현식(expression)이란?</h2><p>그렇다면 표현식은 무엇일까?</p>
+<p>표현식은 값이 될 수 있는 문(statement)이다. 즉 평가되어 값을 생성하거나 기존의 값을 참조하는 것이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> score = <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
+
+<p>위는 100 이라는 숫자 리터럴로 변수를 선언하고 초기화한 것이다. 그리고 리터럴은 값으로 평가되기 때문에 리터럴도 표현식이 된다는 점에 주목해야 한다</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> score = <span class="number">123</span> * <span class="number">456</span>;</span><br></pre></td></tr></table></figure>
+
+<p>그리고 위의 예시에서도 123 * 456 이라는 식이 평가되어 값을 가지기 때문에 위의 예시도 표현식에 해당된다.</p>
+<h2 id="문-statement-이란"><a href="#문-statement-이란" class="headerlink" title="문(statement)이란?"></a>문(statement)이란?</h2><p>문은 표현식과 헷갈릴 수 있지만, 이 둘을 잘 구분한다면 자바스크립트 코드를 읽고 실행 결과를 예측하는데 큰 도움이 될 수 있다.</p>
+<p>문은 프로그램을 구성하는 기본 단위, 최소 실행 단위이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sum = <span class="number">1</span> + <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<p>위 한 줄의 코드는 문(statement)이다. 그리고</p>
+<ul>
+<li>var</li>
+<li>sum</li>
+<li>=</li>
+<li>1</li>
+<li>-</li>
+<li>2</li>
+</ul>
+<p>라는 문법적으로 더 나눌 수 없는 코드의 기본 요소인 토큰들로 이루어진다.</p>
+<p>그리고 많이 들어봤던 선언문, 조건문, 반복문 등이 모두 여기서 말하는 “문”에 해당한다.</p>
+<h2 id="표현식과-문의-관계"><a href="#표현식과-문의-관계" class="headerlink" title="표현식과 문의 관계"></a>표현식과 문의 관계</h2><p>많이 헷갈리는 부분인데, 표현식은 문의 일부일 수도 있으며 그 자체로 문이 될 수도 있다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">1</span> + <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<p>이 때 위 코드는 표현식이면서 완전한 문이 되지만, 아래 코드는 변수의 선언문으로써 값으로 평가될 수 없기 때문에 표현식이 될 수 없다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x;</span><br></pre></td></tr></table></figure>
+
+<p>하지만 “되”와 “돼”를 “하”와 “해”에 대입하여 생각해 구분하는 것과 같이 위 둘도 쉽게 구분할 수 있는 방법이 있다. 그것은 바로 변수에 할당해보는 것이다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="keyword">var</span> x;</span><br></pre></td></tr></table></figure>
+
+<p>먼저 표현식이 아닌 선언문을 변수 foo에 할당할 수는 없다. 하지만 아래 코드는 가능하다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = (x = <span class="number">1</span> + <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// foo = 3</span></span><br></pre></td></tr></table></figure>
+
+<p>할당문을 값처럼 변수에 할당한 것이다. 왜 이것이 가능하냐면 표현식 문인 할당문은 할당한 “값”으로 평가되기 때문이다.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1088,201 +1353,6 @@
 <img src="/images/3_mu3.png" width=700>
 
 <p>이제 이렇게 못생긴 페이지를 실제 VLIVE 앱과 같이 꾸밀 차례이다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/02/html-css/vlive-2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 지식 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/02/html-css/vlive-2/" class="post-title-link" itemprop="url">VLIVE 프로젝트 - 반응형 레이아웃 분석</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-
-      <time title="Post created: 2021-05-02 16:33:20" itemprop="dateCreated datePublished" datetime="2021-05-02T16:33:20+09:00">2021-05-02</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Updated at: 2021-05-09 15:06:12" itemprop="dateModified" datetime="2021-05-09T15:06:12+09:00">2021-05-09</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/" itemprop="url" rel="index"><span itemprop="name">HTML/CSS</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/HTML-CSS/Project/" itemprop="url" rel="index"><span itemprop="name">Project</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="VLIVE-팀-프로젝트"><a href="#VLIVE-팀-프로젝트" class="headerlink" title="VLIVE 팀 프로젝트"></a>VLIVE 팀 프로젝트</h1><ul>
-<li><a href="https://dooyeong20.github.io/vlive/01_team/src/">완성된 프로젝트 보러가기</a></li>
-</ul>
-<h2 id="VLIVE-반응형-프로토타이핑"><a href="#VLIVE-반응형-프로토타이핑" class="headerlink" title="VLIVE 반응형 프로토타이핑"></a>VLIVE 반응형 프로토타이핑</h2><p>VLIVE는 반응형 레이아웃 배치 breakpoint가 크게 총 2개이다. 모바일, 태블릿, 데스크탑 모드 총 3개의 반응형 레이아웃을 제공하고 있는 것을 보았고, <a href="https://dooyeong20.github.io/2021/05/01/html-css/vlive-1/">지난 글</a>에서 볼 수 있듯이 헤더, 좌/우측 컨테이너 그리고 메인(동영상)컨테이너, 그리고 댓글 컨테이너로 구성되어 있는 것을 확인했다.</p>
-<p>따라서 이대로 레이아웃을 짜보았는데, VLIVE는 원래 <code>flex</code> 로 배치되어 있었지만 나는 <code>grid</code> 를 사용해 배치해보았다. 왜냐하면 큰 단위의 전체적인 배치를 하고, 반응형에 대응하기에는 <code>grid</code> 가 적합하다고 판단했기 때문이다.</p>
-<h3 id="데스크탑-레이아웃"><a href="#데스크탑-레이아웃" class="headerlink" title="데스크탑 레이아웃"></a>데스크탑 레이아웃</h3><img src="/images/proto-1.png" width="800">
-
-<p>데스크탑 레이아웃은 헤더와 좌우측 컨테이너, 그리고 메인과 댓글 창의 배치가 위와 같이 되어있다.</p>
-<h3 id="태블릿-레이아웃"><a href="#태블릿-레이아웃" class="headerlink" title="태블릿 레이아웃"></a>태블릿 레이아웃</h3><img src="/images/proto-2.png" width="500">
-
-<p>태블릿 레이아웃은 우측 컨테이너가 메인 컨테이너와 댓글 컨테이너 사이로 배치되는 것을 확인할 수 있는데, 이 때문에 <code>flex</code> 배치보다 <code>grid</code> 배치를 선택하게 되었다.</p>
-<h3 id="모바일-레이아웃"><a href="#모바일-레이아웃" class="headerlink" title="모바일 레이아웃"></a>모바일 레이아웃</h3><img src="/images/proto-3.png" width="300">
-
-<p>모바일 레이아웃은 위 태블릿 레이아웃에서 좌측 컨테이너가 토글로 숨어있는 형태로 구성된다.</p>
-<h3 id="grid-설정-CSS"><a href="#grid-설정-CSS" class="headerlink" title="grid 설정 (CSS)"></a>grid 설정 (CSS)</h3><p>위에서 <code>grid</code> 배치를 사용했다고 했는데, 아래와 같이 코드를 짜서 구성하였다.</p>
-<img src="/images/proto-4.png" width="400">
-
-<p>다음은 위 VLIVE 마크업을 해볼 차례이다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/02/ps/boj-12025/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 지식 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/02/ps/boj-12025/" class="post-title-link" itemprop="url">BOJ 12025 - 장난꾸러기 영훈</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-      
-
-      <time title="Post created: 2021-05-02 15:38:23 / Updated at: 16:50:07" itemprop="dateCreated datePublished" datetime="2021-05-02T15:38:23+09:00">2021-05-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/" itemprop="url" rel="index"><span itemprop="name">Problem Solving</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Problem-Solving/BOJ/" itemprop="url" rel="index"><span itemprop="name">BOJ</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="백준-12025-장난꾸러기-영훈"><a href="#백준-12025-장난꾸러기-영훈" class="headerlink" title="백준 12025 - 장난꾸러기 영훈"></a>백준 12025 - 장난꾸러기 영훈</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://www.acmicpc.net/problem/12025">백준 12025번</a> 에서 풀어볼 수 있습니다.</li>
-</ul>
-<h2 id="문제설명"><a href="#문제설명" class="headerlink" title="문제설명"></a>문제설명</h2><p>희현이는 인터넷 ID를 만들 때 주로 쓰는 비밀번호가 있다. 하지만 이 비밀번호는 너무 길어서 희현이는 항상 쪽지에 적어 다니면서 확인을 한다. 하지만 장난꾸러기 영훈이는 이 쪽지를 가져가 1들 중 몇 개를 6로, 6들 중 몇 개를 1로 바꾸고 2들 중 몇 개를 7로 7들 중 몇 개를 2으로 바꾸는 장난을 쳤다. 따라서 영훈이가 장난쳐놓은 비밀번호 무용지물이 되었다. 왜냐하면 1이라고 쓰여 있어도 1 또는 6일수가 있고, 또한 6이라 쓰여 있어도 1 또는 6일수가 있다. 2과 7에서도 마찬가지이다. 하지만 희현이는 이러한 상황에 대비하여 비밀번호에 대한 한 가지 단서를 만들어 놓았는데 이는 다음과 같다.</p>
-<p>비밀번호 수열의 숫자 중 1과 6을 모두 1로, 2와 7을 모두 2으로 바꾼 숫자와 1과 6을 모두 6으로 2과 7을 모두 7로 바꾼 숫자 사이에 가능한 경우를 모두 사전순으로 나열한 다음 그 중 k번째가 비밀번호이다.</p>
-<p>따라서 이 단서를 통해 멘붕에 빠진 희현이를 도와 비밀번호를 다시 찾아보자.</p>
-<h3 id="제한사항"><a href="#제한사항" class="headerlink" title="제한사항"></a>제한사항</h3><ul>
-<li>비밀번호의 길이는 60자까지이고 첫 숫자가 0일수도 있다.)</li>
-<li>둘째 줄에 숫자 k가 주어진다. (k ≤ 2^63 – 1)</li>
-</ul>
-<h2 id="풀이"><a href="#풀이" class="headerlink" title="풀이"></a>풀이</h2><p>이 문제는 1,2,6,7 만 추출해낸 다음 순열로 문제를 풀 수도 있다. 하지만 주어진 k 입력의 크기가 2^63 -1 로 매우 크기 때문에 100% 시간초과가 날 것이라고 생각했다. 그리고 k 번째의 순열을 O(1)로 찾기 위해서 비트마스킹을 사용했는데, 어떻게 사용되는지 아래에서 보자.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. k &#x3D; 0</span><br><span class="line">&gt; 0000</span><br><span class="line"></span><br><span class="line">2. k &#x3D; 1</span><br><span class="line">&gt; 0001</span><br><span class="line"></span><br><span class="line">3. k &#x3D; 2</span><br><span class="line">&gt; 0010</span><br></pre></td></tr></table></figure>
-
-<p>이런식으로 이진수를 사용하게되면 자동적으로 k 번째에 해당하는 flag 조합을 쉽고 빠르게 구할 수 있게 된다. 따라서 주어진 비밀번호에서 1,2,6,7의 개수를 추출해 해당 개수만큼에 해당하는 비트열을 만든다음, 그 길이에 따른 k 번째 비트(순열)을 구해줄 수 있다. 예를 들어 <code>1122</code> 라는 문자열이 있을 때, 3 번째 비트는 <code>0010</code> 가 된다. 따라서 <code>1</code>에 해당하는 수를 큰 값으로 배치해주고, <code>0</code>에 해당하는 수를 작은 값으로 배치해주면 된다. 즉, 위 예시에서는 <code>1172</code>가 답이 되는 것이다.</p>
-<h2 id="소스-코드"><a href="#소스-코드" class="headerlink" title="소스 코드"></a>소스 코드</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> stdin</span><br><span class="line"></span><br><span class="line">password = stdin.readline().strip()</span><br><span class="line">k = <span class="built_in">int</span>(stdin.readline())</span><br><span class="line">bit = <span class="number">1</span></span><br><span class="line">cnt = <span class="number">0</span></span><br><span class="line">ans = <span class="string">&#x27;&#x27;</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 비밀번호를 받아 1,2,6,7 일 경우에만 저장해놓음</span></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> password:</span><br><span class="line">    <span class="keyword">if</span> p == <span class="string">&#x27;1&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;6&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;2&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;7&#x27;</span>:</span><br><span class="line">        bit &lt;&lt;= <span class="number">1</span></span><br><span class="line">        cnt += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 만약 구하려는 k 번째가 가능한 순열의 경우의 수를 넘는다면 바로 종료</span></span><br><span class="line"><span class="keyword">if</span> k &gt; bit:</span><br><span class="line">    <span class="built_in">print</span>(-<span class="number">1</span>)</span><br><span class="line">    exit(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># bit의 길이를 맞춰주기 위해 좌측에 &#x27;0&#x27;으로 패딩처리</span></span><br><span class="line">bit = <span class="built_in">str</span>(<span class="built_in">bin</span>(bit - <span class="number">1</span> &amp; (k-<span class="number">1</span>))[<span class="number">2</span>:])</span><br><span class="line">bit = <span class="string">&#x27;0&#x27;</span> * (cnt - <span class="built_in">len</span>(bit)) + bit</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 해당 비트에 해당하는 경우에 따라서 수를 정해서 ans 에 저장해나감</span></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> password:</span><br><span class="line">    <span class="keyword">if</span> p == <span class="string">&#x27;1&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;6&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;2&#x27;</span> <span class="keyword">or</span> p == <span class="string">&#x27;7&#x27;</span>:</span><br><span class="line">        <span class="keyword">if</span> bit[i] == <span class="string">&#x27;0&#x27;</span>:</span><br><span class="line">            <span class="keyword">if</span> p == <span class="string">&#x27;6&#x27;</span>:</span><br><span class="line">                ans += <span class="string">&#x27;1&#x27;</span></span><br><span class="line">            <span class="keyword">elif</span> p == <span class="string">&#x27;7&#x27;</span>:</span><br><span class="line">                ans += <span class="string">&#x27;2&#x27;</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                ans += p</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> p == <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">            ans += <span class="string">&#x27;6&#x27;</span></span><br><span class="line">        <span class="keyword">elif</span> p == <span class="string">&#x27;2&#x27;</span>:</span><br><span class="line">            ans += <span class="string">&#x27;7&#x27;</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            ans += p</span><br><span class="line">        i += <span class="number">1</span></span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    ans += p</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(ans)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="결과"><a href="#결과" class="headerlink" title="결과"></a>결과</h2><img src="/images/210502-1.png" width="800">
 
       
     </div>
