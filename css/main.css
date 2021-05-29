@@ -2988,6 +2988,9 @@ body * {
   height: 100px;
   background-color: #fff;
 }
+.site-meta .site-subtitle {
+  margin-top: 0;
+}
 .site-brand-container {
   background: none;
 }
@@ -2998,7 +3001,7 @@ body * {
   border-radius: 20px;
 }
 .site-meta .brand::before {
-  content: 'I ❤️ JavaScript';
+  content: '❤️ Java & JavaScript ❤️';
   display: block;
 }
 .site-brand-container .site-meta .brand {
@@ -3009,4 +3012,6 @@ body * {
   box-sizing: border-box;
   padding: 0.3rem;
   border-radius: 20px;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
