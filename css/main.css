@@ -3001,7 +3001,7 @@ body * {
   border-radius: 20px;
 }
 .site-meta .brand::before {
-  content: '❤️ Java & JavaScript ❤️';
+  content: '❤️ JavaScript ❤️';
   display: block;
 }
 .site-brand-container .site-meta .brand {
