@@ -93,7 +93,7 @@
         <li class="menu-item menu-item-코딩테스트"><a href="/categories/Problem-Solving/" rel="section"><i class="fa fa-bookmark fa-fw"></i>코딩테스트</a></li>
         <li class="menu-item menu-item-javascript"><a href="/categories/JavaScript/" rel="section"><i class="fa fa-bookmark fa-fw"></i>JavaScript</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>태그<span class="badge">10</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">78</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>아카이브<span class="badge">79</span></a></li>
   </ul>
 </nav>
 
@@ -139,7 +139,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-count">79</span>
           <span class="site-state-item-name">포스트</span>
         </a>
       </div>
@@ -192,6 +192,71 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/06/06/moved/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/my.png">
+      <meta itemprop="name" content="dooyeong">
+      <meta itemprop="description" content="좋은 개발자 기술 블로그">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="두영's 지식 공간">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/06/06/moved/" class="post-title-link" itemprop="url">티스토리로 ...</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">작성일</span>
+      
+
+      <time title="Post created: 2021-06-06 12:14:06 / Updated at: 12:39:45" itemprop="dateCreated datePublished" datetime="2021-06-06T12:14:06+09:00">2021-06-06</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="생산성을-위해서-Tistory로-Link"><a href="#생산성을-위해서-Tistory로-Link" class="headerlink" title="생산성을 위해서 Tistory로! Link"></a>생산성을 위해서 Tistory로! <a target="_blank" rel="noopener" href="https://dooyeong20.tistory.com/">Link</a></h1><img src="/images/tistory.png" width=800>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1614,119 +1679,6 @@
 <p>y는 변수 선언 없이 단지 전역 객체의 프로퍼티로 추가되었을 뿐이다. 따라서 y는 변수가 아니고, y는 변수가 아니므로 변수 호이스팅이 발생하지 않는다.</p>
 <p>또한 변수가 아니라 단지 프로퍼티인 y는 delete 연산자로 삭제할 수 있다. 전역 변수는 프로퍼티이지만 delete 연산자로 삭제할 수 없다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">10</span>; <span class="comment">// 전역 변수</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  y = <span class="number">20</span>; <span class="comment">// window.y = 20;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.x); <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.y); <span class="comment">// 20</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> x; <span class="comment">// 전역 변수는 삭제되지 않는다.</span></span><br><span class="line"><span class="keyword">delete</span> y; <span class="comment">// 프로퍼티는 삭제된다.</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.x); <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.y); <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://dooyeong20.github.io/2021/05/23/javascript/day18/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/my.png">
-      <meta itemprop="name" content="dooyeong">
-      <meta itemprop="description" content="좋은 개발자 기술 블로그">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="두영's 지식 공간">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/23/javascript/day18/" class="post-title-link" itemprop="url">JavaScript 18 - strict mode</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">작성일</span>
-      
-
-      <time title="Post created: 2021-05-23 12:35:06 / Updated at: 13:01:50" itemprop="dateCreated datePublished" datetime="2021-05-23T12:35:06+09:00">2021-05-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
-        </span>
-          , 
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/JavaScript/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="strict-mode"><a href="#strict-mode" class="headerlink" title="strict mode"></a>strict mode</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  x = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> y = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo();</span><br><span class="line">bar();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(x); <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">console</span>.log(y); <span class="comment">// error</span></span><br></pre></td></tr></table></figure>
-
-<p>위 코드를 보면 foo 함수 내에서 <code>x = 10</code> 을 수행하기 위해서 foo 함수 스코프에서 <code>x</code> 를 검색한다. 하지만 당연히 없고, 그럼 다음으로 상위 스코프인 전역 스코프에서 x 선언을 검색하지만 전역에도 없고, 따라서 엥ㄴ진이 <strong>암묵적으로</strong> 전역 객체에 <code>x</code> 프로퍼티를 동적으로 생성한다.</p>
-<p>개발자의 의도와 상관없이 발생하는 암묵적 전역은 오류를 발생시킬 가능성이 매우 높기 때문에 <code>let</code>, <code>const</code> 와같은 키워드를 사용해 변수를 선언한 다음에 사용해야 한다.</p>
-<p>하지만 오타, 문법 지식의 미비로 인해서 실수를 발생시킬 수 있으므로 잠재적인 오류를 억제해주는 개발 환경을 만들 수 있는데, 그 중 한 방법이 바로 ES5 부터 도입된 strict mode 이다. 이는 자바스크립트의 문법을 더 엄격히 적용해 오류를 발생시킬 확률이 높거나 문제를 일으킬 수 있는 코드에 대해서 명시적으로 에러를 발생시킨다.</p>
-<p>ESLint 와 같은 도구를 사용해도 strict mode 가 발생시키는 오류는 기본적으로 제공하며 더 나아가 코딩 컨벤션, 제안 사항 등 원하는 설정을 적용할 수 있어서 ESLint 를 선호하는 개발자들이 많다.</p>
-<blockquote>
-<p>ES6에서 도입된 클래스와 모듈은 기본적으로 strict mode가 적용된다.</p>
-</blockquote>
-<h2 id="strict-mode-의-적용"><a href="#strict-mode-의-적용" class="headerlink" title="strict mode 의 적용"></a>strict mode 의 적용</h2><p>strict mode 를 적용하는 방법은 간단하다. 전역의 선두에 <code>&#39;use strict&#39;;</code> 를 추가해주면 된다.</p>
-<p>그리고 비슷한 원리로 만약 함수 몸체의 선두에 추가하면 해당 함수와 내부 함수에 strict mode 가 적용된다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  x = <span class="number">10</span>; <span class="comment">// ReferenceError</span></span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
-
-<h2 id="strict-mode-주의-사항"><a href="#strict-mode-주의-사항" class="headerlink" title="strict mode 주의 사항"></a>strict mode 주의 사항</h2><h3 id="전역에-strict-mode-를-적용하지-말자"><a href="#전역에-strict-mode-를-적용하지-말자" class="headerlink" title="전역에 strict mode 를 적용하지 말자"></a>전역에 strict mode 를 적용하지 말자</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="meta">  &#x27;use strict&#x27;</span>;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  x = <span class="number">1</span>; <span class="comment">// 에러가 발생하지 않는다.</span></span></span><br><span class="line"><span class="javascript">  <span class="built_in">console</span>.log(x); <span class="comment">// 1</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="meta">  &#x27;use strict&#x27;</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">  y = <span class="number">1</span>; <span class="comment">// ReferenceError: y is not defined</span></span></span><br><span class="line"><span class="javascript">  <span class="built_in">console</span>.log(y);</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-<p>위의 경우에, script 단위로 적용이되어버려 아래에 strict mode 가 적용되지 않는다. 따라서 이 방법 대신에 즉시 실행 함수로 스크립트의 전체를 감싸서 스코프를 구분해준 다음 해당 함수 선두에 strict mode 를 적용해주면 된다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  &#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// code</span></span><br><span class="line">  <span class="comment">// code</span></span><br><span class="line">  <span class="comment">// code</span></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<h3 id="함수-단위로-strict-mode-를-사용하지-말자"><a href="#함수-단위로-strict-mode-를-사용하지-말자" class="headerlink" title="함수 단위로 strict mode 를 사용하지 말자"></a>함수 단위로 strict mode 를 사용하지 말자</h3><p>어떤 함수는 strict mode를 적용하고 어떤 함수는 적용하지 않는 것은 합리적이지 않다. 그리고 모든 함수에 일일이 strict mode를 적용하는 것은 번거롭다.</p>
-<p>또한 만약 strict mode가 적용된 함수가 참조할 함수 외부의 컨텍스트에 strict mode를 적용하지 않는다면 원하는 대로 동작하지 않을 수 있다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// non-strict mode</span></span><br><span class="line">  <span class="keyword">var</span> lеt = <span class="number">10</span>; <span class="comment">// 에러 X</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">    &#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> = <span class="number">20</span>; <span class="comment">// 에러 O</span></span><br><span class="line">  &#125;</span><br><span class="line">  foo();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<p>따라서 strict mode 는 즉시 실행 함수로 감싼 스크립트 단위로 적용하면 좋다.</p>
-<h2 id="strict-mode-의-에러"><a href="#strict-mode-의-에러" class="headerlink" title="strict mode 의 에러"></a>strict mode 의 에러</h2><h3 id="1-암묵적-전역"><a href="#1-암묵적-전역" class="headerlink" title="1. 암묵적 전역"></a>1. 암묵적 전역</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  &#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  x = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-변수-함수-매개변수의-삭제"><a href="#2-변수-함수-매개변수의-삭제" class="headerlink" title="2. 변수, 함수, 매개변수의 삭제"></a>2. 변수, 함수, 매개변수의 삭제</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  &#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">delete</span> x;</span><br><span class="line">  <span class="comment">// SyntaxError: Delete of an unqualified identifier in strict mode.</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">delete</span> a;</span><br><span class="line">    <span class="comment">// SyntaxError: Delete of an unqualified identifier in strict mode.</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">delete</span> foo;</span><br><span class="line">  <span class="comment">// SyntaxError: Delete of an unqualified identifier in strict mode.</span></span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-매개변수-이름-중복"><a href="#3-매개변수-이름-중복" class="headerlink" title="3. 매개변수 이름 중복"></a>3. 매개변수 이름 중복</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  &#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//SyntaxError: Duplicate parameter name not allowed in this context</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">x, x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + x;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(foo(<span class="number">1</span>, <span class="number">2</span>));</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-with-문의-사용"><a href="#4-with-문의-사용" class="headerlink" title="4. with 문의 사용"></a>4. <code>with</code> 문의 사용</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  &#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// SyntaxError: Strict mode code may not include a with statement</span></span><br><span class="line">  <span class="keyword">with</span> (&#123; <span class="attr">x</span>: <span class="number">1</span> &#125;) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(x);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<h2 id="strict-mode-적용에-의한-변화"><a href="#strict-mode-적용에-의한-변화" class="headerlink" title="strict mode 적용에 의한 변화"></a>strict mode 적용에 의한 변화</h2><h3 id="1-일반-함수의-this"><a href="#1-일반-함수의-this" class="headerlink" title="1. 일반 함수의 this"></a>1. 일반 함수의 this</h3><p>strict mode 에서는 함수를 일반 함수로써 호출하면 <code>this</code> 에 <code>undefined</code> 가 바인딩된다. 왜냐하면 일반 함수 내부에서는 <code>this</code> 가 사용될 필요가 없기 때문이다. 참고로 에러는 발생하지 않는다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  &#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>); <span class="comment">// undefined</span></span><br><span class="line">  &#125;</span><br><span class="line">  foo();</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>); <span class="comment">// Foo</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">new</span> Foo();</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-arguments-객체"><a href="#2-arguments-객체" class="headerlink" title="2. arguments 객체"></a>2. arguments 객체</h3><p>strict mode 에서는 매개변수에 저달된 인수를 재할당해서 변경해도 arguments 객체에 반영되지 않는다.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">a</span>) </span>&#123;</span><br><span class="line"><span class="meta">  &#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  a = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">arguments</span>); <span class="comment">// &#123; 0: 1, length: 1 &#125; 변경되지 않음</span></span><br><span class="line">&#125;)(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
 
       
     </div>
